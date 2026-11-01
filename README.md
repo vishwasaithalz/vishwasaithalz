@@ -22,6 +22,14 @@
   <em>Curiosity is the exploit. Consistency is the patch.</em>
 </p>
 
+<p align="center">
+  <img src="assets/sticker-shield.svg" width="76" alt="Security shield sticker" />
+  &nbsp;&nbsp;
+  <img src="assets/sticker-orbit.svg" width="76" alt="AI orbit sticker" />
+  &nbsp;&nbsp;
+  <img src="assets/sticker-bolt.svg" width="76" alt="Automation bolt sticker" />
+</p>
+
 <img src="assets/neon-divider.svg" width="100%" alt="" />
 
 ## 🛰️ Mission Control
