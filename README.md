@@ -78,7 +78,7 @@ My current orbit brings together **defensive security, responsible security test
       <strong>Security · Open source · Knowledge</strong><br/>
       Long-running cybersecurity and open-source technology project, with roots in 2013.
       <br/><br/>
-      <a href="https://github.com/vishwasaithalz/YYYH">↗ Explore repository</a> · <a href="https://yyyh-phi.vercel.app">↗ Live site</a>
+      <a href="https://yyyh-phi.vercel.app">↗ Visit live site</a> · <sub>🔒 Source repository is private</sub>
       <br/><br/>
       <sub>Active foundation · Content preservation and modernization</sub>
     </td>
@@ -87,7 +87,7 @@ My current orbit brings together **defensive security, responsible security test
       <strong>Python · Windows · Local-first</strong><br/>
       A lightweight analyzer for imported Windows security event data, with filters and JSON/CSV reporting.
       <br/><br/>
-      <a href="https://github.com/vishwasaithalz/LogSentry">↗ Explore repository</a>
+      🔒 <sub>Private development repository</sub>
       <br/><br/>
       <sub>Early build · Synthetic sample data · Unit tests</sub>
     </td>
@@ -98,7 +98,7 @@ My current orbit brings together **defensive security, responsible security test
       <strong>HTML · CSS · JavaScript</strong><br/>
       Safe browser-based learning labs for HTTP security headers, password entropy concepts, and input handling.
       <br/><br/>
-      <a href="https://github.com/vishwasaithalz/CyberPlayground">↗ Explore repository</a>
+      🔒 <sub>Private development repository</sub>
       <br/><br/>
       <sub>Learning playground · No target scanning or telemetry</sub>
     </td>
@@ -107,7 +107,7 @@ My current orbit brings together **defensive security, responsible security test
       <strong>Node.js · Workflow design · APIs</strong><br/>
       Provider-neutral workflow experiments with a deterministic local mock mode.
       <br/><br/>
-      <a href="https://github.com/vishwasaithalz/AI-Automation-Lab">↗ Explore repository</a>
+      🔒 <sub>Private development repository</sub>
       <br/><br/>
       <sub>Early build · No external AI provider required for demo</sub>
     </td>
@@ -117,9 +117,9 @@ My current orbit brings together **defensive security, responsible security test
 <details>
   <summary><strong>🧰 More workshop shelves</strong></summary>
   <br/>
-  - [Recon Lite](https://github.com/vishwasaithalz/recon-lite) · HTTP response and security-header analysis.
-  - [Flagship API](https://github.com/vishwasaithalz/flagship-api) · API engineering experiments.
-  - [Next.js Boilerplate](https://github.com/vishwasaithalz/nextjs-boilerplate) · Starter template / sandbox.
+  - **Recon Lite** · HTTP response and security-header analysis · 🔒 Private repository.
+  - **Flagship API** · API engineering experiments · 🔒 Private repository.
+  - **Next.js Boilerplate** · Starter template / sandbox · 🔒 Private repository.
 </details>
 
 <img src="assets/neon-divider.svg" width="100%" alt="" />
