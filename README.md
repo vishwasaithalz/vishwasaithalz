@@ -150,6 +150,21 @@ My current orbit brings together **defensive security, responsible security test
 - [ ] Strengthen API engineering, Python testing, and secure development fundamentals.
 - [ ] Keep every project documented, reproducible, and honest about its limitations.
 
+## 📡 Live GitHub signals
+
+<p align="center">
+  <img src="https://img.shields.io/github/followers/vishwasaithalz?style=for-the-badge&logo=github&label=Followers&color=111827&labelColor=111827" alt="GitHub followers" />
+  <img src="https://img.shields.io/github/stars/vishwasaithalz?affiliations=OWNER&style=for-the-badge&logo=github&label=Stars&color=111827&labelColor=111827" alt="Stars across public repositories" />
+  <img src="https://img.shields.io/github/repo-size/vishwasaithalz/vishwasaithalz?style=for-the-badge&logo=github&label=Profile%20repo&color=111827&labelColor=111827" alt="Profile repository size" />
+</p>
+
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=vishwasaithalz&show_icons=true&hide_border=true&bg_color=0D1117&title_color=4DE8FF&icon_color=9B8CFF&text_color=C3CCE1&rank_icon=github" alt="Public GitHub statistics" width="49%" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=vishwasaithalz&layout=compact&hide_border=true&bg_color=0D1117&title_color=4DE8FF&text_color=C3CCE1" alt="Public repository language breakdown" width="49%" />
+</p>
+
+<sub>These are live public metrics, not targets or manufactured engagement. Private repository activity and hidden contributions may not appear in third-party cards. External stats cards can be rate-limited or temporarily unavailable.</sub>
+
 ## 🧭 Build Rules
 
 | Principle | How it shows up in my work |
