@@ -37,8 +37,7 @@ for (const languageMap of languageResults) {
   }
 }
 const languages = Object.entries(totals).sort((a, b) => b[1] - a[1]).slice(0, 6);
-const totalBytes = languages.reduce((sum, [, bytes]) => sum + bytes, 0) ||
-  Object.values(totals).reduce((sum, bytes) => sum + bytes, 0);
+const totalBytes = Object.values(totals).reduce((sum, bytes) => sum + bytes, 0);
 const colors = {
   TypeScript: '#3178c6', JavaScript: '#d8b52b', Python: '#3776ab',
   HTML: '#e34f26', CSS: '#663399', Shell: '#89e051', Go: '#00add8',
