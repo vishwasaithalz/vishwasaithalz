@@ -1,6 +1,12 @@
 name: Refresh profile statistics
 
 on:
+  push:
+    branches: [main]
+    paths:
+      - 'README.md'
+      - 'scripts/generate-profile-stats.mjs'
+      - '.github/workflows/refresh-profile-stats.yml'
   workflow_dispatch:
   schedule:
     - cron: '17 3 * * 1'
