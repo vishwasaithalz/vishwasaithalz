@@ -1,6 +1,42 @@
 {
   "schema": 1,
-  "checkedAt": null,
-  "method": "Awaiting first scheduled GitHub Actions run",
-  "checks": []
+  "checkedAt": "2026-11-03T09:46:06.544280+00:00",
+  "method": "HTTP GET from GitHub Actions; not a browser or full functional test",
+  "checks": [
+    {
+      "repo": "YYYH",
+      "url": "https://yyyh-phi.vercel.app/",
+      "status": "reachable",
+      "http": 200,
+      "error": null
+    },
+    {
+      "repo": "flagship-api",
+      "url": "https://flagship-api.vercel.app/",
+      "status": "reachable",
+      "http": 200,
+      "error": null
+    },
+    {
+      "repo": "nextjs-boilerplate",
+      "url": "https://nextjs-boilerplate-ten-alpha-14.vercel.app/",
+      "status": "reachable",
+      "http": 200,
+      "error": null
+    },
+    {
+      "repo": "recon-lite",
+      "url": "https://recon-lite.vercel.app/",
+      "status": "reachable",
+      "http": 200,
+      "error": null
+    },
+    {
+      "repo": "CyberPlayground",
+      "url": "https://cyber-playground-nu.vercel.app/",
+      "status": "reachable",
+      "http": 200,
+      "error": null
+    }
+  ]
 }
