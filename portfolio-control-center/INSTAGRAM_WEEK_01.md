@@ -16,3 +16,12 @@ Rules: original or properly licensed visuals and audio; verify facts; avoid copy
 | 7 | Image | Retro loading screen | Some memories never finish loading. | Vote: dial-up or broadband? | Original 4:5 graphic |
 
 Production gate per item: verify 1080×1920 for Reels, 4:5 or supported aspect ratio for image posts; preview subtitles and safe zones; verify music license; confirm brand voice and cover; proofread; obtain approval; schedule in Metricool; capture resulting post ID and status; report analytics after publishing. No automated comments or fake engagement.
+
+## Metricool recommended planning window (checked 03 Nov 2026)
+Metricool's Instagram best-time response for 04–10 Nov 2026 ranked **10:00** as the strongest hour on each of the seven days, using the requested Asia/Calcutta timezone. This is an audience-activity suggestion, not a guarantee of reach. Proposed review slots: 04, 05, 06, 07, 08, 09 and 10 November at 10:00 IST, one item per day. **These are NOT scheduled posts.**
+
+## Verified creative files
+A local downloadable Week 1 preview ZIP contains seven original 1080×1920 PNG covers and three four-second MP4 prototype reels (Days 1, 3 and 6). The source files are not uploaded to Metricool. They are labeled DRAFT, need motion/audio improvements, and require final approval. For Day 2 and Day 5 carousel concepts, multiple finished slides still need production; a single cover is not a completed carousel.
+
+## Verification on 03 Nov 2026
+The GitHub Actions selected-deployment health.json recorded five HTTP 200 responses at 15:16 IST. A separate browser content fetch found meaningful rendered content on all five selected homepages. This does not establish functional coverage of forms, navigation, APIs, or every subroute.
