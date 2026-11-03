@@ -18,9 +18,10 @@ def check(item):
             result["http"] = response.status
             body = response.read(250000).decode("utf-8", errors="replace")
             result["contentVerified"] = item["expected"].casefold() in body.casefold()
+            result["contentCheckMethod"] = "raw response text, not JavaScript-rendered DOM"
             result["status"] = ("reachable" if result["contentVerified"] else "attention") if 200 <= response.status < 400 else "attention"
             if 200 <= response.status < 400 and not result["contentVerified"]:
-                result["error"] = "Expected page text not found"
+                result["error"] = "Expected text absent from raw HTML; may require browser-rendered check"
     except urllib.error.HTTPError as exc:
         result["http"] = exc.code
         result["status"] = "protected" if exc.code in (401,403) else "attention"
