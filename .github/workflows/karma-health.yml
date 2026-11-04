@@ -17,6 +17,8 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+      - name: Test health-check status classification (offline)
+        run: python -m unittest discover -s portfolio-control-center -p 'test_check_health.py' -v
       - name: Probe selected GitHub-linked Vercel URLs
         run: python portfolio-control-center/check_health.py
       - name: Commit real status results only when changed
