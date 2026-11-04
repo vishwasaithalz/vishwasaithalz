@@ -1,42 +1,52 @@
 {
   "schema": 1,
-  "checkedAt": "2026-11-03T09:46:06.544280+00:00",
-  "method": "HTTP GET from GitHub Actions; not a browser or full functional test",
+  "checkedAt": "2026-11-04T11:24:41.000407+00:00",
+  "method": "HTTP GET + expected page text from GitHub Actions; not a browser or full functional test",
   "checks": [
     {
       "repo": "YYYH",
       "url": "https://yyyh-phi.vercel.app/",
       "status": "reachable",
       "http": 200,
-      "error": null
+      "error": null,
+      "contentVerified": true,
+      "contentCheckMethod": "raw response text, not JavaScript-rendered DOM"
     },
     {
       "repo": "flagship-api",
       "url": "https://flagship-api.vercel.app/",
       "status": "reachable",
       "http": 200,
-      "error": null
+      "error": null,
+      "contentVerified": true,
+      "contentCheckMethod": "raw response text, not JavaScript-rendered DOM"
     },
     {
       "repo": "nextjs-boilerplate",
       "url": "https://nextjs-boilerplate-ten-alpha-14.vercel.app/",
       "status": "reachable",
       "http": 200,
-      "error": null
+      "error": null,
+      "contentVerified": true,
+      "contentCheckMethod": "raw response text, not JavaScript-rendered DOM"
     },
     {
       "repo": "recon-lite",
       "url": "https://recon-lite.vercel.app/",
       "status": "reachable",
       "http": 200,
-      "error": null
+      "error": null,
+      "contentVerified": true,
+      "contentCheckMethod": "raw response text, not JavaScript-rendered DOM"
     },
     {
       "repo": "CyberPlayground",
       "url": "https://cyber-playground-nu.vercel.app/",
       "status": "reachable",
       "http": 200,
-      "error": null
+      "error": null,
+      "contentVerified": true,
+      "contentCheckMethod": "raw response text, not JavaScript-rendered DOM"
     }
   ]
 }
