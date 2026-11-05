@@ -17,7 +17,24 @@ def audit(repo):
     tree=get(f"{p}/git/trees/{info['default_branch']}?recursive=1")
     paths={item["path"] for item in tree.get("tree",[]) if item["type"]=="blob"}
     checks={"license":bool(info.get("license")),"readme":"README.md" in paths,"security_policy":"SECURITY.md" in paths,"ci_workflow":any(s.startswith(".github/workflows/") for s in paths),"tests":any(s.startswith("tests/") or s.startswith("test/") for s in paths)}
-    return {"repository":repo,"visibility":info["visibility"],"head":info.get("default_branch"),"checks":checks,"passed":sum(checks.values()),"total":len(checks),"note":"Public metadata checks only. Not a secrets or vulnerability scan."}
+    extra={}
+    for key,endpoint in [
+        ("open_prs",f"{p}/pulls?state=open&per_page=100"),
+        ("latest_ci",f"{p}/actions/runs?per_page=1"),
+        ("security_advisories",f"{p}/security-advisories?per_page=1")
+    ]:
+        try:
+            data=get(endpoint)
+            if key=="open_prs":
+                extra[key]=[{"number":x["number"],"draft":x.get("draft",False)} for x in data] if isinstance(data,list) else "unavailable"
+            elif key=="latest_ci":
+                runs=data.get("workflow_runs",[])
+                extra[key]={"conclusion":runs[0]["conclusion"],"sha":runs[0]["head_sha"]} if runs else None
+            else:
+                extra[key]="endpoint_accessible" if isinstance(data,list) else "unavailable"
+        except Exception:
+            extra[key]="unavailable"
+    return {"repository":repo,"visibility":info["visibility"],"head":info.get("default_branch"),"checks":checks,"passed":sum(checks.values()),"total":len(checks),"observations":extra,"note":"Public metadata only. API access limits do not imply safety."}
 def main():
     results=[]
     for repo in REPOS:
