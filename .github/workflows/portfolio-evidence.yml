@@ -1,0 +1,33 @@
+name: Refresh portfolio evidence
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '30 3 * * *'
+  push:
+    paths:
+      - '.portfolio/refresh.mjs'
+      - '.github/workflows/portfolio-evidence.yml'
+permissions:
+  contents: write
+concurrency:
+  group: portfolio-evidence
+  cancel-in-progress: false
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+      - name: Read public source and CI evidence
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: node .portfolio/refresh.mjs
+      - name: Commit only changed evidence
+        run: |
+          git add .portfolio/evidence.json
+          if git diff --cached --quiet; then
+            echo "Evidence unchanged."
+            exit 0
+          fi
+          git -c user.name='github-actions[bot]' -c user.email='41898282+github-actions[bot]@users.noreply.github.com' commit -m 'Refresh public portfolio evidence'
+          git push
