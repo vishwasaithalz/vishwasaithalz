@@ -222,3 +222,10 @@ If you're building practical security tools, privacy-aware automation, or useful
 <!-- KARMA AVATAR GALLERY -->
 <p align="center"><img src="assets/karma-avatar.svg" width="112" alt="vishwasaithalz original illustrated animated avatar" /></p>
 <p align="center"><a href="https://karma-ops-monitor.vercel.app/#gallery">Explore the animated project gallery</a></p>
+
+
+### Original motion gallery
+
+![GitHub profile original animated project signal](assets/karma-motion.gif)
+
+[Download this profile GIF](assets/karma-motion.gif)
