@@ -204,6 +204,7 @@ If you're building practical security tools, privacy-aware automation, or useful
 
 
 <!-- KARMA ORBIT SHOWCASE -->
+<p align="center"><a href="https://karma-ops-monitor.vercel.app"><img src="https://img.shields.io/badge/OPEN_INTERACTIVE_KARMA_HOMEPAGE-0f766e?style=for-the-badge&logo=vercel&logoColor=white" alt="Open KARMA interactive Vercel homepage" /></a></p>
 <p align="center"><img src="assets/karma-orbit.svg" width="100%" alt="Animated KARMA orbit, with reduced-motion support" /></p>
 <details><summary><strong>🎛️ KARMA interactive project selector</strong></summary>
 
