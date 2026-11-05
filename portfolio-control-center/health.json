@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "checkedAt": "2026-11-04T11:24:41.000407+00:00",
+  "checkedAt": "2026-11-05T11:22:27.781061+00:00",
   "method": "HTTP GET + expected page text from GitHub Actions; not a browser or full functional test",
   "checks": [
     {
@@ -24,10 +24,10 @@
     {
       "repo": "nextjs-boilerplate",
       "url": "https://nextjs-boilerplate-ten-alpha-14.vercel.app/",
-      "status": "reachable",
+      "status": "attention",
       "http": 200,
-      "error": null,
-      "contentVerified": true,
+      "error": "Expected text absent from raw HTML; may require browser-rendered check",
+      "contentVerified": false,
       "contentCheckMethod": "raw response text, not JavaScript-rendered DOM"
     },
     {
