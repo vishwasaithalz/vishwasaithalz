@@ -1,0 +1,27 @@
+name: KARMA public repository quality audit
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/audit-public-repos.py'
+      - '.github/workflows/public-quality-audit.yml'
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run read-only quality inventory
+        run: python scripts/audit-public-repos.py
+      - name: Upload machine-readable and human-readable reports
+        uses: actions/upload-artifact@v4
+        with:
+          name: karma-public-quality
+          path: reports/public-quality.*
+          retention-days: 30
