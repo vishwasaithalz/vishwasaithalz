@@ -201,3 +201,18 @@ If you're building practical security tools, privacy-aware automation, or useful
 
 </div>
 <!-- KARMA VISUAL IDENTITY: END -->
+
+
+<!-- KARMA ORBIT SHOWCASE -->
+<p align="center"><img src="assets/karma-orbit.svg" width="100%" alt="Animated KARMA orbit, with reduced-motion support" /></p>
+<details><summary><strong>🎛️ KARMA interactive project selector</strong></summary>
+
+| Choose a station | Open project |
+|:--|:--|
+| 🛰️ Operations | [KARMA Ops Monitor](https://github.com/vishwasaithalz/KARMA-Ops-Monitor) |
+| 🛡️ Security | [LogSentry](https://github.com/vishwasaithalz/LogSentry) |
+| 🧪 Learning | [CyberPlayground](https://github.com/vishwasaithalz/CyberPlayground) |
+| 🤖 Automation | [AI Automation Lab](https://github.com/vishwasaithalz/AI-Automation-Lab) |
+| 🌓 Publishing | [YinYangYoHackers](https://github.com/vishwasaithalz/YYYH) |
+
+</details>
