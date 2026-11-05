@@ -1,15 +1,46 @@
-# KARMA Quora Answer Studio · Daily Draft Queue
-Status: ORIGINAL DRAFTS · NOT POSTED
-Profile: https://www.quora.com/profile/Vishwasaithal
-Policy: Only answer real questions that are independently located and checked for relevance. Do not claim a particular Quora question URL has been verified unless it has. Avoid mass posting, fabricated expertise, spam, and promotional links.
+# KARMA Quora Desk 2.0 · Editorial Operations
 
-## Draft 1 · How can a beginner start learning cybersecurity for free?
-A good free path starts with networking fundamentals rather than jumping straight to hacking tools. Learn IP addressing, DNS, HTTP, basic Linux commands and how browsers communicate with servers. Then study authentication, least privilege, software updates and common web vulnerabilities. Build a small home lab using deliberately vulnerable applications or training environments, never systems you do not own or have permission to test. Keep notes on what you tried, what happened and what you learned. A public GitHub repository with reproducible educational exercises is more useful than a list of tools you cannot explain. Free learning resources include OWASP Web Security Testing Guide and PortSwigger Web Security Academy. Practice consistently, document ethically and apply for entry-level IT/security roles while you build confidence.
+Profile target: https://www.quora.com/profile/Vishwasaithal  
+Workspace: `quora-desk.html` (linked from the private Portfolio Control Center)  
+Last updated: 2026-11-05  
+Status: research and drafting only; no Quora publishing integration connected.
 
-## Draft 2 · Is AI automation useful if I am not a professional programmer?
-Yes, especially when you start with a repetitive task that has a clear input and output. For example, collect a list of your own project URLs, check whether each returns an expected HTTP response and save a dated report. Add error handling and a manual review step before any action that publishes, deletes or sends messages. Avoid putting API keys in frontend code or GitHub. Measure time saved, false alarms and failure cases. A useful first project is a GitHub Actions workflow that runs basic tests and produces a short report. AI can help explain errors and draft scripts, but it cannot replace verifying the result.
+## Included workspace features
 
-## Draft 3 · What should a returning developer put on GitHub?
-Show three things: work that runs, explanations that make sense and evidence that you tested it. Start with one small application or script, add a README explaining the problem and setup, include screenshots only from real builds, and document limitations. Keep dependencies updated, use a license when appropriate, and avoid fake stars, invented certificates or unsupported claims. A thoughtful issue log and small, meaningful commits often communicate more than a collection of empty repositories.
+- Candidate pipeline with search, topic/status filters and priority sorting.
+- Draft studio with editable answer, title, source URLs and fact-check notes.
+- Duplicate warning when adding a normalized question title already in the queue.
+- Seven-step human review gate: real question, fit, source support, duplicate review, truthfulness, platform rules and final review.
+- Editorial approval state, separate from publication.
+- Manual publication history field that requires an actual Quora answer URL after posting.
+- Research source vault.
+- Daily brief, CSV, Markdown and JSON backup exports; JSON import.
+- Browser-local persistence. Drafts remain on the user's device unless exported.
+- No Quora credentials, session cookies, tokens, browser automation, votes, comments or auto-posting.
 
-Review gate: find the exact current question, check that a substantially identical answer is not already published, update citations and platform rules, revise for the questioner's needs, approve, publish only via supported authorized integration, then log URL and timestamp.
+## Seed candidates
+
+These are proposed topic concepts, not verified Quora questions. They have no confirmed question URLs, dates, follower counts or inspected answer competition. Each must be matched to a real question before publication.
+
+1. GitHub Actions workflow security — least privilege, untrusted contributions, secrets and third-party actions. Priority 9.0/10.
+2. Authentication versus authorization in API security — server-side object-level access checks. Priority 8.7/10.
+3. JavaScript async/await error handling — promise rejection versus HTTP error status. Priority 8.4/10.
+
+## Editorial policy
+
+- Answer the exact question, directly and with useful substance.
+- Use primary documentation where possible; open every source and verify it supports the associated claim.
+- Separate documented facts, illustrative examples, recommendations and unknowns.
+- Do not invent credentials, professional experience, client work, experiments or personal results.
+- Avoid spam, repetitive answers, engagement manipulation, excessive self-promotion and affiliate links.
+- Never crawl Quora, bypass access controls, automate login or use unofficial write endpoints.
+- No answer or comment is published from this workspace. Manual publication is outside the application.
+- Record only publicly verifiable or user-provided engagement metrics.
+
+## Data and privacy
+
+The workspace stores queue data in browser localStorage. It does not sync between devices and can be lost if browser storage is cleared. Use the JSON export regularly. Do not store passwords, session tokens, API keys or sensitive personal data.
+
+## Future integrations
+
+A future sync service would require an authenticated backend, access controls, secure storage, validation, audit logging and an officially supported provider integration. Until an authorized Quora publishing integration exists, the approval gate is editorial only and publishing remains manual.
