@@ -217,3 +217,8 @@ If you're building practical security tools, privacy-aware automation, or useful
 | 🌓 Publishing | [YinYangYoHackers](https://github.com/vishwasaithalz/YYYH) |
 
 </details>
+
+
+<!-- KARMA AVATAR GALLERY -->
+<p align="center"><img src="assets/karma-avatar.svg" width="112" alt="vishwasaithalz original illustrated animated avatar" /></p>
+<p align="center"><a href="https://karma-ops-monitor.vercel.app/#gallery">Explore the animated project gallery</a></p>
