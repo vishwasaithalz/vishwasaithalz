@@ -15,6 +15,15 @@
 
 ## 01 / The six stations
 
+<p align="center">
+<img src="assets/projects/logsentry.svg" width="48%" alt="LogSentry defensive event triage original card" />
+<img src="assets/projects/recon-lite.svg" width="48%" alt="Recon Lite security header analysis original card" />
+<img src="assets/projects/automation-lab.svg" width="48%" alt="AI Automation Lab workflow original card" />
+<img src="assets/projects/cyberplayground.svg" width="48%" alt="CyberPlayground safe security learning original card" />
+<img src="assets/projects/yyyh.svg" width="48%" alt="YinYangYoHackers original learning card" />
+<img src="assets/projects/karma-ops.svg" width="48%" alt="KARMA operations original project card" />
+</p>
+
 | Project | What it demonstrates | Evidence |
 | :-- | :-- | :-- |
 | **[LogSentry](https://github.com/vishwasaithalz/LogSentry)** | Defensive triage of imported Windows security events, with synthetic sample data and explicit investigation limits | Python CLI · [source & setup](https://github.com/vishwasaithalz/LogSentry#readme) |
