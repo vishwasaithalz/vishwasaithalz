@@ -83,7 +83,19 @@ jobs:
           git add assets/arcade-gifs/
           if ! git diff --cached --quiet; then
             git commit -m "media: render six distinct original KARMA Arcade GIFs"
-            git push
+            # Other KARMA workflows may push fresh stats concurrently.
+            # Rebase only our generated-art commit; never force-push main.
+            for attempt in 1 2 3 4; do
+              git fetch origin main
+              git rebase origin/main
+              if git push origin HEAD:main; then
+                exit 0
+              fi
+              echo "Main advanced while GIFs were rendering; retry $attempt"
+              sleep 3
+            done
+            echo "::error::Unable to publish GIF art without force-pushing."
+            exit 1
           else
             echo "Generated art unchanged"
           fi
