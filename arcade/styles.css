@@ -19,3 +19,8 @@
 .feature-ribbon a:hover{border-color:#65deff}
 @media(max-width:650px){.gif-gallery{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.gif-gallery span{font-size:11px}.pinball-touch{gap:8px}.pinball-touch button{font-size:11px;min-height:70px}}
 @media(prefers-reduced-motion:reduce){.gif-gallery a,.pinball-touch button{transition:none}}
+
+.motion-section{padding:35px 28px;margin:26px 0 0;border:1px solid #66517c;border-radius:20px;background:linear-gradient(155deg,#20163d,#101b32 80%);box-shadow:0 22px 45px #0004}
+.motion-section .panel-heading{margin-bottom:7px}
+.motion-section .gif-gallery img{image-rendering:auto}
+@media(max-width:640px){.motion-section{padding:23px 13px}.motion-section h2{font-size:27px}}
