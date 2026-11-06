@@ -1,5 +1,5 @@
 <!-- KARMA Command Deck | verified links 2026-11-06 -->
-<p align="center"><img src="assets/karma-command-deck.svg" width="100%" alt="KARMA Command Deck: build, secure, automate" /></p>
+<p align="center"><img src="assets/karma-arcade-hero.svg" width="100%" alt="KARMA rainbow arcade: build, secure, automate" /></p>
 
 <p align="center">
   <strong>Vishwas Aithal</strong> · Defensive security · Python & JavaScript · AI workflow experiments
@@ -11,17 +11,19 @@
   <a href="https://www.youtube.com/@vishwasaithalz">YouTube</a>
 </p>
 
-> **A returning technologist building in public.** I work on local-first defensive tools, safe security learning labs, reproducible automation and web engineering. This profile is a field journal of working experiments, not a claim of expert-level mastery.
+> **🪐 From 2013 internet rabbit holes to today’s security labs.** A returning technologist building in public. I work on local-first defensive tools, safe security learning labs, reproducible automation and web engineering. This profile is a field journal of working experiments, not a claim of expert-level mastery.
 
-## 01 / The six stations
+## 🌈 01 / Choose your universe
+
+Six projects, six visual identities. No duplicate cards, no fabricated metrics, no fake demo buttons.
 
 <p align="center">
-<img src="assets/projects/logsentry.svg" width="48%" alt="LogSentry defensive event triage original card" />
-<img src="assets/projects/recon-lite.svg" width="48%" alt="Recon Lite security header analysis original card" />
-<img src="assets/projects/automation-lab.svg" width="48%" alt="AI Automation Lab workflow original card" />
-<img src="assets/projects/cyberplayground.svg" width="48%" alt="CyberPlayground safe security learning original card" />
-<img src="assets/projects/yyyh.svg" width="48%" alt="YinYangYoHackers original learning card" />
-<img src="assets/projects/karma-ops.svg" width="48%" alt="KARMA operations original project card" />
+<img src="assets/projects/logsentry-v2.svg" width="48%" alt="LogSentry defensive event triage original card" />
+<img src="assets/projects/recon-lite-v2.svg" width="48%" alt="Recon Lite security header analysis original card" />
+<img src="assets/projects/automation-lab-v2.svg" width="48%" alt="AI Automation Lab workflow original card" />
+<img src="assets/projects/cyberplayground-v2.svg" width="48%" alt="CyberPlayground safe security learning original card" />
+<img src="assets/projects/yyyh-v2.svg" width="48%" alt="YinYangYoHackers original learning card" />
+<img src="assets/projects/karma-ops-v2.svg" width="48%" alt="KARMA operations original project card" />
 </p>
 
 | Project | What it demonstrates | Evidence |
@@ -35,7 +37,7 @@
 
 <sub>Public homepages checked in a read-only browser on 2026-11-06. The KARMA workshop homepage is a broader portfolio, not a standalone monitoring dashboard. Hosted landing-page checks do not certify every feature.</sub>
 
-## 02 / Engineering, not theater
+## 🛠️ 02 / Built, tested, documented
 
 - **Local-first by default:** avoid uploading sensitive Windows logs or user data to public demos.
 - **Testable increments:** synthetic fixtures, explicit scope and reproducible commands.
@@ -49,7 +51,7 @@ python tools/github_public_metrics.py
 
 [View the metrics source](tools/github_public_metrics.py) · [Review LogSentry's merged documentation improvement](https://github.com/vishwasaithalz/LogSentry/pull/2)
 
-## 03 / Current toolbox
+## ⚡ 03 / The toolkit
 
 <p>
   <img src="https://img.shields.io/badge/Python-192332?style=flat-square&logo=python&logoColor=white" alt="Python" />
@@ -60,7 +62,7 @@ python tools/github_public_metrics.py
   <img src="https://img.shields.io/badge/GitHub_Actions-192332?style=flat-square&logo=githubactions&logoColor=white" alt="GitHub Actions" />
 </p>
 
-## 04 / KARMA signal board
+## 📡 04 / The signal board
 
 The metrics script reads **real public GitHub REST API data** for six repositories. Counts are fetched when the script runs and may be unavailable during rate limits. These counts are **not GitHub achievement awards**. Official GitHub achievements are shown by GitHub itself, not manufactured in this README.
 
@@ -73,7 +75,9 @@ The metrics script reads **real public GitHub REST API data** for six repositori
 
 </details>
 
-## 05 / Original motion lab
+## 🎞️ 05 / The motion vault
+
+A tiny piece of the old internet, rebuilt for a modern README. The animation is optional; the projects and links above remain useful without it.
 
 <p align="center"><img src="assets/karma-orbit.svg" width="100%" alt="KARMA orbit project illustration" /></p>
 <details><summary><strong>Open the original animated artwork</strong></summary>
@@ -82,7 +86,7 @@ The metrics script reads **real public GitHub REST API data** for six repositori
 
 </details>
 
-## 06 / Connect
+## 💌 06 / Find me online
 
 [GitHub](https://github.com/vishwasaithalz) · [LinkedIn](https://www.linkedin.com/in/vishwas-aithal) · [YouTube](https://www.youtube.com/@vishwasaithalz)
 
