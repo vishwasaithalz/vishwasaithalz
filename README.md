@@ -229,3 +229,19 @@ If you're building practical security tools, privacy-aware automation, or useful
 ![GitHub profile original animated project signal](assets/karma-motion.gif)
 
 [Download this profile GIF](assets/karma-motion.gif)
+
+
+## 🏅 Six projects to feature
+
+Suggested GitHub profile pins (pinning itself is managed in GitHub's profile UI):
+
+| Project | Focus | Public source / demo |
+| --- | --- | --- |
+| LogSentry | Defensive Windows event triage | [Source](https://github.com/vishwasaithalz/LogSentry) · local CLI, no hosted demo claimed |
+| Recon Lite | Offline HTTP header review | [Source](https://github.com/vishwasaithalz/recon-lite) · local CLI, no hosted demo claimed |
+| AI-Automation-Lab | Deterministic provider-neutral workflows | [Source](https://github.com/vishwasaithalz/AI-Automation-Lab) · local mock demo |
+| CyberPlayground | Security education | [Source](https://github.com/vishwasaithalz/CyberPlayground) |
+| YYYH | Security publishing and learning | [Source](https://github.com/vishwasaithalz/YYYH) · [Site](https://yyyh-phi.vercel.app) |
+| KARMA-Ops-Monitor | Portfolio operations and observability | [Source](https://github.com/vishwasaithalz/KARMA-Ops-Monitor) · [Site](https://karma-ops-monitor.vercel.app) |
+
+**Public GitHub API experiment:** Run `python tools/github_public_metrics.py` to fetch current public repository star, fork, and open-issue counts using GitHub's REST API. This is a read-only, networked utility: it uses no credentials, makes no GitHub writes, and fails visibly if requests are blocked or rate-limited. Counts are not an official achievement tally. No metrics are hardcoded as accomplishments.
