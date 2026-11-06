@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="color-scheme" content="dark">
-  <meta name="description" content="KARMA.EXE is an original interactive security and automation project arcade: a scripted origin-story chat, terminal explorer, playable Snake, and project roulette.">
+  <meta name="description" content="KARMA.EXE is an original interactive security and automation project arcade: a scripted origin-story chat, terminal explorer, playable Snake, original pinball, and project roulette.">
   <meta name="theme-color" content="#170b3d">
   <title>KARMA.EXE | Interactive project arcade</title>
   <link rel="stylesheet" href="./styles.css">
@@ -15,7 +15,7 @@
     <header class="hero">
       <div class="eyebrow"><span class="live-dot"></span> SYSTEM ONLINE <span class="sep">/</span> ORIGINAL WEB ARCADE <span class="sep">/</span> 2013 TO NOW</div>
       <h1>KARMA<span>.EXE</span></h1>
-      <p class="lead">One browser. Four doors. A thousand unfinished ideas that became working projects.</p>
+      <p class="lead">One browser. Five doors. A thousand unfinished ideas that became working projects.</p>
       <div class="hero-actions">
         <a href="https://github.com/vishwasaithalz" class="hero-link">↖ GitHub home</a>
         <a href="https://github.com/vishwasaithalz?tab=repositories" class="hero-link alt">Explore public builds ↗</a>
@@ -25,6 +25,7 @@
       <button class="tab active" type="button" data-tab="chat" aria-controls="chat" aria-selected="true">💬 STORY CHAT</button>
       <button class="tab" type="button" data-tab="terminal" aria-controls="terminal" aria-selected="false">⌨ TERMINAL</button>
       <button class="tab" type="button" data-tab="snake" aria-controls="snake" aria-selected="false">🐍 SNAKE</button>
+      <button class="tab" type="button" data-tab="pinball" aria-controls="pinball" aria-selected="false">🕹 PINBALL</button>
       <button class="tab" type="button" data-tab="roulette" aria-controls="roulette" aria-selected="false">🎲 PROJECT ROULETTE</button>
     </nav>
     <main>
@@ -59,8 +60,17 @@
         <div class="game-actions"><button id="start-game" type="button">▶ START / RESTART</button><button id="pause-game" type="button">Ⅱ PAUSE</button><span>ARROWS / WASD</span></div>
         <div class="pad" aria-label="Touch game controls"><button type="button" data-dir="up" aria-label="Move up">↑</button><div><button type="button" data-dir="left" aria-label="Move left">←</button><button type="button" data-dir="down" aria-label="Move down">↓</button><button type="button" data-dir="right" aria-label="Move right">→</button></div></div>
       </section>
+      <section class="panel" id="pinball" aria-labelledby="pinball-heading" hidden>
+        <div class="panel-heading"><div><div class="tag pink">CHAPTER 04 / CLASSIC ARCADE LAB</div><h2 id="pinball-heading">Pinball: KARMA 198X</h2></div><div class="status">● REAL PHYSICS / LOCAL GAME</div></div>
+        <p class="note">Original five-bumper pinball table with gravity, collisions, bounce sparks, left and right flippers, launch, pause, three lives and a score. Runs in your browser only.</p>
+        <div class="score-bar"><span>SCORE <strong id="pinball-score">00000</strong></span><span>BALLS LEFT <strong id="pinball-lives">3</strong></span><span id="pinball-status">READY</span></div>
+        <canvas id="pinball-canvas" width="560" height="690" tabindex="0" aria-label="Pinball table with five bumpers and two flippers. Press left and right arrow keys or A and D, Space to launch, P to pause. Touch buttons below are supported."></canvas>
+        <div class="game-actions"><button id="pinball-launch" type="button">🚀 LAUNCH</button><button id="pinball-reset" type="button">↻ RESET</button><button id="pinball-pause" type="button">Ⅱ PAUSE</button></div>
+        <div class="pinball-touch" aria-label="Touch pinball flippers"><button type="button" data-flipper="left" aria-label="Hold the left flipper">◀ LEFT FLIPPER</button><button type="button" data-flipper="right" aria-label="Hold the right flipper">RIGHT FLIPPER ▶</button></div>
+        <p class="note"><strong>Keyboard:</strong> A/D or left/right arrows to flip, Space to launch, P to pause. <strong>Phone:</strong> press and hold flipper buttons. No scores are sent anywhere.</p>
+      </section>
       <section class="panel" id="roulette" aria-labelledby="roulette-heading" hidden>
-        <div class="panel-heading"><div><div class="tag yellow">CHAPTER 04 / THE PROJECT GENERATOR</div><h2 id="roulette-heading">Find your next rabbit hole</h2></div><div class="status">● NO TRACKING</div></div>
+        <div class="panel-heading"><div><div class="tag yellow">CHAPTER 05 / THE PROJECT GENERATOR</div><h2 id="roulette-heading">Find your next rabbit hole</h2></div><div class="status">● NO TRACKING</div></div>
         <p class="note">Explore one real public project at random. There are no paid links, simulated ratings or fictional accomplishments.</p>
         <div class="roulette-card"><div id="roulette-icon" class="roulette-icon">🎲</div><div class="roulette-eyebrow" id="roulette-type">KARMA PROJECT SELECTOR</div><h3 id="roulette-name">Choose your adventure</h3><p id="roulette-desc">Hit the button to pick one of six public projects.</p><a id="roulette-link" href="https://github.com/vishwasaithalz" target="_blank" rel="noopener noreferrer">EXPLORE PROJECT ↗</a></div>
         <button id="spin" class="spin" type="button">🎰 SURPRISE ME</button>
@@ -69,5 +79,6 @@
     <footer><div>MADE FOR THE CURIOUS <span>✦</span> BUILT WITHOUT TELEMETRY</div><p>GitHub READMEs cannot execute interactive JavaScript. This companion site provides the buttons, chat and keyboard controls instead.</p><a href="https://github.com/vishwasaithalz/vishwasaithalz">Source and project notes ↗</a></footer>
   </div>
   <script src="./app.js" defer></script>
+  <script src="./pinball.js" defer></script>
 </body>
 </html>
