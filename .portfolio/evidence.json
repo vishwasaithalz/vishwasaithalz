@@ -1,26 +1,26 @@
 {
   "version": 1,
-  "source": "GitHub API snapshot, updated by authenticated GitHub Actions",
-  "checkedAt": "2026-11-05T15:53:52.860Z",
+  "source": "Authenticated GitHub Actions snapshot",
+  "checkedAt": "2026-11-06T11:18:16.837Z",
   "timeMeaning": "Snapshot content changed at this time; unchanged checks do not create commits.",
   "results": [
     {
       "name": "LogSentry",
       "status": "success",
-      "sha": "167cea88327949f92f73efec2ab1c9b25eb00a9a",
-      "message": "Document local JSON report export",
-      "commitDate": "2026-11-05T03:24:18Z",
+      "sha": "79930dd695c20c406886d90aee0fcd4ad5b9c2e5",
+      "message": "ci: pin verified current official actions to immutable commit SHAs (#5)",
+      "commitDate": "2026-11-06T09:26:06Z",
       "files": [
         {
-          "name": "README.md",
+          "name": ".github/workflows/tests.yml",
           "status": "modified",
-          "additions": 1,
-          "deletions": 1
+          "additions": 2,
+          "deletions": 2
         }
       ],
-      "url": "https://github.com/vishwasaithalz/LogSentry/commit/167cea88327949f92f73efec2ab1c9b25eb00a9a",
+      "url": "https://github.com/vishwasaithalz/LogSentry/commit/79930dd695c20c406886d90aee0fcd4ad5b9c2e5",
       "ci": "success",
-      "ciUrl": "https://github.com/vishwasaithalz/LogSentry/actions/runs/41961384382",
+      "ciUrl": "https://github.com/vishwasaithalz/LogSentry/actions/runs/42195025038",
       "release": null,
       "releaseStatus": "checked",
       "providerWarnings": []
@@ -28,20 +28,38 @@
     {
       "name": "AI-Automation-Lab",
       "status": "success",
-      "sha": "c3029ce9961b3152082e1383619ca33eac2064a2",
-      "message": "Document JSON report export",
-      "commitDate": "2026-11-05T03:24:42Z",
+      "sha": "ef17a3bc86dceedbdc8d17db958e160363389c94",
+      "message": "KARMA consolidated public SEO and GitHub CI audit runners (#11)\n\n* feat: integrate consolidated audit src/consolidated-audit.mjs\n\n* feat: integrate consolidated audit tests/consolidated-audit.test.mjs\n\n* feat: integrate consolidated audit src/consolidated-readonly-report.mjs\n\n* feat: integrate consolidated audit tests/consolidated-readonly-report.test.mjs",
+      "commitDate": "2026-11-06T10:45:53Z",
       "files": [
         {
-          "name": "README.md",
-          "status": "modified",
-          "additions": 1,
-          "deletions": 1
+          "name": "src/consolidated-audit.mjs",
+          "status": "added",
+          "additions": 24,
+          "deletions": 0
+        },
+        {
+          "name": "src/consolidated-readonly-report.mjs",
+          "status": "added",
+          "additions": 32,
+          "deletions": 0
+        },
+        {
+          "name": "tests/consolidated-audit.test.mjs",
+          "status": "added",
+          "additions": 20,
+          "deletions": 0
+        },
+        {
+          "name": "tests/consolidated-readonly-report.test.mjs",
+          "status": "added",
+          "additions": 30,
+          "deletions": 0
         }
       ],
-      "url": "https://github.com/vishwasaithalz/AI-Automation-Lab/commit/c3029ce9961b3152082e1383619ca33eac2064a2",
+      "url": "https://github.com/vishwasaithalz/AI-Automation-Lab/commit/ef17a3bc86dceedbdc8d17db958e160363389c94",
       "ci": "success",
-      "ciUrl": "https://github.com/vishwasaithalz/AI-Automation-Lab/actions/runs/41961429479",
+      "ciUrl": "https://github.com/vishwasaithalz/AI-Automation-Lab/actions/runs/42205150916",
       "release": null,
       "releaseStatus": "checked",
       "providerWarnings": []
@@ -49,20 +67,20 @@
     {
       "name": "CyberPlayground",
       "status": "success",
-      "sha": "93efef123691b7adda466654b06d631ccf8c4adc",
-      "message": "Document guided learning path and progress privacy",
-      "commitDate": "2026-11-05T03:31:21Z",
+      "sha": "5107b03592b60d91c609a9503cd5e8fae4f496e2",
+      "message": "ci: pin verified current official actions to immutable commit SHAs (#3)",
+      "commitDate": "2026-11-06T09:25:53Z",
       "files": [
         {
-          "name": "README.md",
+          "name": ".github/workflows/tests.yml",
           "status": "modified",
           "additions": 2,
           "deletions": 2
         }
       ],
-      "url": "https://github.com/vishwasaithalz/CyberPlayground/commit/93efef123691b7adda466654b06d631ccf8c4adc",
+      "url": "https://github.com/vishwasaithalz/CyberPlayground/commit/5107b03592b60d91c609a9503cd5e8fae4f496e2",
       "ci": "success",
-      "ciUrl": "https://github.com/vishwasaithalz/CyberPlayground/actions/runs/41962119694",
+      "ciUrl": "https://github.com/vishwasaithalz/CyberPlayground/actions/runs/42194996449",
       "release": null,
       "releaseStatus": "checked",
       "providerWarnings": []
@@ -70,20 +88,20 @@
     {
       "name": "YYYH",
       "status": "success",
-      "sha": "8529a57a38b59c151ce335b44b3b4ce2fe70186a",
-      "message": "Route learning CTA to research articles",
-      "commitDate": "2026-11-05T03:27:28Z",
+      "sha": "431e812959f2469c614dfe4172357efb643cff16",
+      "message": "ci: pin verified current official actions to immutable commit SHAs (#6)",
+      "commitDate": "2026-11-06T09:26:50Z",
       "files": [
         {
-          "name": "src/components/SeoLandingView.tsx",
+          "name": ".github/workflows/ci.yml",
           "status": "modified",
           "additions": 1,
           "deletions": 1
         }
       ],
-      "url": "https://github.com/vishwasaithalz/YYYH/commit/8529a57a38b59c151ce335b44b3b4ce2fe70186a",
+      "url": "https://github.com/vishwasaithalz/YYYH/commit/431e812959f2469c614dfe4172357efb643cff16",
       "ci": "success",
-      "ciUrl": "https://github.com/vishwasaithalz/YYYH/actions/runs/41961719164",
+      "ciUrl": "https://github.com/vishwasaithalz/YYYH/actions/runs/42195117658",
       "release": null,
       "releaseStatus": "checked",
       "providerWarnings": []
