@@ -22,9 +22,9 @@ Status: research and drafting only; no Quora publishing integration connected.
 
 These are proposed topic concepts, not verified Quora questions. They have no confirmed question URLs, dates, follower counts or inspected answer competition. Each must be matched to a real question before publication.
 
-1. GitHub Actions workflow security — least privilege, untrusted contributions, secrets and third-party actions. Priority 9.0/10.
-2. Authentication versus authorization in API security — server-side object-level access checks. Priority 8.7/10.
-3. JavaScript async/await error handling — promise rejection versus HTTP error status. Priority 8.4/10.
+1. GitHub Actions workflow security  -  least privilege, untrusted contributions, secrets and third-party actions. Priority 9.0/10.
+2. Authentication versus authorization in API security  -  server-side object-level access checks. Priority 8.7/10.
+3. JavaScript async/await error handling  -  promise rejection versus HTTP error status. Priority 8.4/10.
 
 ## Editorial policy
 
