@@ -24,6 +24,17 @@ function changeTab(id) {
 tabs.forEach(tab => tab.addEventListener("click", () => changeTab(tab.dataset.tab)));
 const initial = location.hash.slice(1);
 if (["chat", "terminal", "snake", "pinball", "roulette"].includes(initial)) changeTab(initial);
+window.addEventListener("hashchange", () => {
+  const tabId = location.hash.slice(1);
+  if (["chat","terminal","snake","pinball","roulette"].includes(tabId)) changeTab(tabId);
+});
+document.querySelectorAll(".gif-gallery img[data-fallback]").forEach(img => {
+  img.addEventListener("error", () => {
+    if (img.dataset.didFallback) return;
+    img.dataset.didFallback="true";
+    img.src=img.dataset.fallback;
+  });
+});
 
 const topics = [
   {match: /^(2013|history|origin|start|blog|old)/i, text: "2013. The first tech blog was YinYangYoHackers. Curiosity came first, polish arrived much later. The archive is still part of this story. 🌗"},
