@@ -17,12 +17,24 @@ function changeTab(id) {
   }
   if (id === "terminal") $("#term-input").focus();
   if (id === "snake") $("#game").focus();
+  if (id === "pinball") $("#pinball-canvas").focus();
   if (id === "chat") $("#chat-input").focus();
   if (location.hash !== "#" + id) history.replaceState(null, "", "#" + id);
 }
 tabs.forEach(tab => tab.addEventListener("click", () => changeTab(tab.dataset.tab)));
 const initial = location.hash.slice(1);
-if (["chat", "terminal", "snake", "roulette"].includes(initial)) changeTab(initial);
+if (["chat", "terminal", "snake", "pinball", "roulette"].includes(initial)) changeTab(initial);
+window.addEventListener("hashchange", () => {
+  const tabId = location.hash.slice(1);
+  if (["chat","terminal","snake","pinball","roulette"].includes(tabId)) changeTab(tabId);
+});
+document.querySelectorAll(".gif-gallery img[data-fallback]").forEach(img => {
+  img.addEventListener("error", () => {
+    if (img.dataset.didFallback) return;
+    img.dataset.didFallback="true";
+    img.src=img.dataset.fallback;
+  });
+});
 
 const topics = [
   {match: /^(2013|history|origin|start|blog|old)/i, text: "2013. The first tech blog was YinYangYoHackers. Curiosity came first, polish arrived much later. The archive is still part of this story. 🌗"},
@@ -80,7 +92,7 @@ function termLine(text, kind = "") {
   $("#term-output").appendChild(line);
   $("#term-output").scrollTop = $("#term-output").scrollHeight;
 }
-termLine("KARMA.EXE [version 2.0]  |  public, local, read-only", "system");
+termLine("KARMA.EXE [version 3.0]  |  public, local, read-only", "system");
 termLine("Type 'help' for available commands. No shell commands are executed.", "system");
 termLine(" ");
 const projects = [
@@ -97,7 +109,7 @@ function command(value) {
   termLine("karma@github:~$ " + value, "command");
   const parts = clean.split(/\s+/);
   switch(parts[0]) {
-    case "help": termLine("help | about | ls | projects | story | status | whoami | date | open [project] | chat | snake | roulette | clear"); break;
+    case "help": termLine("help | about | ls | projects | story | status | whoami | date | open [project] | chat | snake | pinball | roulette | gallery | clear"); break;
     case "about": termLine("KARMA is a public maker-workshop for defensive security, automation and web experiments."); break;
     case "whoami": termLine("vishwasaithalz | returning technologist | learning by shipping"); break;
     case "ls": termLine("LogSentry/  recon-lite/  AI-Automation-Lab/  CyberPlayground/  YYYH/  KARMA-Ops-Monitor/"); break;
@@ -108,6 +120,8 @@ function command(value) {
     case "chat": changeTab("chat");break;
     case "snake": changeTab("snake");break;
     case "roulette": changeTab("roulette");break;
+    case "pinball": changeTab("pinball");break;
+    case "gallery": document.querySelector("#project-motion")?.scrollIntoView({behavior:"smooth"});break;
     case "clear": $("#term-output").replaceChildren();break;
     case "open": {
       const key = parts.slice(1).join("-").replace(/[^a-z0-9-]/g,"");

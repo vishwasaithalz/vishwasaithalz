@@ -14,9 +14,10 @@
 > **🪐 From a 2013 blog to modern security labs.** I'm a returning technologist building practical, local-first defensive tools, safe educational experiments, reproducible automation and public engineering notes. Read the code, try a demo, or explore the story.
 
 <p align="center">
-<a href="https://vishwasaithalz.github.io/vishwasaithalz/arcade/#snake"><img src="assets/nav/arcade.svg" width="31%" alt="Play the real browser Snake arcade" /></a>
-<a href="https://vishwasaithalz.github.io/vishwasaithalz/arcade/#chat"><img src="assets/nav/chat.svg" width="31%" alt="Open an interactive scripted origin-story conversation" /></a>
-<a href="https://vishwasaithalz.github.io/vishwasaithalz/arcade/#terminal"><img src="assets/nav/terminal.svg" width="31%" alt="Use the interactive browser terminal explorer" /></a>
+<a href="https://vishwasaithalz.github.io/vishwasaithalz/arcade/#snake"><img src="assets/nav/arcade.svg" width="23%" alt="Play the original Snake browser game" /></a>
+<a href="https://vishwasaithalz.github.io/vishwasaithalz/arcade/#pinball"><img src="assets/nav/pinball.svg" width="23%" alt="Play KARMA 198X physics pinball" /></a>
+<a href="https://vishwasaithalz.github.io/vishwasaithalz/arcade/#chat"><img src="assets/nav/chat.svg" width="23%" alt="Talk to the interactive scripted story" /></a>
+<a href="https://vishwasaithalz.github.io/vishwasaithalz/arcade/#terminal"><img src="assets/nav/terminal.svg" width="23%" alt="Use the interactive browser terminal explorer" /></a>
 </p>
 
 ## 🌈 01 / Choose your universe
@@ -134,6 +135,31 @@ The public metadata script fetches the current repository information only when 
 - [Next.js Boilerplate](https://github.com/vishwasaithalz/nextjs-boilerplate): starter and sandbox.
 - [Profile design catalog](https://github.com/abhisheknaiidu/awesome-github-profile-readme): open-source inspiration.
 - [Real animation workflows](https://github.com/vishwasaithalz/vishwasaithalz/actions): see GitHub Actions runs.
+
+</details>
+
+## 🕹️ ARCADE 3.0 / A playable workshop
+
+The KARMA Arcade includes an original physics pinball table, Snake, a local scripted story chat, a read-only simulated terminal and a project roulette. No gameplay data is sent to an external service.
+
+<p align="center">
+<a href="https://vishwasaithalz.github.io/vishwasaithalz/arcade/#pinball"><img src="assets/nav/pinball.svg" width="47%" alt="Play the physics-based KARMA Pinball game" /></a>
+<a href="https://vishwasaithalz.github.io/vishwasaithalz/arcade/#roulette"><img src="assets/nav/arcade.svg" width="47%" alt="Explore the random real-project arcade" /></a>
+</p>
+
+<details>
+<summary><strong>🎞 Open six project-specific original animated GIFs</strong></summary>
+
+<p align="center">
+<a href="https://github.com/vishwasaithalz/LogSentry"><img src="assets/arcade-gifs/logsentry.gif" width="31%" alt="LogSentry event scanner animation" /></a>
+<a href="https://recon-lite.vercel.app"><img src="assets/arcade-gifs/recon-lite.gif" width="31%" alt="Recon Lite header sweep animation" /></a>
+<a href="https://github.com/vishwasaithalz/AI-Automation-Lab"><img src="assets/arcade-gifs/automation-lab.gif" width="31%" alt="Automation Lab workflow pulse animation" /></a>
+<a href="https://cyber-playground-nu.vercel.app"><img src="assets/arcade-gifs/cyberplayground.gif" width="31%" alt="CyberPlayground retro pixel runner animation" /></a>
+<a href="https://yyyh-phi.vercel.app"><img src="assets/arcade-gifs/yyyh.gif" width="31%" alt="YYYH retro spinner animation" /></a>
+<a href="https://karma-ops-monitor.vercel.app"><img src="assets/arcade-gifs/karma-ops.gif" width="31%" alt="KARMA Ops radar sweep animation" /></a>
+</p>
+
+Each clip depicts the project's theme. Graphics do not represent live security findings, simulated user data or measured production performance.
 
 </details>
 

@@ -34,6 +34,14 @@ jobs:
           assert 'KARMA Command Deck' in readme
           assert 'https://github.com/vishwasaithalz' in readme
           for path in re.findall(r'(?:src|href)="(assets/[^"]+)"', readme):
+              if path.startswith("assets/arcade-gifs/"):
+                  # GIFs are generated and checked in the dedicated Arcade workflow.
+                  assert Path("scripts/generate-karma-arcade-gifs.py").is_file()
+                  assert Path(path).name in {
+                      "logsentry.gif", "recon-lite.gif", "automation-lab.gif",
+                      "cyberplayground.gif", "yyyh.gif", "karma-ops.gif",
+                  }
+                  continue
               assert Path(path).is_file(), f"Missing local asset: {path}"
           for path in Path('assets').glob('*.svg'):
               ET.parse(path)
