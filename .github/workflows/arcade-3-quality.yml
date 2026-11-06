@@ -1,0 +1,89 @@
+name: KARMA Arcade 3 GIFs and playable UI checks
+
+on:
+  pull_request:
+    paths:
+      - arcade/**
+      - scripts/generate-karma-arcade-gifs.py
+      - .github/workflows/arcade-3-quality.yml
+      - README.md
+  push:
+    branches: [main]
+    paths:
+      - arcade/**
+      - scripts/generate-karma-arcade-gifs.py
+      - .github/workflows/arcade-3-quality.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  verify-and-render:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - name: Check out KARMA profile
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: true
+      - name: Set up Python
+        uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
+        with:
+          python-version: "3.12"
+      - name: Validate browser JavaScript
+        run: |
+          node --check arcade/app.js
+          node --check arcade/pinball.js
+          python -m py_compile scripts/generate-karma-arcade-gifs.py
+      - name: Verify complete UI wiring and visible punctuation
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          page=Path("arcade/index.html").read_text(encoding="utf-8")
+          app=Path("arcade/app.js").read_text(encoding="utf-8")
+          game=Path("arcade/pinball.js").read_text(encoding="utf-8")
+          readme=Path("README.md").read_text(encoding="utf-8")
+          for key in ("pinball-canvas", "pinball-launch", "pinball-reset", "pinball-pause", "pinball-score", "pinball-lives", "pinball-status"):
+              assert ('id="'+key+'"') in page, f"Missing pinball control: {key}"
+          for tab in ("chat", "terminal", "snake", "pinball", "roulette"):
+              assert ('id="'+tab+'"') in page, f"Missing tab: {tab}"
+          assert "pinball.js" in page
+          assert 'requestAnimationFrame(frame)' in game
+          assert "pinball" in app
+          assert "arcade-gifs" in page
+          for src in (page, readme):
+              assert not any(c in src for c in "\u2014\u2015\u2e3a\u2e3b"), "Long dash in visible text"
+          print("Arcade 3.0 source and wiring verified")
+          PY
+      - name: Install image renderer
+        run: python -m pip install --disable-pip-version-check 'Pillow==11.3.0'
+      - name: Render six original project GIFs
+        run: python scripts/generate-karma-arcade-gifs.py
+      - name: Validate six independent GIF outputs
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          from PIL import Image
+          paths=sorted(Path("assets/arcade-gifs").glob("*.gif"))
+          assert len(paths)==6, f"Expected six GIFs, found {len(paths)}"
+          for p in paths:
+              with Image.open(p) as im:
+                  assert im.n_frames >= 20
+                  assert im.size == (480,270)
+                  assert im.info.get("loop")==0
+              assert p.stat().st_size<2000000, f"Oversized GIF: {p.name}"
+          print("All six unique animated GIFs passed")
+          PY
+      - name: Commit GIFs on main only
+        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/arcade-gifs/
+          if ! git diff --cached --quiet; then
+            git commit -m "media: render six distinct original KARMA Arcade GIFs"
+            git push
+          else
+            echo "Generated art unchanged"
+          fi
