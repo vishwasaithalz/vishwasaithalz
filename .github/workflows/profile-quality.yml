@@ -1,0 +1,44 @@
+name: Profile quality
+on:
+  push:
+    paths:
+      - README.md
+      - assets/**
+      - tools/**
+      - .github/workflows/profile-quality.yml
+  pull_request:
+    paths:
+      - README.md
+      - assets/**
+      - tools/**
+      - .github/workflows/profile-quality.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Verify profile source and local assets
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import re
+          import xml.etree.ElementTree as ET
+          readme = Path('README.md').read_text(encoding='utf-8')
+          assert 'KARMA Command Deck' in readme
+          assert 'https://github.com/vishwasaithalz' in readme
+          for path in re.findall(r'(?:src|href)="(assets/[^"]+)"', readme):
+              assert Path(path).is_file(), f"Missing local asset: {path}"
+          for path in Path('assets').glob('*.svg'):
+              ET.parse(path)
+          assert 'visitor-badge' not in readme.lower()
+          print('Profile README and SVG checks passed')
+          PY
+      - name: Compile public metrics utility
+        run: python -m py_compile tools/github_public_metrics.py
