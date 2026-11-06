@@ -1,6 +1,8 @@
 <!-- KARMA Command Deck | verified links 2026-11-06 -->
 <p align="center"><img src="assets/karma-arcade-hero.svg" width="100%" alt="KARMA rainbow arcade: build, secure, automate" /></p>
 
+<p align="center"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&amp;weight=700&amp;size=22&amp;duration=3000&amp;pause=900&amp;color=FF73A8&amp;center=true&amp;vCenter=true&amp;width=720&amp;height=55&amp;lines=Defensive+Security+%7C+Python;Automation+Engineering+%7C+JavaScript;Building+Since+2013+%7C+KARMA" alt="Animated KARMA identity: defensive security, automation engineering, building since 2013" /></p>
+
 <p align="center">
   <strong>Vishwas Aithal</strong> · Defensive security · Python & JavaScript · AI workflow experiments
 </p>
@@ -37,7 +39,29 @@ Six projects, six visual identities. No duplicate cards, no fabricated metrics, 
 
 <sub>Public homepages checked in a read-only browser on 2026-11-06. The KARMA workshop homepage is a broader portfolio, not a standalone monitoring dashboard. Hosted landing-page checks do not certify every feature.</sub>
 
-## 🛠️ 02 / Built, tested, documented
+## 🪐 02 / The repository universe
+
+![KARMA repository orbit](dist/github-cosmos.svg)
+
+The living orbit represents repositories and their technical relationships. [Generator](.github/workflows/karma-orbit.yml). Until the first successful generator run, the image explicitly identifies itself as a preview.
+
+## 📺 03 / Contribution signal
+
+![KARMA contribution history](assets/crt/crt-winamp.svg)
+
+Retro Winamp-inspired contribution visualization. [Generator](.github/workflows/karma-crt.yml). The initial image is a clearly labelled placeholder, not invented activity data.
+
+## 🐍 04 / The contribution arcade
+
+![KARMA contribution snake](dist/karma-snake.svg)
+
+A snake crossing the contribution grid, updated from actual public GitHub contributions when its [weekly generator](.github/workflows/karma-snake.yml) succeeds. The initial animation is explicitly marked as a preview.
+
+## 💬 05 / The origin story
+
+<p align="center"><img src="assets/karma-story-chat.svg" width="780" alt="Four-message animated story: from the 2013 internet to modern security and automation projects" /></p>
+
+## 🛠️ 06 / Built, tested, documented
 
 - **Local-first by default:** avoid uploading sensitive Windows logs or user data to public demos.
 - **Testable increments:** synthetic fixtures, explicit scope and reproducible commands.
@@ -51,7 +75,7 @@ python tools/github_public_metrics.py
 
 [View the metrics source](tools/github_public_metrics.py) · [Review LogSentry's merged documentation improvement](https://github.com/vishwasaithalz/LogSentry/pull/2)
 
-## ⚡ 03 / The toolkit
+## ⚡ 07 / The toolkit
 
 <p>
   <img src="https://img.shields.io/badge/Python-192332?style=flat-square&logo=python&logoColor=white" alt="Python" />
@@ -62,7 +86,7 @@ python tools/github_public_metrics.py
   <img src="https://img.shields.io/badge/GitHub_Actions-192332?style=flat-square&logo=githubactions&logoColor=white" alt="GitHub Actions" />
 </p>
 
-## 📡 04 / The signal board
+## 📡 08 / The signal board
 
 The metrics script reads **real public GitHub REST API data** for six repositories. Counts are fetched when the script runs and may be unavailable during rate limits. These counts are **not GitHub achievement awards**. Official GitHub achievements are shown by GitHub itself, not manufactured in this README.
 
@@ -75,7 +99,7 @@ The metrics script reads **real public GitHub REST API data** for six repositori
 
 </details>
 
-## 🎞️ 05 / The motion vault
+## 🎞️ 09 / The motion vault
 
 A tiny piece of the old internet, rebuilt for a modern README. The animation is optional; the projects and links above remain useful without it.
 
@@ -86,8 +110,14 @@ A tiny piece of the old internet, rebuilt for a modern README. The animation is 
 
 </details>
 
-## 💌 06 / Find me online
+## 💌 10 / Find me online
 
 [GitHub](https://github.com/vishwasaithalz) · [LinkedIn](https://www.linkedin.com/in/vishwas-aithal) · [YouTube](https://www.youtube.com/@vishwasaithalz)
 
 <sub>Designed to be useful without remote widgets. No visitor-tracking counters, fabricated stars, fake achievements or private project disclosures. © Vishwas Aithal.</sub>
+
+## 📡 Open Comms · Contact KARMA
+
+<a href="mailto:vishwas.ptv@gmail.com"><img src="assets/karma-comms.svg" width="100%" alt="Animated contact console: email KARMA about collaboration and security research" /></a>
+
+<sub>All generated activity displays use public GitHub information. No private repository names or confidential logs are intentionally included. Animated SVGs provide reduced-motion fallbacks where supported.</sub>

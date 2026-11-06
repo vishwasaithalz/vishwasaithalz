@@ -1,0 +1,24 @@
+name: KARMA contribution snake
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '35 2 * * 1'
+permissions:
+  contents: write
+jobs:
+  snake:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: Platane/snk/svg-only@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            dist/karma-snake.svg?color_snake=%23FF73A8&color_dots=%23170B3D,%233D326A,%2365DEFF,%23D8A3FF,%23A9FF78
+      - name: Publish generated SVG only when changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add dist/karma-snake.svg
+          git diff --cached --quiet || (git commit -m "chore: refresh contribution snake" && git push)
