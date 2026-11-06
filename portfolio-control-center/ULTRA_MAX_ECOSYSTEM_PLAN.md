@@ -1,4 +1,4 @@
-# KARMA ULTRA MAX — Multi-site Upgrade Program
+# KARMA ULTRA MAX  -  Multi-site Upgrade Program
 
 Updated: 2026-11-05  
 Owner: vishwasaithalz  
@@ -55,24 +55,24 @@ Purpose: evolve the existing website portfolio into distinct, useful products wi
 
 ## Delivery sequence
 
-### Wave 0 — Inventory and protection
+### Wave 0  -  Inventory and protection
 - Confirm canonical repo, Vercel project, production alias, visibility and hosting for each site.
 - Record current commit and deployment before changes.
 - Mark held, private, preview-only and approval-gated projects.
 - Identify source repositories for Vercel projects that are not Git-connected.
 
-### Wave 1 — Core product quality
+### Wave 1  -  Core product quality
 - Prioritize YYYH, Recon Lite, Flagship API, Next.js Forge and Download Manager.
 - Implement real functionality in the existing architecture, not static mock cards.
 - Add tests and docs with each feature.
 
-### Wave 2 — Content and creative products
+### Wave 2  -  Content and creative products
 - Improve NOSTALGIA.EXE public archive and its private Instagram dashboard.
 - Improve NetMirror in its Cloudflare source/hosting workflow.
 - Upgrade KARMA CUT LAB after verifying its current provider and image pipeline.
 - Preserve the single private Build Journal.
 
-### Wave 3 — Integration and observability
+### Wave 3  -  Integration and observability
 - Add only supported connectors with explicit permission and least privilege.
 - Connect project status and release information to the private Control Center.
 - Add scheduled checks only when they do not duplicate or alter existing automations.
