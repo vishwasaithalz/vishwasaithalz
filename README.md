@@ -43,19 +43,23 @@ Six projects, six visual identities. No duplicate cards, no fabricated metrics, 
 
 ![KARMA repository orbit](dist/github-cosmos.svg)
 
-The living orbit represents repositories and their technical relationships. [Generator](.github/workflows/karma-orbit.yml). Until the first successful generator run, the image explicitly identifies itself as a preview.
+The living orbit represents repositories and their technical relationships. [Generator](.github/workflows/karma-orbit.yml). Generated from public repository metadata by the successful GitHub Actions workflow.
 
 ## 📺 03 / Contribution signal
 
-![KARMA contribution history](assets/crt/crt-winamp.svg)
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/crt/winamp-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="assets/crt/winamp-light.svg" />
+  <img src="assets/crt/winamp-dark.svg" alt="Real GitHub contribution history rendered in the Winamp CRT style" width="100%" />
+</picture>
 
-Retro Winamp-inspired contribution visualization. [Generator](.github/workflows/karma-crt.yml). The initial image is a clearly labelled placeholder, not invented activity data.
+Retro Winamp-inspired contribution visualization. [Generator](.github/workflows/karma-crt.yml). Generated from real public GitHub contribution data; dark and light themes are available.
 
 ## 🐍 04 / The contribution arcade
 
 ![KARMA contribution snake](dist/karma-snake.svg)
 
-A snake crossing the contribution grid, updated from actual public GitHub contributions when its [weekly generator](.github/workflows/karma-snake.yml) succeeds. The initial animation is explicitly marked as a preview.
+A snake crossing the contribution grid, updated from actual public GitHub contributions when its [weekly generator](.github/workflows/karma-snake.yml) succeeds. Generated from real public GitHub contribution data by the successful GitHub Actions workflow.
 
 ## 💬 05 / The origin story
 
