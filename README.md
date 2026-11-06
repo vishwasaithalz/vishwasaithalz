@@ -1,6 +1,7 @@
 <!-- KARMA public profile | visual copy reviewed 2026-11-06 | no long dash punctuation -->
 <p align="center"><img src="assets/karma-arcade-hero.svg" width="100%" alt="KARMA Rainbow Arcade. Build, Secure, Automate" /></p>
 <p align="center"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&amp;weight=700&amp;size=22&amp;duration=3000&amp;pause=900&amp;color=FF73A8&amp;center=true&amp;vCenter=true&amp;width=720&amp;height=55&amp;lines=Defensive+Security+%7C+Python;Automation+Engineering+%7C+JavaScript;Building+Since+2013+%7C+KARMA" alt="Typing intro: cybersecurity, automation, and building since 2013" /></p>
+<p align="center"><strong>KARMA Command Deck: Arcade Edition</strong></p>
 <p align="center"><strong>Vishwas Aithal</strong> · Defensive security · Python and JavaScript · AI workflow experiments</p>
 
 <p align="center">
