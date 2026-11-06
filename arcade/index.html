@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <meta name="description" content="KARMA.EXE is an original interactive security and automation project arcade: a scripted origin-story chat, terminal explorer, playable Snake, and project roulette.">
+  <meta name="theme-color" content="#170b3d">
+  <title>KARMA.EXE | Interactive project arcade</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div class="sky" aria-hidden="true"></div>
+  <div class="shell">
+    <header class="hero">
+      <div class="eyebrow"><span class="live-dot"></span> SYSTEM ONLINE <span class="sep">/</span> ORIGINAL WEB ARCADE <span class="sep">/</span> 2013 TO NOW</div>
+      <h1>KARMA<span>.EXE</span></h1>
+      <p class="lead">One browser. Four doors. A thousand unfinished ideas that became working projects.</p>
+      <div class="hero-actions">
+        <a href="https://github.com/vishwasaithalz" class="hero-link">↖ GitHub home</a>
+        <a href="https://github.com/vishwasaithalz?tab=repositories" class="hero-link alt">Explore public builds ↗</a>
+      </div>
+    </header>
+    <nav class="tabs" aria-label="KARMA interactive modes">
+      <button class="tab active" type="button" data-tab="chat" aria-controls="chat" aria-selected="true">💬 STORY CHAT</button>
+      <button class="tab" type="button" data-tab="terminal" aria-controls="terminal" aria-selected="false">⌨ TERMINAL</button>
+      <button class="tab" type="button" data-tab="snake" aria-controls="snake" aria-selected="false">🐍 SNAKE</button>
+      <button class="tab" type="button" data-tab="roulette" aria-controls="roulette" aria-selected="false">🎲 PROJECT ROULETTE</button>
+    </nav>
+    <main>
+      <section class="panel active" id="chat" aria-labelledby="chat-heading">
+        <div class="panel-heading"><div><div class="tag pink">CHAPTER 01 / MEMORY LANE</div><h2 id="chat-heading">Talk to the timeline</h2></div><div class="status">● SCRIPTED LOCAL CHAT</div></div>
+        <p class="note">A playful, interactive story. Replies are prewritten and run entirely in your browser. This is not an AI chatbot or a conversation with a real person.</p>
+        <div class="chat-window">
+          <div class="chat-top"><span class="avatar">K</span><div><strong>KARMA / ARCHIVE</strong><small>Interactive story guide, not an AI assistant</small></div><span class="signal">ONLINE</span></div>
+          <div id="chat-log" class="chat-log" role="log" aria-live="polite" aria-relevant="additions"></div>
+          <div id="typing" class="typing" aria-live="polite" hidden>Archive is typing <span>● ● ●</span></div>
+          <div class="quick" aria-label="Suggested conversation topics">
+            <button type="button" data-prompt="2013">🌗 2013</button><button type="button" data-prompt="security">🛡 Security</button><button type="button" data-prompt="automation">🤖 Automation</button><button type="button" data-prompt="projects">🚀 Projects</button><button type="button" data-prompt="why karma">✨ Why KARMA?</button>
+          </div>
+          <form id="chat-form" class="chat-form"><label class="sr-only" for="chat-input">Message to scripted archive</label><input id="chat-input" maxlength="160" autocomplete="off" placeholder="Ask about 2013, projects, security..." required><button type="submit">SEND ↗</button></form>
+        </div>
+      </section>
+      <section class="panel" id="terminal" aria-labelledby="terminal-heading" hidden>
+        <div class="panel-heading"><div><div class="tag cyan">CHAPTER 02 / ROOT ACCESS TO STORIES</div><h2 id="terminal-heading">KARMA Terminal</h2></div><div class="status">● READ ONLY</div></div>
+        <p class="note">This terminal is a self-contained project explorer. It does not execute shell commands, access your computer, or contact a server.</p>
+        <div class="terminal">
+          <div class="term-bar"><span class="dots">● ● ●</span> karma@github : ~/builds <span class="term-state">LOCAL MODE</span></div>
+          <div id="term-output" class="term-output" role="log" aria-live="polite" aria-relevant="additions"></div>
+          <form id="term-form" class="term-form"><span aria-hidden="true" class="prompt">karma@github:~$</span><label class="sr-only" for="term-input">Enter an explorer command</label><input id="term-input" autocomplete="off" spellcheck="false" placeholder="help" maxlength="100" required></form>
+        </div>
+        <div class="quick" aria-label="Terminal shortcuts"><button type="button" data-command="help">help</button><button type="button" data-command="projects">projects</button><button type="button" data-command="story">story</button><button type="button" data-command="status">status</button><button type="button" data-command="clear">clear</button></div>
+      </section>
+      <section class="panel" id="snake" aria-labelledby="snake-heading" hidden>
+        <div class="panel-heading"><div><div class="tag lime">CHAPTER 03 / THE CONTRIBUTION ARCADE</div><h2 id="snake-heading">Snake: Commit Quest</h2></div><div class="status">● PLAYABLE, OFFLINE</div></div>
+        <p class="note">An original arcade companion to the real GitHub contribution-snake graphic. Collect commits, dodge the walls and don't bite the tail. No score is uploaded or tracked.</p>
+        <div class="score-bar"><span>SCORE <strong id="score">000</strong></span><span>BEST THIS VISIT <strong id="best">000</strong></span><span id="game-status">READY</span></div>
+        <canvas id="game" width="560" height="336" tabindex="0" aria-label="Snake game playfield. Use arrow keys or WASD. A touch control pad is below."></canvas>
+        <div class="game-actions"><button id="start-game" type="button">▶ START / RESTART</button><button id="pause-game" type="button">Ⅱ PAUSE</button><span>ARROWS / WASD</span></div>
+        <div class="pad" aria-label="Touch game controls"><button type="button" data-dir="up" aria-label="Move up">↑</button><div><button type="button" data-dir="left" aria-label="Move left">←</button><button type="button" data-dir="down" aria-label="Move down">↓</button><button type="button" data-dir="right" aria-label="Move right">→</button></div></div>
+      </section>
+      <section class="panel" id="roulette" aria-labelledby="roulette-heading" hidden>
+        <div class="panel-heading"><div><div class="tag yellow">CHAPTER 04 / THE PROJECT GENERATOR</div><h2 id="roulette-heading">Find your next rabbit hole</h2></div><div class="status">● NO TRACKING</div></div>
+        <p class="note">Explore one real public project at random. There are no paid links, simulated ratings or fictional accomplishments.</p>
+        <div class="roulette-card"><div id="roulette-icon" class="roulette-icon">🎲</div><div class="roulette-eyebrow" id="roulette-type">KARMA PROJECT SELECTOR</div><h3 id="roulette-name">Choose your adventure</h3><p id="roulette-desc">Hit the button to pick one of six public projects.</p><a id="roulette-link" href="https://github.com/vishwasaithalz" target="_blank" rel="noopener noreferrer">EXPLORE PROJECT ↗</a></div>
+        <button id="spin" class="spin" type="button">🎰 SURPRISE ME</button>
+      </section>
+    </main>
+    <footer><div>MADE FOR THE CURIOUS <span>✦</span> BUILT WITHOUT TELEMETRY</div><p>GitHub READMEs cannot execute interactive JavaScript. This companion site provides the buttons, chat and keyboard controls instead.</p><a href="https://github.com/vishwasaithalz/vishwasaithalz">Source and project notes ↗</a></footer>
+  </div>
+  <script src="./app.js" defer></script>
+</body>
+</html>

@@ -1,127 +1,158 @@
-<!-- KARMA Command Deck | verified links 2026-11-06 -->
-<p align="center"><img src="assets/karma-arcade-hero.svg" width="100%" alt="KARMA rainbow arcade: build, secure, automate" /></p>
-
-<p align="center"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&amp;weight=700&amp;size=22&amp;duration=3000&amp;pause=900&amp;color=FF73A8&amp;center=true&amp;vCenter=true&amp;width=720&amp;height=55&amp;lines=Defensive+Security+%7C+Python;Automation+Engineering+%7C+JavaScript;Building+Since+2013+%7C+KARMA" alt="Animated KARMA identity: defensive security, automation engineering, building since 2013" /></p>
+<!-- KARMA public profile | visual copy reviewed 2026-11-06 | no long dash punctuation -->
+<p align="center"><img src="assets/karma-arcade-hero.svg" width="100%" alt="KARMA Rainbow Arcade. Build, Secure, Automate" /></p>
+<p align="center"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&amp;weight=700&amp;size=22&amp;duration=3000&amp;pause=900&amp;color=FF73A8&amp;center=true&amp;vCenter=true&amp;width=720&amp;height=55&amp;lines=Defensive+Security+%7C+Python;Automation+Engineering+%7C+JavaScript;Building+Since+2013+%7C+KARMA" alt="Typing intro: cybersecurity, automation, and building since 2013" /></p>
+<p align="center"><strong>KARMA Command Deck: Arcade Edition</strong></p>
+<p align="center"><strong>Vishwas Aithal</strong> · Defensive security · Python and JavaScript · AI workflow experiments</p>
 
 <p align="center">
-  <strong>Vishwas Aithal</strong> · Defensive security · Python & JavaScript · AI workflow experiments
-</p>
-<p align="center">
-  <a href="https://github.com/vishwasaithalz?tab=repositories">Source code</a> ·
-  <a href="https://yyyh-phi.vercel.app">YinYangYoHackers</a> ·
-  <a href="https://www.linkedin.com/in/vishwas-aithal">LinkedIn</a> ·
-  <a href="https://www.youtube.com/@vishwasaithalz">YouTube</a>
+<a href="https://github.com/vishwasaithalz?tab=repositories"><img src="assets/nav/code.svg" width="23%" alt="Explore GitHub source code" /></a>
+<a href="https://yyyh-phi.vercel.app"><img src="assets/nav/yyyh.svg" width="23%" alt="Visit YinYangYoHackers" /></a>
+<a href="https://www.linkedin.com/in/vishwas-aithal"><img src="assets/nav/linkedin.svg" width="23%" alt="Visit LinkedIn" /></a>
+<a href="https://www.youtube.com/@vishwasaithalz"><img src="assets/nav/youtube.svg" width="23%" alt="Visit YouTube" /></a>
 </p>
 
-> **🪐 From 2013 internet rabbit holes to today’s security labs.** A returning technologist building in public. I work on local-first defensive tools, safe security learning labs, reproducible automation and web engineering. This profile is a field journal of working experiments, not a claim of expert-level mastery.
+> **🪐 From a 2013 blog to modern security labs.** I'm a returning technologist building practical, local-first defensive tools, safe educational experiments, reproducible automation and public engineering notes. Read the code, try a demo, or explore the story.
+
+<p align="center">
+<a href="https://vishwasaithalz.github.io/vishwasaithalz/arcade/#snake"><img src="assets/nav/arcade.svg" width="31%" alt="Play the real browser Snake arcade" /></a>
+<a href="https://vishwasaithalz.github.io/vishwasaithalz/arcade/#chat"><img src="assets/nav/chat.svg" width="31%" alt="Open an interactive scripted origin-story conversation" /></a>
+<a href="https://vishwasaithalz.github.io/vishwasaithalz/arcade/#terminal"><img src="assets/nav/terminal.svg" width="31%" alt="Use the interactive browser terminal explorer" /></a>
+</p>
 
 ## 🌈 01 / Choose your universe
 
-Six projects, six visual identities. No duplicate cards, no fabricated metrics, no fake demo buttons.
+**Six projects. Six different personalities. Compact tiles that lead somewhere useful.** Tap a station to open a real public repository or demo.
 
 <p align="center">
-<img src="assets/projects/logsentry-v2.svg" width="48%" alt="LogSentry defensive event triage original card" />
-<img src="assets/projects/recon-lite-v2.svg" width="48%" alt="Recon Lite security header analysis original card" />
-<img src="assets/projects/automation-lab-v2.svg" width="48%" alt="AI Automation Lab workflow original card" />
-<img src="assets/projects/cyberplayground-v2.svg" width="48%" alt="CyberPlayground safe security learning original card" />
-<img src="assets/projects/yyyh-v2.svg" width="48%" alt="YinYangYoHackers original learning card" />
-<img src="assets/projects/karma-ops-v2.svg" width="48%" alt="KARMA operations original project card" />
+<a href="https://github.com/vishwasaithalz/LogSentry"><img src="assets/tiles/logsentry.svg" width="48%" alt="LogSentry, open defensive Windows event project" /></a>
+<a href="https://recon-lite.vercel.app"><img src="assets/tiles/recon-lite.svg" width="48%" alt="Recon Lite, open public security signals demo" /></a>
+<a href="https://github.com/vishwasaithalz/AI-Automation-Lab"><img src="assets/tiles/automation-lab.svg" width="48%" alt="AI Automation Lab, open reproducible workflow project" /></a>
+<a href="https://cyber-playground-nu.vercel.app"><img src="assets/tiles/cyberplayground.svg" width="48%" alt="CyberPlayground, open safe interactive security learning labs" /></a>
+<a href="https://yyyh-phi.vercel.app"><img src="assets/tiles/yyyh.svg" width="48%" alt="YinYangYoHackers, open the public learning site" /></a>
+<a href="https://karma-ops-monitor.vercel.app"><img src="assets/tiles/karma-ops.svg" width="48%" alt="KARMA Ops, open the portfolio workshop" /></a>
 </p>
 
-| Project | What it demonstrates | Evidence |
+<details>
+<summary><strong>🧪 Show the technical details and source links</strong></summary>
+
+| Project | Scope | Evidence |
 | :-- | :-- | :-- |
-| **[LogSentry](https://github.com/vishwasaithalz/LogSentry)** | Defensive triage of imported Windows security events, with synthetic sample data and explicit investigation limits | Python CLI · [source & setup](https://github.com/vishwasaithalz/LogSentry#readme) |
-| **[Recon Lite](https://github.com/vishwasaithalz/recon-lite)** | Offline-first analysis of HTTP security headers and response signals | [Signal Room demo](https://recon-lite.vercel.app) · [source](https://github.com/vishwasaithalz/recon-lite) |
-| **[AI Automation Lab](https://github.com/vishwasaithalz/AI-Automation-Lab)** | Provider-neutral automation and deterministic local mock workflows | [source & local demo](https://github.com/vishwasaithalz/AI-Automation-Lab#readme) |
-| **[CyberPlayground](https://github.com/vishwasaithalz/CyberPlayground)** | Browser-based educational labs for safe security concepts | [public learning labs](https://cyber-playground-nu.vercel.app) · [source](https://github.com/vishwasaithalz/CyberPlayground) |
-| **[YinYangYoHackers](https://github.com/vishwasaithalz/YYYH)** | Cybersecurity learning, technical publishing and a project with roots in 2013 | [public website](https://yyyh-phi.vercel.app) · [source](https://github.com/vishwasaithalz/YYYH) |
-| **[KARMA Ops Monitor](https://github.com/vishwasaithalz/KARMA-Ops-Monitor)** | Portfolio operations, visibility and engineering process | [KARMA workshop](https://karma-ops-monitor.vercel.app) · [source](https://github.com/vishwasaithalz/KARMA-Ops-Monitor) |
+| [LogSentry](https://github.com/vishwasaithalz/LogSentry) | Imported Windows security event analysis | Python CLI, synthetic fixtures, explicit investigation limits |
+| [Recon Lite](https://github.com/vishwasaithalz/recon-lite) | HTTP security-header and response analysis | [Public Signal Room demo](https://recon-lite.vercel.app) |
+| [AI Automation Lab](https://github.com/vishwasaithalz/AI-Automation-Lab) | Provider-neutral workflow experiments | Deterministic local mock examples |
+| [CyberPlayground](https://github.com/vishwasaithalz/CyberPlayground) | Browser-based security education | [Public learning labs](https://cyber-playground-nu.vercel.app) |
+| [YinYangYoHackers](https://github.com/vishwasaithalz/YYYH) | Cybersecurity learning and technology publishing | [Public website](https://yyyh-phi.vercel.app) |
+| [KARMA Ops Monitor](https://github.com/vishwasaithalz/KARMA-Ops-Monitor) | Portfolio and engineering operations | [KARMA workshop](https://karma-ops-monitor.vercel.app) |
 
-<sub>Public homepages checked in a read-only browser on 2026-11-06. The KARMA workshop homepage is a broader portfolio, not a standalone monitoring dashboard. Hosted landing-page checks do not certify every feature.</sub>
+Public homepages were inspected in a browser on 2026-11-06. A working landing page does not certify every feature. LogSentry and AI Automation Lab have local CLI or mock examples, not a claimed hosted equivalent.
+</details>
 
-## 🪐 02 / The repository universe
+## 🪐 02 / Your repository universe
 
-![KARMA repository orbit](dist/github-cosmos.svg)
+<a href="https://vishwasaithalz.github.io/vishwasaithalz/arcade/#roulette"><img src="dist/github-cosmos.svg" width="100%" alt="Animated repository orbit. Click to explore a real random project in KARMA Arcade." /></a>
 
-The living orbit represents repositories and their technical relationships. [Generator](.github/workflows/karma-orbit.yml). Generated from public repository metadata by the successful GitHub Actions workflow.
+Real public repository relationships, generated by GitHub Actions. Tap the orbit to open the interactive project roulette.
 
-## 📺 03 / Contribution signal
+## 📺 03 / Real contribution signal
 
+<a href="https://github.com/vishwasaithalz/vishwasaithalz/actions/workflows/karma-crt.yml">
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/crt/winamp-dark.svg" />
-  <source media="(prefers-color-scheme: light)" srcset="assets/crt/winamp-light.svg" />
-  <img src="assets/crt/winamp-dark.svg" alt="Real GitHub contribution history rendered in the Winamp CRT style" width="100%" />
+<source media="(prefers-color-scheme: dark)" srcset="assets/crt/winamp-dark.svg" />
+<source media="(prefers-color-scheme: light)" srcset="assets/crt/winamp-light.svg" />
+<img src="assets/crt/winamp-dark.svg" alt="Winamp CRT showing actual GitHub contribution data. Click for workflow." width="100%" />
 </picture>
+</a>
 
-Retro Winamp-inspired contribution visualization. [Generator](.github/workflows/karma-crt.yml). Generated from real public GitHub contribution data; dark and light themes are available.
+A Winamp-inspired chart generated from real public contribution data, not a fictional score.
 
 ## 🐍 04 / The contribution arcade
 
-![KARMA contribution snake](dist/karma-snake.svg)
+<a href="https://vishwasaithalz.github.io/vishwasaithalz/arcade/#snake"><img src="dist/karma-snake.svg" width="100%" alt="GitHub contribution snake from real data. Click to play a real Snake browser game." /></a>
 
-A snake crossing the contribution grid, updated from actual public GitHub contributions when its [weekly generator](.github/workflows/karma-snake.yml) succeeds. Generated from real public GitHub contribution data by the successful GitHub Actions workflow.
+The GitHub graph powers this animation. The clickable Snake game has keyboard controls and a mobile touch pad, with no uploaded scores.
 
-## 💬 05 / The origin story
+## 💬 05 / A story you can actually talk to
 
-<p align="center"><img src="assets/karma-story-chat.svg" width="780" alt="Four-message animated story: from the 2013 internet to modern security and automation projects" /></p>
+<a href="https://vishwasaithalz.github.io/vishwasaithalz/arcade/#chat"><img src="assets/karma-live-chat.svg" width="100%" alt="Animated scripted conversation about the 2013 blog and newer security projects. Click to ask the archive a question." /></a>
 
-## 🛠️ 06 / Built, tested, documented
+**💬 Real input, local replies.** The linked chat accepts questions about the 2013 blog, security labs, automation and projects. It is a scripted interactive timeline, not a human operator or live AI assistant.
 
-- **Local-first by default:** avoid uploading sensitive Windows logs or user data to public demos.
-- **Testable increments:** synthetic fixtures, explicit scope and reproducible commands.
-- **Authorized security work only:** research and test systems where permission is clear.
-- **Readable code and documentation:** state limitations instead of presenting prototypes as production systems.
+<p align="center"><a href="https://vishwasaithalz.github.io/vishwasaithalz/arcade/#chat"><img src="assets/nav/chat.svg" width="48%" alt="Enter the local interactive timeline chat" /></a></p>
+
+## ⌨️ 06 / Terminal access to the workshop
+
+<a href="https://vishwasaithalz.github.io/vishwasaithalz/arcade/#terminal"><img src="assets/karma-terminal-launcher.svg" width="100%" alt="Retro terminal preview. Click to open the usable local command explorer." /></a>
+
+Try `help`, `projects`, `story`, `status`, `open logsentry`, or `snake`. The browser terminal is interactive, but it does **not** execute real shell commands or access anyone's computer.
+
+<p align="center">
+<a href="https://vishwasaithalz.github.io/vishwasaithalz/arcade/#terminal"><img src="assets/nav/terminal.svg" width="48%" alt="Open the playable browser terminal" /></a>
+<a href="https://vishwasaithalz.github.io/vishwasaithalz/arcade/#roulette"><img src="assets/nav/arcade.svg" width="48%" alt="Open the project roulette mini-game" /></a>
+</p>
+
+## 🛠️ 07 / Evidence, not theater
+
+- **Privacy by default:** local-first projects and no public upload of private event logs.
+- **Authorized security research only:** work on systems with explicit permission.
+- **Reproducible experiments:** synthetic fixtures, tests, documented limitations.
+- **A real GitHub API utility:** public metadata via a read-only Python script.
 
 ```bash
-# Example: inspect real public repository metadata, no API token or write permissions
+# Public repository information only. No API token or write access required.
 python tools/github_public_metrics.py
 ```
 
-[View the metrics source](tools/github_public_metrics.py) · [Review LogSentry's merged documentation improvement](https://github.com/vishwasaithalz/LogSentry/pull/2)
-
-## ⚡ 07 / The toolkit
-
-<p>
-  <img src="https://img.shields.io/badge/Python-192332?style=flat-square&logo=python&logoColor=white" alt="Python" />
-  <img src="https://img.shields.io/badge/JavaScript-192332?style=flat-square&logo=javascript&logoColor=white" alt="JavaScript" />
-  <img src="https://img.shields.io/badge/TypeScript-192332?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript" />
-  <img src="https://img.shields.io/badge/Node.js-192332?style=flat-square&logo=nodedotjs&logoColor=white" alt="Node.js" />
-  <img src="https://img.shields.io/badge/Linux-192332?style=flat-square&logo=linux&logoColor=white" alt="Linux" />
-  <img src="https://img.shields.io/badge/GitHub_Actions-192332?style=flat-square&logo=githubactions&logoColor=white" alt="GitHub Actions" />
+<p align="center">
+<a href="https://github.com/vishwasaithalz/vishwasaithalz/blob/main/tools/github_public_metrics.py"><img src="assets/nav/metrics.svg" width="48%" alt="Read the public GitHub REST API metrics source" /></a>
+<a href="https://github.com/vishwasaithalz/LogSentry/pull/2"><img src="assets/nav/logsentry.svg" width="48%" alt="Read the merged LogSentry investigation limits improvement" /></a>
 </p>
 
-## 📡 08 / The signal board
+## ⚡ 08 / The toolkit
 
-The metrics script reads **real public GitHub REST API data** for six repositories. Counts are fetched when the script runs and may be unavailable during rate limits. These counts are **not GitHub achievement awards**. Official GitHub achievements are shown by GitHub itself, not manufactured in this README.
+<p align="center">
+<img src="https://img.shields.io/badge/Python-3E2A78?style=for-the-badge&amp;logo=python&amp;logoColor=FFD86B" alt="Python" />
+<img src="https://img.shields.io/badge/JavaScript-23325C?style=for-the-badge&amp;logo=javascript&amp;logoColor=FFDF5A" alt="JavaScript" />
+<img src="https://img.shields.io/badge/TypeScript-173858?style=for-the-badge&amp;logo=typescript&amp;logoColor=65DEFF" alt="TypeScript" />
+<img src="https://img.shields.io/badge/Node.js-235038?style=for-the-badge&amp;logo=nodedotjs&amp;logoColor=A9FF78" alt="Node.js" />
+<img src="https://img.shields.io/badge/Linux-3F2745?style=for-the-badge&amp;logo=linux&amp;logoColor=FFC55A" alt="Linux" />
+<img src="https://img.shields.io/badge/GitHub_Actions-3E244F?style=for-the-badge&amp;logo=githubactions&amp;logoColor=D8A3FF" alt="GitHub Actions" />
+</p>
 
-<details><summary><strong>Explore more projects and experiments</strong></summary>
+## 📡 09 / The signal board
 
-- [Flagship API](https://github.com/vishwasaithalz/flagship-api) · API engineering experiments.
-- [Next.js Boilerplate](https://github.com/vishwasaithalz/nextjs-boilerplate) · Web development starter and sandbox.
-- [All public repositories](https://github.com/vishwasaithalz?tab=repositories).
-- [GitHub profile redesign design references](https://github.com/abhisheknaiidu/awesome-github-profile-readme).
+The public metadata script fetches the current repository information only when run. Read its code to confirm what it does. Counts do not imply official GitHub achievements or rankings.
+
+<p align="center">
+<a href="https://github.com/vishwasaithalz?tab=repositories"><img src="assets/nav/code.svg" width="48%" alt="Open all public GitHub repositories" /></a>
+<a href="https://karma-ops-monitor.vercel.app"><img src="assets/nav/portfolio.svg" width="48%" alt="Open the live KARMA portfolio workshop" /></a>
+</p>
+
+<details>
+<summary>🧰 More experiments and design references</summary>
+
+- [Flagship API](https://github.com/vishwasaithalz/flagship-api): API engineering experiments.
+- [Next.js Boilerplate](https://github.com/vishwasaithalz/nextjs-boilerplate): starter and sandbox.
+- [Profile design catalog](https://github.com/abhisheknaiidu/awesome-github-profile-readme): open-source inspiration.
+- [Real animation workflows](https://github.com/vishwasaithalz/vishwasaithalz/actions): see GitHub Actions runs.
 
 </details>
 
-## 🎞️ 09 / The motion vault
+## 🎞️ 10 / The original motion vault
 
-A tiny piece of the old internet, rebuilt for a modern README. The animation is optional; the projects and links above remain useful without it.
+<a href="https://vishwasaithalz.github.io/vishwasaithalz/arcade/"><img src="assets/karma-motion.gif" width="72%" alt="Original KARMA animated project signal. Click to open the interactive arcade." /></a>
 
-<p align="center"><img src="assets/karma-orbit.svg" width="100%" alt="KARMA orbit project illustration" /></p>
-<details><summary><strong>Open the original animated artwork</strong></summary>
-
-![KARMA original motion artwork](assets/karma-motion.gif)
-
+<details><summary>Open the original orbital artwork</summary>
+<img src="assets/karma-orbit.svg" width="75%" alt="Original KARMA orbit art" />
 </details>
 
-## 💌 10 / Find me online
+## 💌 11 / Open comms
 
-[GitHub](https://github.com/vishwasaithalz) · [LinkedIn](https://www.linkedin.com/in/vishwas-aithal) · [YouTube](https://www.youtube.com/@vishwasaithalz)
+<a href="mailto:vishwas.ptv@gmail.com"><img src="assets/karma-comms.svg" width="100%" alt="Animated KARMA communications console. Click to email for collaboration." /></a>
 
-<sub>Designed to be useful without remote widgets. No visitor-tracking counters, fabricated stars, fake achievements or private project disclosures. © Vishwas Aithal.</sub>
+<p align="center">
+<a href="https://www.linkedin.com/in/vishwas-aithal"><img src="assets/nav/linkedin.svg" width="31%" alt="Open LinkedIn" /></a>
+<a href="https://www.youtube.com/@vishwasaithalz"><img src="assets/nav/youtube.svg" width="31%" alt="Open YouTube" /></a>
+<a href="https://github.com/vishwasaithalz"><img src="assets/nav/code.svg" width="31%" alt="Open GitHub" /></a>
+</p>
 
-## 📡 Open Comms · Contact KARMA
-
-<a href="mailto:vishwas.ptv@gmail.com"><img src="assets/karma-comms.svg" width="100%" alt="Animated contact console: email KARMA about collaboration and security research" /></a>
-
-<sub>All generated activity displays use public GitHub information. No private repository names or confidential logs are intentionally included. Animated SVGs provide reduced-motion fallbacks where supported.</sub>
+<sub>Public project demonstrations only. No private repository names are exposed. Animated SVGs include reduced-motion styling where supported. The arcade runs locally in the browser with no analytics or API calls. © Vishwas Aithal.</sub>
