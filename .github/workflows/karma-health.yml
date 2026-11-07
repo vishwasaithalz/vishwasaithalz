@@ -1,5 +1,11 @@
 name: KARMA selected-project health
 on:
+  push:
+    branches: [main]
+    paths:
+      - portfolio-control-center/check_health.py
+      - portfolio-control-center/test_check_health.py
+      - .github/workflows/karma-health.yml
   schedule:
     - cron: '30 3 * * *'
   workflow_dispatch:
