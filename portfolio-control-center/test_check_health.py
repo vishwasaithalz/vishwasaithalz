@@ -31,6 +31,14 @@ class FakeResponse:
 
 
 class HealthCheckTests(unittest.TestCase):
+    def test_nextjs_expected_text_matches_current_app_metadata(self):
+        target = next(t for t in health.TARGETS if t["repo"] == "nextjs-boilerplate")
+        self.assertEqual(target["expected"], "Forge UI")
+        with patch.object(health.urllib.request, "urlopen", return_value=FakeResponse(b"<title>Forge UI | KARMA Component Workshop</title>")):
+            result = health.check(target)
+        self.assertEqual(result["status"], "reachable")
+        self.assertTrue(result["contentVerified"])
+
     def test_reachable_when_expected_text_is_present(self):
         with patch.object(health.urllib.request, "urlopen", return_value=FakeResponse(b"<title>Expected Title</title>")):
             result = health.check(TARGET)
