@@ -171,6 +171,19 @@ Each clip depicts the project's theme. Graphics do not represent live security f
 <img src="assets/karma-orbit.svg" width="75%" alt="Original KARMA orbit art" />
 </details>
 
+### 🧪 Four new KARMA engineering labs
+
+Working starter implementations with offline unit tests and explicit, measurable roadmaps. These are **prototypes, not production benchmarks**.
+
+| Lab | Practical starting point | Source and tests |
+|:--|:--|:--|
+| **SentinelPulse** | Bounded L7 signature checks, local rate limiter and CSP nonce | [Open](https://github.com/vishwasaithalz/AI-Automation-Lab/tree/main/projects/SentinelPulse) |
+| **SERPMatrix** | Technical SEO HTML audit and XML sitemap generator | [Open](https://github.com/vishwasaithalz/AI-Automation-Lab/tree/main/projects/SERPMatrix) |
+| **CloudHardener** | Read-only Kubernetes JSON policy assessment | [Open](https://github.com/vishwasaithalz/AI-Automation-Lab/tree/main/projects/CloudHardener) |
+| **ApexVitals** | Route glyph analysis, precompression and srcset planning | [Open](https://github.com/vishwasaithalz/AI-Automation-Lab/tree/main/projects/ApexVitals) |
+
+[Browse all four projects](https://github.com/vishwasaithalz/AI-Automation-Lab/tree/main/projects) · [Verified prototype CI](https://github.com/vishwasaithalz/AI-Automation-Lab/actions/workflows/karma-project-prototypes.yml)
+
 ## 💌 11 / Open comms
 
 <a href="mailto:vishwas.ptv@gmail.com"><img src="assets/karma-comms.svg" width="100%" alt="Animated KARMA communications console. Click to email for collaboration." /></a>
