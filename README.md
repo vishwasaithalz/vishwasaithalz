@@ -171,18 +171,18 @@ Each clip depicts the project's theme. Graphics do not represent live security f
 <img src="assets/karma-orbit.svg" width="75%" alt="Original KARMA orbit art" />
 </details>
 
-### 🧪 Four new KARMA engineering labs
+### 🧪 Four live KARMA engineering labs
 
-Working starter implementations with offline unit tests and explicit, measurable roadmaps. These are **prototypes, not production benchmarks**.
+Four independent Vercel production demos, backed by public source and passing CI. Each is an **interactive prototype, not a production security or performance guarantee**.
 
-| Lab | Practical starting point | Source and tests |
+| Engineering lab | Live workbench | Verified source |
 |:--|:--|:--|
-| **SentinelPulse** | Bounded L7 signature checks, local rate limiter and CSP nonce | [Open](https://github.com/vishwasaithalz/AI-Automation-Lab/tree/main/projects/SentinelPulse) |
-| **SERPMatrix** | Technical SEO HTML audit and XML sitemap generator | [Open](https://github.com/vishwasaithalz/AI-Automation-Lab/tree/main/projects/SERPMatrix) |
-| **CloudHardener** | Read-only Kubernetes JSON policy assessment | [Open](https://github.com/vishwasaithalz/AI-Automation-Lab/tree/main/projects/CloudHardener) |
-| **ApexVitals** | Route glyph analysis, precompression and srcset planning | [Open](https://github.com/vishwasaithalz/AI-Automation-Lab/tree/main/projects/ApexVitals) |
+| **SentinelPulse** | [Open demo](https://karma-sentinelpulse.vercel.app/) | [Rules, limiter, tests](https://github.com/vishwasaithalz/AI-Automation-Lab/tree/main/projects/SentinelPulse) |
+| **SERPMatrix** | [Open demo](https://karma-serpmatrix.vercel.app/) | [SEO auditor, tests](https://github.com/vishwasaithalz/AI-Automation-Lab/tree/main/projects/SERPMatrix) |
+| **CloudHardener** | [Open demo](https://karma-cloudhardener.vercel.app/) | [Kubernetes audit, tests](https://github.com/vishwasaithalz/AI-Automation-Lab/tree/main/projects/CloudHardener) |
+| **ApexVitals** | [Open demo](https://karma-apexvitals.vercel.app/) | [Glyph analysis, gzip, tests](https://github.com/vishwasaithalz/AI-Automation-Lab/tree/main/projects/ApexVitals) |
 
-[Browse all four projects](https://github.com/vishwasaithalz/AI-Automation-Lab/tree/main/projects) · [Verified prototype CI](https://github.com/vishwasaithalz/AI-Automation-Lab/actions/workflows/karma-project-prototypes.yml)
+[Browse all source](https://github.com/vishwasaithalz/AI-Automation-Lab/tree/main/projects) · [Run history](https://github.com/vishwasaithalz/AI-Automation-Lab/actions/workflows/karma-project-prototypes.yml)
 
 ## 💌 11 / Open comms
 
