@@ -1,7 +1,7 @@
 {
   "version": 1,
   "source": "Authenticated GitHub Actions snapshot",
-  "checkedAt": "2026-11-06T11:18:16.837Z",
+  "checkedAt": "2026-11-07T10:32:48.092Z",
   "timeMeaning": "Snapshot content changed at this time; unchanged checks do not create commits.",
   "results": [
     {
@@ -28,38 +28,20 @@
     {
       "name": "AI-Automation-Lab",
       "status": "success",
-      "sha": "ef17a3bc86dceedbdc8d17db958e160363389c94",
-      "message": "KARMA consolidated public SEO and GitHub CI audit runners (#11)\n\n* feat: integrate consolidated audit src/consolidated-audit.mjs\n\n* feat: integrate consolidated audit tests/consolidated-audit.test.mjs\n\n* feat: integrate consolidated audit src/consolidated-readonly-report.mjs\n\n* feat: integrate consolidated audit tests/consolidated-readonly-report.test.mjs",
-      "commitDate": "2026-11-06T10:45:53Z",
+      "sha": "fa830b0e82d50f42c57ff2ca44933bee5fabe148",
+      "message": "ci: verify four live Vercel workbenches on a schedule",
+      "commitDate": "2026-11-07T10:30:25Z",
       "files": [
         {
-          "name": "src/consolidated-audit.mjs",
+          "name": ".github/workflows/karma-live-endpoints.yml",
           "status": "added",
-          "additions": 24,
-          "deletions": 0
-        },
-        {
-          "name": "src/consolidated-readonly-report.mjs",
-          "status": "added",
-          "additions": 32,
-          "deletions": 0
-        },
-        {
-          "name": "tests/consolidated-audit.test.mjs",
-          "status": "added",
-          "additions": 20,
-          "deletions": 0
-        },
-        {
-          "name": "tests/consolidated-readonly-report.test.mjs",
-          "status": "added",
-          "additions": 30,
+          "additions": 26,
           "deletions": 0
         }
       ],
-      "url": "https://github.com/vishwasaithalz/AI-Automation-Lab/commit/ef17a3bc86dceedbdc8d17db958e160363389c94",
+      "url": "https://github.com/vishwasaithalz/AI-Automation-Lab/commit/fa830b0e82d50f42c57ff2ca44933bee5fabe148",
       "ci": "success",
-      "ciUrl": "https://github.com/vishwasaithalz/AI-Automation-Lab/actions/runs/42205150916",
+      "ciUrl": "https://github.com/vishwasaithalz/AI-Automation-Lab/actions/runs/42364231757",
       "release": null,
       "releaseStatus": "checked",
       "providerWarnings": []
