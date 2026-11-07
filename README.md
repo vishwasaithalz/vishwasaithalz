@@ -3,6 +3,7 @@
 <p align="center"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&amp;weight=700&amp;size=22&amp;duration=3000&amp;pause=900&amp;color=FF73A8&amp;center=true&amp;vCenter=true&amp;width=720&amp;height=55&amp;lines=Defensive+Security+%7C+Python;Automation+Engineering+%7C+JavaScript;Building+Since+2013+%7C+KARMA" alt="Typing intro: cybersecurity, automation, and building since 2013" /></p>
 <p align="center"><strong>KARMA Command Deck: Arcade Edition</strong></p>
 <p align="center"><strong>Vishwas Aithal</strong> · Defensive security · Python and JavaScript · AI workflow experiments</p>
+<p align="center"><a href="https://vishwasaithal.ai.studio/"><strong>🌐 Personal Portfolio · Cybersecurity / Web Design / SEO</strong></a></p>
 
 <p align="center">
 <a href="https://github.com/vishwasaithalz?tab=repositories"><img src="assets/nav/code.svg" width="23%" alt="Explore GitHub source code" /></a>
