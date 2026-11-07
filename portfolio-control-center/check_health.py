@@ -6,7 +6,7 @@ from datetime import datetime, timezone
 TARGETS = [
     {"repo":"YYYH","url":"https://yyyh-phi.vercel.app/","expected":"YinYangYoHackers"},
     {"repo":"flagship-api","url":"https://flagship-api.vercel.app/","expected":"Flagship API"},
-    {"repo":"nextjs-boilerplate","url":"https://nextjs-boilerplate-ten-alpha-14.vercel.app/","expected":"Northstar"},
+    {"repo":"nextjs-boilerplate","url":"https://nextjs-boilerplate-ten-alpha-14.vercel.app/","expected":"Forge UI"},
     {"repo":"recon-lite","url":"https://recon-lite.vercel.app/","expected":"RECON LITE"},
     {"repo":"CyberPlayground","url":"https://cyber-playground-nu.vercel.app/","expected":"CyberPlayground"},
 ]
