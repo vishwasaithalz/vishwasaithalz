@@ -1,8 +1,8 @@
-<!-- KARMA public profile | visual copy reviewed 2026-11-06 | no long dash punctuation -->
-<p align="center"><img src="assets/karma-arcade-hero.svg" width="100%" alt="Vishwas Aithal Rainbow Arcade. Build, Secure, Automate" /></p>
+<!-- Vishwas Aithal personal GitHub | original retro desktop art | no long dash punctuation -->
+<p align="center"><img src="assets/retro-memory-desktop.svg" width="100%" alt="Original retro Windows desktop: Vishwas Aithal, the cybercafe kid, with childhood software, games, music player, cartoons and modern code" /></p>
 <p align="center"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&amp;weight=700&amp;size=22&amp;duration=3000&amp;pause=900&amp;color=FF73A8&amp;center=true&amp;vCenter=true&amp;width=720&amp;height=55&amp;lines=Defensive+Security+%7C+Python;Automation+Engineering+%7C+JavaScript;Building+Since+2013+%7C+Vishwas+Aithal" alt="Typing intro: cybersecurity, automation, and building since 2013" /></p>
-<p align="center"><strong>Vishwas Aithal Command Deck: Arcade Edition</strong></p>
-<p align="center"><strong>Vishwas Aithal</strong> · Defensive security · Python and JavaScript · AI workflow experiments</p>
+<p align="center"><strong>VISHWAS.EXE // THE CYBERCAFÉ KID</strong></p>
+<p align="center"><strong>Vishwas Aithal</strong> · 90s PC kid · Blogger since 2013 · Defensive security, web and automation now</p>
 <p align="center"><a href="https://vishwasaithal.ai.studio/"><strong>🌐 Personal Portfolio · Cybersecurity / Web Design / SEO</strong></a></p>
 
 <p align="center">
@@ -12,7 +12,7 @@
 <a href="https://www.youtube.com/@vishwasaithalz"><img src="assets/nav/youtube.svg" width="23%" alt="Visit YouTube" /></a>
 </p>
 
-> **🪐 From a 2013 blog to modern security labs.** I'm a returning technologist building practical, local-first defensive tools, safe educational experiments, reproducible automation and public engineering notes. Read the code, try a demo, or explore the story.
+> **I was the kid who clicked every icon just to find out what it did.** Windows desktops, Winamp playlists, virtual drives, compressed game folders, Saturday morning cartoons, a 2013 tech blog, and a stubborn curiosity about how computers work. Today that curiosity shows up as defensive security tools, websites, automation and experiments you can actually inspect. **The wallpaper changed. The curiosity didn't.**
 
 <p align="center">
 <a href="https://vishwasaithalz.github.io/vishwasaithalz/arcade/#snake"><img src="assets/nav/arcade.svg" width="23%" alt="Play the original Snake browser game" /></a>
@@ -21,9 +21,42 @@
 <a href="https://vishwasaithalz.github.io/vishwasaithalz/arcade/#terminal"><img src="assets/nav/terminal.svg" width="23%" alt="Use the interactive browser terminal explorer" /></a>
 </p>
 
-## 🌈 01 / Choose your universe
+## 💾 00 / C:\\VISHWAS\\MEMORIES\\README.TXT
 
-**Six projects. Six different personalities. Compact tiles that lead somewhere useful.** Tap a station to open a real public repository or demo.
+**Before repositories, there were desktop shortcuts. Before CI, there was the excitement of a successful installation.** This is the software-and-pop-culture time capsule behind my tech journey.
+
+| Folder | Core memory |
+| :-- | :-- |
+| 🎧 **MUSIC & MEDIA** | Winamp skins, VLC playlists, watching the equalizer dance |
+| 💿 **VIRTUAL DRIVES** | Daemon Tools, PowerISO, mounting ISOs and figuring out what a disc image actually was |
+| 🧰 **PC MAINTENANCE** | CCleaner, Registry Mechanic and the great tradition of trying to make Windows faster |
+| 📦 **DOWNLOADS** | WinRAR, Internet Download Manager, µTorrent and folders named `final_v2_really_final` |
+| 🎮 **GAME.EXE** | Snake, Mario, Contra, Tanks (Battle City), Virtua Cop 2, Project I.G.I. and Counter-Strike |
+| 📺 **CARTOON BREAK** | Dexter's Laboratory, Johnny Bravo, Popeye, The Powerpuff Girls, Power Rangers S.P.D., Pokémon and Beyblade |
+| 🌐 **FIRST WEB CHAPTER** | Blogger, YinYangYoHackers, curiosity-driven experiments and the beginning of my online tech archive |
+
+### 🖥️ System restore points
+
+```text
+C:\\> dir /b MY_LIFE
+WINDOWS_95_TO_WINDOWS_11\    A lifetime of desktops and experiments
+AFTER_SCHOOL\                 Games, cartoons, computer shops, curiosity
+2013_BLOGGER\                 YinYangYoHackers and learning in public
+NOW\                          Python, JavaScript, AI, web and defensive security
+
+C:\\> type STATUS.TXT
+Still curious. Still building. Still pressing every button.
+```
+
+**My personality settings:** a little Dexter's Laboratory, a little old-school PC repair shop, a lot of late-night tinkering. I like tech that feels alive, but I still want the code to be understandable, the demos to be real and the security work to be authorized.
+
+<p align="center"><a href="https://vishwasaithalz.github.io/vishwasaithalz/arcade/#snake"><strong>▶ OPEN ARCADE</strong></a> &nbsp;·&nbsp; <a href="https://yyyh-phi.vercel.app"><strong>🌐 OPEN THE BLOG ERA</strong></a> &nbsp;·&nbsp; <a href="https://github.com/vishwasaithalz?tab=repositories"><strong>📁 OPEN PROJECTS</strong></a></p>
+
+---
+
+## 🗂️ 01 / PROGRAM FILES / MY PROJECTS
+
+**Six real shortcuts, six distinct personalities.** These icons open public source code or working demos, not decorative dead ends.
 
 <p align="center">
 <a href="https://github.com/vishwasaithalz/LogSentry"><img src="assets/tiles/logsentry.svg" width="48%" alt="LogSentry, open defensive Windows event project" /></a>
@@ -49,13 +82,13 @@
 Public homepages were inspected in a browser on 2026-11-06. A working landing page does not certify every feature. LogSentry and AI Automation Lab have local CLI or mock examples, not a claimed hosted equivalent.
 </details>
 
-## 🪐 02 / Your repository universe
+## 🌐 02 / NETWORK NEIGHBORHOOD
 
 <a href="https://vishwasaithalz.github.io/vishwasaithalz/arcade/#roulette"><img src="dist/github-cosmos.svg" width="100%" alt="Animated repository orbit. Click to explore a real random project in Vishwas Aithal Arcade." /></a>
 
 Real public repository relationships, generated by GitHub Actions. Tap the orbit to open the interactive project roulette.
 
-## 📺 03 / Real contribution signal
+## 🎚️ 03 / WINAMP-STYLE CONTRIBUTION MIX
 
 <a href="https://github.com/vishwasaithalz/vishwasaithalz/actions/workflows/karma-crt.yml">
 <picture>
@@ -67,13 +100,13 @@ Real public repository relationships, generated by GitHub Actions. Tap the orbit
 
 A Winamp-inspired chart generated from real public contribution data, not a fictional score.
 
-## 🐍 04 / The contribution arcade
+## 🐍 04 / SNAKE.EXE
 
 <a href="https://vishwasaithalz.github.io/vishwasaithalz/arcade/#snake"><img src="dist/karma-snake.svg" width="100%" alt="GitHub contribution snake from real data. Click to play a real Snake browser game." /></a>
 
 The GitHub graph powers this animation. The clickable Snake game has keyboard controls and a mobile touch pad, with no uploaded scores.
 
-## 💬 05 / A story you can actually talk to
+## 💬 05 / THE CHAT WINDOW
 
 <a href="https://vishwasaithalz.github.io/vishwasaithalz/arcade/#chat"><img src="assets/karma-live-chat.svg" width="100%" alt="Animated scripted conversation about the 2013 blog and newer security projects. Click to ask the archive a question." /></a>
 
@@ -81,7 +114,7 @@ The GitHub graph powers this animation. The clickable Snake game has keyboard co
 
 <p align="center"><a href="https://vishwasaithalz.github.io/vishwasaithalz/arcade/#chat"><img src="assets/nav/chat.svg" width="48%" alt="Enter the local interactive timeline chat" /></a></p>
 
-## ⌨️ 06 / Terminal access to the workshop
+## ⌨️ 06 / DOS PROMPT TO MODERN TERMINAL
 
 <a href="https://vishwasaithalz.github.io/vishwasaithalz/arcade/#terminal"><img src="assets/karma-terminal-launcher.svg" width="100%" alt="Retro terminal preview. Click to open the usable local command explorer." /></a>
 
@@ -92,7 +125,7 @@ Try `help`, `projects`, `story`, `status`, `open logsentry`, or `snake`. The bro
 <a href="https://vishwasaithalz.github.io/vishwasaithalz/arcade/#roulette"><img src="assets/nav/arcade.svg" width="48%" alt="Open the project roulette mini-game" /></a>
 </p>
 
-## 🛠️ 07 / Evidence, not theater
+## 🛠️ 07 / BEHIND THE SCREEN
 
 - **Privacy by default:** local-first projects and no public upload of private event logs.
 - **Authorized security research only:** work on systems with explicit permission.
@@ -109,7 +142,7 @@ python tools/github_public_metrics.py
 <a href="https://github.com/vishwasaithalz/LogSentry/pull/2"><img src="assets/nav/logsentry.svg" width="48%" alt="Read the merged LogSentry investigation limits improvement" /></a>
 </p>
 
-## ⚡ 08 / The toolkit
+## ⚡ 08 / CURRENTLY INSTALLED
 
 <p align="center">
 <img src="https://img.shields.io/badge/Python-3E2A78?style=for-the-badge&amp;logo=python&amp;logoColor=FFD86B" alt="Python" />
@@ -120,7 +153,7 @@ python tools/github_public_metrics.py
 <img src="https://img.shields.io/badge/GitHub_Actions-3E244F?style=for-the-badge&amp;logo=githubactions&amp;logoColor=D8A3FF" alt="GitHub Actions" />
 </p>
 
-## 📡 09 / The signal board
+## 📡 09 / SYSTEM INFORMATION
 
 The public metadata script fetches the current repository information only when run. Read its code to confirm what it does. Counts do not imply official GitHub achievements or rankings.
 
@@ -164,7 +197,7 @@ Each clip depicts the project's theme. Graphics do not represent live security f
 
 </details>
 
-## 🎞️ 10 / The original motion vault
+## 🎞️ 10 / SCREENSAVER VAULT
 
 <a href="https://vishwasaithalz.github.io/vishwasaithalz/arcade/"><img src="assets/karma-motion.gif" width="72%" alt="Original Vishwas Aithal animated project signal. Click to open the interactive arcade." /></a>
 
@@ -187,7 +220,7 @@ Six independent Vercel workbenches with source code, automated tests and daily H
 
 [Explore all six project folders](https://github.com/vishwasaithalz/AI-Automation-Lab/tree/main/projects) · [Live uptime checks](https://github.com/vishwasaithalz/AI-Automation-Lab/actions/workflows/karma-live-endpoints.yml)
 
-## 💌 11 / Open comms
+## 💌 11 / SEND A MESSAGE
 
 <a href="mailto:vishwas.ptv@gmail.com"><img src="assets/karma-comms.svg" width="100%" alt="Animated Vishwas Aithal communications console. Click to email for collaboration." /></a>
 
