@@ -73,8 +73,8 @@ details summary{cursor:pointer;font-weight:700;color:var(--mint)}
 .shortcut-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:8px}
 .shortcut-grid a{display:flex;flex-direction:column;gap:5px;text-decoration:none;background:var(--inset);border:1px solid var(--border);padding:12px;min-height:85px}
 .shortcut-grid a span{font-size:22px}.shortcut-grid a:hover{background:var(--button)}
-#boot,#screensaver,#login{position:fixed;inset:0;z-index:100;display:none}
-#boot.show,#screensaver.show,#login.show{display:grid}
+#boot,#screensaver,#login,#bsod{position:fixed;inset:0;z-index:100;display:none}
+#boot.show,#screensaver.show,#login.show,#bsod.show{display:grid}
 #boot{place-items:center;background:radial-gradient(circle at center,#101d27,#01040a);padding:20px}
 .boot-card{max-width:700px;width:100%;font:14px/1.8 Consolas,monospace;color:#94efae}
 .boot-card h2{font:700 clamp(30px,5vw,60px) Consolas,monospace;color:#d5f5bc;margin:0}
@@ -85,6 +85,7 @@ details summary{cursor:pointer;font-weight:700;color:var(--mint)}
 .login-card h2{font-size:26px;margin:0}.login-card p{color:#41606a}.avatar{height:70px;width:70px;background:#77adb8;border:3px solid #fff;border-radius:14px;display:grid;place-items:center;font-size:40px;margin:12px auto}
 .login-card button{background:#215d95}
 #screensaver{background:#020609;overflow:hidden;place-items:center;color:#71ffb1}
+#bsod{background:#1045a3;color:white;place-items:center;padding:25px;font:18px/1.6 Consolas,monospace}#bsod article{max-width:800px}#bsod h2{font:700 clamp(45px,9vw,95px) Consolas,monospace;margin:0}#bsod p{color:#eaf0ff}#bsod button{background:#fff;color:#1741a2;border:2px solid #fff}
 #screensaver .screensaver-word{position:absolute;top:30%;left:10%;font:800 clamp(32px,5vw,70px) Consolas,monospace;white-space:nowrap;text-shadow:0 0 25px #35ff9a;animation:floaty 7s alternate ease-in-out infinite}
 #screensaver .scanlines{position:absolute;inset:0;pointer-events:none;background:repeating-linear-gradient(transparent 0 3px,#08151166 3px 4px)}
 @keyframes floaty{0%{transform:translate(0,0) rotate(-5deg)}100%{transform:translate(32vw,24vh) rotate(5deg)}}
@@ -110,7 +111,7 @@ details summary{cursor:pointer;font-weight:700;color:var(--mint)}
 <button id="show-login" title="Show fake nostalgic login screen">🔐 XP LOGIN</button>
 <button id="play-tone" title="Play opt-in original synthesised boot notes">🔊 BOOT TONES</button>
 <button id="saver" title="Start original screensaver">🌠 SCREENSAVER</button>
-<button id="dial-up" title="Demonstrate simulated dial-up connection">📞 DIAL-UP</button>
+<button id="dial-up" title="Demonstrate simulated dial-up connection">📞 DIAL-UP</button><button id="fake-bsod" title="Open harmless parody error screen">🟦 FAKE BSOD</button>
 <select id="theme" aria-label="Desktop theme"><option value="default">Midnight CRT</option><option value="amber">DOS Amber</option><option value="ice">Glass Blue</option><option value="pink">Y2K Plum</option></select>
 <span class="spacer"></span><a class="button" href="game-room.html">🚀 BONUS GAMES</a><a class="button" href="network.html">🌐 NETWORK MAP</a><a class="button" href="../memory/">🖥 MEMORY OS</a><a class="button" href="../museum/">📁 MUSEUM</a><a class="button" href="../arcade/">🕹 ARCADE</a>
 </nav>
@@ -192,6 +193,7 @@ details summary{cursor:pointer;font-weight:700;color:var(--mint)}
 </main>
 <div id="boot" role="dialog" aria-modal="true" aria-labelledby="boot-title"><div class="boot-card"><div class="small">Vishwas Aithal Original BIOS Experience</div><h2 id="boot-title">VISHWAS.EXE BIOS</h2><div class="bootlogs" id="boot-logs"></div><div class="progress"><div id="boot-progress"></div></div><div class="controls" style="margin-top:20px"><button class="primary" id="boot-skip">▶ ENTER DESKTOP</button></div></div></div>
 <div id="login" role="dialog" aria-modal="true" aria-labelledby="login-title"><div class="login-card"><h2 id="login-title">Welcome to the cybercafé</h2><p>A nostalgic XP-style welcome screen, not an actual login. No password or personal information required.</p><div class="avatar" aria-hidden="true">🧑‍💻</div><p style="text-align:center"><strong>Vishwas Aithal</strong><br>Guest / Memory OS</p><div class="controls" style="justify-content:center"><button id="login-enter">↪ Enter desktop</button><button id="login-close">✕ Cancel</button></div></div></div>
+<div id="bsod" role="dialog" aria-modal="true" aria-label="Harmless blue screen parody"><article><h2>:(</h2><p>Your computer ran into an unexpected amount of nostalgia and needs a coffee break.</p><p>STOP CODE: TOO_MANY_DESKTOP_SHORTCUTS</p><p>NO ACTUAL CRASH. This is an original parody page with no access to your computer.</p><button id="bsod-exit">↩ RETURN TO DESKTOP</button></article></div>
 <div id="screensaver" role="dialog" aria-modal="true" aria-label="Screensaver"><div class="scanlines"></div><div class="screensaver-word">VISHWAS.EXE<br>STILL CURIOUS_</div><button id="saver-exit">EXIT SCREENSAVER / ESC</button></div>
 <script>
 (function(){
@@ -207,13 +209,14 @@ const audio=(()=>{let ctx;return function(){try{ctx=ctx||new (window.AudioContex
 let bootTimer=null,bootStep=0;
 const bootMessages=['Memory Test ................. OK','Virtual CPU: CURIOSITY / ALWAYS ON','Disk: MEMORIES_C / SAFE MOUNT','SOUND: USER INITIATED ONLY','INTERNET: OPT-IN PUBLIC FEED','SECURITY: LOCAL SIMULATION','LOADING THE CYBERCAFE ...','WELCOME BACK, VISHWAS.'];
 function startBoot(){closeOverlays();$('boot').classList.add('show');$('boot-logs').textContent='';$('boot-progress').style.width='0%';bootStep=0;const advance=()=>{if(bootStep>=bootMessages.length){clearInterval(bootTimer);bootTimer=null;return}let p=document.createElement('div');p.textContent='> '+bootMessages[bootStep++];$('boot-logs').appendChild(p);$('boot-progress').style.width=Math.round(bootStep/bootMessages.length*100)+'%'};advance();bootTimer=setInterval(advance,340);$('boot-skip').focus()}
-function closeOverlays(){['boot','login','screensaver'].forEach(id=>$(id).classList.remove('show'));if(bootTimer){clearInterval(bootTimer);bootTimer=null}}
+function closeOverlays(){['boot','login','screensaver','bsod'].forEach(id=>$(id).classList.remove('show'));if(bootTimer){clearInterval(bootTimer);bootTimer=null}}
 $('boot-again').addEventListener('click',startBoot);$('boot-skip').addEventListener('click',()=>{closeOverlays();status('BIOS sequence finished. Desktop ready.');$('boot-again').focus()});
 $('show-login').addEventListener('click',()=>{closeOverlays();$('login').classList.add('show');$('login-enter').focus()});
 for(const id of ['login-enter','login-close'])$(id).addEventListener('click',()=>{closeOverlays();$('show-login').focus()});
 $('play-tone').addEventListener('click',audio);
 $('saver').addEventListener('click',()=>{closeOverlays();$('screensaver').classList.add('show');$('saver-exit').focus()});
 $('saver-exit').addEventListener('click',()=>{closeOverlays();$('saver').focus()});
+$('fake-bsod').addEventListener('click',()=>{closeOverlays();$('bsod').classList.add('show');$('bsod-exit').focus()});$('bsod-exit').addEventListener('click',()=>{closeOverlays();$('fake-bsod').focus()});
 $('dial-up').addEventListener('click',()=>{status('DIALUP.EXE (simulation): *beep* *static* *handshake*  Connected to childhood memories, no actual network connection.');audio()});
 const themes=['default','amber','ice','pink'];function setTheme(v){if(!themes.includes(v))return;state.theme=v;document.body.dataset.theme=v;$('theme').value=v;persist()}setTheme(state.theme);
 $('theme').addEventListener('change',e=>setTheme(e.target.value));
