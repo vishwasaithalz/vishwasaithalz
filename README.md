@@ -2,7 +2,7 @@
 <p align="center"><img src="assets/retro-memory-desktop.svg" width="100%" alt="Original retro Windows desktop: Vishwas Aithal, the cybercafe kid, with childhood software, games, music player, cartoons and modern code" /></p>
 <p align="center"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&amp;weight=700&amp;size=22&amp;duration=3000&amp;pause=900&amp;color=FF73A8&amp;center=true&amp;vCenter=true&amp;width=720&amp;height=55&amp;lines=Defensive+Security+%7C+Python;Automation+Engineering+%7C+JavaScript;Building+Since+2013+%7C+Vishwas+Aithal" alt="Typing intro: cybersecurity, automation, and building since 2013" /></p>
 <p align="center"><strong>VISHWAS.EXE // THE CYBERCAFÉ KID</strong></p>
-<p align="center"><a href="https://vishwasaithalz.github.io/vishwasaithalz/memory/"><strong>🖥️ BOOT THE INTERACTIVE MEMORY OS</strong></a> &nbsp;·&nbsp; <a href="https://vishwasaithalz.github.io/vishwasaithalz/arcade/"><strong>🎮 OPEN ARCADE 3.0</strong></a></p>
+<p align="center"><a href="https://vishwasaithalz.github.io/vishwasaithalz/overload/"><strong>💥 OVERLOAD 2.0</strong></a> &nbsp;·&nbsp; <a href="https://vishwasaithalz.github.io/vishwasaithalz/memory/"><strong>🖥️ MEMORY OS</strong></a> &nbsp;·&nbsp; <a href="https://vishwasaithalz.github.io/vishwasaithalz/museum/"><strong>💾 MUSEUM</strong></a> &nbsp;·&nbsp; <a href="https://vishwasaithalz.github.io/vishwasaithalz/arcade/"><strong>🎮 ARCADE 3.0</strong></a></p>
 <p align="center"><strong>Vishwas Aithal</strong> · 90s PC kid · Blogger since 2013 · Defensive security, web and automation now</p>
 <p align="center"><a href="https://vishwasaithal.ai.studio/"><strong>🌐 Personal Portfolio · Cybersecurity / Web Design / SEO</strong></a></p>
 
@@ -52,6 +52,38 @@ Still curious. Still building. Still pressing every button.
 **My personality settings:** a little Dexter's Laboratory, a little old-school PC repair shop, a lot of late-night tinkering. I like tech that feels alive, but I still want the code to be understandable, the demos to be real and the security work to be authorized.
 
 <p align="center"><a href="https://vishwasaithalz.github.io/vishwasaithalz/memory/"><strong>💾 BOOT MEMORY OS</strong></a> &nbsp;·&nbsp; <a href="https://vishwasaithalz.github.io/vishwasaithalz/arcade/#snake"><strong>▶ OPEN ARCADE</strong></a> &nbsp;·&nbsp; <a href="https://yyyh-phi.vercel.app"><strong>🌐 OPEN THE BLOG ERA</strong></a> &nbsp;·&nbsp; <a href="https://github.com/vishwasaithalz?tab=repositories"><strong>📁 OPEN PROJECTS</strong></a></p>
+
+---
+
+## 💥 EXTRA PACK 02 / THE OVERLOAD COMPUTER
+
+<a href="https://vishwasaithalz.github.io/vishwasaithalz/overload/"><img src="assets/retro-overload-marquee.svg" width="100%" alt="Overload 2.0 original illustrated retro computer with Minesweeper, Pong, pixel paint, PC building, command prompt, defrag visualization, GitHub feed and BIOS features" /></a>
+
+The after-school PC, now with more buttons than anyone reasonably needs. **This expansion contains playable original Minesweeper and Pong, a working pixel painting canvas with PNG export, a playful PC parts selector, a safe terminal, a visual-only defrag toy, a retro BIOS boot screen, an XP-style fake welcome screen, an original screensaver and user-triggered synthesized boot tones.**
+
+**The Network Neighborhood panel optionally requests recent *public* GitHub events without a token.** Real project source links remain front and center; private repository contents never enter the display. No trackers or external JavaScript libraries are included.
+
+<p align="center"><a href="https://vishwasaithalz.github.io/vishwasaithalz/overload/"><strong>💥 BOOT OVERLOAD 2.0</strong></a> &nbsp;·&nbsp; <a href="https://vishwasaithalz.github.io/vishwasaithalz/memory/"><strong>🖥️ MEMORY OS</strong></a> &nbsp;·&nbsp; <a href="https://vishwasaithalz.github.io/vishwasaithalz/museum/"><strong>💾 MUSEUM</strong></a></p>
+
+<details><summary><strong>📟 View Overload 2.0 app directory</strong></summary>
+
+| Shortcut | What it does |
+| :-- | :-- |
+| `MINES.EXE` | Original 9×9 Minesweeper with first-click protection, flags, timer and a local personal best |
+| `PONG.EXE` | Original canvas Pong against a scripted CPU opponent, with keyboard and touch controls |
+| `PAINT.EXE` | Draw with touch, mouse or pen, erase, resize brush and export a locally generated PNG |
+| `HARDWARE.EXE` | Select example PC parts and copy the resulting illustrative configuration |
+| `COMMAND.COM` | Read-only local simulated commands such as `help`, `whoami`, `dir` and `projects` |
+| `DEFRAG.EXE` | A color-block sorting animation that never touches a disk |
+| `NETWORK.EXE` | Optional read-only request for publicly visible GitHub activity |
+| `BIOS.EXE` | Original boot sequence, opt-in synthesized tones and fake XP-inspired welcome screen |
+| `SCREEN.EXE` | Animated retro screensaver with an exit control and Escape key |
+| `CONTROL.EXE` | Four color schemes, keyboard shortcuts and a secret nostalgia Easter egg |
+
+**Keyboard controls:** Alt+1 Minesweeper · Alt+2 Pong · Alt+3 Paint · Alt+4 PC Builder · Alt+B BIOS · Alt+S screensaver.
+
+<sub>Static website, not an operating system. No authentication, real network scans, disk defragmentation, commercial game downloads or fabricated GitHub achievements. Personal best saved only on your device if local storage is available.</sub>
+</details>
 
 ---
 
