@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#066a73">
+<meta name="description" content="Vishwas Aithal Memory OS: an original interactive retro desktop about a childhood of Winamp, Windows, games, Blogger and modern tech projects.">
+<title>VISHWAS.EXE | Memory OS</title>
+<style>
+:root{font-family:Tahoma,Verdana,Arial,sans-serif;color:#172a39;font-size:14px}
+*{box-sizing:border-box}button,input{font:inherit}button{cursor:pointer}a{color:#1456aa}
+body{margin:0;min-width:320px;min-height:100vh;overflow:hidden;background:#05636e}
+.desktop{height:100vh;min-height:520px;position:relative;overflow:hidden;background:radial-gradient(circle at 82% 16%,#14819e 0%,transparent 40%),radial-gradient(circle at 38% 70%,#065a85,transparent 56%),linear-gradient(130deg,#005557,#043b63 76%,#22245a)}
+.desktop:after{content:"";position:absolute;inset:0;pointer-events:none;background:repeating-linear-gradient(transparent 0 3px,rgba(3,17,28,.035) 3px 4px)}
+.wallpaper{position:absolute;right:5%;top:9%;text-align:right;color:#c2f7df;z-index:0;pointer-events:none;text-shadow:0 3px 30px #003941}
+.wallpaper h1{font-size:clamp(43px,7vw,108px);letter-spacing:-.08em;line-height:.95;margin:0;font-weight:900}
+.wallpaper p{font-family:"Courier New",monospace;font-size:clamp(13px,1.4vw,19px);letter-spacing:.1em}
+.wallpaper .version{color:#ffe4a3;font-size:14px;letter-spacing:.35em}
+.shortcuts{position:absolute;top:30px;left:25px;display:grid;grid-template-columns:repeat(2,100px);gap:22px 14px;z-index:1}
+.shortcut{display:flex;flex-direction:column;align-items:center;gap:6px;min-height:92px;width:100px;border:1px solid transparent;background:transparent;color:white;text-shadow:1px 2px #183f54;padding:7px 2px;text-align:center;font-size:12px;line-height:1.2}
+.shortcut:hover,.shortcut:focus-visible{background:#9ad9ec33;border:1px dotted #eaf8fc;outline:0}
+.shortcut-icon{font-size:40px;line-height:1.1;filter:drop-shadow(2px 4px 1px #07394c)}
+.taskbar{position:absolute;left:0;bottom:0;right:0;height:43px;z-index:100;display:flex;align-items:center;padding:4px;gap:5px;background:#bdbdbb;border-top:2px solid #fff;box-shadow:0 -1px #4e5b60}
+.start{background:#d9d9d9;border:2px solid;border-color:#fff #525252 #525252 #fff;padding:5px 12px;font-weight:bold;color:#102c34;min-width:87px}
+.start:active,.start[aria-expanded=true]{border-color:#525252 #fff #fff #525252}
+.task-apps{display:flex;gap:3px;flex:1;overflow:hidden}
+.task-app{background:#c6d2d1;max-width:180px;min-width:80px;text-overflow:ellipsis;white-space:nowrap;overflow:hidden;padding:5px;border:2px solid;border-color:#5b6a6a #f4f4f4 #f4f4f4 #5b6a6a}
+.clock{padding:5px 12px;border:2px solid;border-color:#777 #fff #fff #777;font-size:12px;font-weight:bold;white-space:nowrap}
+.start-menu{position:absolute;z-index:105;bottom:43px;left:3px;width:265px;background:#c5c5c5;border:3px solid;border-color:#fff #555 #555 #fff;box-shadow:3px 3px 0 #0005;display:none;padding:5px}
+.start-menu.open{display:block}.start-menu h2{font-size:13px;padding:12px;color:#fff;background:linear-gradient(90deg,#102f83,#2598c3);margin:0 0 5px}
+.start-menu button{width:100%;border:0;background:none;text-align:left;padding:10px;font-size:13px}.start-menu button:hover{background:#173f91;color:white}
+.windows{position:absolute;inset:0 0 43px;pointer-events:none;z-index:5}
+.window{pointer-events:auto;position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:min(660px,calc(100vw - 34px));max-height:calc(100vh - 84px);display:flex;flex-direction:column;background:#c6c6c6;border:3px solid;border-color:#fff #505050 #505050 #fff;box-shadow:5px 7px 0 #001a3080;min-height:210px}
+.window.active{box-shadow:8px 11px 0 #001a3080}
+.titlebar{background:linear-gradient(90deg,#10267b,#1598c4);padding:6px 5px 6px 11px;color:#fff;font-weight:bold;display:flex;align-items:center;gap:8px;user-select:none;touch-action:none;cursor:move}
+.titlebar span{flex:1}.titlebar button{border:2px solid;border-color:#fff #333 #333 #fff;background:#cfcfcf;color:#112c36;width:24px;height:22px;line-height:14px;font-weight:bold}
+.window-body{background:#f1efe5;overflow:auto;padding:19px;line-height:1.6;min-height:160px}
+.window-body h2{font-size:23px;line-height:1.15;color:#153b78;margin:0 0 10px}
+.window-body p{margin:10px 0}.window-body h3{font-size:16px;color:#175c71;margin:16px 0 6px}
+.window-status{font-size:11px;padding:3px 9px;background:#e1e1e1;border-top:1px solid #999;color:#52636c}
+.btn{display:inline-block;background:#e3e3e3;border:2px solid;border-color:#fff #555 #555 #fff;color:#0c334b;text-decoration:none;padding:6px 12px;margin:4px 6px 4px 0;font-size:13px;font-weight:bold}
+.btn:hover,.btn:focus-visible{background:#d0e4ed}
+.folder-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.folder{background:#fff;border-left:4px solid #167598;padding:10px}
+.folder strong{display:block;color:#174282;margin-bottom:4px}
+.tag{display:inline-block;margin:4px;padding:5px 8px;background:#e7f0e7;border:1px solid #a3bbb1;color:#274358}
+.terminal{font-family:Consolas,"Courier New",monospace;color:#a9f8c7;background:#0b1c2d;padding:13px;border:2px inset #647d78;font-size:13px;min-height:220px}
+.terminal pre{white-space:pre-wrap;margin:0;font-family:inherit}
+.terminal form{display:flex;gap:5px;align-items:center}
+.terminal input{flex:1;min-width:0;background:transparent;color:#fff;border:0;border-bottom:1px solid #7fc1a4;outline:0}
+.player{background:#22283e;color:#daf0e0;padding:16px;border:4px ridge #77798b}
+.player .track{color:#63f09d;background:#0a121f;padding:13px;font:17px "Courier New",monospace}
+.eq{display:flex;align-items:end;gap:4px;height:90px;background:#0c1321;padding:8px;margin-top:7px}
+.eq i{display:block;width:9px;background:linear-gradient(0deg,#5effac,#f5b843);height:34%;transform-origin:bottom;animation:eq 900ms infinite alternate ease-in-out;animation-play-state:paused}
+.eq.playing i{animation-play-state:running}@keyframes eq{from{transform:scaleY(.35)}to{transform:scaleY(1.7)}}
+@media(prefers-reduced-motion:reduce){.eq i{animation:none}}
+.gamebox{background:#0d2031;border:4px solid #4a6971;padding:8px;text-align:center}
+#snake-canvas{display:block;width:100%;max-width:480px;height:auto;margin:auto;image-rendering:pixelated;background:#102336}
+.gameinfo{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;margin:8px 0}
+.dpad{display:grid;grid-template-columns:repeat(3,55px);justify-content:center;gap:4px;margin:10px auto}
+.dpad button{padding:9px;font-weight:bold;background:#bedce0;border:2px solid;border-color:#fff #52666b #52666b #fff}
+.dpad [data-dir=up]{grid-column:2}.dpad [data-dir=left]{grid-column:1;grid-row:2}.dpad [data-dir=down]{grid-column:2;grid-row:2}.dpad [data-dir=right]{grid-column:3;grid-row:2}
+.note{font-size:12px;color:#435d61}
+.timeline{border-left:3px dotted #3992a5;margin-left:8px;padding-left:16px}.timeline p:before{content:"■";color:#2569ab;margin-left:-24px;margin-right:11px}
+@media(max-width:720px){.desktop{min-height:450px}.shortcuts{top:8px;left:4px;grid-template-columns:repeat(2,76px);gap:6px}.shortcut{width:76px;min-height:80px;font-size:11px}.shortcut-icon{font-size:30px}.wallpaper{right:10px;top:11px}.wallpaper h1{font-size:42px}.wallpaper p{font-size:11px;max-width:180px;margin-left:auto}.window{top:48%;max-height:calc(100vh - 70px);min-height:200px}.window-body{padding:12px}.folder-grid{grid-template-columns:1fr}.clock{padding:5px}.task-app{min-width:50px;font-size:11px}.wallpaper .version{font-size:10px}}
+</style>
+</head>
+<body>
+<main class="desktop" aria-label="Vishwas Aithal retro desktop">
+  <div class="wallpaper" aria-hidden="true"><div class="version">MEMORY OS 98 / NOW EDITION</div><h1>VISHWAS<br>EXE.</h1><p>THE KID NEVER LOGGED OFF_</p></div>
+  <nav class="shortcuts" aria-label="Desktop shortcuts">
+    <button class="shortcut" data-app="about"><span class="shortcut-icon">🖥️</span>My Computer</button>
+    <button class="shortcut" data-app="software"><span class="shortcut-icon">💿</span>Program Files</button>
+    <button class="shortcut" data-app="music"><span class="shortcut-icon">🎵</span>Winamp-ish</button>
+    <button class="shortcut" data-app="games"><span class="shortcut-icon">🕹️</span>Games</button>
+    <button class="shortcut" data-app="snake"><span class="shortcut-icon">🐍</span>Snake.exe</button>
+    <button class="shortcut" data-app="cartoons"><span class="shortcut-icon">📺</span>TV Break</button>
+    <button class="shortcut" data-app="blog"><span class="shortcut-icon">🌐</span>Blogger 2013</button>
+    <button class="shortcut" data-app="projects"><span class="shortcut-icon">📁</span>Projects</button>
+    <button class="shortcut" data-app="terminal"><span class="shortcut-icon">⌨️</span>Terminal</button>
+    <button class="shortcut" data-app="timeline"><span class="shortcut-icon">⏳</span>My Timeline</button>
+  </nav>
+  <div class="windows" id="windows" aria-live="off"></div>
+  <nav class="start-menu" id="start-menu" aria-label="Start menu"><h2>VISHWAS.EXE <span style="font-weight:normal">| The cybercafé kid</span></h2><div id="start-items"></div></nav>
+  <footer class="taskbar"><button class="start" id="start" aria-expanded="false" aria-controls="start-menu">▦ Start</button><div class="task-apps" id="task-apps"></div><div class="clock" id="clock">00:00</div></footer>
+</main>
+<script>
+(function(){
+'use strict';
+var openWindows={},topZ=10,activeApp='',snakeTimer=null,snake=null;
+var appTitles={about:'My Computer',software:'Program Files',music:'Winamp-ish',games:'Game Folder',snake:'Snake.exe',cartoons:'Saturday TV',blog:'Blogger 2013',projects:'My Projects',terminal:'Command Prompt',timeline:'Restore Points'};
+var appOrder=['about','software','music','games','snake','cartoons','blog','projects','terminal','timeline'];
+var appContent={
+about:'<h2>🖥️ C:\\VISHWAS\\ABOUT.TXT</h2><p><strong>Vishwas Aithal</strong> here. A 90s and 2000s computer kid who grew into a tech blogger, developer, automation builder and defensive security enthusiast.</p><p>Winamp playlists, ISO mounts, game shortcuts, Windows experiments and cartoon marathons were my early curriculum. The machine changed from <strong>Windows 95 to Windows 11</strong>. The curiosity stayed.</p><p><strong>Today:</strong> Python, JavaScript, safe security labs, websites, AI workflow experiments and public build notes.</p><button class="btn" data-open="timeline">Open timeline</button><button class="btn" data-open="projects">See real projects</button>',
+software:'<h2>💿 C:\\PROGRAM FILES</h2><p>The old-school utility drawer. These are memories, not endorsements or downloads.</p><div class="folder-grid"><div class="folder"><strong>🎧 Media</strong>Winamp 2.x, VLC, skins, playlists, pixel visualizers</div><div class="folder"><strong>💿 Virtual drives</strong>Daemon Tools, PowerISO, mounting disc images</div><div class="folder"><strong>📦 Archives and downloads</strong>WinRAR, Internet Download Manager, µTorrent</div><div class="folder"><strong>🧹 Maintenance</strong>CCleaner, Registry Mechanic, and forever tweaking Windows</div></div><p class="note">No installers, third-party downloads or executable software are supplied here.</p>',
+music:'<h2>🎵 VISUALIZER.EXE</h2><p>A little tribute to the Winamp skins and equalizers that made listening to MP3s an entire desktop activity.</p><div class="player"><div class="track">01. The kid who never logged off<br><small>STATUS: MEMORY MODE</small></div><div class="eq" id="equalizer"></div><button class="btn" id="eq-toggle">▶ Animate visualizer</button><small> Visual tribute only. No music or audio playback.</small></div><p><a href="https://github.com/vishwasaithalz/vishwasaithalz" target="_blank" rel="noopener noreferrer">View my real contribution-based Winamp-style chart on GitHub</a></p>',
+games:'<h2>🎮 C:\\GAMES</h2><p>Before PC benchmarks, there was the very important question: <strong>Will this game run?</strong></p><p><span class="tag">Snake</span><span class="tag">Mario</span><span class="tag">Contra</span><span class="tag">Tanks / Battle City</span><span class="tag">Virtua Cop 2</span><span class="tag">Project I.G.I.</span><span class="tag">Counter-Strike</span></p><p>Playable here: an <strong>original Snake mini-game</strong>. Other titles are references to the classics, not distributed copies.</p><button class="btn" data-open="snake">▶ PLAY SNAKE.EXE</button><a class="btn" href="https://vishwasaithalz.github.io/vishwasaithalz/arcade/#pinball" target="_blank" rel="noopener noreferrer">OPEN ORIGINAL PINBALL</a>',
+cartoons:'<h2>📺 AFTER SCHOOL / ON AIR</h2><p>When the PC was off, the imagination stayed switched on.</p><div class="folder-grid"><div class="folder"><strong>🧪 Cartoon laboratory</strong>Dexter\'s Laboratory, Johnny Bravo, The Powerpuff Girls</div><div class="folder"><strong>💪 Classics</strong>Popeye and the everlasting spinach-powered comeback</div><div class="folder"><strong>⚡ Action hour</strong>Power Rangers S.P.D., Pokémon, Beyblade</div><div class="folder"><strong>💭 The connection</strong>Build things. Experiment. Train. Try again. A pretty great developer origin story.</div></div><p class="note">Names only. No copied footage, logos or theme songs.</p>',
+blog:'<h2>🌐 INTERNET EXPLORER / BLOGGER 2013</h2><p>One of the first meaningful windows into my online tech world was <strong>YinYangYoHackers</strong>. Writing, experimenting and learning in public became part of the journey.</p><p><a class="btn" href="https://yinyangyohackers.blogspot.com" target="_blank" rel="noopener noreferrer">Legacy Blogger</a><a class="btn" href="https://yyyh-phi.vercel.app" target="_blank" rel="noopener noreferrer">Modern site</a><a class="btn" href="https://github.com/vishwasaithalz/YYYH" target="_blank" rel="noopener noreferrer">Source code</a></p><p>No nostalgia without forward motion: the goal is still to create useful work, not just collect old screenshots.</p>',
+projects:'<h2>📁 C:\\WORKBENCH\\PROJECTS</h2><p>These shortcuts point to real public repositories or demos.</p><div class="folder-grid"><div class="folder"><strong>🔍 LogSentry</strong>Windows security event learning and analysis.<br><a href="https://github.com/vishwasaithalz/LogSentry" target="_blank" rel="noopener noreferrer">Source</a></div><div class="folder"><strong>📡 Recon Lite</strong>Browser-side public response and header signals.<br><a href="https://recon-lite.vercel.app" target="_blank" rel="noopener noreferrer">Demo</a></div><div class="folder"><strong>🤖 AI Automation Lab</strong>Reproducible workflows and experiments.<br><a href="https://github.com/vishwasaithalz/AI-Automation-Lab" target="_blank" rel="noopener noreferrer">Source</a></div><div class="folder"><strong>🛡️ CyberPlayground</strong>Educational security tools and labs.<br><a href="https://cyber-playground-nu.vercel.app" target="_blank" rel="noopener noreferrer">Demo</a></div><div class="folder"><strong>🌐 YinYangYoHackers</strong>Tech blog and learning archive.<br><a href="https://github.com/vishwasaithalz/YYYH" target="_blank" rel="noopener noreferrer">Source</a></div><div class="folder"><strong>🧪 Ops Monitor</strong>Engineering workshop and portfolio experiments.<br><a href="https://karma-ops-monitor.vercel.app" target="_blank" rel="noopener noreferrer">Demo</a></div></div>',
+terminal:'<h2>⌨️ COMMAND.COM</h2><p>Safe local toy terminal. Type <code>help</code> for available commands.</p><div class="terminal"><pre id="terminal-output">VISHWAS MEMORY OS [Version 98.NOW]\n(c) Vishwas Aithal. Original local simulation.\n\n</pre><form id="terminal-form"><label for="terminal-command">C:\\&gt;</label><input id="terminal-command" spellcheck="false" autocomplete="off" aria-label="Terminal command"></form></div>',
+timeline:'<h2>⏳ RESTORE POINTS</h2><div class="timeline"><p><strong>Windows 95 through Windows 11</strong><br>Years of desktops, installs, games and endless questions.</p><p><strong>The after-school era</strong><br>Cartoons, cybercafé energy, PC games, software experiments.</p><p><strong>2013: Blogger</strong><br>YinYangYoHackers and the practice of learning publicly.</p><p><strong>Today: The workbench</strong><br>Defensive security, Python, JavaScript, automation and shipping useful demos.</p></div><p><strong>Last known status:</strong> curiosity.exe is still running.</p>',
+snake:'<h2>🐍 SNAKE.EXE</h2><p>An original tiny browser game. Use arrow keys, WASD or the on-screen controls.</p><div class="gamebox"><canvas id="snake-canvas" width="480" height="320" aria-label="Snake game field"></canvas></div><div class="gameinfo"><strong id="snake-score">SCORE: 0</strong><span id="snake-state">READY</span><button class="btn" id="snake-start">▶ Start / Restart</button></div><div class="dpad" aria-label="Snake direction controls"><button data-dir="up" aria-label="Up">▲</button><button data-dir="left" aria-label="Left">◀</button><button data-dir="down" aria-label="Down">▼</button><button data-dir="right" aria-label="Right">▶</button></div>'
+};
+function get(id){return document.getElementById(id)}
+function focusApp(id){var w=openWindows[id];if(!w)return;w.style.zIndex=++topZ;document.querySelectorAll('.window').forEach(function(x){x.classList.remove('active')});w.classList.add('active');activeApp=id;w.hidden=false}
+function closeApp(id){if(id==='snake'&&snakeTimer){clearInterval(snakeTimer);snakeTimer=null}var w=openWindows[id];if(!w)return;w.remove();delete openWindows[id];var t=document.querySelector('[data-task="'+id+'"]');if(t)t.remove();activeApp='';var remaining=Object.keys(openWindows);if(remaining.length)focusApp(remaining[remaining.length-1])}
+function openApp(id){if(!appContent[id])return;if(openWindows[id]){focusApp(id);return}
+ var w=document.createElement('section');w.className='window';w.setAttribute('role','dialog');w.setAttribute('aria-label',appTitles[id]);w.dataset.window=id;
+ w.innerHTML='<header class="titlebar"><span>▣ '+appTitles[id]+'</span><button class="close" title="Close window" aria-label="Close '+appTitles[id]+'">×</button></header><div class="window-body">'+appContent[id]+'</div><div class="window-status">VISHWAS.EXE / LOCAL MEMORY OS / NO TRACKING</div>';
+ get('windows').appendChild(w);openWindows[id]=w;w.querySelector('.close').addEventListener('click',function(){closeApp(id)});
+ w.addEventListener('pointerdown',function(){focusApp(id)});setupDrag(w);focusApp(id);
+ w.querySelectorAll('[data-open]').forEach(function(b){b.addEventListener('click',function(){openApp(b.dataset.open)})});
+ var task=document.createElement('button');task.className='task-app';task.dataset.task=id;task.textContent='▣ '+appTitles[id];task.addEventListener('click',function(){focusApp(id)});get('task-apps').appendChild(task);
+ if(id==='music')initMusic(w);if(id==='terminal')initTerminal(w);if(id==='snake')initSnake(w);
+}
+function setupDrag(w){var h=w.querySelector('.titlebar'),moving=false,downX=0,downY=0,startX=0,startY=0;
+ h.addEventListener('pointerdown',function(e){if(e.target.tagName==='BUTTON'||innerWidth<720)return;moving=true;downX=e.clientX;downY=e.clientY;var r=w.getBoundingClientRect();startX=r.left;startY=r.top;w.style.transform='none';w.style.left=startX+'px';w.style.top=startY+'px';h.setPointerCapture(e.pointerId)});
+ h.addEventListener('pointermove',function(e){if(!moving)return;var nx=Math.max(0,Math.min(innerWidth-w.offsetWidth,startX+e.clientX-downX));var ny=Math.max(0,Math.min(innerHeight-80,startY+e.clientY-downY));w.style.left=nx+'px';w.style.top=ny+'px'});
+ h.addEventListener('pointerup',function(){moving=false});h.addEventListener('pointercancel',function(){moving=false})}
+function initMusic(w){var eq=w.querySelector('#equalizer');for(var i=0;i<32;i++){var b=document.createElement('i');b.style.height=(10+(i*13)%55)+'%';b.style.animationDelay='-'+((i*11)%19)/10+'s';eq.appendChild(b)}w.querySelector('#eq-toggle').addEventListener('click',function(){var playing=eq.classList.toggle('playing');this.textContent=playing?'❚❚ Pause visualizer':'▶ Animate visualizer'})}
+function initTerminal(w){var out=w.querySelector('#terminal-output'),input=w.querySelector('#terminal-command'),form=w.querySelector('#terminal-form');
+ form.addEventListener('submit',function(e){e.preventDefault();var raw=input.value.trim(),cmd=raw.toLowerCase(),response='';
+ if(!raw)return;out.textContent+='C:\\> '+raw+'\n';input.value='';
+ if(cmd==='help')response='Commands: help, about, whoami, dir, games, projects, version, date, clear';
+ else if(cmd==='whoami')response='vishwas_aithal';
+ else if(cmd==='about')response='90s desktop kid -> blogger (2013) -> tech builder.';
+ else if(cmd==='dir'||cmd==='ls')response='GAMES\\  MUSIC\\  BLOGGER_2013\\  PROJECTS\\  MEMORIES.TXT';
+ else if(cmd==='games')response='Snake | Mario | Contra | Tanks | Virtua Cop 2 | IGI | Counter-Strike';
+ else if(cmd==='projects')response='LogSentry | Recon Lite | CyberPlayground | Automation Lab | YYYH';
+ else if(cmd==='version')response='MEMORY OS 98.NOW | Desktop simulation, no shell access';
+ else if(cmd==='date')response=new Date().toLocaleString();
+ else if(cmd==='clear')out.textContent='';
+ else response='Unknown local command. Type help.';
+ out.textContent+=response?response+'\n\n':'';input.focus();out.parentElement.scrollTop=out.parentElement.scrollHeight});
+ input.focus()}
+function initSnake(w){var c=w.querySelector('#snake-canvas'),ctx=c.getContext('2d'),score=w.querySelector('#snake-score'),state=w.querySelector('#snake-state');
+ function draw(){ctx.fillStyle='#102336';ctx.fillRect(0,0,480,320);ctx.strokeStyle='#204354';for(var x=0;x<24;x++)for(var y=0;y<16;y++)ctx.strokeRect(x*20,y*20,20,20);
+ if(!snake)return;ctx.fillStyle='#efbd6e';ctx.fillRect(snake.food.x*20+2,snake.food.y*20+2,16,16);
+ snake.body.forEach(function(p,i){ctx.fillStyle=i===0?'#d1ff8c':'#58d4a4';ctx.fillRect(p.x*20+2,p.y*20+2,16,16)})}
+ function randomFood(){var p;do{p={x:Math.floor(Math.random()*24),y:Math.floor(Math.random()*16)}}while(snake.body.some(function(b){return b.x===p.x&&b.y===p.y}));return p}
+ function start(){if(snakeTimer)clearInterval(snakeTimer);snake={body:[{x:11,y:8},{x:10,y:8},{x:9,y:8}],dir:{x:1,y:0},next:{x:1,y:0},food:null,points:0};snake.food=randomFood();score.textContent='SCORE: 0';state.textContent='RUNNING';draw();snakeTimer=setInterval(tick,140)}
+ function tick(){snake.dir=snake.next;var head={x:snake.body[0].x+snake.dir.x,y:snake.body[0].y+snake.dir.y},eat=head.x===snake.food.x&&head.y===snake.food.y;
+ var collisionBody=eat?snake.body:snake.body.slice(0,-1);
+ if(head.x<0||head.x>=24||head.y<0||head.y>=16||collisionBody.some(function(p){return p.x===head.x&&p.y===head.y})){clearInterval(snakeTimer);snakeTimer=null;state.textContent='GAME OVER. RESTART?';return}
+ snake.body.unshift(head);if(eat){snake.points++;score.textContent='SCORE: '+snake.points;snake.food=randomFood()}else snake.body.pop();draw()}
+ function direction(k){if(!snake||!snakeTimer)return;var d={ArrowUp:[0,-1],w:[0,-1],ArrowDown:[0,1],s:[0,1],ArrowLeft:[-1,0],a:[-1,0],ArrowRight:[1,0],d:[1,0]}[k];if(!d)return;if(snake.dir.x===-d[0]&&snake.dir.y===-d[1])return;snake.next={x:d[0],y:d[1]}}
+ w.querySelector('#snake-start').addEventListener('click',start);w.querySelectorAll('[data-dir]').forEach(function(b){b.addEventListener('click',function(){direction({up:'ArrowUp',down:'ArrowDown',left:'ArrowLeft',right:'ArrowRight'}[b.dataset.dir])})});w.snakeDirection=direction;draw()}
+appOrder.forEach(function(id){var b=document.createElement('button');b.textContent='▸ '+appTitles[id];b.addEventListener('click',function(){openApp(id);toggleStart(false)});get('start-items').appendChild(b)});
+document.querySelectorAll('[data-app]').forEach(function(b){b.addEventListener('click',function(){openApp(b.dataset.app)})});
+function toggleStart(show){get('start-menu').classList.toggle('open',show);get('start').setAttribute('aria-expanded',String(show))}
+get('start').addEventListener('click',function(){toggleStart(!get('start-menu').classList.contains('open'))});
+document.addEventListener('keydown',function(e){if(e.key==='Escape'){toggleStart(false);return}if(activeApp==='snake'&&openWindows.snake&&openWindows.snake.snakeDirection&&!/INPUT|TEXTAREA/.test(document.activeElement.tagName)){if(['ArrowUp','ArrowDown','ArrowLeft','ArrowRight','w','a','s','d'].includes(e.key)){e.preventDefault();openWindows.snake.snakeDirection(e.key)}}});
+function clock(){get('clock').textContent=new Date().toLocaleTimeString([], {hour:'2-digit',minute:'2-digit'})}clock();setInterval(clock,30000);
+openApp('about');
+})();
+</script>
+</body>
+</html>
