@@ -1,1 +1,78 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="refresh" content="0;url=./arcade/"><meta name="robots" content="index,follow"><title>KARMA.EXE Interactive Arcade</title><style>body{font-family:system-ui,sans-serif;margin:0;min-height:100vh;display:grid;place-items:center;background:#170B3D;color:#F7F1FF;text-align:center}a{color:#65DEFF;font-size:1.25rem;font-weight:800}</style></head><body><main><h1>🎮 KARMA.EXE</h1><p>Launch the interactive project arcade.</p><p><a href="./arcade/">Enter the arcade ↗</a></p></main></body></html>
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#10283e"><meta name="description" content="Vishwas Aithal, the 90s cybercafe kid turned blogger, cybersecurity tinkerer and developer. Boot an interactive retro computer universe, original arcade games and engineering project showcase.">
+<meta name="robots" content="index,follow">
+<title>VISHWAS.EXE | The Kid Never Logged Off</title>
+<style>
+:root{--bg:#071829;--ink:#e8f7e8;--accent:#b4f5ba;--dim:#b2ccd0;--edge:#72b5ba;--base:#102c41;--screen:#0b2332;--gold:#ffdb93}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;min-width:320px;min-height:100vh;background:radial-gradient(circle at 65% 10%,#174f68 0,transparent 30%),radial-gradient(circle at 12% 75%,#392c63 0,transparent 40%),linear-gradient(145deg,#061623,#172748);font-family:Consolas,"Courier New",monospace;color:var(--ink)}
+body[data-theme=day]{--bg:#dce4de;--ink:#1b3744;--accent:#2a726c;--dim:#365c62;--edge:#3e7381;--base:#cbe7e5;--screen:#d6eced;--gold:#805316;background:linear-gradient(145deg,#d6e4d4,#afbed2)}
+*::selection{background:var(--gold);color:#162a39}
+a,button{font:inherit;cursor:pointer}a:focus-visible,button:focus-visible{outline:3px dashed var(--gold);outline-offset:4px}
+.outer{max-width:1260px;margin:auto;padding:20px clamp(12px,2.6vw,35px) 60px}
+.chrome{display:flex;align-items:center;justify-content:space-between;gap:9px;padding:8px 12px;background:#1c4770;border:2px solid #83b5b7;color:#e0f4ef;font-size:12px}
+.chrome strong{color:#ffdc91}
+.surface{border:2px solid var(--edge);margin-top:17px;background:var(--base);box-shadow:9px 11px #0005}
+.surface-title{background:linear-gradient(90deg,#113a97,#2c8fb1);color:#fff;padding:8px 13px;display:flex;justify-content:space-between;gap:15px;font-size:13px;font-weight:bold}
+.hero{display:grid;grid-template-columns:1fr minmax(200px,290px);align-items:center;gap:23px;padding:clamp(20px,3vw,44px)}
+.kicker{font-size:12px;color:var(--gold);letter-spacing:.2em;font-weight:700}
+h1{font:900 clamp(43px,7vw,94px)/.96 "Arial Black",system-ui,sans-serif;letter-spacing:-.07em;margin:14px 0 16px}h1 span{color:var(--accent)}
+.intro{max-width:760px;color:var(--dim);font:clamp(14px,1.65vw,18px)/1.5 system-ui,sans-serif}
+.chips{display:flex;flex-wrap:wrap;gap:7px;margin-top:21px}.chip{font-size:12px;border:1px solid var(--edge);background:var(--screen);padding:7px 9px;color:var(--gold)}
+.retro-pc{background:linear-gradient(145deg,#b9bfba,#eceae4);border-radius:12px;padding:18px 14px 22px;box-shadow:10px 13px #050c1b80;transform:rotate(2deg);border:4px ridge #dadfd6;color:#1d3442}
+.monitor{background:#071c24;border:13px ridge #818e8d;height:191px;border-radius:9px;padding:14px;position:relative;color:#8ff5bc;font:13px/1.7 Consolas,monospace;box-shadow:inset 0 0 24px #1b5b4a}
+.monitor .terminal-head{color:#ffdf97;font-weight:bold}.blink{animation:blink 1s steps(1) infinite}@keyframes blink{50%{opacity:0}}
+.pc-bottom{text-align:center;font:900 11px Arial,sans-serif;color:#5b6065;margin-top:13px;letter-spacing:.2em}.pc-led{display:inline-block;width:8px;height:8px;border-radius:50%;background:#57bd73;margin-left:15px}
+.section{padding:20px clamp(15px,3vw,30px)}
+.hd{font-size:20px;color:var(--accent);font-weight:800;letter-spacing:-.02em}
+.sub{color:var(--dim);font-size:13px;line-height:1.6;margin-top:4px;margin-bottom:18px}
+.launch-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.launch{display:flex;flex-direction:column;gap:7px;min-height:155px;border:2px solid var(--edge);background:var(--screen);padding:15px;text-decoration:none;color:var(--ink);transition:transform .13s ease,border-color .13s ease}
+.launch:hover,.launch.active{border-color:var(--gold);transform:translateY(-3px)}.launch .icon{font-size:30px}.launch strong{font-size:16px;color:var(--accent)}.launch small{font-size:12px;line-height:1.5;color:var(--dim)}.launch .arrow{margin-top:auto;font-size:11px;color:var(--gold);letter-spacing:.09em}
+.bar{display:flex;gap:8px;flex-wrap:wrap;padding:10px 15px;border-top:2px solid var(--edge);align-items:center}
+.bar a,.bar button{background:var(--screen);border:1px solid var(--edge);color:var(--ink);padding:8px 11px;text-decoration:none;min-height:39px}
+.bar a:hover,.bar button:hover{background:var(--base)}
+.bar .grow{flex:1}
+footer{margin-top:26px;padding:18px 0;color:var(--dim);font-size:12px;line-height:1.65;border-top:1px solid var(--edge)}
+@media(max-width:850px){.hero{grid-template-columns:1fr}.retro-pc{display:none}.launch-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:540px){.launch-grid{grid-template-columns:1fr}.launch{min-height:122px}.hero{padding:19px}.chrome{font-size:9px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.blink{animation:none}.launch{transition:none}}
+</style></head><body data-theme="night">
+<main class="outer">
+<div class="chrome"><span>▣ VISHWAS AITHAL // BOOT MANAGER 2.0</span><strong id="clock">SYSTEM ONLINE</strong></div>
+<div class="surface">
+<div class="surface-title"><span>🖥 C:\VISHWAS\MY COMPUTER</span><span>□ ×</span></div>
+<div class="hero">
+<div><div class="kicker">FROM WINDOWS 95 TO NOW / THE KID NEVER LOGGED OFF</div><h1>VISHWAS<span>.EXE</span><br>BOOT SYSTEM_</h1>
+<p class="intro">Winamp playlists. Virtual drives. Mystery downloads. Snake, Mario, Contra, Tanks, Virtua Cop 2, I.G.I. and Counter-Strike. Dexter, Johnny Bravo, Pokémon, Beyblade and after-school television. A 2013 blog. A lifelong obsession with how things work. Now: original games, safe security labs, web projects and automation.</p>
+<div class="chips"><span class="chip">💾 90s KID</span><span class="chip">🌐 BLOGGER SINCE 2013</span><span class="chip">⌨️ WEB + SECURITY</span><span class="chip">🕹 ORIGINAL GAMES</span></div>
+</div>
+<div class="retro-pc" aria-hidden="true"><div class="monitor"><div class="terminal-head">VISHWAS BIOS v2.0</div><div>Memory: 102+ MEMORIES</div><div>Boot: CURIOSITY.EXE</div><div>Code: PYTHON / JS</div><div>Safety: LOCAL FIRST</div><div>STATUS: READY <span class="blink">▮</span></div></div><div class="pc-bottom">PERSONAL COMPUTER <i class="pc-led"></i></div></div>
+</div>
+<div class="section">
+<div class="hd">📂 CHOOSE YOUR BOOT DEVICE</div><p class="sub">All paths below are part of this public project. The games are original and the nostalgic apps are simulations. Press Tab and Enter, or navigate cards with arrow keys when one is focused.</p>
+<div class="launch-grid" id="launch-grid">
+<a class="launch" href="./overload/"><span class="icon">💥</span><strong>OVERLOAD 2.0</strong><small>Minesweeper, Pong, paint, PC builder, BIOS, terminal, fake BSOD, animated screensaver and more.</small><span class="arrow">[1] BOOT DESKTOP ▶</span></a>
+<a class="launch" href="./overload/game-room.html"><span class="icon">🚀</span><strong>BONUS GAME ROOM</strong><small>Original Starfighter and Pixel Racer with keyboard and touch controls.</small><span class="arrow">[2] LAUNCH ARCADE ▶</span></a>
+<a class="launch" href="./overload/network.html"><span class="icon">🌐</span><strong>NETWORK NEIGHBORHOOD</strong><small>Clickable illustrated diagram of public projects, not a real network scan.</small><span class="arrow">[3] EXPLORE REPOS ▶</span></a>
+<a class="launch" href="./overload/capsule.html"><span class="icon">💾</span><strong>FLOPPY TIME CAPSULE</strong><small>Four private-to-your-browser memory disks with optional text export.</small><span class="arrow">[4] OPEN FLOPPY ▶</span></a>
+<a class="launch" href="./memory/"><span class="icon">🖥️</span><strong>MEMORY OS</strong><small>Original windowed 90s-inspired desktop, Snake, Winamp-ish visualizer and local terminal.</small><span class="arrow">[5] RESTORE DESKTOP ▶</span></a>
+<a class="launch" href="./museum/"><span class="icon">📼</span><strong>THE INTERNET MUSEUM</strong><small>102 searchable software, game, cartoon and early web memories with mini-games.</small><span class="arrow">[6] OPEN ARCHIVE ▶</span></a>
+<a class="launch" href="./arcade/"><span class="icon">🎮</span><strong>ARCADE 3.0</strong><small>The preserved original Snake, pinball, project roulette, chat and terminal experience.</small><span class="arrow">[7] ORIGINAL ARCADE ▶</span></a>
+<a class="launch" href="https://github.com/vishwasaithalz"><span class="icon">⌨️</span><strong>REAL SOURCE CODE</strong><small>Inspect public security labs, websites, automation experiments and documented limitations.</small><span class="arrow">[8] OPEN GITHUB ▶</span></a>
+<a class="launch" href="https://vishwasaithal.ai.studio/"><span class="icon">🧑‍💻</span><strong>PERSONAL PORTFOLIO</strong><small>Follow the actual builder beyond the nostalgia and see the public identity.</small><span class="arrow">[9] OPEN PORTFOLIO ▶</span></a>
+</div></div>
+<div class="bar"><button id="theme" type="button">🎨 TOGGLE THEME</button><button id="tone" type="button">🔊 ORIGINAL BOOT TONES</button><span class="grow"></span><a href="https://www.linkedin.com/in/vishwas-aithal">LINKEDIN</a><a href="https://github.com/vishwasaithalz?tab=repositories">GITHUB PROJECTS</a></div>
+</div>
+<footer>© Vishwas Aithal. Original illustrations and code. Classic software and entertainment names are descriptive nostalgia references, not affiliated downloads or copyrighted audio. No analytics, account creation, advertisements or automatic playback. GitHub Pages hosting required for subpages to appear live.</footer>
+</main>
+<script>
+(function(){
+'use strict';
+let $=id=>document.getElementById(id);
+function clock(){$('clock').textContent=new Date().toLocaleTimeString([],{hour:'2-digit',minute:'2-digit'})}clock();setInterval(clock,45000);
+$('theme').addEventListener('click',()=>document.body.dataset.theme=document.body.dataset.theme==='night'?'day':'night');
+$('tone').addEventListener('click',()=>{try{let ac=new (window.AudioContext||window.webkitAudioContext)();[220,330,440,550].forEach((n,i)=>{let t=ac.currentTime+i*.12,o=ac.createOscillator(),g=ac.createGain();o.type='triangle';o.frequency.value=n;g.gain.setValueAtTime(.0001,t);g.gain.exponentialRampToValueAtTime(.05,t+.025);g.gain.exponentialRampToValueAtTime(.0001,t+.19);o.connect(g);g.connect(ac.destination);o.start(t);o.stop(t+.2)})}catch(e){$('tone').textContent='Sound unavailable'}});
+const cards=[...document.querySelectorAll('.launch')];cards.forEach((a,i)=>{a.addEventListener('focus',()=>{cards.forEach(c=>c.classList.remove('active'));a.classList.add('active')});a.addEventListener('blur',()=>a.classList.remove('active'));a.addEventListener('keydown',e=>{if(e.key==='ArrowRight'||e.key==='ArrowDown'){e.preventDefault();cards[(i+1)%cards.length].focus()}if(e.key==='ArrowLeft'||e.key==='ArrowUp'){e.preventDefault();cards[(i-1+cards.length)%cards.length].focus()}})});
+})();
+</script></body></html>
