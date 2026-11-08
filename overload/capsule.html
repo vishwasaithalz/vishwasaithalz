@@ -1,0 +1,74 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#284866"><meta name="description" content="Vishwas Aithal's original retro virtual floppy time capsule. Save personal memory notes to your own browser and export a text backup. No account or tracking.">
+<title>VISHWAS.EXE | FLOPPY TIME CAPSULE</title>
+<style>
+:root{font-family:"Trebuchet MS",Verdana,sans-serif;background:#152d44;color:#edf6ed}*{box-sizing:border-box}
+body{margin:0;min-width:320px;background:radial-gradient(circle at 80% 18%,#425778,transparent 38%),linear-gradient(145deg,#0f3141,#231e44);min-height:100vh}
+main{max-width:1160px;margin:auto;padding:25px clamp(12px,3vw,38px) 55px}
+small,.small{font-size:12px;color:#c1d0cd}
+h1{font:900 clamp(39px,7vw,86px)/.95 "Arial Black",system-ui,sans-serif;letter-spacing:-.07em;color:#d2ffde;margin:13px 0}
+.kicker{font:700 12px "Courier New",monospace;color:#ffe39f;letter-spacing:.2em}
+a,button{font:inherit;cursor:pointer;border:2px solid #91b9b3;background:#294e61;color:#f0ffed;padding:9px 12px;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;gap:6px;border-radius:2px;min-height:40px}
+a:hover,button:hover{background:#3d6d79}a:focus-visible,button:focus-visible,textarea:focus-visible{outline:3px dashed #ffdf95;outline-offset:2px}
+.nav{display:flex;flex-wrap:wrap;gap:8px;margin:20px 0}
+.layout{display:grid;grid-template-columns:minmax(285px,.8fr) minmax(0,1.2fr);gap:18px}
+.window{border:3px ridge #91bdc8;box-shadow:7px 8px #091c2b;background:#cccdc8;color:#213b4b;min-width:0}
+.bar{background:linear-gradient(90deg,#12358c,#2696bc);color:#fff;padding:9px 12px;font:700 13px "Courier New",monospace;display:flex;justify-content:space-between}
+.inner{padding:clamp(12px,2vw,25px)}
+.floppies{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px}
+.disk{border:0;background:none;color:#1b3248;display:flex;flex-direction:column;align-items:center;gap:7px;padding:0}
+.disk:hover{background:none}.disk:focus-visible{outline:3px dashed #214f90}
+.disk-art{width:min(100%,192px);aspect-ratio:1;position:relative;background:linear-gradient(135deg,#343944,#5b606e);border-radius:8px 9px 17px 12px;box-shadow:6px 6px #74757d,inset 4px 4px #9298a3;display:block;border:4px solid #343945;overflow:hidden}
+.disk-art:before{content:"";position:absolute;top:0;left:29%;width:56%;height:24%;background:#8a9cab;border-left:8px solid #252b36;border-right:10px solid #d6d9d6}
+.disk-art:after{content:"";position:absolute;bottom:-2px;left:19%;width:65%;height:48%;border-radius:3px;background:#e5e4d8;border:5px solid #4c5163}
+.disk-art .label{position:absolute;z-index:1;bottom:12%;left:24%;right:22%;font:700 clamp(10px,1.3vw,15px) "Courier New",monospace;text-align:center;line-height:1.15;color:#1f3a60;overflow-wrap:anywhere}
+.disk.selected .disk-art{outline:5px solid #e3b551;outline-offset:4px}.disk:focus-visible .disk-art{outline:5px solid #245e9c}
+.disk .text{font:700 13px "Courier New",monospace;color:#254c6f}.disk .state{font-size:11px;color:#456e60}
+.editor-head{display:flex;justify-content:space-between;align-items:center;gap:10px}
+textarea{display:block;width:100%;min-height:240px;max-height:440px;resize:vertical;background:#fffdf0;color:#2c3748;border:3px inset #8c9697;padding:15px;font:15px/1.6 "Courier New",monospace}
+.buttons{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}
+.buttons button{background:#e0e2df;color:#26455d;border:2px outset #f4f5f0}
+.buttons button:hover{background:#d6e9e7}
+.counter{font:12px "Courier New",monospace;color:#536f72}
+.note{border-left:4px solid #2e8292;background:#eaf3eb;padding:10px;margin-top:12px;color:#3d5960;font-size:13px;line-height:1.5}
+#status{min-height:26px;color:#225d5c;font:13px "Courier New",monospace}
+footer{color:#bdd2c5;font-size:12px;margin-top:26px;line-height:1.6;border-top:1px solid #7297a4;padding-top:18px}
+@media(max-width:800px){.layout{grid-template-columns:1fr}.disk-art{width:min(100%,160px)}}
+</style></head>
+<body><main>
+<div class="kicker">EXTRA PACK 05 / PERSONAL STORAGE / NO SERVER</div>
+<h1>FLOPPY<br>CAPSULE.EXE</h1>
+<p style="max-width:850px;color:#c6ddd8">A little private memory vault inspired by the 3.5-inch floppy era. Store notes about games, old internet memories, Blogger 2013 or the future you want to build. The only copies are in this browser and any backup file you choose to download.</p>
+<nav class="nav"><a href="./">💥 OVERLOAD 2.0</a><a href="game-room.html">🎮 BONUS GAMES</a><a href="../museum/">💾 MUSEUM</a><a href="../memory/">🖥️ MEMORY OS</a></nav>
+<div class="layout">
+<section class="window"><div class="bar"><span>💿 FLOPPY DRIVE (A:)</span><span>4 DISKS</span></div><div class="inner">
+<h2>Choose a disk</h2><div class="floppies" id="floppies"></div><p class="small" style="color:#4e6771">Each disk holds up to 4,000 characters. Your browser may delete local data if you clear site storage.</p>
+<div class="note">📀 This is not a shared guestbook, not cloud storage and not real disk hardware. Visitors cannot read one another's notes.</div>
+</div></section>
+<section class="window"><div class="bar"><span>📝 NOTEPAD.EXE / WRITE MEMORY</span><span id="disk-name">DISK A</span></div><div class="inner">
+<div class="editor-head"><h2 id="editor-title">2013: The Blogger Years</h2><span id="badge" class="counter">EMPTY</span></div>
+<label for="note" class="small" style="color:#375867">Write your memory, a story, a future note or a fragment of an old-school README:</label>
+<textarea id="note" maxlength="4000" spellcheck="true" placeholder="Dear future me, remember when..."></textarea>
+<div class="editor-head"><span class="counter"><span id="count">0</span> / 4000 characters</span><span class="counter" id="saved-at">Not saved</span></div>
+<div class="buttons"><button id="save">💾 Save to this browser</button><button id="export">📄 Export all as TXT</button><button id="clear">🗑 Clear selected disk</button></div>
+<div id="status" role="status" aria-live="polite">Choose a disk and start writing.</div>
+<div class="note"><strong>Offline first:</strong> No external JavaScript, accounts, trackers, remote sync or outgoing requests. Use Export to keep a separate copy. Avoid putting passwords or sensitive personal information into browser storage.</div>
+</div></section>
+</div><footer>© Vishwas Aithal. Original browser-based memory vault. Storage is local and not encrypted; it should not be used for sensitive secrets. The floppy graphics are drawn in CSS, not copies of commercial artwork.</footer>
+</main>
+<script>
+(function(){
+'use strict';
+const $=id=>document.getElementById(id);
+const disks=[{id:'a',title:'2013: The Blogger Years',short:'BLOGGER 2013',hint:'Websites, old posts, how I started.'},{id:'b',title:'After School Arcade',short:'GAME.EXE',hint:'Snake, Mario, Contra, I.G.I., Counter-Strike.'},{id:'c',title:'Saturday Morning TV',short:'CARTOONS',hint:'Dexter, Johnny Bravo, Pokémon, Beyblade.'},{id:'d',title:'Letter to My Future Self',short:'FUTURE.TXT',hint:'Ideas, goals and inventions yet to come.'}];
+const prefix='vishwas.floppy.v1.';let selected='a',saved={},dates={};function read(id){try{let raw=JSON.parse(localStorage.getItem(prefix+id)||'null');if(raw&&typeof raw.text==='string'){return {text:raw.text.slice(0,4000),updated:typeof raw.updated==='string'?raw.updated:''}}}catch(e){}return{text:'',updated:''}}
+function renderList(){$('floppies').replaceChildren();disks.forEach((d,i)=>{let data=read(d.id),b=document.createElement('button');b.className='disk'+(selected===d.id?' selected':'');b.type='button';b.setAttribute('aria-pressed',String(selected===d.id));b.setAttribute('aria-label','Open disk '+d.id.toUpperCase()+': '+d.title);
+let art=document.createElement('span');art.className='disk-art';let label=document.createElement('span');label.className='label';label.textContent=d.short;art.appendChild(label);let title=document.createElement('span');title.className='text';title.textContent='DISK '+String.fromCharCode(65+i)+':';let state=document.createElement('span');state.className='state';state.textContent=data.text?'● WRITTEN':'○ EMPTY';b.append(art,title,state);b.addEventListener('click',()=>selectDisk(d.id));$('floppies').appendChild(b)})}
+function selectDisk(id){selected=id;let d=disks.find(x=>x.id===id),data=read(id);$('note').value=data.text;$('editor-title').textContent=d.title;$('disk-name').textContent='DISK '+id.toUpperCase();$('badge').textContent=data.text?'SAVED':'EMPTY';$('count').textContent=data.text.length;$('saved-at').textContent=data.updated?'Saved '+new Date(data.updated).toLocaleString():'Not saved';$('status').textContent=d.hint;renderList()}
+$('note').addEventListener('input',()=>{$('count').textContent=$('note').value.length;$('badge').textContent='UNSAVED'});
+$('save').addEventListener('click',()=>{let text=$('note').value.slice(0,4000),data={text,updated:new Date().toISOString()};try{localStorage.setItem(prefix+selected,JSON.stringify(data));selectDisk(selected);$('status').textContent='Saved locally on this browser.'}catch(e){$('status').textContent='Browser storage is disabled or full. Export a text file instead.'}});
+$('clear').addEventListener('click',()=>{if(!confirm('Erase this virtual disk from this browser?'))return;try{localStorage.removeItem(prefix+selected)}catch(e){}selectDisk(selected);$('status').textContent='Selected disk cleared.'});
+$('export').addEventListener('click',()=>{let text='VISHWAS.EXE // VIRTUAL FLOPPY BACKUP\nGenerated locally: '+new Date().toLocaleString()+'\n\n'+disks.map((d,i)=>'=== DISK '+String.fromCharCode(65+i)+': '+d.title.toUpperCase()+' ===\n'+read(d.id).text+'\n').join('\n');try{let blob=new Blob([text],{type:'text/plain;charset=utf-8'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='VISHWAS-FLOPPY-TIME-CAPSULE.txt';document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),2000);$('status').textContent='Text backup export requested.'}catch(e){$('status').textContent='Export unavailable. Copy the note text manually.'}});
+selectDisk('a');
+})();
+</script></body></html>
