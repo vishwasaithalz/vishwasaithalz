@@ -21,7 +21,7 @@
 <a href="https://vishwasaithalz.github.io/vishwasaithalz/arcade/#terminal"><img src="assets/nav/terminal.svg" width="23%" alt="Use the interactive browser terminal explorer" /></a>
 </p>
 
-## 💾 00 / C:\\VISHWAS\\MEMORIES\\README.TXT
+## 💾 00 / `C:\VISHWAS\MEMORIES\README.TXT`
 
 **Before repositories, there were desktop shortcuts. Before CI, there was the excitement of a successful installation.** This is the software-and-pop-culture time capsule behind my tech journey.
 
@@ -38,13 +38,13 @@
 ### 🖥️ System restore points
 
 ```text
-C:\\> dir /b MY_LIFE
+C:\> dir /b MY_LIFE
 WINDOWS_95_TO_WINDOWS_11\    A lifetime of desktops and experiments
 AFTER_SCHOOL\                 Games, cartoons, computer shops, curiosity
 2013_BLOGGER\                 YinYangYoHackers and learning in public
 NOW\                          Python, JavaScript, AI, web and defensive security
 
-C:\\> type STATUS.TXT
+C:\> type STATUS.TXT
 Still curious. Still building. Still pressing every button.
 ```
 
