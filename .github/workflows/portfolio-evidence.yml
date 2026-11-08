@@ -29,7 +29,9 @@ jobs:
             echo "Evidence unchanged."
             exit 0
           fi
-          git -c user.name='github-actions[bot]' -c user.email='41898282+github-actions[bot]@users.noreply.github.com' commit -m 'Refresh public portfolio evidence'
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -m 'Refresh public portfolio evidence'
           # Retry a normal fast-forward push if another job moved main.
           for attempt in 1 2 3 4; do
             git fetch origin main
