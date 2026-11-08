@@ -30,4 +30,15 @@ jobs:
             exit 0
           fi
           git -c user.name='github-actions[bot]' -c user.email='41898282+github-actions[bot]@users.noreply.github.com' commit -m 'Refresh public portfolio evidence'
-          git push
+          # Retry a normal fast-forward push if another job moved main.
+          for attempt in 1 2 3 4; do
+            git fetch origin main
+            git rebase origin/main
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+            echo "Main changed before evidence could publish: retry $attempt"
+            sleep 2
+          done
+          echo "::error::Unable to publish public evidence without force-push."
+          exit 1
