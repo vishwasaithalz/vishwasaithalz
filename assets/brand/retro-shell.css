@@ -1,0 +1,60 @@
+/* VISHWAS.EXE | Shared interface shell | Vishwas Aithal
+   One header system for every public GitHub Pages experience.
+   Isolated from app logic; no JavaScript or network tracking.
+*/
+:root{
+  --vx-navy:#0b1b30;
+  --vx-title-start:#214a95;
+  --vx-title-end:#167e88;
+  --vx-teal:#176b79;
+  --vx-mint:#aaf0c8;
+  --vx-amber:#f6d08b;
+  --vx-text:#edf7ed;
+  --vx-border:#73b5b8;
+  --vx-shadow:#041322;
+}
+.vx-global-nav,.vx-global-nav *{box-sizing:border-box}
+.vx-global-nav{
+  position:relative;z-index:900;min-height:49px;
+  display:flex;align-items:center;justify-content:space-between;
+  gap:12px;padding:7px clamp(9px,2.5vw,28px);
+  background:linear-gradient(105deg,var(--vx-navy),#183959 57%,#153c4b);
+  color:var(--vx-text);border-bottom:3px solid var(--vx-amber);
+  box-shadow:0 4px 0 #0413228f;
+  font:700 12px/1.2 Consolas,"Courier New",monospace;
+}
+.vx-global-nav .vx-brand{
+  flex:none;color:#d5ffe3;text-decoration:none;white-space:nowrap;
+  display:inline-flex;align-items:center;gap:7px;
+  border:1px solid var(--vx-border);padding:7px 10px;
+  background:#163e52;letter-spacing:.02em;
+}
+.vx-global-nav .vx-brand strong{color:var(--vx-amber)}
+.vx-global-nav .vx-links{
+  display:flex;align-items:center;justify-content:flex-end;gap:7px;
+  overflow-x:auto;overflow-y:hidden;scrollbar-width:thin;
+  scrollbar-color:var(--vx-teal) transparent;
+}
+.vx-global-nav .vx-links a{
+  flex:none;text-decoration:none;color:var(--vx-text);
+  background:#21445c;border:1px solid #6598a5;
+  padding:7px 9px;white-space:nowrap;display:inline-flex;
+  align-items:center;gap:5px;
+}
+.vx-global-nav a:hover,.vx-global-nav a:focus-visible{background:#2b6c70;border-color:var(--vx-amber);color:white}
+.vx-global-nav a[aria-current=page]{border-color:var(--vx-amber);color:var(--vx-amber);background:#3e485c}
+.vx-global-nav a:focus-visible{outline:2px dashed var(--vx-amber);outline-offset:3px}
+.vx-global-nav .vx-indicator{font-size:10px;color:var(--vx-mint);flex:none;white-space:nowrap}
+.vx-universe .window{border-color:var(--vx-border) !important;box-shadow:5px 7px 0 #04132277}
+.vx-universe .window>.titlebar,.vx-universe .window>.bar,.vx-universe .surface-title{
+  background:linear-gradient(95deg,var(--vx-title-start),var(--vx-title-end)) !important;
+  color:#f7fff6 !important;
+}
+.vx-universe .desktop{height:calc(100vh - 50px);min-height:480px}
+@media(max-width:980px){
+.vx-global-nav{flex-wrap:wrap;gap:5px}
+.vx-global-nav .vx-links{justify-content:flex-start;max-width:100%;width:100%;padding-bottom:1px}
+.vx-global-nav .vx-indicator{display:none}
+.vx-universe .desktop{height:calc(100vh - 91px);min-height:470px}
+}
+@media(prefers-reduced-motion:reduce){.vx-global-nav *{scroll-behavior:auto}}
