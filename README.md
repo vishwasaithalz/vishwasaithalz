@@ -1,7 +1,7 @@
 <!-- KARMA public profile | visual copy reviewed 2026-11-06 | no long dash punctuation -->
-<p align="center"><img src="assets/karma-arcade-hero.svg" width="100%" alt="KARMA Rainbow Arcade. Build, Secure, Automate" /></p>
-<p align="center"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&amp;weight=700&amp;size=22&amp;duration=3000&amp;pause=900&amp;color=FF73A8&amp;center=true&amp;vCenter=true&amp;width=720&amp;height=55&amp;lines=Defensive+Security+%7C+Python;Automation+Engineering+%7C+JavaScript;Building+Since+2013+%7C+KARMA" alt="Typing intro: cybersecurity, automation, and building since 2013" /></p>
-<p align="center"><strong>KARMA Command Deck: Arcade Edition</strong></p>
+<p align="center"><img src="assets/karma-arcade-hero.svg" width="100%" alt="Vishwas Aithal Rainbow Arcade. Build, Secure, Automate" /></p>
+<p align="center"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&amp;weight=700&amp;size=22&amp;duration=3000&amp;pause=900&amp;color=FF73A8&amp;center=true&amp;vCenter=true&amp;width=720&amp;height=55&amp;lines=Defensive+Security+%7C+Python;Automation+Engineering+%7C+JavaScript;Building+Since+2013+%7C+Vishwas+Aithal" alt="Typing intro: cybersecurity, automation, and building since 2013" /></p>
+<p align="center"><strong>Vishwas Aithal Command Deck: Arcade Edition</strong></p>
 <p align="center"><strong>Vishwas Aithal</strong> · Defensive security · Python and JavaScript · AI workflow experiments</p>
 <p align="center"><a href="https://vishwasaithal.ai.studio/"><strong>🌐 Personal Portfolio · Cybersecurity / Web Design / SEO</strong></a></p>
 
@@ -16,7 +16,7 @@
 
 <p align="center">
 <a href="https://vishwasaithalz.github.io/vishwasaithalz/arcade/#snake"><img src="assets/nav/arcade.svg" width="23%" alt="Play the original Snake browser game" /></a>
-<a href="https://vishwasaithalz.github.io/vishwasaithalz/arcade/#pinball"><img src="assets/nav/pinball.svg" width="23%" alt="Play KARMA 198X physics pinball" /></a>
+<a href="https://vishwasaithalz.github.io/vishwasaithalz/arcade/#pinball"><img src="assets/nav/pinball.svg" width="23%" alt="Play Vishwas Aithal 198X physics pinball" /></a>
 <a href="https://vishwasaithalz.github.io/vishwasaithalz/arcade/#chat"><img src="assets/nav/chat.svg" width="23%" alt="Talk to the interactive scripted story" /></a>
 <a href="https://vishwasaithalz.github.io/vishwasaithalz/arcade/#terminal"><img src="assets/nav/terminal.svg" width="23%" alt="Use the interactive browser terminal explorer" /></a>
 </p>
@@ -31,7 +31,7 @@
 <a href="https://github.com/vishwasaithalz/AI-Automation-Lab"><img src="assets/tiles/automation-lab.svg" width="48%" alt="AI Automation Lab, open reproducible workflow project" /></a>
 <a href="https://cyber-playground-nu.vercel.app"><img src="assets/tiles/cyberplayground.svg" width="48%" alt="CyberPlayground, open safe interactive security learning labs" /></a>
 <a href="https://yyyh-phi.vercel.app"><img src="assets/tiles/yyyh.svg" width="48%" alt="YinYangYoHackers, open the public learning site" /></a>
-<a href="https://karma-ops-monitor.vercel.app"><img src="assets/tiles/karma-ops.svg" width="48%" alt="KARMA Ops, open the portfolio workshop" /></a>
+<a href="https://karma-ops-monitor.vercel.app"><img src="assets/tiles/karma-ops.svg" width="48%" alt="Vishwas Aithal Ops, open the portfolio workshop" /></a>
 </p>
 
 <details>
@@ -44,14 +44,14 @@
 | [AI Automation Lab](https://github.com/vishwasaithalz/AI-Automation-Lab) | Provider-neutral workflow experiments | Deterministic local mock examples |
 | [CyberPlayground](https://github.com/vishwasaithalz/CyberPlayground) | Browser-based security education | [Public learning labs](https://cyber-playground-nu.vercel.app) |
 | [YinYangYoHackers](https://github.com/vishwasaithalz/YYYH) | Cybersecurity learning and technology publishing | [Public website](https://yyyh-phi.vercel.app) |
-| [KARMA Ops Monitor](https://github.com/vishwasaithalz/KARMA-Ops-Monitor) | Portfolio and engineering operations | [KARMA workshop](https://karma-ops-monitor.vercel.app) |
+| [Vishwas Aithal Ops Monitor](https://github.com/vishwasaithalz/KARMA-Ops-Monitor) | Portfolio and engineering operations | [Vishwas Aithal workshop](https://karma-ops-monitor.vercel.app) |
 
 Public homepages were inspected in a browser on 2026-11-06. A working landing page does not certify every feature. LogSentry and AI Automation Lab have local CLI or mock examples, not a claimed hosted equivalent.
 </details>
 
 ## 🪐 02 / Your repository universe
 
-<a href="https://vishwasaithalz.github.io/vishwasaithalz/arcade/#roulette"><img src="dist/github-cosmos.svg" width="100%" alt="Animated repository orbit. Click to explore a real random project in KARMA Arcade." /></a>
+<a href="https://vishwasaithalz.github.io/vishwasaithalz/arcade/#roulette"><img src="dist/github-cosmos.svg" width="100%" alt="Animated repository orbit. Click to explore a real random project in Vishwas Aithal Arcade." /></a>
 
 Real public repository relationships, generated by GitHub Actions. Tap the orbit to open the interactive project roulette.
 
@@ -126,7 +126,7 @@ The public metadata script fetches the current repository information only when 
 
 <p align="center">
 <a href="https://github.com/vishwasaithalz?tab=repositories"><img src="assets/nav/code.svg" width="48%" alt="Open all public GitHub repositories" /></a>
-<a href="https://karma-ops-monitor.vercel.app"><img src="assets/nav/portfolio.svg" width="48%" alt="Open the live KARMA portfolio workshop" /></a>
+<a href="https://karma-ops-monitor.vercel.app"><img src="assets/nav/portfolio.svg" width="48%" alt="Open the live Vishwas Aithal portfolio workshop" /></a>
 </p>
 
 <details>
@@ -141,10 +141,10 @@ The public metadata script fetches the current repository information only when 
 
 ## 🕹️ ARCADE 3.0 / A playable workshop
 
-The KARMA Arcade includes an original physics pinball table, Snake, a local scripted story chat, a read-only simulated terminal and a project roulette. No gameplay data is sent to an external service.
+The Vishwas Aithal Arcade includes an original physics pinball table, Snake, a local scripted story chat, a read-only simulated terminal and a project roulette. No gameplay data is sent to an external service.
 
 <p align="center">
-<a href="https://vishwasaithalz.github.io/vishwasaithalz/arcade/#pinball"><img src="assets/nav/pinball.svg" width="47%" alt="Play the physics-based KARMA Pinball game" /></a>
+<a href="https://vishwasaithalz.github.io/vishwasaithalz/arcade/#pinball"><img src="assets/nav/pinball.svg" width="47%" alt="Play the physics-based Vishwas Aithal Pinball game" /></a>
 <a href="https://vishwasaithalz.github.io/vishwasaithalz/arcade/#roulette"><img src="assets/nav/arcade.svg" width="47%" alt="Explore the random real-project arcade" /></a>
 </p>
 
@@ -157,7 +157,7 @@ The KARMA Arcade includes an original physics pinball table, Snake, a local scri
 <a href="https://github.com/vishwasaithalz/AI-Automation-Lab"><img src="assets/arcade-gifs/automation-lab.gif" width="31%" alt="Automation Lab workflow pulse animation" /></a>
 <a href="https://cyber-playground-nu.vercel.app"><img src="assets/arcade-gifs/cyberplayground.gif" width="31%" alt="CyberPlayground retro pixel runner animation" /></a>
 <a href="https://yyyh-phi.vercel.app"><img src="assets/arcade-gifs/yyyh.gif" width="31%" alt="YYYH retro spinner animation" /></a>
-<a href="https://karma-ops-monitor.vercel.app"><img src="assets/arcade-gifs/karma-ops.gif" width="31%" alt="KARMA Ops radar sweep animation" /></a>
+<a href="https://karma-ops-monitor.vercel.app"><img src="assets/arcade-gifs/karma-ops.gif" width="31%" alt="Vishwas Aithal Ops radar sweep animation" /></a>
 </p>
 
 Each clip depicts the project's theme. Graphics do not represent live security findings, simulated user data or measured production performance.
@@ -166,13 +166,13 @@ Each clip depicts the project's theme. Graphics do not represent live security f
 
 ## 🎞️ 10 / The original motion vault
 
-<a href="https://vishwasaithalz.github.io/vishwasaithalz/arcade/"><img src="assets/karma-motion.gif" width="72%" alt="Original KARMA animated project signal. Click to open the interactive arcade." /></a>
+<a href="https://vishwasaithalz.github.io/vishwasaithalz/arcade/"><img src="assets/karma-motion.gif" width="72%" alt="Original Vishwas Aithal animated project signal. Click to open the interactive arcade." /></a>
 
 <details><summary>Open the original orbital artwork</summary>
-<img src="assets/karma-orbit.svg" width="75%" alt="Original KARMA orbit art" />
+<img src="assets/karma-orbit.svg" width="75%" alt="Original Vishwas Aithal orbit art" />
 </details>
 
-### 🧪 Six live KARMA engineering labs
+### 🧪 Six live Vishwas Aithal engineering labs
 
 Six independent Vercel workbenches with source code, automated tests and daily HTTP checks. These are educational and engineering prototypes, **not** production security guarantees or measured performance achievements.
 
@@ -189,7 +189,7 @@ Six independent Vercel workbenches with source code, automated tests and daily H
 
 ## 💌 11 / Open comms
 
-<a href="mailto:vishwas.ptv@gmail.com"><img src="assets/karma-comms.svg" width="100%" alt="Animated KARMA communications console. Click to email for collaboration." /></a>
+<a href="mailto:vishwas.ptv@gmail.com"><img src="assets/karma-comms.svg" width="100%" alt="Animated Vishwas Aithal communications console. Click to email for collaboration." /></a>
 
 <p align="center">
 <a href="https://www.linkedin.com/in/vishwas-aithal"><img src="assets/nav/linkedin.svg" width="31%" alt="Open LinkedIn" /></a>
