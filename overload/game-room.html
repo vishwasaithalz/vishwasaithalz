@@ -34,7 +34,7 @@ main{max-width:1220px;margin:auto;padding:7px 22px 70px;display:grid;grid-templa
 'use strict';const $=id=>document.getElementById(id),K={left:false,right:false,fire:false};
 const space=$('space'),sc=space.getContext('2d'),race=$('race'),rc=race.getContext('2d');let spaceRun=false,raceRun=false,spaceFrame=0,raceFrame=0,lastS=0,lastR=0;
 let ship={x:250,y:402},bullets=[],foes=[],sparks=[],lives=3,score=0,wave=1,shootWait=0,enemyDrift=1,foeShots=[],starfield=Array.from({length:70},()=>({x:Math.random()*500,y:Math.random()*440,s:Math.random()*1.5+.6}));
-function spaceSet(){spaceRun=false;cancelAnimationFrame(spaceFrame);ship={x:250,y:402};bullets=[];foes=[];sparks=[];foeShots=[];lives=3;score=0;wave=1;shootWait=0;enemyDrift=1;makeWave();spaceLabels();$('space-status').textContent='Ready. Start the geometric invader challenge.';spaceDraw()}
+function spaceSet(){spaceRun=false;cancelAnimationFrame(spaceFrame);$('space-start').textContent='▶ Start game';ship={x:250,y:402};bullets=[];foes=[];sparks=[];foeShots=[];lives=3;score=0;wave=1;shootWait=0;enemyDrift=1;makeWave();spaceLabels();$('space-status').textContent='Ready. Start the geometric invader challenge.';spaceDraw()}
 function makeWave(){foes=[];for(let y=0;y<3;y++)for(let x=0;x<8;x++)foes.push({x:46+x*55,y:55+y*37,live:true});enemyDrift=(Math.random()>.5?1:-1)*(32+wave*12)}
 function spaceLabels(){$('space-score').textContent='SCORE: '+score;$('space-lives').textContent='LIVES: '+lives;$('space-wave').textContent='WAVE: '+wave}
 function sFill(x,y,w,h,color){sc.fillStyle=color;sc.fillRect(x,y,w,h)}
@@ -56,7 +56,7 @@ if(foes.some(f=>f.live&&f.y>385)){lives=0}
 if(lives<=0){spaceLabels();spaceStop('GAME OVER. '+score+' points. Reset to restart.');return}
 if(foes.every(f=>!f.live)){wave++;makeWave();$('space-status').textContent='Wave '+wave+' incoming!'}
 spaceLabels();spaceDraw();spaceFrame=requestAnimationFrame(spaceTick)}
-function toggleSpace(){if(spaceRun){spaceStop('Paused.');return}if(lives<=0)spaceSet();spaceRun=true;lastS=performance.now();$('space-start').textContent='❚❚ Pause';$('space-status').textContent='Incoming geometric invaders!';spaceFrame=requestAnimationFrame(spaceTick)}
+function toggleSpace(){if(spaceRun){spaceStop('Paused.');return}if(raceRun)raceStop('Paused because Starfighter opened.');if(lives<=0)spaceSet();spaceRun=true;lastS=performance.now();$('space-start').textContent='❚❚ Pause';$('space-status').textContent='Incoming geometric invaders!';spaceFrame=requestAnimationFrame(spaceTick)}
 $('space-start').addEventListener('click',toggleSpace);$('space-reset').addEventListener('click',spaceSet);spaceSet();
 for(let id of ['left','right','fire']){let b=document.querySelector('[data-space="'+id+'"]');b.addEventListener('pointerdown',e=>{K[id]=true;b.setPointerCapture(e.pointerId)});for(let evt of ['pointerup','pointercancel','lostpointercapture'])b.addEventListener(evt,()=>K[id]=false)}
 space.addEventListener('pointermove',e=>{if(!spaceRun)return;let rect=space.getBoundingClientRect();ship.x=Math.max(24,Math.min(476,(e.clientX-rect.left)*500/rect.width))});
@@ -65,7 +65,7 @@ space.addEventListener('pointerdown',()=>{K.fire=true});space.addEventListener('
 // Pixel Racer: lane changes move once per key press. The road is original geometric canvas art.
 let lane=1,traffic=[],distance=0,speed=1,spawn=0,offset=0,rBest=0,raceOver=false;try{rBest=Number(localStorage.getItem('vishwas.race.best')||0)||0}catch(e){}
 function raceLabels(){$('race-score').textContent='DISTANCE: '+Math.floor(distance);$('race-best').textContent='BEST: '+Math.floor(rBest);$('race-level').textContent='SPEED: '+speed}
-function raceSet(){raceRun=false;cancelAnimationFrame(raceFrame);raceOver=false;lane=1;traffic=[];distance=0;speed=1;spawn=0;offset=0;raceLabels();$('race-status').textContent='Ready for three lanes of pixel racing.';raceDraw()}
+function raceSet(){raceRun=false;cancelAnimationFrame(raceFrame);$('race-start').textContent='▶ Start race';raceOver=false;lane=1;traffic=[];distance=0;speed=1;spawn=0;offset=0;raceLabels();$('race-status').textContent='Ready for three lanes of pixel racing.';raceDraw()}
 function saveBest(){if(distance>rBest){rBest=Math.floor(distance);try{localStorage.setItem('vishwas.race.best',String(rBest))}catch(e){}}raceLabels()}
 function raceStop(message){raceRun=false;cancelAnimationFrame(raceFrame);$('race-start').textContent='▶ Start race';$('race-status').textContent=message;raceDraw()}
 function roadX(n){return 130+n*120}
@@ -81,7 +81,7 @@ for(let t of traffic)t.y+=dt*(120+speed*17);
 traffic=traffic.filter(t=>t.y<500);
 if(traffic.some(t=>t.lane===lane&&Math.abs(t.y-384)<43)){raceOver=true;saveBest();raceStop('💥 CRASH! Distance '+Math.floor(distance)+'. Try another run.');return}
 raceLabels();raceDraw();raceFrame=requestAnimationFrame(tickRace)}
-function toggleRace(){if(raceRun){raceStop('Paused.');return}if(raceOver){raceSet()}raceRun=true;lastR=performance.now();$('race-start').textContent='❚❚ Pause';$('race-status').textContent='Avoid the cars. Every lane move counts.';raceFrame=requestAnimationFrame(tickRace)}
+function toggleRace(){if(raceRun){raceStop('Paused.');return}if(spaceRun)spaceStop('Paused because Pixel Racer opened.');if(raceOver){raceSet()}raceRun=true;lastR=performance.now();$('race-start').textContent='❚❚ Pause';$('race-status').textContent='Avoid the cars. Every lane move counts.';raceFrame=requestAnimationFrame(tickRace)}
 function moveLane(n){lane=Math.max(0,Math.min(2,lane+n));raceDraw()}
 $('race-start').addEventListener('click',toggleRace);$('race-reset').addEventListener('click',raceSet);$('race-left').addEventListener('click',()=>moveLane(-1));$('race-right').addEventListener('click',()=>moveLane(1));raceSet();
 document.addEventListener('keydown',e=>{if(/INPUT|TEXTAREA|SELECT/.test(e.target.tagName))return;
