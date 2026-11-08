@@ -1,4 +1,4 @@
-name: Profile quality
+name: VISHWAS.EXE Profile Quality
 on:
   push:
     paths:
