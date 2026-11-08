@@ -61,9 +61,9 @@ Still curious. Still building. Still pressing every button.
 
 The after-school PC, now with more buttons than anyone reasonably needs. **This expansion contains playable original Minesweeper and Pong, a working pixel painting canvas with PNG export, a playful PC parts selector, a safe terminal, a visual-only defrag toy, a retro BIOS boot screen, an XP-style fake welcome screen, an original screensaver and user-triggered synthesized boot tones.**
 
-**The Network Neighborhood panel optionally requests recent *public* GitHub events without a token.** Real project source links remain front and center; private repository contents never enter the display. No trackers or external JavaScript libraries are included.
+**A separate illustrated Network Neighborhood** maps eight public GitHub repositories as clickable nodes. The main dashboard can optionally request recent *public* GitHub events without a token. Real source links remain front and center, private repository contents never enter the display, and the apps use no third-party scripts or tracking.
 
-<p align="center"><a href="https://vishwasaithalz.github.io/vishwasaithalz/overload/"><strong>💥 BOOT OVERLOAD 2.0</strong></a> &nbsp;·&nbsp; <a href="https://vishwasaithalz.github.io/vishwasaithalz/memory/"><strong>🖥️ MEMORY OS</strong></a> &nbsp;·&nbsp; <a href="https://vishwasaithalz.github.io/vishwasaithalz/museum/"><strong>💾 MUSEUM</strong></a></p>
+<p align="center"><a href="https://vishwasaithalz.github.io/vishwasaithalz/overload/"><strong>💥 BOOT OVERLOAD 2.0</strong></a> &nbsp;·&nbsp; <a href="https://vishwasaithalz.github.io/vishwasaithalz/overload/game-room.html"><strong>🚀 BONUS GAMES</strong></a> &nbsp;·&nbsp; <a href="https://vishwasaithalz.github.io/vishwasaithalz/overload/network.html"><strong>🌐 NETWORK MAP</strong></a> &nbsp;·&nbsp; <a href="https://vishwasaithalz.github.io/vishwasaithalz/overload/capsule.html"><strong>💾 FLOPPY CAPSULE</strong></a></p>
 
 <details><summary><strong>📟 View Overload 2.0 app directory</strong></summary>
 
@@ -79,8 +79,15 @@ The after-school PC, now with more buttons than anyone reasonably needs. **This 
 | `BIOS.EXE` | Original boot sequence, opt-in synthesized tones and fake XP-inspired welcome screen |
 | `SCREEN.EXE` | Animated retro screensaver with an exit control and Escape key |
 | `CONTROL.EXE` | Four color schemes, keyboard shortcuts and a secret nostalgia Easter egg |
+| `STARFIGHTER.EXE` | Original geometric space shooter with waves, score and keyboard or touch controls |
+| `PIXEL RACER.EXE` | Original three-lane avoidance racer with local best distance and increasing speed |
+| `NEIGHBORHOOD.EXE` | Accessible SVG map linking eight public repositories, not a real infrastructure topology |
+| `FLOPPY.EXE` | Four browser-only virtual disks for personal notes, downloadable as a TXT backup |
+| `BSOD-PARODY.EXE` | Harmless blue-screen joke with an explicit exit and no actual system access |
 
 **Keyboard controls:** Alt+1 Minesweeper · Alt+2 Pong · Alt+3 Paint · Alt+4 PC Builder · Alt+B BIOS · Alt+S screensaver.
+
+**Bonus disk count:** Four playable games across the Overload desktop and the separate original game room, plus drawing, hardware assembly concepts, project mapping and a private local memory vault.
 
 <sub>Static website, not an operating system. No authentication, real network scans, disk defragmentation, commercial game downloads or fabricated GitHub achievements. Personal best saved only on your device if local storage is available.</sub>
 </details>
