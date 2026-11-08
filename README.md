@@ -55,6 +55,35 @@ Still curious. Still building. Still pressing every button.
 
 ---
 
+## 🏛️ BONUS DISC / THE INTERNET MUSEUM
+
+<a href="https://vishwasaithalz.github.io/vishwasaithalz/museum/"><img src="assets/retro-museum-marquee.svg" width="100%" alt="Original illustrated museum launcher with seven nostalgic memory folders" /></a>
+
+**102 memory files, seven collections, two playable mini-games and four desktop themes.** Open the archive, search for classic software and cartoons, collect favorites locally or find the secret keyboard Easter egg. It is a tribute to the PC culture that shaped my curiosity, not an installer archive.
+
+<p align="center"><a href="https://vishwasaithalz.github.io/vishwasaithalz/museum/"><strong>💾 EXPLORE ALL 102 MEMORIES</strong></a> &nbsp;·&nbsp; <a href="https://vishwasaithalz.github.io/vishwasaithalz/memory/"><strong>🖥️ RETURN TO MEMORY OS</strong></a></p>
+
+<details>
+<summary><strong>📦 Open the full expansion pack manifest</strong></summary>
+
+| Memory directory | Included |
+| :-- | :-- |
+| `C:\WINDOWS\` | Windows 95 through Windows 11, CRT monitors, floppy disks, CDs, keyboards, USB drives |
+| `C:\MUSIC\` | Winamp, VLC, Media Player, AIMP, foobar2000, RealPlayer and skins |
+| `C:\UTILITIES\` | Daemon Tools, PowerISO, WinRAR, 7-Zip, IDM, µTorrent, CCleaner, Task Manager, Paint and more |
+| `C:\GAMES\` | Snake, Contra, Mario, Tanks, Virtua Cop 2, Project I.G.I., Counter-Strike, Minesweeper, pinball and more |
+| `C:\CARTOONS\` | Dexter, Johnny Bravo, Powerpuff Girls, Popeye, Pokémon, Beyblade, Power Rangers S.P.D. and more |
+| `C:\INTERNET\` | Internet Explorer, Firefox, Yahoo Messenger, MSN, Orkut, Blogger and the early web |
+| `C:\WORKBENCH\` | Python, JavaScript, Git, GitHub Actions, safe security tools and public engineering labs |
+
+**Extra interactions:** instant search, category and era filters, randomly selected nostalgia, saved favorites on your device, original memory-matching game, six-question retro quiz, silent animated equalizer, local-only achievements, four color themes and a hidden classic keyboard-code surprise.
+
+<sub>Entertainment names are nostalgia references. No third-party executables, copyrighted games, music or cartoons are distributed. Local achievements are not GitHub achievements. No tracking or public guestbook.</sub>
+
+</details>
+
+---
+
 ## 🗂️ 01 / PROGRAM FILES / MY PROJECTS
 
 **Six real shortcuts, six distinct personalities.** These icons open public source code or working demos, not decorative dead ends.
