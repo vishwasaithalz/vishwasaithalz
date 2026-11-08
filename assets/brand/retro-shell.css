@@ -104,7 +104,7 @@ body.vx-universe {
   outline-offset: 3px;
 }
 .vx-universe { --vx-foreground: #e9e9df; }
-body.vx-universe:not([data-theme="day"]):not([data-theme="mint"]) {
+body.vx-universe:is(:not([data-theme]),[data-theme="default"],[data-theme="night"]) {
   --bg: #151b1c;
   --panel: #202829;
   --surface: #202829;
@@ -128,8 +128,32 @@ body.vx-universe:not([data-theme="day"]):not([data-theme="mint"]) {
   --base: #202829;
   --screen: #1c2525;
 }
-body.vx-universe:not(:has(.desktop)) {
+body.vx-universe:is(:not([data-theme]),[data-theme="default"],[data-theme="night"]):not(:has(.desktop)) {
   background: #151b1c !important;
+}
+body.vx-universe[data-theme="day"] { background: #e7e9e1 !important; color: #172421; }
+body.vx-universe[data-theme="day"] h1,
+body.vx-universe[data-theme="day"] .hero h1 { color: #172421 !important; }
+body.vx-universe[data-theme="day"] .hero h1 span { color: #49675a !important; -webkit-text-fill-color: #49675a; }
+body.vx-universe[data-theme="day"] .hero p,
+body.vx-universe[data-theme="day"] .lead { color: #485a52; }
+body.vx-universe[data-theme="day"] .eyebrow { color: #846a42 !important; }
+body.vx-universe[data-theme="day"] .utility { background: #f4f2e9; border-color: #b9c4b9; }
+body.vx-universe[data-theme="day"] .utility button { color: #172421; }
+body.vx-universe[data-theme="day"] .actions .primary { color: #e7e9e1; background: #172421; border-color: #172421; }
+body.vx-universe[data-theme="day"] .work-card { color: #172421; background: #f4f2e9; border-color: #b9c4b9; }
+body.vx-universe[data-theme="day"] .work-card p { color: #485a52; }
+body.vx-universe[data-theme="day"] .work-card .view { color: #49675a; }
+body.vx-universe[data-theme="day"] .archive-link small { color: #637168; }
+body.vx-universe[data-theme="day"] .era p { color: #485a52; }
+body.vx-universe[data-theme="mint"] .window,
+body.vx-universe[data-theme="mint"] .window .inner {
+  color: var(--ink);
+  background: var(--surface);
+}
+body.vx-universe[data-theme="mint"] .window { border-color: var(--edge); }
+body.vx-universe:is([data-theme="amber"],[data-theme="plum"],[data-theme="pink"],[data-theme="ice"]) .window {
+  background: var(--panel,var(--surface));
 }
 body.vx-universe .window {
   border: 1px solid #3b4944;
