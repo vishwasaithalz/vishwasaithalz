@@ -82,7 +82,9 @@ for(const slug of brands){
  const svg=readFileSync(absolute,'utf8');
  if(!svg.includes('<svg ')||!svg.includes('</svg>'))err(path,'malformed SVG envelope');
  if(!svg.includes('VISHWAS.EXE'))err(path,'unified identity missing');
- if(!svg.includes('prefers-reduced-motion'))err(path,'reduced-motion fallback missing');
+ // Purely static illustrations need no motion fallback.
+ // If future SVGs animate again, reduced-motion handling is required.
+ if(/@keyframes|<animate\b|animation:/.test(svg)&&!svg.includes('prefers-reduced-motion'))err(path,'animated illustration missing reduced-motion fallback');
 }
 const faviconPath=join(root,'assets/brand/favicon.svg');
 if(!existsSync(faviconPath))err('theme','favicon asset missing');
