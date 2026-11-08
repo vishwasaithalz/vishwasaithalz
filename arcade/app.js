@@ -40,9 +40,9 @@ const topics = [
   {match: /^(2013|history|origin|start|blog|old)/i, text: "2013. The first tech blog was YinYangYoHackers. Curiosity came first, polish arrived much later. The archive is still part of this story. 🌗"},
   {match: /(security|logsentry|cyber|ethical|hacking)/i, text: "Security is the workshop: LogSentry explores imported Windows event data. Recon Lite studies HTTP response headers. Everything here is intended for defensive, authorized learning. 🛡"},
   {match: /(automation|ai|workflow|agent)/i, text: "The Automation Lab builds provider-neutral workflows and deterministic mock examples. The goal is reproducible behavior, not screenshots of impossible magic. 🤖"},
-  {match: /(projects|repo|build|work)/i, text: "Pick a door: LogSentry, Recon Lite, AI Automation Lab, CyberPlayground, YinYangYoHackers, or KARMA Ops Monitor. Go to the project roulette tab to discover one. 🚀"},
-  {match: /(karma|name|why)/i, text: "KARMA is the name of this personal workshop. It joins the experiments, documentation and lessons into one evolving maker story. No mythology required. ✨"},
-  {match: /(hello|hi|hey|help)/i, text: "Hey! Try 2013, security, automation, projects or why KARMA. This is a local scripted story, not a remote chatbot. 💬"},
+  {match: /(projects|repo|build|work)/i, text: "Pick a door: LogSentry, Recon Lite, AI Automation Lab, CyberPlayground, YinYangYoHackers, or Vishwas Aithal Ops Monitor. Go to the project roulette tab to discover one. 🚀"},
+  {match: /(karma|name|why)/i, text: "Vishwas Aithal builds this collection of security, automation and web experiments. Each project documents a real step in the journey. ✨"},
+  {match: /(hello|hi|hey|help)/i, text: "Hey! Try 2013, security, automation, projects or about Vishwas Aithal. This is a local scripted story, not a remote chatbot. 💬"},
   {match: /(music|rap|song)/i, text: "There is a music chapter too, but this little chat focuses on the engineering journey. Explore the linked public projects for code and experiments. 🎧"}
 ];
 function addMessage(who, message) {
@@ -50,7 +50,7 @@ function addMessage(who, message) {
   wrapper.className = "message " + who;
   const by = document.createElement("div");
   by.className = "by";
-  by.textContent = who === "bot" ? "KARMA ARCHIVE" : "YOU";
+  by.textContent = who === "bot" ? "VISHWAS AITHAL ARCHIVE" : "YOU";
   const content = document.createElement("div");
   content.textContent = message;
   wrapper.append(by, content);
@@ -67,7 +67,7 @@ function ask(question) {
   $("#typing").hidden = false;
   $("#chat-input").disabled = true;
   const found = topics.find(item => item.match.test(clean));
-  const reply = found ? found.text : "There are more stories than fit in this little archive. Try 2013, security, projects, automation, or why KARMA. Each topic opens a different corner of the workshop. 🧩";
+  const reply = found ? found.text : "There are more stories than fit in this little archive. Try 2013, security, projects, automation, or about Vishwas Aithal. Each topic opens a different corner of the workshop. 🧩";
   window.setTimeout(() => {
     addMessage("bot", reply);
     $("#typing").hidden = true;
@@ -92,7 +92,7 @@ function termLine(text, kind = "") {
   $("#term-output").appendChild(line);
   $("#term-output").scrollTop = $("#term-output").scrollHeight;
 }
-termLine("KARMA.EXE [version 3.0]  |  public, local, read-only", "system");
+termLine("VISHWAS AITHAL [version 3.0]  |  public, local, read-only", "system");
 termLine("Type 'help' for available commands. No shell commands are executed.", "system");
 termLine(" ");
 const projects = [
@@ -101,16 +101,16 @@ const projects = [
   {key:"automation",icon:"🤖",name:"AI Automation Lab",desc:"Provider-neutral workflows with local mock mode",url:"https://github.com/vishwasaithalz/AI-Automation-Lab",type:"AUTOMATION"},
   {key:"cyberplayground",icon:"🎮",name:"CyberPlayground",desc:"Safe browser-based security learning labs",url:"https://cyber-playground-nu.vercel.app",type:"LEARNING"},
   {key:"yyyh",icon:"🌗",name:"YinYangYoHackers",desc:"Cybersecurity publishing with roots in 2013",url:"https://yyyh-phi.vercel.app",type:"PUBLISHING"},
-  {key:"karma",icon:"🛰️",name:"KARMA Ops",desc:"Personal workshop and portfolio operations",url:"https://karma-ops-monitor.vercel.app",type:"OPERATIONS"}
+  {key:"karma",icon:"🛰️",name:"Vishwas Aithal Ops",desc:"Personal workshop and portfolio operations",url:"https://karma-ops-monitor.vercel.app",type:"OPERATIONS"}
 ];
 function command(value) {
   const clean = value.trim().toLowerCase();
   if (!clean) return;
-  termLine("karma@github:~$ " + value, "command");
+  termLine("vishwas@github:~$ " + value, "command");
   const parts = clean.split(/\s+/);
   switch(parts[0]) {
     case "help": termLine("help | about | ls | projects | story | status | whoami | date | open [project] | chat | snake | pinball | roulette | gallery | clear"); break;
-    case "about": termLine("KARMA is a public maker-workshop for defensive security, automation and web experiments."); break;
+    case "about": termLine("Vishwas Aithal develops public experiments in defensive security, automation and web engineering."); break;
     case "whoami": termLine("vishwasaithalz | returning technologist | learning by shipping"); break;
     case "ls": termLine("LogSentry/  recon-lite/  AI-Automation-Lab/  CyberPlayground/  YYYH/  KARMA-Ops-Monitor/"); break;
     case "projects": projects.forEach(p => termLine(p.icon + " " + p.name + ": " + p.desc)); break;
