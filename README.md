@@ -1,79 +1,319 @@
+<!-- Vishwas Aithal personal GitHub | original retro desktop art | no long dash punctuation -->
 <!-- VISHWAS.EXE UNIFIED THEME START -->
+<p align="center"><a href="https://vishwasaithalz.github.io/vishwasaithalz/"><img src="assets/brand/vishwas-exe-main.svg" width="100%" alt="Vishwas Aithal unified retro Windows project universe with consistent midnight, teal, mint and amber styling" /></a></p>
+<p align="center"><strong>VISHWAS.EXE / THE CYBERCAFÉ KID</strong><br/><sub>One retro computer universe, real engineering work, original interactive games</sub></p>
 <p align="center">
-  <a href="https://vishwasaithalz.github.io/vishwasaithalz/">
-    <img src="assets/brand/vishwas-exe-main.svg" width="100%" alt="Vishwas Aithal: a quiet, original retro computing illustration with a desktop monitor" />
-  </a>
+<a href="https://vishwasaithalz.github.io/vishwasaithalz/"><strong>💾 BOOT MANAGER</strong></a> &nbsp;·&nbsp;
+<a href="https://vishwasaithalz.github.io/vishwasaithalz/overload/"><strong>🖥️ OVERLOAD OS</strong></a> &nbsp;·&nbsp;
+<a href="https://vishwasaithalz.github.io/vishwasaithalz/arcade/"><strong>🎮 ARCADE</strong></a> &nbsp;·&nbsp;
+<a href="https://github.com/vishwasaithalz?tab=repositories"><strong>📁 ALL PROJECTS</strong></a> &nbsp;·&nbsp;
+<a href="https://vishwasaithal.ai.studio/"><strong>🌐 PORTFOLIO</strong></a>
 </p>
-
-# Vishwas Aithal
-
-I got into computers by opening every folder and trying to understand what was inside. Windows, Winamp, old games and a lot of trial and error eventually led to a technology blog in 2013. Now I'm building small software projects around **web development, automation and defensive security**.
-
-I like clear documentation, working examples and tools that are honest about their limitations.
-
-[Personal website](https://vishwasaithalz.github.io/vishwasaithalz/) · [Portfolio](https://vishwasaithal.ai.studio/) · [LinkedIn](https://www.linkedin.com/in/vishwas-aithal) · [All repositories](https://github.com/vishwasaithalz?tab=repositories)
-
 <!-- VISHWAS.EXE UNIFIED THEME END -->
 
-## Selected work
-
-| Project | What I am exploring |
-| :-- | :-- |
-| [LogSentry](https://github.com/vishwasaithalz/LogSentry) | Reviewing exported Windows event data in a local-first defensive workflow |
-| [CyberPlayground](https://github.com/vishwasaithalz/CyberPlayground) | Interactive security education in the browser |
-| [Recon Lite](https://github.com/vishwasaithalz/recon-lite) | Offline inspection of saved HTTP response headers |
-| [AI Automation Lab](https://github.com/vishwasaithalz/AI-Automation-Lab) | Reproducible workflow experiments, mock integrations and tests |
-| [Flagship API](https://github.com/vishwasaithalz/flagship-api) | Small Node.js APIs with explicit contracts and validation |
-| [Next.js Boilerplate](https://github.com/vishwasaithalz/nextjs-boilerplate) | A practical foundation for React and TypeScript projects |
-| [Ops Monitor](https://github.com/vishwasaithalz/KARMA-Ops-Monitor) | Public CI signals and engineering operations |
-| [YinYangYoHackers](https://github.com/vishwasaithalz/YYYH) | Revisiting the technology blog where I started writing in 2013 |
-
-The repositories contain the actual source, setup instructions, limitations and tests. The security examples are for authorized, educational or defensive use.
-
-## The other side of the desk
-
-I still like software with a little personality, especially the curious, homemade feeling of the early internet. Rather than loading every experiment into this README, I keep them in a small browser archive.
-
-| Open | What you'll find |
-| :-- | :-- |
-| [After Hours](https://vishwasaithalz.github.io/vishwasaithalz/) | The central index and selected projects |
-| [Memory OS](https://vishwasaithalz.github.io/vishwasaithalz/memory/) | A windowed retro desktop |
-| [Internet Museum](https://vishwasaithalz.github.io/vishwasaithalz/museum/) | A searchable collection of 102 nostalgic items |
-| [Arcade](https://vishwasaithalz.github.io/vishwasaithalz/arcade/) | Original Snake and pinball, plus small interactive experiments |
-| [Overload workbench](https://vishwasaithalz.github.io/vishwasaithalz/overload/) | Minesweeper, Pong, a drawing canvas, simulated PC tools and more |
-
 <details>
-<summary>More playable experiments and utilities</summary>
+<summary><strong>🎞 Open the original full-size cybercafé desktop artwork</strong></summary>
 
-- [Starfighter and Pixel Racer](https://vishwasaithalz.github.io/vishwasaithalz/overload/game-room.html): two original browser games.
-- [Project network](https://vishwasaithalz.github.io/vishwasaithalz/overload/network.html): a visual map of the public repositories, not an infrastructure scan.
-- [Tracker studio](https://vishwasaithalz.github.io/vishwasaithalz/overload/tracker.html): a 16-step synthesizer for original patterns only.
-- [Floppy time capsule](https://vishwasaithalz.github.io/vishwasaithalz/overload/capsule.html): personal notes stored locally in your own browser.
-- [The old cybercafé layout](README-archive-2026-11-09.md): the complete previous README, preserved with its artwork, animations, project links and experiments.
-
+<p align="center"><img src="assets/retro-memory-desktop.svg" width="100%" alt="Original retro Windows desktop: Vishwas Aithal, the cybercafe kid, with childhood software, games, music player, cartoons and modern code" /></p>
 </details>
+<p align="center"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&amp;weight=700&amp;size=22&amp;duration=3000&amp;pause=900&amp;color=FF73A8&amp;center=true&amp;vCenter=true&amp;width=720&amp;height=55&amp;lines=Defensive+Security+%7C+Python;Automation+Engineering+%7C+JavaScript;Building+Since+2013+%7C+Vishwas+Aithal" alt="Typing intro: cybersecurity, automation, and building since 2013" /></p>
+<p align="center"><strong>VISHWAS.EXE // THE CYBERCAFÉ KID</strong></p>
+<p align="center"><a href="https://vishwasaithalz.github.io/vishwasaithalz/overload/"><strong>💥 OVERLOAD 2.0</strong></a> &nbsp;·&nbsp; <a href="https://vishwasaithalz.github.io/vishwasaithalz/memory/"><strong>🖥️ MEMORY OS</strong></a> &nbsp;·&nbsp; <a href="https://vishwasaithalz.github.io/vishwasaithalz/museum/"><strong>💾 MUSEUM</strong></a> &nbsp;·&nbsp; <a href="https://vishwasaithalz.github.io/vishwasaithalz/arcade/"><strong>🎮 ARCADE 3.0</strong></a></p>
+<p align="center"><strong>Vishwas Aithal</strong> · 90s PC kid · Blogger since 2013 · Defensive security, web and automation now</p>
+<p align="center"><a href="https://vishwasaithal.ai.studio/"><strong>🌐 Personal Portfolio · Cybersecurity / Web Design / SEO</strong></a></p>
 
-## A few things that stayed with me
+<p align="center">
+<a href="https://github.com/vishwasaithalz?tab=repositories"><img src="assets/nav/code.svg" width="23%" alt="Explore GitHub source code" /></a>
+<a href="https://yyyh-phi.vercel.app"><img src="assets/nav/yyyh.svg" width="23%" alt="Visit YinYangYoHackers" /></a>
+<a href="https://www.linkedin.com/in/vishwas-aithal"><img src="assets/nav/linkedin.svg" width="23%" alt="Visit LinkedIn" /></a>
+<a href="https://www.youtube.com/@vishwasaithalz"><img src="assets/nav/youtube.svg" width="23%" alt="Visit YouTube" /></a>
+</p>
 
-Winamp visualizers, VLC, WinRAR, Daemon Tools, PowerISO, the early days of internet downloads, and games like Snake, Contra, I.G.I. and Counter-Strike. On the other side of the desk: Dexter's Laboratory, Johnny Bravo, Pokémon and Beyblade. Eventually I stopped just exploring software and started trying to build some of my own.
+> **I was the kid who clicked every icon just to find out what it did.** Windows desktops, Winamp playlists, virtual drives, compressed game folders, Saturday morning cartoons, a 2013 tech blog, and a stubborn curiosity about how computers work. Today that curiosity shows up as defensive security tools, websites, automation and experiments you can actually inspect. **The wallpaper changed. The curiosity didn't.**
 
-<details>
-<summary>Open the original Winamp-inspired contribution display</summary>
+<p align="center">
+<a href="https://vishwasaithalz.github.io/vishwasaithalz/arcade/#snake"><img src="assets/nav/arcade.svg" width="23%" alt="Play the original Snake browser game" /></a>
+<a href="https://vishwasaithalz.github.io/vishwasaithalz/arcade/#pinball"><img src="assets/nav/pinball.svg" width="23%" alt="Play Vishwas Aithal 198X physics pinball" /></a>
+<a href="https://vishwasaithalz.github.io/vishwasaithalz/arcade/#chat"><img src="assets/nav/chat.svg" width="23%" alt="Talk to the interactive scripted story" /></a>
+<a href="https://vishwasaithalz.github.io/vishwasaithalz/arcade/#terminal"><img src="assets/nav/terminal.svg" width="23%" alt="Use the interactive browser terminal explorer" /></a>
+</p>
 
-<img src="assets/crt/winamp-dark.svg" width="85%" alt="Original Winamp-inspired GitHub contribution visualization" />
+## 💾 00 / `C:\VISHWAS\MEMORIES\README.TXT`
 
-This graphic is generated by a public GitHub workflow. It is not a fabricated score. The rest of the original artwork is in the [archived README](README-archive-2026-11-09.md).
+**From Windows 95 to Windows 11, before repositories there were desktop shortcuts. Before CI, there was the excitement of a successful installation.** This is the software-and-pop-culture time capsule behind my tech journey.
 
-</details>
+| Folder | Core memory |
+| :-- | :-- |
+| 🎧 **MUSIC & MEDIA** | Winamp skins, VLC playlists, watching the equalizer dance |
+| 💿 **VIRTUAL DRIVES** | Daemon Tools, PowerISO, mounting ISOs and figuring out what a disc image actually was |
+| 🧰 **PC MAINTENANCE** | CCleaner, Registry Mechanic and the great tradition of trying to make Windows faster |
+| 📦 **DOWNLOADS** | WinRAR, Internet Download Manager, µTorrent and folders named `final_v2_really_final` |
+| 🎮 **GAME.EXE** | Snake, Mario, Contra, Tanks (Battle City), Virtua Cop 2, Project I.G.I. and Counter-Strike |
+| 📺 **CARTOON BREAK** | Dexter's Laboratory, Johnny Bravo, Popeye, The Powerpuff Girls, Power Rangers S.P.D., Pokémon and Beyblade |
+| 🌐 **FIRST WEB CHAPTER** | Blogger, YinYangYoHackers, curiosity-driven experiments and the beginning of my online tech archive |
 
-## Small engineering notes
+### 🖥️ System restore points
 
-Most of the work here is exploratory. I try to keep the interesting bits accessible: source code, reproducible commands, explicit tradeoffs and boundaries around sensitive data.
+```text
+C:\> dir /b MY_LIFE
+WINDOWS_95_TO_WINDOWS_11\    A lifetime of desktops and experiments
+AFTER_SCHOOL\                 Games, cartoons, computer shops, curiosity
+2013_BLOGGER\                 YinYangYoHackers and learning in public
+NOW\                          Python, JavaScript, AI, web and defensive security
 
-If you want to see the actual state of the projects, use the [GitHub Actions runs](https://github.com/vishwasaithalz/vishwasaithalz/actions) rather than decorative status graphics. The shared visual system is documented in the [design notes](assets/brand/THEME.md).
+C:\> type STATUS.TXT
+Still curious. Still building. Still pressing every button.
+```
+
+**My personality settings:** a little Dexter's Laboratory, a little old-school PC repair shop, a lot of late-night tinkering. I like tech that feels alive, but I still want the code to be understandable, the demos to be real and the security work to be authorized.
+
+<p align="center"><a href="https://vishwasaithalz.github.io/vishwasaithalz/memory/"><strong>💾 BOOT MEMORY OS</strong></a> &nbsp;·&nbsp; <a href="https://vishwasaithalz.github.io/vishwasaithalz/arcade/#snake"><strong>▶ OPEN ARCADE</strong></a> &nbsp;·&nbsp; <a href="https://yyyh-phi.vercel.app"><strong>🌐 OPEN THE BLOG ERA</strong></a> &nbsp;·&nbsp; <a href="https://github.com/vishwasaithalz?tab=repositories"><strong>📁 OPEN PROJECTS</strong></a></p>
 
 ---
 
-[GitHub](https://github.com/vishwasaithalz) · [LinkedIn](https://www.linkedin.com/in/vishwas-aithal) · [YouTube](https://www.youtube.com/@vishwasaithalz) · [Portfolio](https://vishwasaithal.ai.studio/)
+## 💥 EXTRA PACK 02 / THE OVERLOAD COMPUTER
 
-<sub>Original browser experiments are simulations or educational tools, not commercial software distributions. No private repository content or fabricated achievements are presented here. All work credited to Vishwas Aithal.</sub>
+<a href="https://vishwasaithalz.github.io/vishwasaithalz/overload/"><img src="assets/retro-overload-marquee.svg" width="100%" alt="Overload 2.0 original illustrated retro computer with Minesweeper, Pong, pixel paint, PC building, command prompt, defrag visualization, GitHub feed and BIOS features" /></a>
+
+The after-school PC, now with more buttons than anyone reasonably needs. **This expansion contains playable original Minesweeper and Pong, a working pixel painting canvas with PNG export, a playful PC parts selector, a safe terminal, a visual-only defrag toy, a retro BIOS boot screen, an XP-style fake welcome screen, an original screensaver and user-triggered synthesized boot tones.**
+
+**A separate illustrated Network Neighborhood** maps eight public GitHub repositories as clickable nodes. The main dashboard can optionally request recent *public* GitHub events without a token. Real source links remain front and center, private repository contents never enter the display, and the apps use no third-party scripts or tracking.
+
+<p align="center"><a href="https://vishwasaithalz.github.io/vishwasaithalz/overload/"><strong>💥 BOOT OVERLOAD 2.0</strong></a> &nbsp;·&nbsp; <a href="https://vishwasaithalz.github.io/vishwasaithalz/overload/game-room.html"><strong>🚀 BONUS GAMES</strong></a> &nbsp;·&nbsp; <a href="https://vishwasaithalz.github.io/vishwasaithalz/overload/network.html"><strong>🌐 NETWORK MAP</strong></a> &nbsp;·&nbsp; <a href="https://vishwasaithalz.github.io/vishwasaithalz/overload/capsule.html"><strong>💾 FLOPPY CAPSULE</strong></a> &nbsp;·&nbsp; <a href="https://vishwasaithalz.github.io/vishwasaithalz/overload/tracker.html"><strong>🎚️ TRACKER STUDIO</strong></a></p>
+
+<details><summary><strong>📟 View Overload 2.0 app directory</strong></summary>
+
+| Shortcut | What it does |
+| :-- | :-- |
+| `MINES.EXE` | Original 9×9 Minesweeper with first-click protection, flags, timer and a local personal best |
+| `PONG.EXE` | Original canvas Pong against a scripted CPU opponent, with keyboard and touch controls |
+| `PAINT.EXE` | Draw with touch, mouse or pen, erase, resize brush and export a locally generated PNG |
+| `HARDWARE.EXE` | Select example PC parts and copy the resulting illustrative configuration |
+| `COMMAND.COM` | Read-only local simulated commands such as `help`, `whoami`, `dir` and `projects` |
+| `DEFRAG.EXE` | A color-block sorting animation that never touches a disk |
+| `NETWORK.EXE` | Optional read-only request for publicly visible GitHub activity |
+| `BIOS.EXE` | Original boot sequence, opt-in synthesized tones and fake XP-inspired welcome screen |
+| `SCREEN.EXE` | Animated retro screensaver with an exit control and Escape key |
+| `CONTROL.EXE` | Four color schemes, keyboard shortcuts and a secret nostalgia Easter egg |
+| `STARFIGHTER.EXE` | Original geometric space shooter with waves, score and keyboard or touch controls |
+| `PIXEL RACER.EXE` | Original three-lane avoidance racer with local best distance and increasing speed |
+| `NEIGHBORHOOD.EXE` | Accessible SVG map linking eight public repositories, not a real infrastructure topology |
+| `FLOPPY.EXE` | Four browser-only virtual disks for personal notes, downloadable as a TXT backup |
+| `BSOD-PARODY.EXE` | Harmless blue-screen joke with an explicit exit and no actual system access |
+| `TRACKER.EXE` | Original user-created 16-step Web Audio rhythm patterns with four synthesized voices, tempo control, local saving and JSON export |
+
+**Keyboard controls:** Alt+1 Minesweeper · Alt+2 Pong · Alt+3 Paint · Alt+4 PC Builder · Alt+B BIOS · Alt+S screensaver.
+
+**Bonus disk count:** Four playable games across the Overload desktop and original game room, plus drawing, PC concepts, project mapping, a private local memory vault and an opt-in original audio tracker.
+
+<sub>Static website, not an operating system. No authentication, real network scans, disk defragmentation, commercial game downloads or fabricated GitHub achievements. Personal best saved only on your device if local storage is available.</sub>
+</details>
+
+---
+
+## 🏛️ BONUS DISC / THE INTERNET MUSEUM
+
+<a href="https://vishwasaithalz.github.io/vishwasaithalz/museum/"><img src="assets/retro-museum-marquee.svg" width="100%" alt="Original illustrated museum launcher with seven nostalgic memory folders" /></a>
+
+**102 memory files, seven collections, two playable mini-games and four desktop themes.** Open the archive, search for classic software and cartoons, collect favorites locally or find the secret keyboard Easter egg. It is a tribute to the PC culture that shaped my curiosity, not an installer archive.
+
+<p align="center"><a href="https://vishwasaithalz.github.io/vishwasaithalz/museum/"><strong>💾 EXPLORE ALL 102 MEMORIES</strong></a> &nbsp;·&nbsp; <a href="https://vishwasaithalz.github.io/vishwasaithalz/memory/"><strong>🖥️ RETURN TO MEMORY OS</strong></a></p>
+
+<details>
+<summary><strong>📦 Open the full expansion pack manifest</strong></summary>
+
+| Memory directory | Included |
+| :-- | :-- |
+| `C:\WINDOWS\` | Windows 95 through Windows 11, CRT monitors, floppy disks, CDs, keyboards, USB drives |
+| `C:\MUSIC\` | Winamp, VLC, Media Player, AIMP, foobar2000, RealPlayer and skins |
+| `C:\UTILITIES\` | Daemon Tools, PowerISO, WinRAR, 7-Zip, IDM, µTorrent, CCleaner, Task Manager, Paint and more |
+| `C:\GAMES\` | Snake, Contra, Mario, Tanks, Virtua Cop 2, Project I.G.I., Counter-Strike, Minesweeper, pinball and more |
+| `C:\CARTOONS\` | Dexter, Johnny Bravo, Powerpuff Girls, Popeye, Pokémon, Beyblade, Power Rangers S.P.D. and more |
+| `C:\INTERNET\` | Internet Explorer, Firefox, Yahoo Messenger, MSN, Orkut, Blogger and the early web |
+| `C:\WORKBENCH\` | Python, JavaScript, Git, GitHub Actions, safe security tools and public engineering labs |
+
+**Extra interactions:** instant search, category and era filters, randomly selected nostalgia, saved favorites on your device, original memory-matching game, six-question retro quiz, silent animated equalizer, local-only achievements, four color themes and a hidden classic keyboard-code surprise.
+
+<sub>Entertainment names are nostalgia references. No third-party executables, copyrighted games, music or cartoons are distributed. Local achievements are not GitHub achievements. No tracking or public guestbook.</sub>
+
+</details>
+
+---
+
+## 🗂️ 01 / PROGRAM FILES / MY PROJECTS
+
+**Six real shortcuts, six distinct personalities.** These icons open public source code or working demos, not decorative dead ends.
+
+<p align="center">
+<a href="https://github.com/vishwasaithalz/LogSentry"><img src="assets/tiles/logsentry.svg" width="48%" alt="LogSentry, open defensive Windows event project" /></a>
+<a href="https://recon-lite.vercel.app"><img src="assets/tiles/recon-lite.svg" width="48%" alt="Recon Lite, open public security signals demo" /></a>
+<a href="https://github.com/vishwasaithalz/AI-Automation-Lab"><img src="assets/tiles/automation-lab.svg" width="48%" alt="AI Automation Lab, open reproducible workflow project" /></a>
+<a href="https://cyber-playground-nu.vercel.app"><img src="assets/tiles/cyberplayground.svg" width="48%" alt="CyberPlayground, open safe interactive security learning labs" /></a>
+<a href="https://yyyh-phi.vercel.app"><img src="assets/tiles/yyyh.svg" width="48%" alt="YinYangYoHackers, open the public learning site" /></a>
+<a href="https://karma-ops-monitor.vercel.app"><img src="assets/tiles/karma-ops.svg" width="48%" alt="Vishwas Aithal Ops, open the portfolio workshop" /></a>
+</p>
+
+<details>
+<summary><strong>🧪 Show the technical details and source links</strong></summary>
+
+| Project | Scope | Evidence |
+| :-- | :-- | :-- |
+| [LogSentry](https://github.com/vishwasaithalz/LogSentry) | Imported Windows security event analysis | Python CLI, synthetic fixtures, explicit investigation limits |
+| [Recon Lite](https://github.com/vishwasaithalz/recon-lite) | HTTP security-header and response analysis | [Public Signal Room demo](https://recon-lite.vercel.app) |
+| [AI Automation Lab](https://github.com/vishwasaithalz/AI-Automation-Lab) | Provider-neutral workflow experiments | Deterministic local mock examples |
+| [CyberPlayground](https://github.com/vishwasaithalz/CyberPlayground) | Browser-based security education | [Public learning labs](https://cyber-playground-nu.vercel.app) |
+| [YinYangYoHackers](https://github.com/vishwasaithalz/YYYH) | Cybersecurity learning and technology publishing | [Public website](https://yyyh-phi.vercel.app) |
+| [Vishwas Aithal Ops Monitor](https://github.com/vishwasaithalz/KARMA-Ops-Monitor) | Portfolio and engineering operations | [Vishwas Aithal workshop](https://karma-ops-monitor.vercel.app) |
+
+Public homepages were inspected in a browser on 2026-11-06. A working landing page does not certify every feature. LogSentry and AI Automation Lab have local CLI or mock examples, not a claimed hosted equivalent.
+</details>
+
+## 🌐 02 / NETWORK NEIGHBORHOOD
+
+<a href="https://vishwasaithalz.github.io/vishwasaithalz/arcade/#roulette"><img src="dist/github-cosmos.svg" width="100%" alt="Animated repository orbit. Click to explore a real random project in Vishwas Aithal Arcade." /></a>
+
+Real public repository relationships, generated by GitHub Actions. Tap the orbit to open the interactive project roulette.
+
+## 🎚️ 03 / WINAMP-STYLE CONTRIBUTION MIX
+
+<a href="https://github.com/vishwasaithalz/vishwasaithalz/actions/workflows/karma-crt.yml">
+<picture>
+<source media="(prefers-color-scheme: dark)" srcset="assets/crt/winamp-dark.svg" />
+<source media="(prefers-color-scheme: light)" srcset="assets/crt/winamp-light.svg" />
+<img src="assets/crt/winamp-dark.svg" alt="Winamp CRT showing actual GitHub contribution data. Click for workflow." width="100%" />
+</picture>
+</a>
+
+A Winamp-inspired chart generated from real public contribution data, not a fictional score.
+
+## 🐍 04 / SNAKE.EXE
+
+<a href="https://vishwasaithalz.github.io/vishwasaithalz/arcade/#snake"><img src="dist/karma-snake.svg" width="100%" alt="GitHub contribution snake from real data. Click to play a real Snake browser game." /></a>
+
+The GitHub graph powers this animation. The clickable Snake game has keyboard controls and a mobile touch pad, with no uploaded scores.
+
+## 💬 05 / THE CHAT WINDOW
+
+<a href="https://vishwasaithalz.github.io/vishwasaithalz/arcade/#chat"><img src="assets/karma-live-chat.svg" width="100%" alt="Animated scripted conversation about the 2013 blog and newer security projects. Click to ask the archive a question." /></a>
+
+**💬 Real input, local replies.** The linked chat accepts questions about the 2013 blog, security labs, automation and projects. It is a scripted interactive timeline, not a human operator or live AI assistant.
+
+<p align="center"><a href="https://vishwasaithalz.github.io/vishwasaithalz/arcade/#chat"><img src="assets/nav/chat.svg" width="48%" alt="Enter the local interactive timeline chat" /></a></p>
+
+## ⌨️ 06 / DOS PROMPT TO MODERN TERMINAL
+
+<a href="https://vishwasaithalz.github.io/vishwasaithalz/arcade/#terminal"><img src="assets/karma-terminal-launcher.svg" width="100%" alt="Retro terminal preview. Click to open the usable local command explorer." /></a>
+
+Try `help`, `projects`, `story`, `status`, `open logsentry`, or `snake`. The browser terminal is interactive, but it does **not** execute real shell commands or access anyone's computer.
+
+<p align="center">
+<a href="https://vishwasaithalz.github.io/vishwasaithalz/arcade/#terminal"><img src="assets/nav/terminal.svg" width="48%" alt="Open the playable browser terminal" /></a>
+<a href="https://vishwasaithalz.github.io/vishwasaithalz/arcade/#roulette"><img src="assets/nav/arcade.svg" width="48%" alt="Open the project roulette mini-game" /></a>
+</p>
+
+## 🛠️ 07 / BEHIND THE SCREEN
+
+- **Privacy by default:** local-first projects and no public upload of private event logs.
+- **Authorized security research only:** work on systems with explicit permission.
+- **Reproducible experiments:** synthetic fixtures, tests, documented limitations.
+- **A real GitHub API utility:** public metadata via a read-only Python script.
+
+```bash
+# Public repository information only. No API token or write access required.
+python tools/github_public_metrics.py
+```
+
+<p align="center">
+<a href="https://github.com/vishwasaithalz/vishwasaithalz/blob/main/tools/github_public_metrics.py"><img src="assets/nav/metrics.svg" width="48%" alt="Read the public GitHub REST API metrics source" /></a>
+<a href="https://github.com/vishwasaithalz/LogSentry/pull/2"><img src="assets/nav/logsentry.svg" width="48%" alt="Read the merged LogSentry investigation limits improvement" /></a>
+</p>
+
+## ⚡ 08 / CURRENTLY INSTALLED
+
+<p align="center">
+<img src="https://img.shields.io/badge/Python-3E2A78?style=for-the-badge&amp;logo=python&amp;logoColor=FFD86B" alt="Python" />
+<img src="https://img.shields.io/badge/JavaScript-23325C?style=for-the-badge&amp;logo=javascript&amp;logoColor=FFDF5A" alt="JavaScript" />
+<img src="https://img.shields.io/badge/TypeScript-173858?style=for-the-badge&amp;logo=typescript&amp;logoColor=65DEFF" alt="TypeScript" />
+<img src="https://img.shields.io/badge/Node.js-235038?style=for-the-badge&amp;logo=nodedotjs&amp;logoColor=A9FF78" alt="Node.js" />
+<img src="https://img.shields.io/badge/Linux-3F2745?style=for-the-badge&amp;logo=linux&amp;logoColor=FFC55A" alt="Linux" />
+<img src="https://img.shields.io/badge/GitHub_Actions-3E244F?style=for-the-badge&amp;logo=githubactions&amp;logoColor=D8A3FF" alt="GitHub Actions" />
+</p>
+
+## 📡 09 / SYSTEM INFORMATION
+
+The public metadata script fetches the current repository information only when run. Read its code to confirm what it does. Counts do not imply official GitHub achievements or rankings.
+
+<p align="center">
+<a href="https://github.com/vishwasaithalz?tab=repositories"><img src="assets/nav/code.svg" width="48%" alt="Open all public GitHub repositories" /></a>
+<a href="https://karma-ops-monitor.vercel.app"><img src="assets/nav/portfolio.svg" width="48%" alt="Open the live Vishwas Aithal portfolio workshop" /></a>
+</p>
+
+<details>
+<summary>🧰 More experiments and design references</summary>
+
+- [Flagship API](https://github.com/vishwasaithalz/flagship-api): API engineering experiments.
+- [Next.js Boilerplate](https://github.com/vishwasaithalz/nextjs-boilerplate): starter and sandbox.
+- [Profile design catalog](https://github.com/abhisheknaiidu/awesome-github-profile-readme): open-source inspiration.
+- [Real animation workflows](https://github.com/vishwasaithalz/vishwasaithalz/actions): see GitHub Actions runs.
+
+</details>
+
+## 🕹️ ARCADE 3.0 / A playable workshop
+
+The Vishwas Aithal Arcade includes an original physics pinball table, Snake, a local scripted story chat, a read-only simulated terminal and a project roulette. No gameplay data is sent to an external service.
+
+<p align="center">
+<a href="https://vishwasaithalz.github.io/vishwasaithalz/arcade/#pinball"><img src="assets/nav/pinball.svg" width="47%" alt="Play the physics-based Vishwas Aithal Pinball game" /></a>
+<a href="https://vishwasaithalz.github.io/vishwasaithalz/arcade/#roulette"><img src="assets/nav/arcade.svg" width="47%" alt="Explore the random real-project arcade" /></a>
+</p>
+
+<details>
+<summary><strong>🎞 Open six project-specific original animated GIFs</strong></summary>
+
+<p align="center">
+<a href="https://github.com/vishwasaithalz/LogSentry"><img src="assets/arcade-gifs/logsentry.gif" width="31%" alt="LogSentry event scanner animation" /></a>
+<a href="https://recon-lite.vercel.app"><img src="assets/arcade-gifs/recon-lite.gif" width="31%" alt="Recon Lite header sweep animation" /></a>
+<a href="https://github.com/vishwasaithalz/AI-Automation-Lab"><img src="assets/arcade-gifs/automation-lab.gif" width="31%" alt="Automation Lab workflow pulse animation" /></a>
+<a href="https://cyber-playground-nu.vercel.app"><img src="assets/arcade-gifs/cyberplayground.gif" width="31%" alt="CyberPlayground retro pixel runner animation" /></a>
+<a href="https://yyyh-phi.vercel.app"><img src="assets/arcade-gifs/yyyh.gif" width="31%" alt="YYYH retro spinner animation" /></a>
+<a href="https://karma-ops-monitor.vercel.app"><img src="assets/arcade-gifs/karma-ops.gif" width="31%" alt="Vishwas Aithal Ops radar sweep animation" /></a>
+</p>
+
+Each clip depicts the project's theme. Graphics do not represent live security findings, simulated user data or measured production performance.
+
+</details>
+
+## 🎞️ 10 / SCREENSAVER VAULT
+
+<a href="https://vishwasaithalz.github.io/vishwasaithalz/arcade/"><img src="assets/karma-motion.gif" width="72%" alt="Original Vishwas Aithal animated project signal. Click to open the interactive arcade." /></a>
+
+<details><summary>Open the original orbital artwork</summary>
+<img src="assets/karma-orbit.svg" width="75%" alt="Original Vishwas Aithal orbit art" />
+</details>
+
+### 🧪 Six live Vishwas Aithal engineering labs
+
+Six independent Vercel workbenches with source code, automated tests and daily HTTP checks. These are educational and engineering prototypes, **not** production security guarantees or measured performance achievements.
+
+| Project | Live demo | Source and tests |
+|:--|:--|:--|
+| **SentinelPulse** | [Security lab](https://karma-sentinelpulse.vercel.app/) | [Source](https://github.com/vishwasaithalz/AI-Automation-Lab/tree/main/projects/SentinelPulse) |
+| **SERPMatrix** | [SEO lab](https://karma-serpmatrix.vercel.app/) | [Source](https://github.com/vishwasaithalz/AI-Automation-Lab/tree/main/projects/SERPMatrix) |
+| **CloudHardener** | [Kubernetes lab](https://karma-cloudhardener.vercel.app/) | [Source](https://github.com/vishwasaithalz/AI-Automation-Lab/tree/main/projects/CloudHardener) |
+| **ApexVitals** | [Performance lab](https://karma-apexvitals.vercel.app/) | [Source](https://github.com/vishwasaithalz/AI-Automation-Lab/tree/main/projects/ApexVitals) |
+| **ZeroAuth** | [Passkey lab](https://karma-zeroauth.vercel.app/) | [Source](https://github.com/vishwasaithalz/AI-Automation-Lab/tree/main/projects/ZeroAuth) |
+| **Spectra UI** | [Accessibility lab](https://karma-spectra-ui.vercel.app/) | [Source](https://github.com/vishwasaithalz/AI-Automation-Lab/tree/main/projects/SpectraUI) |
+
+[Explore all six project folders](https://github.com/vishwasaithalz/AI-Automation-Lab/tree/main/projects) · [Live uptime checks](https://github.com/vishwasaithalz/AI-Automation-Lab/actions/workflows/karma-live-endpoints.yml)
+
+## 💌 11 / SEND A MESSAGE
+
+<a href="mailto:vishwas.ptv@gmail.com"><img src="assets/karma-comms.svg" width="100%" alt="Animated Vishwas Aithal communications console. Click to email for collaboration." /></a>
+
+<p align="center">
+<a href="https://www.linkedin.com/in/vishwas-aithal"><img src="assets/nav/linkedin.svg" width="31%" alt="Open LinkedIn" /></a>
+<a href="https://www.youtube.com/@vishwasaithalz"><img src="assets/nav/youtube.svg" width="31%" alt="Open YouTube" /></a>
+<a href="https://github.com/vishwasaithalz"><img src="assets/nav/code.svg" width="31%" alt="Open GitHub" /></a>
+</p>
+
+<sub>Public project demonstrations only. No private repository names are exposed. Animated SVGs include reduced-motion styling where supported. The arcade runs locally in the browser with no analytics or API calls. © Vishwas Aithal.</sub>
