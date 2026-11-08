@@ -8,7 +8,9 @@ on:
       - "index.html"
       - "memory/**"
       - "museum/**"
+      - "arcade/**"
       - "overload/**"
+      - "assets/brand/**"
       - "assets/retro-overload-marquee.svg"
       - ".github/workflows/overload-smoke.yml"
   pull_request:
@@ -17,7 +19,9 @@ on:
       - "index.html"
       - "memory/**"
       - "museum/**"
+      - "arcade/**"
       - "overload/**"
+      - "assets/brand/**"
       - "assets/retro-overload-marquee.svg"
       - ".github/workflows/overload-smoke.yml"
   workflow_dispatch:
