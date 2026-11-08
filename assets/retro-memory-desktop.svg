@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="540" viewBox="0 0 1200 540" role="img" aria-labelledby="title description">
+<title id="title">Vishwas Aithal: The Cybercafe Kid</title><desc id="description">An original retro computer desktop featuring an Explorer window of childhood software, games and cartoons, a music player visualizer, and a modern coding terminal.</desc>
+<defs>
+  <linearGradient id="wall" x2="1" y2="1"><stop stop-color="#004c53"/><stop offset=".6" stop-color="#07526a"/><stop offset="1" stop-color="#24295e"/></linearGradient>
+  <linearGradient id="bluebar" x2="1"><stop stop-color="#102f92"/><stop offset="1" stop-color="#2d9ed8"/></linearGradient>
+  <linearGradient id="purple" x2="1" y2="1"><stop stop-color="#1e253d"/><stop offset="1" stop-color="#30304e"/></linearGradient>
+  <pattern id="pix" width="19" height="19" patternUnits="userSpaceOnUse"><path d="M19 0H0V19" fill="none" stroke="#ffffff" stroke-opacity=".05"/></pattern>
+  <pattern id="scan" width="4" height="4" patternUnits="userSpaceOnUse"><path d="M0 3H1200" stroke="#01061d" stroke-opacity=".16"/></pattern>
+  <filter id="sh"><feDropShadow dx="4" dy="6" stdDeviation="3" flood-opacity=".25"/></filter>
+</defs>
+<style>
+@keyframes bounce{0%,100%{transform:scaleY(.65)}45%{transform:scaleY(1.08)}}
+.eq{transform-box:fill-box;transform-origin:center bottom;animation:bounce 1.2s ease-in-out infinite alternate}
+@keyframes blink{50%{opacity:0}}.cursor{animation:blink 1s steps(1) infinite}
+@media(prefers-reduced-motion:reduce){.eq,.cursor{animation:none}}
+</style>
+<rect width="1200" height="540" rx="18" fill="url(#wall)"/><rect width="1200" height="540" rx="18" fill="url(#pix)"/>
+<circle cx="1105" cy="70" r="165" fill="#63d0ed" opacity=".08"/><circle cx="420" cy="460" r="230" fill="#9fe8c0" opacity=".08"/>
+<rect x="8" y="8" width="1184" height="524" rx="12" fill="none" stroke="#a4e9e0" stroke-opacity=".55" stroke-width="3"/>
+<text x="45" y="39" fill="#f2fbd3" font-family="Verdana,Arial,sans-serif" font-size="27" font-weight="700" >VISHWAS AITHAL // THE CYBERCAFÉ KID</text>
+<text x="865" y="38" fill="#ccfdf5" font-family="Verdana,Arial,sans-serif" font-size="14" font-weight="700" >199X &gt; 2013 &gt; NOW</text>
+<!-- File explorer -->
+<g filter="url(#sh)">
+<rect x="39" y="55" width="721" height="418" fill="#c4c4c4" stroke="#e8e8e8" stroke-width="4"/>
+<rect x="47" y="62" width="705" height="35" fill="url(#bluebar)"/>
+<text x="64" y="86" fill="#ffffff" font-family="Verdana,Arial,sans-serif" font-size="19" font-weight="700" >▣  C:\\VISHWAS\\MY COMPUTER</text>
+<rect x="669" y="70" width="22" height="18" fill="#d4d4d4" stroke="#444"/><rect x="697" y="70" width="22" height="18" fill="#d4d4d4" stroke="#444"/><rect x="726" y="70" width="18" height="18" fill="#d4d4d4" stroke="#444"/>
+<text x="731" y="84" fill="#121212" font-family="Verdana,Arial,sans-serif" font-size="13" font-weight="700" >x</text>
+<rect x="48" y="99" width="704" height="31" fill="#eeeae1"/>
+<text x="64" y="120" fill="#263540" font-family="Verdana,Arial,sans-serif" font-size="15" font-weight="400" >File   Edit   View   Favorites   Tools   Help</text>
+<rect x="56" y="136" width="695" height="298" fill="#f7f5e9" stroke="#6d7b80" stroke-width="2"/>
+<text x="74" y="161" fill="#152c8b" font-family="Verdana,Arial,sans-serif" font-size="19" font-weight="700" >THE SOFTWARE DRAWER</text>
+<path d="M74 172H728" stroke="#c8c1b3" stroke-width="2"/>
+<text x="79" y="197" fill="#555974" font-family="Verdana,Arial,sans-serif" font-size="15" font-weight="700" >PROGRAM FILES</text>
+<rect x="81" y="214" width="14" height="11" fill="#e0a844" stroke="#7c5a29" stroke-width="1"/><path d="M81 213h7l2 3h5" fill="none" stroke="#ffdf9a" stroke-width="2"/><text x="107" y="226" fill="#263b46" font-family="Verdana,Arial,sans-serif" font-size="16" font-weight="400" >Winamp 2.x + VLC</text><rect x="81" y="246" width="14" height="11" fill="#c47f26" stroke="#7c5a29" stroke-width="1"/><path d="M81 245h7l2 3h5" fill="none" stroke="#ffdf9a" stroke-width="2"/><text x="107" y="258" fill="#263b46" font-family="Verdana,Arial,sans-serif" font-size="16" font-weight="400" >Daemon Tools + PowerISO</text><rect x="81" y="278" width="14" height="11" fill="#e0a844" stroke="#7c5a29" stroke-width="1"/><path d="M81 277h7l2 3h5" fill="none" stroke="#ffdf9a" stroke-width="2"/><text x="107" y="290" fill="#263b46" font-family="Verdana,Arial,sans-serif" font-size="16" font-weight="400" >WinRAR + IDM + µTorrent</text><rect x="81" y="310" width="14" height="11" fill="#c47f26" stroke="#7c5a29" stroke-width="1"/><path d="M81 309h7l2 3h5" fill="none" stroke="#ffdf9a" stroke-width="2"/><text x="107" y="322" fill="#263b46" font-family="Verdana,Arial,sans-serif" font-size="16" font-weight="400" >CCleaner + Registry Mechanic</text>
+<text x="394" y="197" fill="#555974" font-family="Verdana,Arial,sans-serif" font-size="15" font-weight="700" >GAME SHORTCUTS</text>
+<rect x="399" y="214" width="14" height="11" fill="#e0a844" stroke="#7c5a29" stroke-width="1"/><path d="M399 213h7l2 3h5" fill="none" stroke="#ffdf9a" stroke-width="2"/><text x="425" y="226" fill="#263b46" font-family="Verdana,Arial,sans-serif" font-size="16" font-weight="400" >Snake + Mario + Contra</text><rect x="399" y="246" width="14" height="11" fill="#c47f26" stroke="#7c5a29" stroke-width="1"/><path d="M399 245h7l2 3h5" fill="none" stroke="#ffdf9a" stroke-width="2"/><text x="425" y="258" fill="#263b46" font-family="Verdana,Arial,sans-serif" font-size="16" font-weight="400" >Tanks + Virtua Cop 2</text><rect x="399" y="278" width="14" height="11" fill="#e0a844" stroke="#7c5a29" stroke-width="1"/><path d="M399 277h7l2 3h5" fill="none" stroke="#ffdf9a" stroke-width="2"/><text x="425" y="290" fill="#263b46" font-family="Verdana,Arial,sans-serif" font-size="16" font-weight="400" >Project I.G.I. + Counter-Strike</text>
+<path d="M394 312H724" stroke="#c8c1b3"/>
+<text x="395" y="337" fill="#555974" font-family="Verdana,Arial,sans-serif" font-size="15" font-weight="700" >AFTER-SCHOOL TV</text>
+<text x="395" y="363" fill="#263b46" font-family="Verdana,Arial,sans-serif" font-size="15" font-weight="400" >Dexter · Johnny Bravo · Popeye</text>
+<text x="395" y="385" fill="#263b46" font-family="Verdana,Arial,sans-serif" font-size="15" font-weight="400" >Powerpuff Girls · SPD</text>
+<text x="395" y="407" fill="#263b46" font-family="Verdana,Arial,sans-serif" font-size="15" font-weight="400" >Pokémon · Beyblade</text>
+<path d="M76 358H365" stroke="#c8c1b3"/>
+<text x="79" y="384" fill="#2b6790" font-family="Verdana,Arial,sans-serif" font-size="13" font-weight="700" >2013: BLOGGER → TODAY: BUILDER</text>
+<text x="79" y="405" fill="#263b46" font-family="Verdana,Arial,sans-serif" font-size="15" font-weight="400" >Security · Web · Automation</text>
+<rect x="56" y="439" width="694" height="24" fill="#e1ddd4"/>
+<text x="68" y="456" fill="#44555d" font-family="Verdana,Arial,sans-serif" font-size="13" font-weight="400" >14 memories     6 real projects     curiosity.exe is still running</text>
+</g>
+<!-- audio player -->
+<g filter="url(#sh)">
+<rect x="784" y="57" width="378" height="227" rx="5" fill="url(#purple)" stroke="#b49f70" stroke-width="3"/>
+<rect x="791" y="64" width="364" height="29" fill="#464660"/>
+<text x="804" y="84" fill="#fff1b7" font-family="Verdana,Arial,sans-serif" font-size="15" font-weight="700" >♫  WINAMP-ish // THE SOUNDTRACK</text>
+<rect x="798" y="103" width="350" height="91" rx="2" fill="#090f19" stroke="#718071"/>
+<text x="809" y="129" fill="#58f09a" font-family="Verdana,Arial,sans-serif" font-size="19" font-weight="700" >01. childhood_memories.mp3</text>
+<text x="811" y="154" fill="#80bba8" font-family="Verdana,Arial,sans-serif" font-size="13" font-weight="400" >128 kbps   44.1 kHz   STEREO</text>
+<text x="812" y="181" fill="#d1cfa9" font-family="Verdana,Arial,sans-serif" font-size="15" font-weight="400" >▶   ❚❚   ■   ◀◀   ▶▶    SHUFFLE</text>
+<rect x="799" y="204" width="350" height="55" fill="#111a2c" stroke="#676f90"/>
+<path d="M805 249H1141" stroke="#394b6b"/>
+<rect class="eq" x="813" y="239" width="8" height="9" rx="1" fill="#e8b95b" style="animation-delay:-0s"/><rect class="eq" x="830" y="227" width="8" height="21" rx="1" fill="#4bf5a7" style="animation-delay:-0.18s"/><rect class="eq" x="847" y="235" width="8" height="13" rx="1" fill="#8bdffe" style="animation-delay:-0.36s"/><rect class="eq" x="864" y="214" width="8" height="34" rx="1" fill="#e8b95b" style="animation-delay:-0.54s"/><rect class="eq" x="881" y="223" width="8" height="25" rx="1" fill="#4bf5a7" style="animation-delay:-0.72s"/><rect class="eq" x="898" y="233" width="8" height="15" rx="1" fill="#8bdffe" style="animation-delay:-0.8999999999999999s"/><rect class="eq" x="915" y="209" width="8" height="39" rx="1" fill="#e8b95b" style="animation-delay:-1.08s"/><rect class="eq" x="932" y="226" width="8" height="22" rx="1" fill="#4bf5a7" style="animation-delay:-0s"/><rect class="eq" x="949" y="218" width="8" height="30" rx="1" fill="#8bdffe" style="animation-delay:-0.18s"/><rect class="eq" x="966" y="236" width="8" height="12" rx="1" fill="#e8b95b" style="animation-delay:-0.36s"/><rect class="eq" x="983" y="221" width="8" height="27" rx="1" fill="#4bf5a7" style="animation-delay:-0.54s"/><rect class="eq" x="1000" y="205" width="8" height="43" rx="1" fill="#8bdffe" style="animation-delay:-0.72s"/><rect class="eq" x="1017" y="229" width="8" height="19" rx="1" fill="#e8b95b" style="animation-delay:-0.8999999999999999s"/><rect class="eq" x="1034" y="213" width="8" height="35" rx="1" fill="#4bf5a7" style="animation-delay:-1.08s"/><rect class="eq" x="1051" y="233" width="8" height="15" rx="1" fill="#8bdffe" style="animation-delay:-0s"/><rect class="eq" x="1068" y="222" width="8" height="26" rx="1" fill="#e8b95b" style="animation-delay:-0.18s"/><rect class="eq" x="1085" y="211" width="8" height="37" rx="1" fill="#4bf5a7" style="animation-delay:-0.36s"/><rect class="eq" x="1102" y="230" width="8" height="18" rx="1" fill="#8bdffe" style="animation-delay:-0.54s"/><rect class="eq" x="1119" y="217" width="8" height="31" rx="1" fill="#e8b95b" style="animation-delay:-0.72s"/>
+<text x="803" y="276" fill="#cdd6e3" font-family="Verdana,Arial,sans-serif" font-size="11" font-weight="700" >NO AUTOPLAY • JUST MEMORIES</text>
+</g>
+<!-- terminal -->
+<g filter="url(#sh)">
+<rect x="784" y="299" width="378" height="174" rx="5" fill="#0c1321" stroke="#66c5b7" stroke-width="3"/>
+<rect x="791" y="306" width="364" height="26" fill="#155156"/>
+<text x="807" y="325" fill="#e4fff4" font-family="Verdana,Arial,sans-serif" font-size="15" font-weight="700" >⌁  TERMINAL // 2026</text>
+<text x="806" y="355" fill="#7ee6c8" font-family="Verdana,Arial,sans-serif" font-size="18" font-weight="700" >C:\\&gt; whoami</text>
+<text x="806" y="378" fill="#eef9fb" font-family="Verdana,Arial,sans-serif" font-size="18" font-weight="400" >vishwas_aithal</text>
+<text x="806" y="404" fill="#7ee6c8" font-family="Verdana,Arial,sans-serif" font-size="18" font-weight="700" >C:\\&gt; dir /b</text>
+<text x="806" y="428" fill="#eef9fb" font-family="Verdana,Arial,sans-serif" font-size="14" font-weight="400" >blogger.exe  security.lab  build.js</text>
+<text x="806" y="455" fill="#ffcb78" font-family="Verdana,Arial,sans-serif" font-size="16" font-weight="700" >C:\\&gt; still_curious_</text>
+<rect class="cursor" x="1033" y="442" width="8" height="17" fill="#ffcb78"/>
+</g>
+<!-- taskbar -->
+<rect x="12" y="489" width="1176" height="39" rx="3" fill="#b6c4c5" stroke="#dce5df" stroke-width="3"/>
+<rect x="24" y="496" width="98" height="26" fill="#e5e9dc" stroke="#5b626e" stroke-width="2"/>
+<text x="36" y="515" fill="#223944" font-family="Verdana,Arial,sans-serif" font-size="19" font-weight="700" >▦ Start</text>
+<rect x="140" y="496" width="304" height="26" fill="#d1dfdb" stroke="#7d8c93"/>
+<text x="151" y="514" fill="#233f4d" font-family="Verdana,Arial,sans-serif" font-size="15" font-weight="700" >▣  Childhood.exe</text>
+<rect x="449" y="496" width="252" height="26" fill="#d1dfdb" stroke="#7d8c93"/>
+<text x="459" y="514" fill="#233f4d" font-family="Verdana,Arial,sans-serif" font-size="15" font-weight="700" >⌘  Building.exe</text>
+<text x="838" y="514" fill="#38535c" font-family="Verdana,Arial,sans-serif" font-size="15" font-weight="700" >WINDOWS 95 &gt; WINDOWS 11</text>
+<rect x="12" y="12" width="1176" height="516" fill="url(#scan)" pointer-events="none" opacity=".32"/>
+</svg>
