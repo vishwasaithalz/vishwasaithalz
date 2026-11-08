@@ -1,4 +1,4 @@
-name: KARMA contribution snake
+name: VISHWAS.EXE Contribution Snake
 on:
   workflow_dispatch:
   schedule:
