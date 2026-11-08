@@ -63,9 +63,9 @@ space.addEventListener('pointermove',e=>{if(!spaceRun)return;let rect=space.getB
 space.addEventListener('pointerdown',()=>{K.fire=true});space.addEventListener('pointerup',()=>{K.fire=false});
 
 // Pixel Racer: lane changes move once per key press. The road is original geometric canvas art.
-let lane=1,traffic=[],distance=0,speed=1,spawn=0,offset=0,rBest=0;try{rBest=Number(localStorage.getItem('vishwas.race.best')||0)||0}catch(e){}
+let lane=1,traffic=[],distance=0,speed=1,spawn=0,offset=0,rBest=0,raceOver=false;try{rBest=Number(localStorage.getItem('vishwas.race.best')||0)||0}catch(e){}
 function raceLabels(){$('race-score').textContent='DISTANCE: '+Math.floor(distance);$('race-best').textContent='BEST: '+Math.floor(rBest);$('race-level').textContent='SPEED: '+speed}
-function raceSet(){raceRun=false;cancelAnimationFrame(raceFrame);lane=1;traffic=[];distance=0;speed=1;spawn=0;offset=0;raceLabels();$('race-status').textContent='Ready for three lanes of pixel racing.';raceDraw()}
+function raceSet(){raceRun=false;cancelAnimationFrame(raceFrame);raceOver=false;lane=1;traffic=[];distance=0;speed=1;spawn=0;offset=0;raceLabels();$('race-status').textContent='Ready for three lanes of pixel racing.';raceDraw()}
 function saveBest(){if(distance>rBest){rBest=Math.floor(distance);try{localStorage.setItem('vishwas.race.best',String(rBest))}catch(e){}}raceLabels()}
 function raceStop(message){raceRun=false;cancelAnimationFrame(raceFrame);$('race-start').textContent='▶ Start race';$('race-status').textContent=message;raceDraw()}
 function roadX(n){return 130+n*120}
@@ -79,9 +79,9 @@ function tickRace(time){if(!raceRun)return;let dt=Math.min(.033,(time-lastR)/100
 if(spawn<=0){let roadLane=Math.floor(Math.random()*3);traffic.push({lane:roadLane,y:-40,color:['#f7a4bd','#b4a9f8','#e9b578','#f59f79'][Math.floor(Math.random()*4)]});spawn=Math.max(.27,1.15-speed*.065)}
 for(let t of traffic)t.y+=dt*(120+speed*17);
 traffic=traffic.filter(t=>t.y<500);
-if(traffic.some(t=>t.lane===lane&&Math.abs(t.y-384)<43)){saveBest();raceStop('💥 CRASH! Distance '+Math.floor(distance)+'. Try another run.');return}
+if(traffic.some(t=>t.lane===lane&&Math.abs(t.y-384)<43)){raceOver=true;saveBest();raceStop('💥 CRASH! Distance '+Math.floor(distance)+'. Try another run.');return}
 raceLabels();raceDraw();raceFrame=requestAnimationFrame(tickRace)}
-function toggleRace(){if(raceRun){raceStop('Paused.');return}if(distance>0&&!traffic.length){raceSet()}raceRun=true;lastR=performance.now();$('race-start').textContent='❚❚ Pause';$('race-status').textContent='Avoid the cars. Every lane move counts.';raceFrame=requestAnimationFrame(tickRace)}
+function toggleRace(){if(raceRun){raceStop('Paused.');return}if(raceOver){raceSet()}raceRun=true;lastR=performance.now();$('race-start').textContent='❚❚ Pause';$('race-status').textContent='Avoid the cars. Every lane move counts.';raceFrame=requestAnimationFrame(tickRace)}
 function moveLane(n){lane=Math.max(0,Math.min(2,lane+n));raceDraw()}
 $('race-start').addEventListener('click',toggleRace);$('race-reset').addEventListener('click',raceSet);$('race-left').addEventListener('click',()=>moveLane(-1));$('race-right').addEventListener('click',()=>moveLane(1));raceSet();
 document.addEventListener('keydown',e=>{if(/INPUT|TEXTAREA|SELECT/.test(e.target.tagName))return;
