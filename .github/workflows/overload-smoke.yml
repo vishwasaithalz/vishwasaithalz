@@ -1,0 +1,41 @@
+name: VISHWAS.EXE Static Quality
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "README.md"
+      - "index.html"
+      - "memory/**"
+      - "museum/**"
+      - "overload/**"
+      - "assets/retro-overload-marquee.svg"
+      - ".github/workflows/overload-smoke.yml"
+  pull_request:
+    paths:
+      - "README.md"
+      - "index.html"
+      - "memory/**"
+      - "museum/**"
+      - "overload/**"
+      - "assets/retro-overload-marquee.svg"
+      - ".github/workflows/overload-smoke.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  smoke:
+    name: Check pages, scripts and local links
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout public source
+        uses: actions/checkout@v4
+      - name: Use Node.js 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Run dependency-free site QA
+        run: node overload/qa.mjs
