@@ -1,4 +1,4 @@
-name: KARMA selected-project health
+name: VISHWAS.EXE Project Health
 on:
   push:
     branches: [main]
