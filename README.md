@@ -1,5 +1,21 @@
 <!-- Vishwas Aithal personal GitHub | original retro desktop art | no long dash punctuation -->
+<!-- VISHWAS.EXE UNIFIED THEME START -->
+<p align="center"><a href="https://vishwasaithalz.github.io/vishwasaithalz/"><img src="assets/brand/vishwas-exe-main.svg" width="100%" alt="Vishwas Aithal unified retro Windows project universe with consistent midnight, teal, mint and amber styling" /></a></p>
+<p align="center"><strong>VISHWAS.EXE / THE CYBERCAFÉ KID</strong><br/><sub>One retro computer universe, real engineering work, original interactive games</sub></p>
+<p align="center">
+<a href="https://vishwasaithalz.github.io/vishwasaithalz/"><strong>💾 BOOT MANAGER</strong></a> &nbsp;·&nbsp;
+<a href="https://vishwasaithalz.github.io/vishwasaithalz/overload/"><strong>🖥️ OVERLOAD OS</strong></a> &nbsp;·&nbsp;
+<a href="https://vishwasaithalz.github.io/vishwasaithalz/arcade/"><strong>🎮 ARCADE</strong></a> &nbsp;·&nbsp;
+<a href="https://github.com/vishwasaithalz?tab=repositories"><strong>📁 ALL PROJECTS</strong></a> &nbsp;·&nbsp;
+<a href="https://vishwasaithal.ai.studio/"><strong>🌐 PORTFOLIO</strong></a>
+</p>
+<!-- VISHWAS.EXE UNIFIED THEME END -->
+
+<details>
+<summary><strong>🎞 Open the original full-size cybercafé desktop artwork</strong></summary>
+
 <p align="center"><img src="assets/retro-memory-desktop.svg" width="100%" alt="Original retro Windows desktop: Vishwas Aithal, the cybercafe kid, with childhood software, games, music player, cartoons and modern code" /></p>
+</details>
 <p align="center"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&amp;weight=700&amp;size=22&amp;duration=3000&amp;pause=900&amp;color=FF73A8&amp;center=true&amp;vCenter=true&amp;width=720&amp;height=55&amp;lines=Defensive+Security+%7C+Python;Automation+Engineering+%7C+JavaScript;Building+Since+2013+%7C+Vishwas+Aithal" alt="Typing intro: cybersecurity, automation, and building since 2013" /></p>
 <p align="center"><strong>VISHWAS.EXE // THE CYBERCAFÉ KID</strong></p>
 <p align="center"><a href="https://vishwasaithalz.github.io/vishwasaithalz/overload/"><strong>💥 OVERLOAD 2.0</strong></a> &nbsp;·&nbsp; <a href="https://vishwasaithalz.github.io/vishwasaithalz/memory/"><strong>🖥️ MEMORY OS</strong></a> &nbsp;·&nbsp; <a href="https://vishwasaithalz.github.io/vishwasaithalz/museum/"><strong>💾 MUSEUM</strong></a> &nbsp;·&nbsp; <a href="https://vishwasaithalz.github.io/vishwasaithalz/arcade/"><strong>🎮 ARCADE 3.0</strong></a></p>
