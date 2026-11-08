@@ -2,6 +2,7 @@
 <p align="center"><img src="assets/retro-memory-desktop.svg" width="100%" alt="Original retro Windows desktop: Vishwas Aithal, the cybercafe kid, with childhood software, games, music player, cartoons and modern code" /></p>
 <p align="center"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&amp;weight=700&amp;size=22&amp;duration=3000&amp;pause=900&amp;color=FF73A8&amp;center=true&amp;vCenter=true&amp;width=720&amp;height=55&amp;lines=Defensive+Security+%7C+Python;Automation+Engineering+%7C+JavaScript;Building+Since+2013+%7C+Vishwas+Aithal" alt="Typing intro: cybersecurity, automation, and building since 2013" /></p>
 <p align="center"><strong>VISHWAS.EXE // THE CYBERCAFÉ KID</strong></p>
+<p align="center"><a href="https://vishwasaithalz.github.io/vishwasaithalz/memory/"><strong>🖥️ BOOT THE INTERACTIVE MEMORY OS</strong></a> &nbsp;·&nbsp; <a href="https://vishwasaithalz.github.io/vishwasaithalz/arcade/"><strong>🎮 OPEN ARCADE 3.0</strong></a></p>
 <p align="center"><strong>Vishwas Aithal</strong> · 90s PC kid · Blogger since 2013 · Defensive security, web and automation now</p>
 <p align="center"><a href="https://vishwasaithal.ai.studio/"><strong>🌐 Personal Portfolio · Cybersecurity / Web Design / SEO</strong></a></p>
 
@@ -23,7 +24,7 @@
 
 ## 💾 00 / `C:\VISHWAS\MEMORIES\README.TXT`
 
-**Before repositories, there were desktop shortcuts. Before CI, there was the excitement of a successful installation.** This is the software-and-pop-culture time capsule behind my tech journey.
+**From Windows 95 to Windows 11, before repositories there were desktop shortcuts. Before CI, there was the excitement of a successful installation.** This is the software-and-pop-culture time capsule behind my tech journey.
 
 | Folder | Core memory |
 | :-- | :-- |
@@ -50,7 +51,7 @@ Still curious. Still building. Still pressing every button.
 
 **My personality settings:** a little Dexter's Laboratory, a little old-school PC repair shop, a lot of late-night tinkering. I like tech that feels alive, but I still want the code to be understandable, the demos to be real and the security work to be authorized.
 
-<p align="center"><a href="https://vishwasaithalz.github.io/vishwasaithalz/arcade/#snake"><strong>▶ OPEN ARCADE</strong></a> &nbsp;·&nbsp; <a href="https://yyyh-phi.vercel.app"><strong>🌐 OPEN THE BLOG ERA</strong></a> &nbsp;·&nbsp; <a href="https://github.com/vishwasaithalz?tab=repositories"><strong>📁 OPEN PROJECTS</strong></a></p>
+<p align="center"><a href="https://vishwasaithalz.github.io/vishwasaithalz/memory/"><strong>💾 BOOT MEMORY OS</strong></a> &nbsp;·&nbsp; <a href="https://vishwasaithalz.github.io/vishwasaithalz/arcade/#snake"><strong>▶ OPEN ARCADE</strong></a> &nbsp;·&nbsp; <a href="https://yyyh-phi.vercel.app"><strong>🌐 OPEN THE BLOG ERA</strong></a> &nbsp;·&nbsp; <a href="https://github.com/vishwasaithalz?tab=repositories"><strong>📁 OPEN PROJECTS</strong></a></p>
 
 ---
 
