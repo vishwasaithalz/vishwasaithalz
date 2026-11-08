@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0e2235">
+<meta name="description" content="VISHWAS.EXE Overload 2.0, an original 90s PC inspired interactive workbench with Minesweeper, Pong, Paint, a PC builder, terminal, screensaver, offline toys and an optional public GitHub feed.">
+<title>VISHWAS.EXE | OVERLOAD 2.0</title>
+<style>
+:root{--bg:#0c1427;--panel:#122842;--inset:#0b1e30;--border:#447a92;--hi:#ffe4a6;--mint:#b4ffd1;--text:#ebf4fb;--dim:#a4bbc8;--button:#244760;--pink:#f3a7d4;--shade:#061020}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:radial-gradient(circle at 82% 12%,#214b71 0,transparent 44%),radial-gradient(circle at 6% 65%,#34204f 0,transparent 40%),var(--bg);color:var(--text);font:15px/1.55 system-ui,Segoe UI,sans-serif;min-width:320px}
+body[data-theme=amber]{--bg:#1b160d;--panel:#342817;--inset:#181205;--border:#97723c;--hi:#ffe4a6;--mint:#ffd081;--text:#f9e5ba;--dim:#cabb98;--button:#5c4427;--pink:#ffc791;--shade:#120e08}
+body[data-theme=ice]{--bg:#0b283b;--panel:#153d52;--inset:#092535;--border:#6ab7d4;--hi:#dcf8ff;--mint:#a8f2ee;--text:#ebffff;--dim:#afccd5;--button:#2a6b7e;--pink:#b3e9ff;--shade:#041924}
+body[data-theme=pink]{--bg:#23112e;--panel:#401c4d;--inset:#1c092b;--border:#a66b9d;--hi:#ffe4e8;--mint:#f8c5e1;--text:#fff1fb;--dim:#d8bbd3;--button:#793b74;--pink:#ffacf0;--shade:#10091a}
+button,input,select{font:inherit}button{cursor:pointer}
+button:focus-visible,input:focus-visible,select:focus-visible,a:focus-visible{outline:3px solid var(--hi);outline-offset:2px}
+a{color:var(--mint)}
+button,.button{background:var(--button);border:1px solid var(--border);border-bottom:3px solid var(--shade);color:var(--text);padding:8px 11px;text-decoration:none;border-radius:4px;display:inline-flex;align-items:center;gap:5px;justify-content:center;min-height:38px}
+button:hover,.button:hover{border-color:var(--mint);filter:brightness(1.16)}
+button:disabled{opacity:.6;cursor:default}
+button.primary,.button.primary{background:var(--mint);color:#13242b;font-weight:800}
+button.flat{background:transparent;border:0;border-radius:0;box-shadow:none}
+.small{font-size:12px;color:var(--dim)}
+.top{background:linear-gradient(90deg,#133c61,#23537d,#45345c);padding:6px 18px;display:flex;align-items:center;justify-content:space-between;gap:8px;color:#e5fff2;font:700 12px Consolas,monospace;border-bottom:2px solid #f6d98c}
+.shell{max-width:1300px;margin:auto;padding:18px clamp(12px,2.3vw,30px) 80px}
+.hero{display:grid;grid-template-columns:1fr auto;gap:18px;align-items:center;padding:20px 0 16px}
+.hdr-kicker{font:700 12px Consolas,monospace;letter-spacing:.17em;color:var(--hi)}
+h1{font:900 clamp(42px,7.2vw,96px)/.94 "Arial Black",system-ui,sans-serif;letter-spacing:-.075em;margin:8px 0 16px}
+h1 span{color:var(--mint)}
+.lead{color:var(--dim);max-width:720px;margin:0 0 12px;font-size:clamp(14px,1.7vw,18px)}
+.lcd{width:min(280px,27vw);background:#0b1f19;color:#93f9af;border:10px ridge #809d90;box-shadow:7px 9px var(--shade);padding:12px;font:13px Consolas,monospace;transform:rotate(2deg)}
+.lcd big{display:block;font-size:22px;font-weight:bold;color:#d4ffaf;margin-bottom:12px}.lcd i{display:block;height:6px;background:#5ae7a5;margin:8px 0}
+.dock{display:flex;flex-wrap:wrap;gap:7px;align-items:center;border:2px solid var(--border);padding:9px;background:var(--panel);margin-bottom:20px}
+.dock .spacer{flex:1}
+.app-grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:16px}
+.window{background:var(--panel);border:2px solid var(--border);box-shadow:5px 7px 0 var(--shade);grid-column:span 6;min-width:0;overflow:hidden;scroll-margin-top:20px}
+.window.wide{grid-column:span 12}.window.triple{grid-column:span 4}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:9px;background:linear-gradient(90deg,#214d8a,#117a88);color:#fff;padding:7px 10px;border-bottom:2px solid var(--border);font:bold 13px Consolas,monospace}
+.bar .dots{white-space:nowrap;font-size:14px;letter-spacing:2px}
+.inner{padding:clamp(12px,1.8vw,22px)}
+.inner h2{font-size:19px;margin:0 0 7px}.inner p{margin:5px 0 12px;color:var(--dim)}
+.game-heading{display:flex;align-items:center;flex-wrap:wrap;justify-content:space-between;gap:8px;margin-bottom:10px}
+.controls{display:flex;flex-wrap:wrap;gap:7px;align-items:center}
+.chip{border:1px solid var(--border);border-radius:3px;background:var(--inset);padding:5px 8px;color:var(--hi);font:12px Consolas,monospace}
+.mine-grid{display:grid;grid-template-columns:repeat(9,minmax(0,1fr));gap:2px;max-width:360px;aspect-ratio:1;margin:10px auto;touch-action:manipulation}
+.mine-grid button{min-height:0;padding:0;border-radius:0;background:#32566c;border:2px solid;border-color:#7da4ae #15364a #15364a #7da4ae;font:800 clamp(11px,1.4vw,17px) Consolas,monospace;color:var(--mint);aspect-ratio:1}
+.mine-grid button.revealed{background:var(--inset);border:1px solid #46657a}
+.mine-grid button.mine-hit{background:#ab4458}
+.mine-grid button.flagged{color:var(--hi)}
+.mine-1{color:#6ec5ff!important}.mine-2{color:#85edaf!important}.mine-3{color:#ff9090!important}.mine-4{color:#f4b6fb!important}
+.canvas-wrap{background:var(--inset);border:3px ridge var(--border);max-width:100%;position:relative}
+canvas{display:block;max-width:100%;height:auto;touch-action:none}
+#pong{width:100%;aspect-ratio:560/300}
+#paint{width:100%;aspect-ratio:600/320;background:#fff;cursor:crosshair}
+.pong-keys{display:grid;grid-template-columns:repeat(2,1fr);gap:6px;margin-top:7px}
+select,input[type=range]{accent-color:var(--mint)}select,input[type=text]{background:var(--inset);color:var(--text);border:1px solid var(--border);padding:8px;max-width:100%}
+.paint-palette{display:flex;gap:5px;flex-wrap:wrap}.swatch{width:29px;height:29px;min-height:0;padding:0;border:2px solid #e9f0ff}
+.swatch.selected{outline:3px solid var(--hi);outline-offset:2px}
+.builder-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.builder-grid label{display:flex;flex-direction:column;gap:4px;font-size:12px;color:var(--dim)}
+.builder-grid select{width:100%}
+.builder-summary{background:var(--inset);padding:12px;color:var(--mint);font:13px/1.7 Consolas,monospace;margin-top:12px;white-space:pre-wrap}
+#term-output{background:#071926;color:#9df0b8;padding:12px;max-height:215px;min-height:148px;overflow:auto;white-space:pre-wrap;word-break:break-word;font:13px/1.6 Consolas,monospace}
+.termline{display:flex;gap:8px;align-items:center;background:#071926;color:#a5f5c8;padding:7px 10px;font:13px Consolas,monospace}
+.termline input{flex:1;background:transparent;color:#fff;padding:4px;border:0;border-bottom:1px solid #407968;min-width:40px;outline:none}
+.defrag{display:grid;grid-template-columns:repeat(24,1fr);gap:2px;padding:8px;background:var(--inset);min-height:145px}
+.defrag i{aspect-ratio:1.25;border:1px solid #22303e}
+.feed-list{display:grid;gap:8px;max-height:320px;overflow:auto;padding-right:3px}.feed-item{background:var(--inset);border-left:3px solid var(--mint);padding:9px}.feed-item strong{display:block;word-break:break-word}.feed-item span{display:block;color:var(--dim);font-size:12px}
+.status{font:12px Consolas,monospace;color:var(--hi);padding-top:9px;min-height:27px}
+.details{padding:12px;background:var(--inset);border:1px solid var(--border)}
+details summary{cursor:pointer;font-weight:700;color:var(--mint)}
+.shortcut-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:8px}
+.shortcut-grid a{display:flex;flex-direction:column;gap:5px;text-decoration:none;background:var(--inset);border:1px solid var(--border);padding:12px;min-height:85px}
+.shortcut-grid a span{font-size:22px}.shortcut-grid a:hover{background:var(--button)}
+#boot,#screensaver,#login{position:fixed;inset:0;z-index:100;display:none}
+#boot.show,#screensaver.show,#login.show{display:grid}
+#boot{place-items:center;background:radial-gradient(circle at center,#101d27,#01040a);padding:20px}
+.boot-card{max-width:700px;width:100%;font:14px/1.8 Consolas,monospace;color:#94efae}
+.boot-card h2{font:700 clamp(30px,5vw,60px) Consolas,monospace;color:#d5f5bc;margin:0}
+.boot-card .bootlogs{height:165px;overflow:hidden;border-left:3px solid #497d5f;padding-left:15px;margin:20px 0}
+.progress{height:15px;background:#112b28;border:1px solid #4ca77f}.progress div{height:100%;width:0;background:linear-gradient(90deg,#4dce7a,#dfd278);transition:width .2s}
+#login{place-items:center;background:linear-gradient(120deg,#163d79,#1a7fba 52%,#3653a0);padding:18px}
+.login-card{background:linear-gradient(120deg,#d5e9f3,#ebf2ef);color:#14355c;border:2px solid white;padding:25px;border-radius:15px;width:min(500px,95vw);box-shadow:0 20px 80px #0008}
+.login-card h2{font-size:26px;margin:0}.login-card p{color:#41606a}.avatar{height:70px;width:70px;background:#77adb8;border:3px solid #fff;border-radius:14px;display:grid;place-items:center;font-size:40px;margin:12px auto}
+.login-card button{background:#215d95}
+#screensaver{background:#020609;overflow:hidden;place-items:center;color:#71ffb1}
+#screensaver .screensaver-word{position:absolute;top:30%;left:10%;font:800 clamp(32px,5vw,70px) Consolas,monospace;white-space:nowrap;text-shadow:0 0 25px #35ff9a;animation:floaty 7s alternate ease-in-out infinite}
+#screensaver .scanlines{position:absolute;inset:0;pointer-events:none;background:repeating-linear-gradient(transparent 0 3px,#08151166 3px 4px)}
+@keyframes floaty{0%{transform:translate(0,0) rotate(-5deg)}100%{transform:translate(32vw,24vh) rotate(5deg)}}
+#screensaver button{position:absolute;bottom:35px;z-index:2}
+.footer{border-top:1px solid var(--border);margin-top:30px;padding:20px 0;color:var(--dim);font-size:12px}
+@media(max-width:950px){.window.triple{grid-column:span 6}.window{grid-column:span 12}.lcd{display:none}}
+@media(max-width:660px){.window.triple{grid-column:span 12}.hero{display:block}.top{font-size:10px}.dock{gap:5px}.mine-grid{width:100%}.builder-grid{grid-template-columns:1fr}.inner{padding:12px}#screensaver .screensaver-word{white-space:normal}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}#screensaver .screensaver-word{animation:none}.progress div{transition:none}}
+</style>
+</head>
+<body data-theme="default">
+<div class="top"><span>▣ VISHWAS.EXE / PERSONAL PC / NOT AN ACTUAL OPERATING SYSTEM</span><span id="sysclock">SYSTEM READY</span></div>
+<main class="shell" id="main">
+<header class="hero">
+<div><div class="hdr-kicker">THE 90s KID WHO NEVER LOGGED OFF / EXTRA PACK 02</div>
+<h1>OVERLOAD<br><span>2.0.EXE</span></h1>
+<p class="lead">A completely original browser playground built around the computer-obsessed kid who grew into a blogger, developer and defensive security tinkerer. Actual games, real interactions, deliberate retro chaos. No downloads required.</p>
+<div class="controls"><span class="chip">🎮 2 NEW PLAYABLE GAMES</span><span class="chip">🎨 PIXEL PAINT</span><span class="chip">💻 PC BUILDER</span><span class="chip">🖥 BIOS + LOGIN</span><span class="chip">📡 PUBLIC GITHUB FEED</span></div></div>
+<div class="lcd" aria-hidden="true"><big>VISHWAS.EXE</big>CPU : CURIOSITY 100%<br>RAM : MEMORIES 102+<br>DISK : IDEAS INFINITE<i></i>STATUS : STILL BUILDING</div>
+</header>
+<nav class="dock" aria-label="Overload controls">
+<button id="boot-again" title="Play original boot animation">💾 BIOS BOOT</button>
+<button id="show-login" title="Show fake nostalgic login screen">🔐 XP LOGIN</button>
+<button id="play-tone" title="Play opt-in original synthesised boot notes">🔊 BOOT TONES</button>
+<button id="saver" title="Start original screensaver">🌠 SCREENSAVER</button>
+<button id="dial-up" title="Demonstrate simulated dial-up connection">📞 DIAL-UP</button>
+<select id="theme" aria-label="Desktop theme"><option value="default">Midnight CRT</option><option value="amber">DOS Amber</option><option value="ice">Glass Blue</option><option value="pink">Y2K Plum</option></select>
+<span class="spacer"></span><a class="button" href="../memory/">🖥 MEMORY OS</a><a class="button" href="../museum/">📁 MUSEUM</a><a class="button" href="../arcade/">🕹 ARCADE</a>
+</nav>
+<div id="global-status" role="status" aria-live="polite" class="status">System idle. All simulated tools operate only within this webpage.</div>
+<section class="app-grid">
+<section class="window" id="mines"><div class="bar"><span>💣 MINESWEEPER.EXE / ORIGINAL GAME</span><span class="dots">□ ×</span></div><div class="inner">
+<div class="game-heading"><div><h2>Find the safe squares</h2><p>9 × 9 board, 10 mines. First click protected.</p></div><div class="controls"><span class="chip" id="mine-counter">MINES: 10</span><span class="chip" id="mine-time">TIME: 0s</span></div></div>
+<div class="controls"><button id="mine-reset">🙂 New game</button><button id="flag-toggle" aria-pressed="false">🚩 Flag mode: OFF</button><span class="small">Right-click to flag on desktop. Flag mode works on touch.</span></div>
+<div class="mine-grid" id="mine-grid" role="group" aria-label="Minesweeper grid"></div><div class="status" id="mine-status">Choose a square to begin.</div>
+</div></section>
+<section class="window" id="pong-app"><div class="bar"><span>🏓 PONG.EXE / ORIGINAL GAME</span><span class="dots">□ ×</span></div><div class="inner">
+<div class="game-heading"><div><h2>You vs the old computer</h2><p>Use W/S, ↑/↓, pointer or touch to move the left paddle.</p></div><span class="chip" id="pong-score">PLAYER 0 : 0 CPU</span></div>
+<div class="canvas-wrap"><canvas id="pong" width="560" height="300" aria-label="Pong game canvas"></canvas></div>
+<div class="controls" style="margin-top:10px"><button id="pong-toggle">▶ Start</button><button id="pong-reset">↻ Reset score</button><span class="small">First to 5 wins. CPU is a local scripted opponent.</span></div>
+<div class="pong-keys"><button id="pong-up">▲ Move up</button><button id="pong-down">▼ Move down</button></div>
+<div class="status" id="pong-status">Ready to play.</div>
+</div></section>
+<section class="window" id="paint-app"><div class="bar"><span>🎨 MSPAINT-ish.EXE / PIXEL CANVAS</span><span class="dots">□ ×</span></div><div class="inner">
+<div class="game-heading"><div><h2>Draw something ridiculous</h2><p>Works with mouse, pen or touch. Download your own PNG.</p></div><span class="chip">600 × 320 PIXELS</span></div>
+<div class="canvas-wrap"><canvas id="paint" width="600" height="320" aria-label="Drawing canvas"></canvas></div>
+<div class="controls" style="margin-top:10px"><div class="paint-palette" id="palette" aria-label="Drawing colors"></div><label for="brush" class="small">Brush <output id="brush-value">6</output></label><input id="brush" type="range" min="2" max="30" value="6">
+<button id="paint-erase">🩹 Eraser</button><button id="paint-clear">✖ Clear</button><button id="paint-save">💾 Save PNG</button></div>
+<div class="status" id="paint-status">Blank canvas ready.</div>
+</div></section>
+<section class="window" id="builder-app"><div class="bar"><span>🔧 MY COMPUTER / THE PARTS LAB</span><span class="dots">□ ×</span></div><div class="inner">
+<div class="game-heading"><div><h2>Build your imaginary PC</h2><p>Pick components, get a playful capability summary. No invented benchmarks or prices.</p></div></div>
+<div class="builder-grid">
+<label>CPU<select id="pc-cpu"><option value="retro">Pentium-era classic</option><option value="everyday">Modern everyday processor</option><option value="performance">Modern performance processor</option></select></label>
+<label>RAM<select id="pc-ram"><option value="tiny">64 MB retro memory</option><option value="basic">8 GB everyday memory</option><option value="high">32 GB multitask memory</option></select></label>
+<label>GPU<select id="pc-gpu"><option value="classic">Early 2D adapter</option><option value="integrated">Modern integrated graphics</option><option value="dedicated">Dedicated gaming graphics</option></select></label>
+<label>STORAGE<select id="pc-storage"><option value="disk">Vintage hard disk</option><option value="ssd">SSD</option><option value="nvme">NVMe SSD</option></select></label>
+<label>OS<select id="pc-os"><option value="98">Windows 98 themed</option><option value="xp">Windows XP themed</option><option value="11">Windows 11 themed</option><option value="linux">Linux desktop themed</option></select></label>
+<label>CASE<select id="pc-case"><option value="beige">Beige tower</option><option value="lan">LAN party box</option><option value="glass">Glass workstation</option></select></label>
+</div>
+<div class="builder-summary" id="builder-summary" aria-live="polite"></div>
+<div class="controls"><button id="builder-random">🎲 Random build</button><button id="builder-copy">📋 Copy specs</button></div>
+<div class="status" id="builder-status">No hardware is actually being configured.</div>
+</div></section>
+<section class="window triple" id="terminal-app"><div class="bar"><span>⌨ COMMAND.COM / SAFE TERMINAL</span><span class="dots">□ ×</span></div><div class="inner">
+<p>Try <code>help</code>, <code>whoami</code>, <code>games</code>, <code>projects</code>, <code>ver</code>, <code>dir</code>, <code>fortune</code>, <code>clear</code>, <code>date</code> or <code>open museum</code>.</p>
+<div id="term-output" role="log" aria-label="Simulated terminal output"></div>
+<form id="term-form" class="termline"><span>C:\&gt;</span><input id="term-input" aria-label="Simulated command" autocomplete="off" spellcheck="false"></form>
+<div class="status">Read-only, local simulation. Never runs shell commands.</div>
+</div></section>
+<section class="window triple" id="defrag-app"><div class="bar"><span>💽 DEFRAG-ISH.EXE</span><span class="dots">□ ×</span></div><div class="inner">
+<h2>Fragmented childhood drive</h2><p>Watch colorful blocks organize themselves, 2002-style. Visual toy only.</p>
+<div class="defrag" id="defrag" aria-label="Simulated disk block visualization"></div>
+<div class="controls" style="margin-top:10px"><button id="defrag-go">▶ Optimize memories</button><span class="chip" id="defrag-pct">0% ORGANIZED</span></div>
+<div class="status" id="defrag-status">No disks will be accessed, changed or optimized.</div>
+</div></section>
+<section class="window triple" id="network-app"><div class="bar"><span>📡 NETWORK NEIGHBORHOOD</span><span class="dots">□ ×</span></div><div class="inner">
+<h2>Public GitHub activity</h2><p>Opt-in button fetches recent public GitHub events through the public API. No tokens.</p>
+<div class="controls"><button id="feed-load">⟳ Fetch public activity</button><a class="button" href="https://github.com/vishwasaithalz" target="_blank" rel="noopener noreferrer">↗ Profile</a></div>
+<div class="feed-list" id="feed-items" style="margin-top:12px"><div class="feed-item"><strong>Offline by default.</strong><span>Click the button to request public data.</span></div></div>
+<div class="status" id="feed-status">This widget does not check private repositories.</div>
+</div></section>
+<section class="window wide" id="shortcuts"><div class="bar"><span>📂 FAVORITES / LEGACY SHORTCUTS</span><span class="dots">□ ×</span></div><div class="inner"><div class="shortcut-grid">
+<a href="../memory/"><span>🖥️</span><strong>Memory OS</strong><small>Interactive retro desktop</small></a>
+<a href="../museum/"><span>💾</span><strong>102-file Museum</strong><small>Winamp, games, cartoons</small></a>
+<a href="../arcade/#snake"><span>🐍</span><strong>Snake</strong><small>Original browser arcade</small></a>
+<a href="../arcade/#pinball"><span>🕹️</span><strong>Pinball</strong><small>Original physics table</small></a>
+<a href="../arcade/#terminal"><span>⌨️</span><strong>Legacy Terminal</strong><small>Story explorer</small></a>
+<a href="https://github.com/vishwasaithalz/LogSentry"><span>🛡️</span><strong>LogSentry</strong><small>Defensive Windows lab</small></a>
+<a href="https://github.com/vishwasaithalz/CyberPlayground"><span>🎓</span><strong>CyberPlayground</strong><small>Security education</small></a>
+<a href="https://github.com/vishwasaithalz/AI-Automation-Lab"><span>🤖</span><strong>AI Automation Lab</strong><small>Local workflow experiments</small></a>
+<a href="https://github.com/vishwasaithalz/YYYH"><span>🌐</span><strong>Blogger 2013</strong><small>YinYangYoHackers</small></a>
+<a href="https://github.com/vishwasaithalz"><span>📦</span><strong>All repositories</strong><small>Public source code</small></a>
+</div></div></section>
+<section class="window wide"><div class="bar"><span>🧾 README.TXT / SYSTEM GUIDANCE</span><span class="dots">□ ×</span></div><div class="inner">
+<details class="details"><summary>📟 Keyboard shortcuts, Easter eggs and limitations</summary>
+<p>Alt+1 jumps to Minesweeper; Alt+2 to Pong; Alt+3 to Paint; Alt+4 to PC Builder. Alt+B opens the boot animation. Alt+S activates the screensaver. Escape closes overlays. Type <strong>v i s h w a s</strong> anywhere outside an input field for a secret message.</p>
+<p>Games and visual effects are original and local, not copies of commercial games. There is no actual login, hardware detection, disk defragmentation, dial-up connection, microphone access or network scanning. Only the optional public GitHub feed makes a network API request. Original boot tones play only when clicked. Painting saves a PNG directly to your device. Private repositories stay private.</p>
+</details>
+</div></section>
+</section>
+<footer class="footer">© Vishwas Aithal. The kid never logged off. Original tribute UI with no third-party libraries, analytics, account creation or third-party downloads. Reduced-motion preference respected. Classic brand names are cultural references, not endorsements or bundled media.</footer>
+</main>
+<div id="boot" role="dialog" aria-modal="true" aria-labelledby="boot-title"><div class="boot-card"><div class="small">Vishwas Aithal Original BIOS Experience</div><h2 id="boot-title">VISHWAS.EXE BIOS</h2><div class="bootlogs" id="boot-logs"></div><div class="progress"><div id="boot-progress"></div></div><div class="controls" style="margin-top:20px"><button class="primary" id="boot-skip">▶ ENTER DESKTOP</button></div></div></div>
+<div id="login" role="dialog" aria-modal="true" aria-labelledby="login-title"><div class="login-card"><h2 id="login-title">Welcome to the cybercafé</h2><p>A nostalgic XP-style welcome screen, not an actual login. No password or personal information required.</p><div class="avatar" aria-hidden="true">🧑‍💻</div><p style="text-align:center"><strong>Vishwas Aithal</strong><br>Guest / Memory OS</p><div class="controls" style="justify-content:center"><button id="login-enter">↪ Enter desktop</button><button id="login-close">✕ Cancel</button></div></div></div>
+<div id="screensaver" role="dialog" aria-modal="true" aria-label="Screensaver"><div class="scanlines"></div><div class="screensaver-word">VISHWAS.EXE<br>STILL CURIOUS_</div><button id="saver-exit">EXIT SCREENSAVER / ESC</button></div>
+<script>
+(function(){
+'use strict';
+const $=id=>document.getElementById(id);
+const STORAGE='vishwas.overload.v2';
+const state={sound:false,theme:'default',mineBest:null,pongBest:null,secret:false};
+try{Object.assign(state,JSON.parse(localStorage.getItem(STORAGE)||'{}'))}catch(e){}
+function persist(){try{localStorage.setItem(STORAGE,JSON.stringify(state))}catch(e){}}
+function status(s){$('global-status').textContent=s}
+function restoreFocus(show,origin){if(show){origin?.focus?.()}}
+const audio=(()=>{let ctx;return function(){try{ctx=ctx||new (window.AudioContext||window.webkitAudioContext)();if(ctx.state==='suspended')ctx.resume();[330,440,550,660].forEach((freq,i)=>{let t=ctx.currentTime+i*.11,o=ctx.createOscillator(),g=ctx.createGain();o.type='triangle';o.frequency.value=freq;g.gain.setValueAtTime(.0001,t);g.gain.exponentialRampToValueAtTime(.055,t+.03);g.gain.exponentialRampToValueAtTime(.0001,t+.19);o.connect(g);g.connect(ctx.destination);o.start(t);o.stop(t+.21)});status('Original boot tones played, with no external music.')}catch(e){status('Audio playback unavailable on this browser.')}}})();
+let bootTimer=null,bootStep=0;
+const bootMessages=['Memory Test ................. OK','Virtual CPU: CURIOSITY / ALWAYS ON','Disk: MEMORIES_C / SAFE MOUNT','SOUND: USER INITIATED ONLY','INTERNET: OPT-IN PUBLIC FEED','SECURITY: LOCAL SIMULATION','LOADING THE CYBERCAFE ...','WELCOME BACK, VISHWAS.'];
+function startBoot(){closeOverlays();$('boot').classList.add('show');$('boot-logs').textContent='';$('boot-progress').style.width='0%';bootStep=0;const advance=()=>{if(bootStep>=bootMessages.length){clearInterval(bootTimer);bootTimer=null;return}let p=document.createElement('div');p.textContent='> '+bootMessages[bootStep++];$('boot-logs').appendChild(p);$('boot-progress').style.width=Math.round(bootStep/bootMessages.length*100)+'%'};advance();bootTimer=setInterval(advance,340);$('boot-skip').focus()}
+function closeOverlays(){['boot','login','screensaver'].forEach(id=>$(id).classList.remove('show'));if(bootTimer){clearInterval(bootTimer);bootTimer=null}}
+$('boot-again').addEventListener('click',startBoot);$('boot-skip').addEventListener('click',()=>{closeOverlays();status('BIOS sequence finished. Desktop ready.');$('boot-again').focus()});
+$('show-login').addEventListener('click',()=>{closeOverlays();$('login').classList.add('show');$('login-enter').focus()});
+for(const id of ['login-enter','login-close'])$(id).addEventListener('click',()=>{closeOverlays();$('show-login').focus()});
+$('play-tone').addEventListener('click',audio);
+$('saver').addEventListener('click',()=>{closeOverlays();$('screensaver').classList.add('show');$('saver-exit').focus()});
+$('saver-exit').addEventListener('click',()=>{closeOverlays();$('saver').focus()});
+$('dial-up').addEventListener('click',()=>{status('DIALUP.EXE (simulation): *beep* *static* *handshake*  Connected to childhood memories, no actual network connection.');audio()});
+const themes=['default','amber','ice','pink'];function setTheme(v){if(!themes.includes(v))return;state.theme=v;document.body.dataset.theme=v;$('theme').value=v;persist()}setTheme(state.theme);
+$('theme').addEventListener('change',e=>setTheme(e.target.value));
+function clock(){$('sysclock').textContent=new Date().toLocaleTimeString([],{hour:'2-digit',minute:'2-digit'})}clock();setInterval(clock,45000);
+
+// MINESWEEPER. A fresh board never places a mine on the first selected square or any immediate neighbor.
+let mines=[],mineStarted=false,mineEnded=false,mineFlags=0,mineSeconds=0,mineInterval=null,flagMode=false;
+const MW=9,MH=9,MCOUNT=10;
+function neighbors(i){let x=i%MW,y=Math.floor(i/MW),arr=[];for(let dy=-1;dy<=1;dy++)for(let dx=-1;dx<=1;dx++){if(!dx&&!dy)continue;let nx=x+dx,ny=y+dy;if(nx>=0&&nx<MW&&ny>=0&&ny<MH)arr.push(ny*MW+nx)}return arr}
+function startMines(){clearInterval(mineInterval);mineInterval=null;mines=Array.from({length:MW*MH},()=>({mine:false,flag:false,show:false,n:0,exploded:false}));mineStarted=mineEnded=false;mineFlags=mineSeconds=0;flagMode=false;$('flag-toggle').setAttribute('aria-pressed','false');$('flag-toggle').textContent='🚩 Flag mode: OFF';$('mine-status').textContent='Choose a square to begin.';updateMineStats();renderMines()}
+function seedMines(first){let safe=new Set([first,...neighbors(first)]),choices=Array.from({length:MW*MH},(_,i)=>i).filter(i=>!safe.has(i));for(let m=0;m<MCOUNT;m++){let j=Math.floor(Math.random()*choices.length),i=choices.splice(j,1)[0];mines[i].mine=true}for(let i=0;i<mines.length;i++)mines[i].n=neighbors(i).filter(j=>mines[j].mine).length;mineStarted=true;mineInterval=setInterval(()=>{mineSeconds++;updateMineStats()},1000)}
+function updateMineStats(){$('mine-counter').textContent='MINES LEFT: '+Math.max(0,MCOUNT-mineFlags);$('mine-time').textContent='TIME: '+mineSeconds+'s'}
+function renderMines(){$('mine-grid').innerHTML='';mines.forEach((c,i)=>{let b=document.createElement('button');let label='Row '+(Math.floor(i/MW)+1)+' column '+(i%MW+1);b.type='button';b.setAttribute('aria-label',label+(c.show?', revealed':'')+(c.flag?', flagged':''));b.className=(c.show?'revealed ':'')+(c.exploded?'mine-hit ':'')+(c.flag?'flagged ':'')+(c.show&&!c.mine?'mine-'+c.n:'');b.textContent=c.show?(c.mine?'💣':(c.n||'')):(c.flag?'🚩':'');b.addEventListener('click',e=>{if(e.shiftKey||flagMode)toggleMineFlag(i);else revealMine(i)});b.addEventListener('contextmenu',e=>{e.preventDefault();toggleMineFlag(i)});$('mine-grid').appendChild(b)})}
+function toggleMineFlag(i){if(mineEnded||mines[i].show)return;mines[i].flag=!mines[i].flag;mineFlags+=mines[i].flag?1:-1;updateMineStats();renderMines()}
+function revealMine(i){let c=mines[i];if(mineEnded||c.show||c.flag)return;if(!mineStarted)seedMines(i);if(c.mine){c.exploded=true;mines.forEach(x=>{if(x.mine)x.show=true});finishMines(false);return}let stack=[i];while(stack.length){let index=stack.pop(),k=mines[index];if(k.show||k.flag)continue;k.show=true;if(k.n===0)for(let j of neighbors(index))if(!mines[j].show&&!mines[j].mine&&!mines[j].flag)stack.push(j)}if(mines.filter(x=>x.show&&!x.mine).length===MW*MH-MCOUNT)finishMines(true);else renderMines()}
+function finishMines(win){mineEnded=true;clearInterval(mineInterval);mineInterval=null;if(win){if(state.mineBest===null||mineSeconds<state.mineBest){state.mineBest=mineSeconds;persist()}$('mine-status').textContent='🏆 CLEAR BOARD! '+mineSeconds+'s. Best: '+state.mineBest+'s.'}else $('mine-status').textContent='💥 You hit a mine. Try another boot of the board.';renderMines()}
+$('mine-reset').addEventListener('click',startMines);$('flag-toggle').addEventListener('click',()=>{flagMode=!flagMode;$('flag-toggle').setAttribute('aria-pressed',String(flagMode));$('flag-toggle').textContent='🚩 Flag mode: '+(flagMode?'ON':'OFF')});startMines();
+
+// PONG. Original canvas game. Its animation loop stops when paused or the document is hidden.
+const pong=$('pong'),pg=pong.getContext('2d');let praf=0,playing=false,last=0,py=118,cy=118,px=280,by=150,vx=200,vy=125,ps=0,cs=0,held={up:false,down:false};
+const PW=560,PH=300,PADDLE=65;
+function pongResetBall(dir){px=PW/2;by=PH/2;vx=200*dir;vy=(Math.random()>.5?1:-1)*110}
+function pongDraw(){pg.fillStyle='#061826';pg.fillRect(0,0,PW,PH);pg.fillStyle='#235066';for(let y=4;y<PH;y+=22)pg.fillRect(PW/2-2,y,4,11);pg.fillStyle='#a7ffe2';pg.fillRect(15,py,10,PADDLE);pg.fillStyle='#ffdb97';pg.fillRect(PW-25,cy,10,PADDLE);pg.fillStyle='#f9d3f1';pg.fillRect(px-5,by-5,10,10);pg.fillStyle='#7395a8';pg.font='12px monospace';pg.fillText('YOU',18,17);pg.fillText('CPU',PW-48,17)}
+function pongLabel(){$('pong-score').textContent='PLAYER '+ps+' : '+cs+' CPU'}
+function pongPause(){playing=false;cancelAnimationFrame(praf);$('pong-toggle').textContent='▶ Start';$('pong-status').textContent=ps>=5||cs>=5?'Round finished. Reset to play again.':'Paused.'}
+function pongTick(time){if(!playing)return;let dt=Math.min(.035,(time-last)/1000||.016);last=time;
+if(held.up)py-=285*dt;if(held.down)py+=285*dt;py=Math.max(0,Math.min(PH-PADDLE,py));
+let target=by-PADDLE/2;cy+=Math.max(-150*dt,Math.min(150*dt,target-cy));cy=Math.max(0,Math.min(PH-PADDLE,cy));
+px+=vx*dt;by+=vy*dt;if(by<7){by=7;vy=Math.abs(vy)}if(by>PH-7){by=PH-7;vy=-Math.abs(vy)}
+if(vx<0&&px<=30&&px>=19&&by>=py&&by<=py+PADDLE){px=30;vx=Math.abs(vx)*1.06;vy+=(by-(py+PADDLE/2))*3}
+if(vx>0&&px>=PW-30&&px<=PW-19&&by>=cy&&by<=cy+PADDLE){px=PW-30;vx=-Math.abs(vx)*1.06;vy+=(by-(cy+PADDLE/2))*3}
+if(px<0||px>PW){if(px<0)cs++;else ps++;pongLabel();if(ps>=5||cs>=5){pongPause();$('pong-status').textContent=ps>cs?'🏆 YOU WIN THE LAN PARTY!':'CPU WINS. One more match?';pongDraw();return}pongResetBall(px<0?1:-1)}
+pongDraw();praf=requestAnimationFrame(pongTick)}
+function togglePong(){if(playing){pongPause();return}if(ps>=5||cs>=5){ps=cs=0;pongLabel();pongResetBall(Math.random()>.5?1:-1)}playing=true;last=performance.now();$('pong-toggle').textContent='❚❚ Pause';$('pong-status').textContent='Playing. First to five wins.';praf=requestAnimationFrame(pongTick)}
+$('pong-toggle').addEventListener('click',togglePong);$('pong-reset').addEventListener('click',()=>{pongPause();ps=cs=0;pongLabel();pongResetBall(-1);pongDraw();$('pong-status').textContent='Score reset.'});
+pong.addEventListener('pointermove',e=>{if(!playing)return;let r=pong.getBoundingClientRect();py=Math.max(0,Math.min(PH-PADDLE,(e.clientY-r.top)/r.height*PH-PADDLE/2))});
+for(const [id,key] of [['pong-up','up'],['pong-down','down']]){let b=$(id);b.addEventListener('pointerdown',e=>{held[key]=true;b.setPointerCapture(e.pointerId)});for(const evt of ['pointerup','pointercancel','lostpointercapture'])b.addEventListener(evt,()=>{held[key]=false})}
+document.addEventListener('visibilitychange',()=>{if(document.hidden&&playing)pongPause()});pongResetBall(-1);pongDraw();
+
+// PAINT. Own image only, no files, uploads, microphone or camera.
+const paint=$('paint'),ctx=paint.getContext('2d');let painting=false,color='#29334a',brush=6,erase=false;
+function whiteCanvas(){ctx.fillStyle='#ffffff';ctx.fillRect(0,0,paint.width,paint.height);$('paint-status').textContent='Blank canvas ready.'}whiteCanvas();
+const palette=['#29334a','#f05583','#ffb452','#f8e77a','#4fbd8b','#4fbaf4','#a478eb','#000000','#ffffff'];
+palette.forEach((c,i)=>{let b=document.createElement('button');b.className='swatch'+(i===0?' selected':'');b.style.background=c;b.setAttribute('aria-label','Choose '+c);b.title=c;b.addEventListener('click',()=>{color=c;erase=false;document.querySelectorAll('.swatch').forEach(s=>s.classList.remove('selected'));b.classList.add('selected');$('paint-status').textContent='Drawing with '+c});$('palette').appendChild(b)});
+function pointerPos(e){let r=paint.getBoundingClientRect();return{x:(e.clientX-r.left)*paint.width/r.width,y:(e.clientY-r.top)*paint.height/r.height}}
+function beginStroke(e){if(e.button!==undefined&&e.button!==0)return;e.preventDefault();painting=true;paint.setPointerCapture(e.pointerId);let p=pointerPos(e);ctx.beginPath();ctx.moveTo(p.x,p.y);ctx.lineCap='round';ctx.lineJoin='round';ctx.strokeStyle=erase?'white':color;ctx.lineWidth=brush;ctx.lineTo(p.x+.01,p.y+.01);ctx.stroke()}
+paint.addEventListener('pointerdown',beginStroke);paint.addEventListener('pointermove',e=>{if(!painting)return;let p=pointerPos(e);ctx.lineTo(p.x,p.y);ctx.stroke()});
+for(const evt of ['pointerup','pointercancel','lostpointercapture'])paint.addEventListener(evt,()=>{painting=false});
+$('brush').addEventListener('input',e=>{brush=Number(e.target.value);$('brush-value').textContent=brush});
+$('paint-erase').addEventListener('click',()=>{erase=!erase;$('paint-status').textContent=erase?'Eraser mode on.':'Drawing mode on.'});
+$('paint-clear').addEventListener('click',()=>{if(confirm('Clear your current drawing?'))whiteCanvas()});
+$('paint-save').addEventListener('click',()=>{try{let a=document.createElement('a');a.href=paint.toDataURL('image/png');a.download='VISHWAS-PIXEL-PAINT.png';document.body.appendChild(a);a.click();a.remove();$('paint-status').textContent='PNG export requested.'}catch(e){$('paint-status').textContent='Image export is unavailable in this browser.'}});
+
+// HARDWARE BUILDER. Educational, not a benchmark or a marketplace.
+const pcprefix=['pc-cpu','pc-ram','pc-gpu','pc-storage','pc-os','pc-case'];let lastSpecs='';
+function renderPC(){const m=pcprefix.map(id=>{let el=$(id);return el.options[el.selectedIndex].text});let era=$('pc-cpu').value==='retro'?'Legacy nostalgia rig':'Modern creative workbench';let desc=$('pc-ram').value==='tiny'?'Small vintage memory will be limiting for modern tasks.':'A general-purpose configuration concept; check real compatibility before building.';
+let comparison=$('pc-gpu').value==='dedicated'?'Dedicated graphics often help with GPU-intensive workloads, depending on the software.':'Graphics performance varies significantly by exact hardware.';
+lastSpecs='VISHWAS.EXE // PC BUILDER\n'+['CPU','RAM','GPU','STORAGE','OS THEME','CASE'].map((name,i)=>name.padEnd(11)+' : '+m[i]).join('\n')+'\n\nMODE: '+era+'\n'+desc+'\n'+comparison+'\nIllustrative combinations only. No performance, compatibility or pricing guarantees.';
+$('builder-summary').textContent=lastSpecs}
+pcprefix.forEach(id=>$(id).addEventListener('change',renderPC));renderPC();
+$('builder-random').addEventListener('click',()=>{pcprefix.forEach(id=>{let s=$(id);s.selectedIndex=Math.floor(Math.random()*s.options.length)});renderPC();$('builder-status').textContent='Random combination generated. Check hardware compatibility before using it.'});
+$('builder-copy').addEventListener('click',async()=>{try{await navigator.clipboard.writeText(lastSpecs);$('builder-status').textContent='Specifications copied.'}catch(e){$('builder-status').textContent='Clipboard unavailable. Select the text in the summary to copy.'}});
+
+// TERMINAL.
+const terminal=$('term-output');function line(s){terminal.textContent+=s+'\n';terminal.scrollTop=terminal.scrollHeight}
+line('VISHWAS.EXE TERMINAL [LOCAL SIMULATION]');line('Type help to see the command set.');line('');
+const cmds={
+help:'help | whoami | games | projects | ver | dir | fortune | clear | date | open museum | open memory | open arcade | reboot',
+whoami:'vishwas_aithal | cybercafe kid | blogger since 2013',
+games:'Minesweeper.EXE   Pong.EXE   Snake.EXE   Pinball.EXE',
+projects:'LogSentry   CyberPlayground   Recon-Lite   AI-Automation-Lab   YinYangYoHackers',
+ver:'VISHWAS.EXE OVERLOAD 2.0 | STATIC WEB SIMULATION',
+dir:'C:\\\n  GAMES\\\n  DRAWINGS\\\n  MEMORIES\\\n  SOFTWARE\\\n  PROJECTS\\',
+fortune:'The wallpaper changed. The curiosity did not.'
+};
+$('term-form').addEventListener('submit',e=>{e.preventDefault();let input=$('term-input'),raw=input.value.trim(),cmd=raw.toLowerCase();input.value='';if(!raw)return;line('C:\\> '+raw);
+if(cmd==='clear'){terminal.textContent='';return}if(cmd==='date'){line(new Date().toLocaleString());return}if(cmd==='reboot'){line('Launching BIOS sequence...');startBoot();return}
+if(cmd.startsWith('open ')){let key=cmd.slice(5),paths={museum:'../museum/',memory:'../memory/',arcade:'../arcade/'};if(paths[key]){line('Opening local '+key+' page...');window.location.href=paths[key]}else line('Unknown destination. Try open museum.');return}
+line(Object.prototype.hasOwnProperty.call(cmds,cmd)?cmds[cmd]:'Unknown simulation command. Type help.');});
+
+// DISK DEFRAG PARODY.
+const defrag=$('defrag');let blocks=[],defragTimer=null,defragStep=0;const colors=['#348a91','#e6c87b','#6d77ab','#51836b','#a56d8f'];
+function drawDefrag(){defrag.innerHTML='';blocks.forEach(n=>{let s=document.createElement('i');s.style.background=colors[n];defrag.appendChild(s)})}
+function initDefrag(){if(defragTimer){clearInterval(defragTimer);defragTimer=null}blocks=Array.from({length:144},()=>Math.floor(Math.random()*5));defragStep=0;$('defrag-pct').textContent='0% ORGANIZED';drawDefrag()}initDefrag();
+$('defrag-go').addEventListener('click',()=>{if(defragTimer)return;defragStep=0;$('defrag-go').disabled=true;$('defrag-status').textContent='Sorting virtual colors, not real files.';defragTimer=setInterval(()=>{defragStep++;for(let n=0;n<8;n++){let a=Math.floor(Math.random()*blocks.length),b=Math.floor(Math.random()*blocks.length);if(blocks[a]>blocks[b]){let tmp=blocks[a];blocks[a]=blocks[b];blocks[b]=tmp}}$('defrag-pct').textContent=Math.min(100,defragStep*4)+'% ORGANIZED';drawDefrag();if(defragStep>=25){clearInterval(defragTimer);defragTimer=null;blocks.sort((a,b)=>a-b);drawDefrag();$('defrag-pct').textContent='100% ORGANIZED';$('defrag-status').textContent='Your nostalgia drive is visually tidy. No actual disks touched.';$('defrag-go').disabled=false}},90)});
+
+// PUBLIC GITHUB EVENTS. Opt-in, read-only endpoint and safe textContent rendering.
+$('feed-load').addEventListener('click',async()=>{const button=$('feed-load');button.disabled=true;$('feed-status').textContent='Fetching recent public events from api.github.com...';try{const response=await fetch('https://api.github.com/users/vishwasaithalz/events/public?per_page=12',{headers:{Accept:'application/vnd.github+json'}});if(!response.ok)throw Error('GitHub API returned '+response.status);const data=await response.json();if(!Array.isArray(data))throw Error('Unexpected API data');$('feed-items').replaceChildren();
+if(!data.length){const box=document.createElement('div');box.className='feed-item';box.textContent='No recent public events returned.';$('feed-items').appendChild(box)}
+data.forEach(event=>{const box=document.createElement('div'),name=document.createElement('strong'),meta=document.createElement('span');box.className='feed-item';name.textContent=(event.type||'Public activity')+' / '+(event.repo?.name||'GitHub');meta.textContent=event.created_at?new Date(event.created_at).toLocaleString():'No event date supplied';box.append(name,meta);$('feed-items').appendChild(box)});$('feed-status').textContent='Showing '+data.length+' publicly visible events. No private repository access.'}
+catch(e){$('feed-items').textContent='Feed unavailable. Open GitHub directly to see current public activity.';$('feed-status').textContent=String(e.message||e)}
+finally{button.disabled=false}});
+
+// KEYBOARD ACCESS & EASTER EGG.
+let secret='';
+document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeOverlays();return}
+if(/INPUT|SELECT|TEXTAREA/.test(e.target.tagName))return;
+const shortcuts={'1':'mines','2':'pong-app','3':'paint-app','4':'builder-app'};if(e.altKey&&shortcuts[e.key]){e.preventDefault();$(shortcuts[e.key]).scrollIntoView({behavior:'smooth'});return}
+if(e.altKey&&e.key.toLowerCase()==='b'){e.preventDefault();startBoot();return}if(e.altKey&&e.key.toLowerCase()==='s'){e.preventDefault();$('saver').click();return}
+if(e.key==='ArrowUp'||e.key==='w')held.up=true;if(e.key==='ArrowDown'||e.key==='s')held.down=true;
+if(e.key.length===1&&!e.altKey&&!e.ctrlKey&&!e.metaKey){secret=(secret+e.key.toLowerCase()).slice(-7);if(secret==='vishwas'){state.secret=true;persist();status('🔓 SECRET UNLOCKED: The kid never logged off. The builder never stopped.')}}});
+document.addEventListener('keyup',e=>{if(e.key==='ArrowUp'||e.key==='w')held.up=false;if(e.key==='ArrowDown'||e.key==='s')held.down=false});
+// Optional site intro, already booted via user action. No auto-playing sound or forced overlay.
+status('VISHWAS.EXE ready. Press Alt+1, Alt+2, Alt+3 or Alt+4 for featured apps.');
+})();
+</script></body></html>
