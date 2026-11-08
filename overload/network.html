@@ -1,0 +1,78 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>VISHWAS.EXE | Network Neighborhood</title>
+<meta name="description" content="An original, animated and keyboard-accessible navigation map of Vishwas Aithal's public GitHub engineering projects. No scanning or network measurements.">
+<style>
+:root{font-family:Consolas,"Courier New",monospace;background:#051927;color:#d8f9ec}
+*{box-sizing:border-box}body{margin:0;min-height:100vh;background:radial-gradient(circle at 50% 42%,#15445d 0,#081d30 48%,#071322 90%)}
+.wrapper{max-width:1380px;margin:auto;padding:24px clamp(12px,2.8vw,36px) 65px}
+.kicker{font-size:12px;color:#e9d19a;letter-spacing:.18em}
+h1{font:900 clamp(40px,6vw,88px)/.95 "Arial Black",sans-serif;letter-spacing:-.065em;margin:12px 0;color:#c9ffe0}
+h1 span{color:#f6b6d4}.intro{line-height:1.7;color:#b5ced4;max-width:1000px}
+a,button{color:#d8fff2;background:#10394e;border:1px solid #72aab0;padding:9px 12px;border-radius:3px;text-decoration:none;font:inherit;cursor:pointer;display:inline-flex;align-items:center;gap:6px;justify-content:center}
+a:hover,button:hover{background:#24667b}a:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline:3px solid #ffe5a1;outline-offset:3px}
+.links{display:flex;gap:8px;flex-wrap:wrap;margin:21px 0}
+.window{background:#0b2435;border:2px solid #629aa7;box-shadow:7px 9px #0006;overflow:hidden}
+.titlebar{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px;background:linear-gradient(90deg,#24519b,#1a8586);font-size:13px;font-weight:bold}
+.inner{padding:12px}
+.layout{display:grid;grid-template-columns:minmax(0,2fr) minmax(285px,1fr);gap:18px}
+.map{background:radial-gradient(ellipse at center,#102f48,#071727);width:100%;border:1px solid #315d79;min-height:300px}
+.map svg{display:block;width:100%;height:auto;max-height:580px}
+.wire{stroke:#3aafac;stroke-width:2;stroke-dasharray:6 8;stroke-opacity:.62;animation:packets 3s linear infinite}
+@keyframes packets{to{stroke-dashoffset:-80}}
+.node{cursor:pointer;outline:none}.node rect{fill:#123c50;stroke:#6eb9aa;stroke-width:2}.node.selected rect,.node:focus rect{stroke:#ffe5a4;stroke-width:4;fill:#1c5771}.node text{pointer-events:none}.node:hover rect{fill:#21506a}
+#details h2{color:#bbffe3;font-size:21px;margin-top:0}#details p{color:#c2d4d7;line-height:1.6}.type{font-size:12px;color:#efd7a0}
+#project-list{display:grid;gap:5px;max-height:400px;overflow:auto}
+#project-list button{text-align:left;justify-content:flex-start;min-height:41px}
+#project-list button[aria-pressed=true]{background:#265c70;border-color:#fff2b8;color:#fff1b8}
+.board{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:13px 0 0}.chip{background:#0a3041;border:1px solid #466b70;padding:7px;font-size:12px;color:#b5f5d8}
+.small{font-size:12px;color:#a7c0c8}.notice{border-left:3px solid #f3d59b;background:#132d3d;padding:14px;line-height:1.6;margin:15px 0;color:#dde8dc}
+@media(max-width:930px){.layout{grid-template-columns:1fr}}@media(prefers-reduced-motion:reduce){.wire{animation:none}}
+</style></head><body>
+<main class="wrapper">
+<div class="kicker">EXTRA PACK 04 / A VISUAL PROJECT LAUNCHER</div>
+<h1>NETWORK<br><span>NEIGHBORHOOD.EXE</span></h1>
+<p class="intro">A retro network explorer for the real public GitHub projects inside the Vishwas Aithal universe. Click a node to inspect its project, then use the explicit link to open the source. The animated lines are visual navigation paths, not network traffic or measured infrastructure.</p>
+<nav class="links"><a href="./">💥 OVERLOAD 2.0</a><a href="game-room.html">🎮 BONUS GAMES</a><a href="../memory/">🖥️ MEMORY OS</a><a href="https://github.com/vishwasaithalz">⌨️ GITHUB</a></nav>
+<section class="layout">
+<div class="window"><div class="titlebar"><span>📡 C:\\NETWORK NEIGHBORHOOD</span><span>MAP ONLY / NOT A SCAN</span></div>
+<div class="inner"><div class="map"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 580" aria-label="Public project navigation map" role="group" id="net-map">
+<defs><pattern id="grid" width="28" height="28" patternUnits="userSpaceOnUse"><path d="M28 0H0V28" fill="none" stroke="#5bc2bd" stroke-opacity=".10"/></pattern></defs>
+<rect width="1200" height="580" fill="url(#grid)"/>
+<g id="wires"></g>
+<circle cx="600" cy="290" r="106" fill="#134863" stroke="#9bedb8" stroke-width="3"/><circle cx="600" cy="290" r="89" fill="none" stroke="#b5ddcf" stroke-opacity=".6" stroke-dasharray="4 6"/>
+<text x="600" y="261" text-anchor="middle" fill="#e8ffe9" font-size="26" font-weight="bold">VISHWAS.EXE</text><text x="600" y="288" text-anchor="middle" fill="#a9f5d0" font-size="19">PUBLIC</text><text x="600" y="315" text-anchor="middle" fill="#a9f5d0" font-size="16">WORKBENCH</text><text x="600" y="342" text-anchor="middle" fill="#a9f5d0" font-size="13">vishwasaithalz</text>
+<g id="nodes"></g>
+</svg></div>
+<div class="board"><span class="chip">8 PUBLIC PROJECT SHORTCUTS</span><span class="chip">SOURCE LINKS ONLY</span><span class="chip">NO NETWORK REQUESTS</span></div>
+</div></div>
+<div class="window"><div class="titlebar"><span>📁 DETAILS / SELECT A NODE</span><span>LOCAL</span></div><div class="inner">
+<div id="details" aria-live="polite"><h2>Choose a public project</h2><p>Select one of the nodes or project buttons to inspect its purpose and open the exact public repository.</p></div>
+<h3 style="font-size:16px;color:#f4d9ae;margin:24px 0 8px">Available projects</h3>
+<div id="project-list"></div>
+</div></div>
+</section>
+<div class="notice"><strong>Privacy and accuracy:</strong> this is an illustrated project directory, not a port scan, topology discovery tool, threat dashboard or live uptime monitor. Node positions and animated cables are purely artistic. Every destination is a public GitHub repository known from the linked account. No private repository data, auth tokens, analytics, external media or network calls are loaded by this map.</div>
+<footer class="small">© Vishwas Aithal. Original SVG navigation artwork. Select a project with mouse, touch, Tab/Enter or the project list.</footer>
+</main>
+<script>
+(function(){
+'use strict';
+const DATA=[{"id":"log","name":"LogSentry","type":"Defensive Windows event learning","link":"https://github.com/vishwasaithalz/LogSentry","x":275,"y":106,"icon":"🛡️"},{"id":"cyber","name":"CyberPlayground","type":"Educational cybersecurity labs","link":"https://github.com/vishwasaithalz/CyberPlayground","x":660,"y":104,"icon":"🎓"},{"id":"ai","name":"AI Automation Lab","type":"Reproducible workflow experiments","link":"https://github.com/vishwasaithalz/AI-Automation-Lab","x":995,"y":145,"icon":"🤖"},{"id":"recon","name":"Recon Lite","type":"Public HTTP signal experiments","link":"https://github.com/vishwasaithalz/recon-lite","x":1052,"y":348,"icon":"📡"},{"id":"yyyh","name":"YinYangYoHackers","type":"The 2013 blogger legacy, reimagined","link":"https://github.com/vishwasaithalz/YYYH","x":795,"y":470,"icon":"🌐"},{"id":"ops","name":"Ops Monitor","type":"Portfolio operations workbench","link":"https://github.com/vishwasaithalz/KARMA-Ops-Monitor","x":413,"y":468,"icon":"🧪"},{"id":"flagship","name":"Flagship API","type":"API engineering experiments","link":"https://github.com/vishwasaithalz/flagship-api","x":132,"y":343,"icon":"🔧"},{"id":"nextjs","name":"Next.js Boilerplate","type":"Starter and web engineering sandbox","link":"https://github.com/vishwasaithalz/nextjs-boilerplate","x":98,"y":182,"icon":"🧱"}],$=id=>document.getElementById(id),svgNS='http://www.w3.org/2000/svg';let selected=null;
+const nodeRoot=$('nodes'),wires=$('wires'),list=$('project-list');
+const safeEl=(tag,attrs,body)=>{let el=document.createElementNS(svgNS,tag);for(const [k,v] of Object.entries(attrs))el.setAttribute(k,String(v));if(body!==undefined)el.textContent=String(body);return el};
+DATA.forEach((d,i)=>{
+const x=600,y=290;
+wires.appendChild(safeEl('path',{d:'M'+x+' '+y+' L'+d.x+' '+d.y,class:'wire',style:'animation-delay:-'+(i*.31)+'s'}));
+let g=safeEl('g',{class:'node',tabindex:'0',role:'button','aria-label':'Select '+d.name,'data-id':d.id,transform:'translate('+d.x+' '+d.y+')'});
+g.appendChild(safeEl('rect',{x:-103,y:-29,width:206,height:58,rx:6}));
+g.appendChild(safeEl('text',{x:-92,y:2,fill:'#c1f7db','font-size':22},d.icon));
+g.appendChild(safeEl('text',{x:-57,y:4,fill:'#ebfff7','font-size':17,'font-weight':'bold'},d.name.length>20?d.name.slice(0,19):d.name));
+g.addEventListener('click',()=>select(d.id));g.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();select(d.id)}});nodeRoot.appendChild(g);
+let b=document.createElement('button');b.type='button';b.dataset.id=d.id;b.textContent=d.icon+' '+d.name;b.addEventListener('click',()=>select(d.id));list.appendChild(b)
+});
+function select(id){let d=DATA.find(x=>x.id===id);if(!d)return;selected=id;document.querySelectorAll('[data-id]').forEach(el=>{el.classList.toggle('selected',el.dataset.id===id);el.setAttribute('aria-pressed',String(el.dataset.id===id))});
+const root=$('details');root.replaceChildren();let h=document.createElement('h2');h.textContent=d.icon+' '+d.name;let p=document.createElement('p');p.textContent=d.type;let note=document.createElement('p');note.className='type';note.textContent='Public GitHub repository. Open source to inspect actual code and documented limits.';
+let a=document.createElement('a');a.href=d.link;a.target='_blank';a.rel='noopener noreferrer';a.textContent='↗ OPEN PUBLIC SOURCE';root.append(h,p,note,a)}
+select(DATA[0].id);
+})();
+</script></body></html>
