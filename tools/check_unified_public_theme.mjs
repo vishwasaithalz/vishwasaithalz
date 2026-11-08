@@ -33,13 +33,13 @@ for(const [repo,slug] of Object.entries(projects)){
    const required=[
      'VISHWAS.EXE UNIFIED THEME START',
      banner,
-     'BOOT MANAGER','OVERLOAD OS','ARCADE','ALL PROJECTS','PORTFOLIO',
-     'Designed and built by <strong>Vishwas Aithal</strong>'
+     'Personal index','All projects','Portfolio',
+     'Original editorial illustration by Vishwas Aithal'
    ];
    for(const needle of required)if(!text.includes(needle))failures.push(repo+': missing '+needle);
    if(!text.includes('\n## '))failures.push(repo+': technical documentation headings missing');
    if(/[\u2014\u2015]/.test(text))failures.push(repo+': public long dash punctuation found');
-   console.log(repo+': shared header and navigation '+(failures.some(f=>f.startsWith(repo+':'))?'INCOMPLETE':'OK'));
+   console.log(repo+': editorial header and navigation '+(failures.some(f=>f.startsWith(repo+':'))?'INCOMPLETE':'OK'));
  }catch(e){failures.push(repo+': cannot inspect public README ('+String(e)+')')}
 }
 if(failures.length){
