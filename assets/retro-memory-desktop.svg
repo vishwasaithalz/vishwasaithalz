@@ -23,7 +23,7 @@
 <g filter="url(#sh)">
 <rect x="39" y="55" width="721" height="418" fill="#c4c4c4" stroke="#e8e8e8" stroke-width="4"/>
 <rect x="47" y="62" width="705" height="35" fill="url(#bluebar)"/>
-<text x="64" y="86" fill="#ffffff" font-family="Verdana,Arial,sans-serif" font-size="19" font-weight="700" >▣  C:\\VISHWAS\\MY COMPUTER</text>
+<text x="64" y="86" fill="#ffffff" font-family="Verdana,Arial,sans-serif" font-size="19" font-weight="700" >▣  C:\VISHWAS\MY COMPUTER</text>
 <rect x="669" y="70" width="22" height="18" fill="#d4d4d4" stroke="#444"/><rect x="697" y="70" width="22" height="18" fill="#d4d4d4" stroke="#444"/><rect x="726" y="70" width="18" height="18" fill="#d4d4d4" stroke="#444"/>
 <text x="731" y="84" fill="#121212" font-family="Verdana,Arial,sans-serif" font-size="13" font-weight="700" >x</text>
 <rect x="48" y="99" width="704" height="31" fill="#eeeae1"/>
@@ -65,11 +65,11 @@
 <rect x="784" y="299" width="378" height="174" rx="5" fill="#0c1321" stroke="#66c5b7" stroke-width="3"/>
 <rect x="791" y="306" width="364" height="26" fill="#155156"/>
 <text x="807" y="325" fill="#e4fff4" font-family="Verdana,Arial,sans-serif" font-size="15" font-weight="700" >⌁  TERMINAL // 2026</text>
-<text x="806" y="355" fill="#7ee6c8" font-family="Verdana,Arial,sans-serif" font-size="18" font-weight="700" >C:\\&gt; whoami</text>
+<text x="806" y="355" fill="#7ee6c8" font-family="Verdana,Arial,sans-serif" font-size="18" font-weight="700" >C:\&gt; whoami</text>
 <text x="806" y="378" fill="#eef9fb" font-family="Verdana,Arial,sans-serif" font-size="18" font-weight="400" >vishwas_aithal</text>
-<text x="806" y="404" fill="#7ee6c8" font-family="Verdana,Arial,sans-serif" font-size="18" font-weight="700" >C:\\&gt; dir /b</text>
+<text x="806" y="404" fill="#7ee6c8" font-family="Verdana,Arial,sans-serif" font-size="18" font-weight="700" >C:\&gt; dir /b</text>
 <text x="806" y="428" fill="#eef9fb" font-family="Verdana,Arial,sans-serif" font-size="14" font-weight="400" >blogger.exe  security.lab  build.js</text>
-<text x="806" y="455" fill="#ffcb78" font-family="Verdana,Arial,sans-serif" font-size="16" font-weight="700" >C:\\&gt; still_curious_</text>
+<text x="806" y="455" fill="#ffcb78" font-family="Verdana,Arial,sans-serif" font-size="16" font-weight="700" >C:\&gt; still_curious_</text>
 <rect class="cursor" x="1033" y="442" width="8" height="17" fill="#ffcb78"/>
 </g>
 <!-- taskbar -->
