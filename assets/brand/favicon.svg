@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title desc">
+<title id="title">VISHWAS.EXE</title><desc id="desc">Original retro floppy-inspired V icon in midnight teal, mint and amber</desc>
+<rect width="64" height="64" rx="12" fill="#0b1b30"/>
+<rect x="7" y="7" width="50" height="50" rx="6" fill="#174e65" stroke="#aaf0c8" stroke-width="3"/>
+<path d="M16 7h31v21H16z" fill="#dce1db"/>
+<path d="M34 9h9v16h-9z" fill="#42718a"/>
+<rect x="17" y="33" width="31" height="20" rx="3" fill="#e5dfc8"/>
+<path d="M22 38l9 10 10-10" fill="none" stroke="#20516b" stroke-width="4" stroke-linecap="square"/>
+<rect x="8" y="54" width="48" height="3" fill="#f6d08b"/>
+</svg>
