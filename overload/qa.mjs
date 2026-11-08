@@ -11,7 +11,8 @@ const required={
  'overload/index.html':['mine-grid','pong','paint','pc-cpu','term-output','defrag','feed-items','bsod'],
  'overload/game-room.html':['space','race','space-start','race-start'],
  'overload/network.html':['net-map','nodes','project-list','details'],
- 'overload/capsule.html':['floppies','note','save','export','clear']
+ 'overload/capsule.html':['floppies','note','save','export','clear'],
+ 'overload/tracker.html':['tracker','play','stop','bpm','volume','eq','status']
 };
 const failures=[],results=[];
 function bad(file,reason){failures.push(file+': '+reason)}
@@ -49,10 +50,11 @@ for(const path of [
  'overload/',
  'overload/game-room.html',
  'overload/network.html',
- 'overload/capsule.html'
+ 'overload/capsule.html',
+ 'overload/tracker.html'
 ])if(!readme.includes(path))bad('README.md','missing launch reference: '+path);
 if(!existsSync(join(root,'assets/retro-overload-marquee.svg')))bad('README.md','missing launcher artwork');
 if(/Build-Journal|nostalgia-karma-dashboard|karma-cloudflare-ops/.test(readme))bad('README.md','private project name exposed');
 console.log('VISHWAS.EXE static quality\n'+results.join('\n'));
 if(failures.length){console.error('FAILED:\n'+failures.join('\n'));process.exitCode=1}
-else console.log('PASS: seven pages parsed, local links resolved and public-only references checked.');
+else console.log('PASS: eight pages parsed, local links resolved and public-only references checked.');
