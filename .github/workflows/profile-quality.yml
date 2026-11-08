@@ -31,7 +31,9 @@ jobs:
           import re
           import xml.etree.ElementTree as ET
           readme = Path('README.md').read_text(encoding='utf-8')
-          assert 'KARMA Command Deck' in readme
+          assert 'VISHWAS.EXE UNIFIED THEME START' in readme
+          assert 'Vishwas Aithal' in readme
+          assert Path('assets/brand/vishwas-exe-main.svg').is_file()
           assert 'https://github.com/vishwasaithalz' in readme
           for path in re.findall(r'(?:src|href)="(assets/[^"]+)"', readme):
               if path.startswith("assets/arcade-gifs/"):
@@ -43,7 +45,7 @@ jobs:
                   }
                   continue
               assert Path(path).is_file(), f"Missing local asset: {path}"
-          for path in Path('assets').glob('*.svg'):
+          for path in [*Path('assets').glob('*.svg'), *Path('assets/brand').glob('*.svg')]:
               ET.parse(path)
           assert 'visitor-badge' not in readme.lower()
           print('Profile README and SVG checks passed')
