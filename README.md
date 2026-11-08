@@ -63,7 +63,7 @@ The after-school PC, now with more buttons than anyone reasonably needs. **This 
 
 **A separate illustrated Network Neighborhood** maps eight public GitHub repositories as clickable nodes. The main dashboard can optionally request recent *public* GitHub events without a token. Real source links remain front and center, private repository contents never enter the display, and the apps use no third-party scripts or tracking.
 
-<p align="center"><a href="https://vishwasaithalz.github.io/vishwasaithalz/overload/"><strong>💥 BOOT OVERLOAD 2.0</strong></a> &nbsp;·&nbsp; <a href="https://vishwasaithalz.github.io/vishwasaithalz/overload/game-room.html"><strong>🚀 BONUS GAMES</strong></a> &nbsp;·&nbsp; <a href="https://vishwasaithalz.github.io/vishwasaithalz/overload/network.html"><strong>🌐 NETWORK MAP</strong></a> &nbsp;·&nbsp; <a href="https://vishwasaithalz.github.io/vishwasaithalz/overload/capsule.html"><strong>💾 FLOPPY CAPSULE</strong></a></p>
+<p align="center"><a href="https://vishwasaithalz.github.io/vishwasaithalz/overload/"><strong>💥 BOOT OVERLOAD 2.0</strong></a> &nbsp;·&nbsp; <a href="https://vishwasaithalz.github.io/vishwasaithalz/overload/game-room.html"><strong>🚀 BONUS GAMES</strong></a> &nbsp;·&nbsp; <a href="https://vishwasaithalz.github.io/vishwasaithalz/overload/network.html"><strong>🌐 NETWORK MAP</strong></a> &nbsp;·&nbsp; <a href="https://vishwasaithalz.github.io/vishwasaithalz/overload/capsule.html"><strong>💾 FLOPPY CAPSULE</strong></a> &nbsp;·&nbsp; <a href="https://vishwasaithalz.github.io/vishwasaithalz/overload/tracker.html"><strong>🎚️ TRACKER STUDIO</strong></a></p>
 
 <details><summary><strong>📟 View Overload 2.0 app directory</strong></summary>
 
@@ -84,10 +84,11 @@ The after-school PC, now with more buttons than anyone reasonably needs. **This 
 | `NEIGHBORHOOD.EXE` | Accessible SVG map linking eight public repositories, not a real infrastructure topology |
 | `FLOPPY.EXE` | Four browser-only virtual disks for personal notes, downloadable as a TXT backup |
 | `BSOD-PARODY.EXE` | Harmless blue-screen joke with an explicit exit and no actual system access |
+| `TRACKER.EXE` | Original user-created 16-step Web Audio rhythm patterns with four synthesized voices, tempo control, local saving and JSON export |
 
 **Keyboard controls:** Alt+1 Minesweeper · Alt+2 Pong · Alt+3 Paint · Alt+4 PC Builder · Alt+B BIOS · Alt+S screensaver.
 
-**Bonus disk count:** Four playable games across the Overload desktop and the separate original game room, plus drawing, hardware assembly concepts, project mapping and a private local memory vault.
+**Bonus disk count:** Four playable games across the Overload desktop and original game room, plus drawing, PC concepts, project mapping, a private local memory vault and an opt-in original audio tracker.
 
 <sub>Static website, not an operating system. No authentication, real network scans, disk defragmentation, commercial game downloads or fabricated GitHub achievements. Personal best saved only on your device if local storage is available.</sub>
 </details>
