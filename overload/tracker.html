@@ -1,0 +1,88 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#141a3a"><meta name="description" content="Vishwas Aithal original retro audio tracker. Create a 16-step pattern, synthesize your own sounds with Web Audio on Play, save locally and export JSON. No external songs.">
+<title>VISHWAS.EXE | TRACKER STUDIO</title>
+<style>
+:root{font-family:Consolas,"Courier New",monospace;color:#e9f6ed;background:#101a2d}
+*{box-sizing:border-box}body{margin:0;min-height:100vh;background:radial-gradient(circle at 80% 15%,#3e2955,transparent 43%),linear-gradient(140deg,#0d2534,#1b153a)}
+a,button,input{font:inherit}a,button{cursor:pointer;background:#253d5e;border:2px solid #718fbd;border-bottom-color:#2b354d;color:#e4ffe7;padding:8px 11px;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;gap:5px}
+a:hover,button:hover{background:#3b5f7b}a:focus-visible,button:focus-visible,input:focus-visible{outline:3px dashed #fbd588;outline-offset:3px}
+.wrap{max-width:1280px;margin:auto;padding:23px clamp(12px,3vw,38px) 65px}
+.kicker{color:#ffc784;font-size:12px;font-weight:bold;letter-spacing:.18em}
+h1{font:900 clamp(40px,7vw,92px)/.95 "Arial Black",system-ui,sans-serif;letter-spacing:-.07em;margin:12px 0}h1 span{color:#b6ffc9}
+.lead{color:#b4c5d8;font:16px/1.6 system-ui,sans-serif;max-width:800px}
+.nav,.controls{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:18px 0}
+.window{border:3px ridge #b69f83;box-shadow:8px 9px #080b20;background:#1d2843;overflow:hidden}
+.titlebar{background:linear-gradient(90deg,#343d73,#9d4e89);padding:9px 12px;color:white;display:flex;justify-content:space-between;gap:7px;font-size:13px;font-weight:bold}
+.inner{padding:clamp(12px,2.7vw,30px)}
+.display{background:#080f21;border:3px inset #576d8f;color:#70f7a0;padding:13px;margin-bottom:20px;font:15px Consolas,monospace}
+.display strong{font-size:19px}.display .sub{color:#93b6af;font-size:11px;margin-top:4px}
+.eq{height:84px;display:flex;align-items:end;gap:3px;padding-top:7px}
+.eq i{display:block;flex:1;background:linear-gradient(to top,#4aff98,#ecc85d);transform-origin:bottom;height:20%;animation:beat 600ms ease-in-out infinite alternate;animation-play-state:paused}
+.eq.on i{animation-play-state:running}@keyframes beat{from{transform:scaleY(.25)}to{transform:scaleY(2)}}
+.grid-scroll{max-width:100%;overflow:auto;border:2px solid #62798d;background:#101c31;padding:10px}
+.tracker-grid{display:grid;grid-template-columns:105px repeat(16,minmax(32px,1fr));gap:4px;min-width:680px}
+.track{display:flex;align-items:center;font-weight:bold;font-size:13px;padding:0 6px;white-space:nowrap}
+.step{border:1px solid #5c8191;border-bottom:2px solid #24455c;border-radius:3px;background:#193149;min-width:0;min-height:36px;padding:0;font-size:12px;color:#94adc0}
+.step.on{background:#e4bc80;color:#28263a;border-color:#fbe5a9;font-weight:bold}.step.current{outline:3px solid #9effc9;outline-offset:-2px}.step.beat-start{border-left:3px solid #e6a2e1}
+.num{font-size:11px;color:#b2cde0;text-align:center;padding:5px 0}
+label{display:inline-flex;align-items:center;gap:7px;color:#bfd0dd;font-size:13px}
+input[type=range]{accent-color:#a8f6b3;width:155px}
+small,.small{color:#aebecf;font-size:12px;line-height:1.6}
+#status{font-size:13px;color:#ffe6a3;min-height:32px}
+footer{border-top:1px solid #617b91;padding-top:17px;margin-top:29px;color:#9bb9c7;font-size:12px;line-height:1.6}
+@media(max-width:700px){.display strong{font-size:15px}.grid-scroll{padding:6px}.lead{font-size:14px}}
+@media(prefers-reduced-motion:reduce){.eq i{animation:none}}
+</style></head><body><main class="wrap">
+<div class="kicker">EXTRA PACK 06 / ORIGINAL AUDIO / NO COPYRIGHTED TRACKS</div>
+<h1>TRACKER<span>.EXE</span><br>STUDIO</h1>
+<p class="lead">Remember Winamp skins and tiny audio visualizers? Build your own 16-step retro rhythm pattern here using four synthesized voices. Nothing plays automatically. Your browser generates the sound only when you click Play.</p>
+<nav class="nav"><a href="./">💥 OVERLOAD DESKTOP</a><a href="../memory/">🖥️ MEMORY OS</a><a href="../museum/">💾 MUSEUM</a><a href="game-room.html">🎮 GAME ROOM</a></nav>
+<section class="window"><div class="titlebar"><span>🎚️ VISHWAS.TRACKER // 16 STEP MACHINE</span><span>01 / LOCAL STUDIO</span></div>
+<div class="inner">
+<div class="display"><strong id="now-playing">STOPPED / NO AUDIO</strong><div class="sub">4 SYNTHESIZED VOICES / 16 STEPS / ORIGINAL USER-CREATED PATTERNS</div><div class="eq" id="eq"></div></div>
+<div class="controls"><button id="play">▶ PLAY</button><button id="stop">■ STOP</button><button id="preset">✦ ORIGINAL PRESET</button><button id="clear">✖ CLEAR</button><button id="random">🎲 RANDOMIZE</button>
+<label>Tempo <input type="range" id="bpm" min="65" max="180" value="115"><output id="bpm-label">115 BPM</output></label>
+<label>Volume <input type="range" id="volume" min="0" max="100" value="42"><output id="volume-label">42%</output></label>
+</div>
+<div class="grid-scroll"><div class="tracker-grid" id="tracker" role="group" aria-label="Sixteen step audio sequencer"></div></div>
+<div class="controls"><button id="save">💾 SAVE IN BROWSER</button><button id="export">📄 EXPORT PATTERN JSON</button><button id="load">↺ LOAD SAVED PATTERN</button><span class="small">Click any step to toggle. Four beats per bar.</span></div>
+<div id="status" role="status" aria-live="polite">Ready. Edit a pattern and press Play to generate original audio.</div>
+<p class="small">Synth voices: low kick tone, synthesized snare noise, high-frequency hat and a short retro blip. Animated bars are decorative, not a calibrated audio analyzer. Sound requires a user action and may be disabled by your browser.</p>
+</div></section>
+<footer>© Vishwas Aithal. Original browser-side synthesized tones, no sampled tracks, recorded music, third-party libraries, analytics or file uploads. Pattern storage is local to the browser. Use at a comfortable listening volume and stop playback when finished.</footer></main>
+<script>
+(function(){
+'use strict';
+const $=id=>document.getElementById(id),names=['KICK','SNARE','HI-HAT','BLIP'],sym=['●','◆','✦','♫'];
+const KEY='vishwas.tracker.v1';
+let pattern=Array.from({length:4},()=>Array(16).fill(false)),position=-1,timer=null,ctx=null,noiseBuffer=null,master=null;
+const b=$('bpm'),v=$('volume');let tempo=Number(b.value);
+function announce(s){$('status').textContent=s}
+function render(){const root=$('tracker');root.replaceChildren();const label=document.createElement('div');label.className='track';label.textContent='TRACK';root.appendChild(label);
+for(let s=0;s<16;s++){let head=document.createElement('div');head.className='num';head.textContent=String(s+1).padStart(2,'0');root.appendChild(head)}
+names.forEach((name,row)=>{let label=document.createElement('div');label.className='track';label.textContent=sym[row]+' '+name;root.appendChild(label);
+for(let s=0;s<16;s++){let cell=document.createElement('button');cell.className='step'+(pattern[row][s]?' on':'')+(position===s?' current':'')+(s%4===0?' beat-start':'');cell.type='button';cell.setAttribute('aria-pressed',String(pattern[row][s]));cell.setAttribute('aria-label',name+' step '+(s+1)+(pattern[row][s]?' on':' off'));cell.textContent=pattern[row][s]?'■':'·';
+cell.addEventListener('click',()=>{pattern[row][s]=!pattern[row][s];render()});root.appendChild(cell)}})}
+const eq=$('eq');for(let i=0;i<34;i++){let el=document.createElement('i');el.style.height=(12+(i*19)%48)+'%';el.style.animationDelay='-'+(i*.04)+'s';eq.appendChild(el)}
+function makeAudio(){if(ctx)return;const AC=window.AudioContext||window.webkitAudioContext;if(!AC)throw Error('Web Audio unavailable');ctx=new AC();master=ctx.createGain();master.gain.value=Number(v.value)/100*.32;master.connect(ctx.destination);const len=Math.round(ctx.sampleRate*.18);noiseBuffer=ctx.createBuffer(1,len,ctx.sampleRate);let data=noiseBuffer.getChannelData(0);for(let i=0;i<len;i++)data[i]=Math.random()*2-1}
+function envelope(g,t,d,peak){g.gain.setValueAtTime(.0001,t);g.gain.exponentialRampToValueAtTime(Math.max(.0002,peak),t+.008);g.gain.exponentialRampToValueAtTime(.0001,t+d)}
+function tonal(freq,start,d,type,level,sweep){let o=ctx.createOscillator(),g=ctx.createGain();o.type=type;o.frequency.setValueAtTime(freq,start);if(sweep)o.frequency.exponentialRampToValueAtTime(sweep,start+d);envelope(g,start,d,level);o.connect(g);g.connect(master);o.start(start);o.stop(start+d+.02)}
+function noisy(start,d,filterFreq,level){let source=ctx.createBufferSource(),filter=ctx.createBiquadFilter(),g=ctx.createGain();source.buffer=noiseBuffer;filter.type='highpass';filter.frequency.value=filterFreq;envelope(g,start,d,level);source.connect(filter);filter.connect(g);g.connect(master);source.start(start);source.stop(start+d+.01)}
+function sound(row,step,t){if(row===0)tonal(145,t,.21,'sine',.75,48);if(row===1){noisy(t,.12,900,.27);tonal(180,t,.09,'triangle',.11,95)}
+if(row===2)noisy(t,.04,6800,.12);if(row===3){let notes=[261.6,329.6,392,523.3,440,392,329.6,293.7];tonal(notes[Math.floor(step/2)%notes.length],t,.11,'square',.08,0)}}
+function stop(){if(timer)clearInterval(timer);timer=null;position=-1;$('now-playing').textContent='STOPPED / NO AUDIO';$('play').textContent='▶ PLAY';eq.classList.remove('on');render()}
+function tick(){if(!ctx)return;position=(position+1)%16;let t=ctx.currentTime+.016;for(let row=0;row<4;row++)if(pattern[row][position])sound(row,position,t);render()}
+async function play(){if(timer){stop();return}try{makeAudio();if(ctx.state==='suspended')await ctx.resume();timer=setInterval(tick,60000/tempo/4);$('now-playing').textContent='PLAYING / ORIGINAL SYNTH';$('play').textContent='❚❚ PAUSE';eq.classList.add('on');tick();announce('Original local audio playing. Use Stop to end it.')}catch(e){announce('Audio could not start: '+(e.message||e))}}
+$('play').addEventListener('click',play);$('stop').addEventListener('click',()=>{stop();announce('Stopped.')});
+b.addEventListener('input',()=>{tempo=Number(b.value);$('bpm-label').textContent=tempo+' BPM';if(timer){clearInterval(timer);timer=setInterval(tick,60000/tempo/4)}});
+v.addEventListener('input',()=>{$('volume-label').textContent=v.value+'%';if(master)master.gain.value=Number(v.value)/100*.32});
+$('clear').addEventListener('click',()=>{stop();pattern=Array.from({length:4},()=>Array(16).fill(false));render();announce('All 64 pattern cells cleared.')});
+$('random').addEventListener('click',()=>{stop();pattern=Array.from({length:4},(_,r)=>Array.from({length:16},(_,i)=>Math.random()<(r===0?.35:r===1?.2:r===2?.52:.16)));render();announce('New randomized original pattern ready.')});
+$('preset').addEventListener('click',()=>{stop();pattern=Array.from({length:4},()=>Array(16).fill(false));[0,4,8,12].forEach(i=>pattern[0][i]=true);[4,12].forEach(i=>pattern[1][i]=true);[2,6,10,14].forEach(i=>pattern[2][i]=true);[0,3,7,11].forEach(i=>pattern[3][i]=true);render();announce('Original starter rhythm loaded. Customize any step.')});
+$('save').addEventListener('click',()=>{try{localStorage.setItem(KEY,JSON.stringify({pattern,bpm:tempo,volume:Number(v.value)}));announce('Pattern saved in local browser storage.')}catch(e){announce('Browser storage unavailable. Export JSON instead.')}});
+$('load').addEventListener('click',()=>{try{const raw=JSON.parse(localStorage.getItem(KEY)||'null');if(!raw){announce('No saved pattern found.');return}if(!Array.isArray(raw.pattern)||raw.pattern.length!==4||raw.pattern.some(r=>!Array.isArray(r)||r.length!==16)){announce('Saved pattern is invalid.');return}stop();pattern=raw.pattern.map(r=>r.map(Boolean));b.value=String(Math.max(65,Math.min(180,Number(raw.bpm)||115)));tempo=Number(b.value);v.value=String(Math.max(0,Math.min(100,Number(raw.volume)??42)));$('bpm-label').textContent=tempo+' BPM';$('volume-label').textContent=v.value+'%';if(master)master.gain.value=Number(v.value)/100*.32;render();announce('Saved pattern loaded.')}catch(e){announce('Could not load local pattern.')}});
+$('export').addEventListener('click',()=>{try{let blob=new Blob([JSON.stringify({version:1,author:'Vishwas Aithal original tracker',bpm:tempo,pattern},null,2)],{type:'application/json'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='VISHWAS-TRACKER-PATTERN.json';document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1500);announce('Original pattern JSON export requested.')}catch(e){announce('Export unavailable in this browser.')}});
+document.addEventListener('visibilitychange',()=>{if(document.hidden&&timer){stop();announce('Paused while tab was hidden.')}});
+render();
+})();
+</script></body></html>
