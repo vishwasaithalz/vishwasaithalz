@@ -7,6 +7,7 @@ on:
     branches: [main]
     paths:
       - 'scripts/audit-public-repos.py'
+      - 'tools/check_unified_public_theme.mjs'
       - '.github/workflows/public-quality-audit.yml'
 permissions:
   contents: read
@@ -19,6 +20,8 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+      - name: Verify consistent VISHWAS.EXE theme across public repositories
+        run: node tools/check_unified_public_theme.mjs
       - name: Run read-only quality inventory
         run: python scripts/audit-public-repos.py
       - name: Upload machine-readable and human-readable reports
