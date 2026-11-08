@@ -34,5 +34,16 @@ jobs:
           git add portfolio-control-center/health.json
           if ! git diff --cached --quiet; then
             git commit -m "chore: record selected-project HTTP health snapshot"
-            git push
+            # Another automated job may advance main. Never force-push.
+            for attempt in 1 2 3 4; do
+              git fetch origin main
+              git rebase origin/main
+              if git push origin HEAD:main; then
+                exit 0
+              fi
+              echo "Main changed before the health snapshot could publish: retry $attempt"
+              sleep 2
+            done
+            echo "::error::Unable to publish health snapshot without force-push."
+            exit 1
           fi
