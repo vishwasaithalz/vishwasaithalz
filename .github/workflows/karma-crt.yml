@@ -1,4 +1,4 @@
-name: KARMA contribution CRT
+name: VISHWAS.EXE Winamp CRT
 on:
   workflow_dispatch:
   schedule:
