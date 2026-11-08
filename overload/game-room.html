@@ -1,0 +1,97 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0b1829"><meta name="description" content="Vishwas Aithal's original cybercafe bonus arcade with two playable browser games: Starfighter and Pixel Racer.">
+<title>VISHWAS.EXE | BONUS GAME ROOM</title><style>
+:root{font-family:Consolas,"Courier New",monospace;color:#e9ffef;background:#0b1729}*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 80% 10%,#2e3263,transparent 49%),#0b1729;min-width:320px;min-height:100vh}
+header{max-width:1220px;margin:auto;padding:25px 22px 9px}.kicker{color:#ffda89;font-size:12px;letter-spacing:2px}h1{font:900 clamp(40px,6.6vw,82px)/.92 "Arial Black",system-ui,sans-serif;letter-spacing:-.075em;margin:13px 0;color:#aef8cf}h1 span{color:#ffb2e5}p{color:#b5cddd;line-height:1.55}
+.links{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0}a,button{color:#e4fff3;background:#223b56;border:2px solid #739caa;padding:9px 12px;text-decoration:none;font:inherit;cursor:pointer;border-radius:2px}a:hover,button:hover{background:#365c79}a:focus-visible,button:focus-visible{outline:3px dashed #ffd37d;outline-offset:3px}
+main{max-width:1220px;margin:auto;padding:7px 22px 70px;display:grid;grid-template-columns:1fr 1fr;gap:20px}.window{border:3px solid #6c9aa8;background:#112c3d;box-shadow:7px 9px #03101a;min-width:0}.bar{padding:9px 12px;background:linear-gradient(90deg,#164d91,#188c89);color:white;font-weight:bold;display:flex;justify-content:space-between;gap:10px}.body{padding:15px}canvas{display:block;background:#070e1e;border:3px ridge #77909c;width:100%;height:auto;aspect-ratio:500/440;image-rendering:pixelated;touch-action:none}
+.row{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0;align-items:center}.stat{background:#061d2d;color:#aef8cf;padding:7px 9px;border:1px solid #568083;font-size:12px}.dpad{display:flex;justify-content:center;gap:10px;margin-top:9px}.dpad button{flex:1;touch-action:none;max-width:180px;min-height:56px;font-size:20px;background:#2b4c6a}
+.dpad button[data-key=fire]{background:#643958;border-color:#cf8abc}
+.status{color:#ffe19b;font-size:13px;min-height:43px}footer{grid-column:1/-1;border-top:1px solid #365b6b;font-size:12px;color:#9ab5bd;margin-top:10px;padding-top:15px}
+@media(max-width:860px){main{grid-template-columns:1fr}canvas{max-width:540px;margin:auto}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style></head><body>
+<header><div class="kicker">DISK 03 / EXTRA GAME ROOM / NO DOWNLOADS</div><h1>CYBERCAFÉ<br><span>ARCADE.EXE</span></h1><p>Two original arcade games inspired by the pixel era, made for the kid who grew up on Snake, Contra, Tanks, Virtua Cop and Counter-Strike. Use the keyboard, mouse or on-screen buttons. No commercial sprites, characters, gameplay recordings or music.</p>
+<nav class="links"><a href="./">💥 OVERLOAD DESKTOP</a><a href="../memory/">🖥️ MEMORY OS</a><a href="../museum/">💾 MUSEUM</a><a href="../arcade/">🎮 ORIGINAL ARCADE</a><a href="https://github.com/vishwasaithalz">⌨️ GITHUB</a></nav></header>
+<main>
+<section class="window"><div class="bar"><span>🚀 STARFIGHTER.EXE</span><span>ORIGINAL</span></div><div class="body">
+<p>Slide, shoot and clear geometric invaders. Three lives. Each new wave moves faster. No auto-shooting.</p>
+<canvas id="space" width="500" height="440" aria-label="Original space shooter canvas"></canvas>
+<div class="row"><span class="stat" id="space-score">SCORE: 0</span><span class="stat" id="space-lives">LIVES: 3</span><span class="stat" id="space-wave">WAVE: 1</span></div>
+<div class="row"><button id="space-start">▶ Start game</button><button id="space-reset">↻ Reset</button></div><div class="dpad"><button data-space="left">◀</button><button data-space="fire">● FIRE</button><button data-space="right">▶</button></div>
+<div class="status" role="status" id="space-status">Controls: A/D or Left/Right to move, Space to fire.</div>
+</div></section>
+<section class="window"><div class="bar"><span>🏎️ PIXEL RACER.EXE</span><span>ORIGINAL</span></div><div class="body">
+<p>Three lanes, falling hazards and increasing speed. Survive as long as you can while the road gets frantic.</p>
+<canvas id="race" width="500" height="440" aria-label="Original three lane avoidance racing game"></canvas>
+<div class="row"><span class="stat" id="race-score">DISTANCE: 0</span><span class="stat" id="race-best">BEST: 0</span><span class="stat" id="race-level">SPEED: 1</span></div>
+<div class="row"><button id="race-start">▶ Start race</button><button id="race-reset">↻ Reset</button></div><div class="dpad"><button id="race-left">◀ LEFT LANE</button><button id="race-right">RIGHT LANE ▶</button></div>
+<div class="status" role="status" id="race-status">Controls: J/L or Left/Right. Each press moves one lane.</div>
+</div></section>
+<footer>© Vishwas Aithal. Fully original browser-side mini-games using generated geometric graphics. Progress is local to your browser; no scores or identifying information are uploaded. Scores may be stored in browser local storage. Hide this tab to pause games.</footer>
+</main>
+<script>
+(function(){
+'use strict';const $=id=>document.getElementById(id),K={left:false,right:false,fire:false};
+const space=$('space'),sc=space.getContext('2d'),race=$('race'),rc=race.getContext('2d');let spaceRun=false,raceRun=false,spaceFrame=0,raceFrame=0,lastS=0,lastR=0;
+let ship={x:250,y:402},bullets=[],foes=[],sparks=[],lives=3,score=0,wave=1,shootWait=0,enemyDrift=1,foeShots=[],starfield=Array.from({length:70},()=>({x:Math.random()*500,y:Math.random()*440,s:Math.random()*1.5+.6}));
+function spaceSet(){spaceRun=false;cancelAnimationFrame(spaceFrame);ship={x:250,y:402};bullets=[];foes=[];sparks=[];foeShots=[];lives=3;score=0;wave=1;shootWait=0;enemyDrift=1;makeWave();spaceLabels();$('space-status').textContent='Ready. Start the geometric invader challenge.';spaceDraw()}
+function makeWave(){foes=[];for(let y=0;y<3;y++)for(let x=0;x<8;x++)foes.push({x:46+x*55,y:55+y*37,live:true});enemyDrift=(Math.random()>.5?1:-1)*(32+wave*12)}
+function spaceLabels(){$('space-score').textContent='SCORE: '+score;$('space-lives').textContent='LIVES: '+lives;$('space-wave').textContent='WAVE: '+wave}
+function sFill(x,y,w,h,color){sc.fillStyle=color;sc.fillRect(x,y,w,h)}
+function spaceDraw(){sFill(0,0,500,440,'#080f20');starfield.forEach(st=>sFill(st.x,st.y,st.s,st.s,'#507b96'));sFill(ship.x-18,ship.y,36,12,'#9bffc9');sFill(ship.x-7,ship.y-12,14,12,'#9bffc9');sFill(ship.x-3,ship.y-19,6,8,'#e1fd99');
+for(let f of foes)if(f.live){sFill(f.x-14,f.y-9,28,18,'#f7a4cc');sFill(f.x-8,f.y-14,16,5,'#caa2ff');sFill(f.x-8,f.y-2,5,5,'#071225');sFill(f.x+3,f.y-2,5,5,'#071225')}
+for(let b of bullets)sFill(b.x-2,b.y-7,4,12,'#fff3a1');for(let b of foeShots)sFill(b.x-2,b.y-4,5,10,'#ff896e');
+if(!spaceRun){sc.fillStyle='#fff5cc';sc.textAlign='center';sc.font='bold 16px monospace';sc.fillText(lives<=0?'GAME OVER':'STARFIGHTER.EXE',250,230)}}
+function spaceStop(message){spaceRun=false;cancelAnimationFrame(spaceFrame);$('space-start').textContent='▶ Resume';$('space-status').textContent=message;spaceDraw()}
+function spaceTick(time){if(!spaceRun)return;let dt=Math.min(.033,(time-lastS)/1000||.016);lastS=time;
+ship.x+=((K.right?1:0)-(K.left?1:0))*245*dt;ship.x=Math.max(24,Math.min(476,ship.x));
+shootWait-=dt;if(K.fire&&shootWait<=0){bullets.push({x:ship.x,y:ship.y-17});shootWait=.22}
+bullets.forEach(b=>b.y-=390*dt);foeShots.forEach(b=>b.y+=(90+wave*12)*dt);
+bullets=bullets.filter(b=>b.y>-10);foeShots=foeShots.filter(b=>b.y<445);
+let edge=false;foes.forEach(f=>{if(!f.live)return;f.x+=enemyDrift*dt;if(f.x>477||f.x<23)edge=true});if(edge){enemyDrift=-enemyDrift;foes.forEach(f=>{if(f.live)f.y+=14})}
+for(let b of bullets){for(let f of foes)if(f.live&&Math.abs(b.x-f.x)<16&&Math.abs(b.y-f.y)<15){f.live=false;b.y=-99;score+=10;break}}
+if(Math.random()<.009+wave*.001){let live=foes.filter(f=>f.live);if(live.length){let f=live[Math.floor(Math.random()*live.length)];foeShots.push({x:f.x,y:f.y+14})}}
+foeShots=foeShots.filter(b=>{if(Math.abs(b.x-ship.x)<20&&Math.abs(b.y-ship.y)<17){lives--;return false}return true});
+if(foes.some(f=>f.live&&f.y>385)){lives=0}
+if(lives<=0){spaceLabels();spaceStop('GAME OVER. '+score+' points. Reset to restart.');return}
+if(foes.every(f=>!f.live)){wave++;makeWave();$('space-status').textContent='Wave '+wave+' incoming!'}
+spaceLabels();spaceDraw();spaceFrame=requestAnimationFrame(spaceTick)}
+function toggleSpace(){if(spaceRun){spaceStop('Paused.');return}if(lives<=0)spaceSet();spaceRun=true;lastS=performance.now();$('space-start').textContent='❚❚ Pause';$('space-status').textContent='Incoming geometric invaders!';spaceFrame=requestAnimationFrame(spaceTick)}
+$('space-start').addEventListener('click',toggleSpace);$('space-reset').addEventListener('click',spaceSet);spaceSet();
+for(let id of ['left','right','fire']){let b=document.querySelector('[data-space="'+id+'"]');b.addEventListener('pointerdown',e=>{K[id]=true;b.setPointerCapture(e.pointerId)});for(let evt of ['pointerup','pointercancel','lostpointercapture'])b.addEventListener(evt,()=>K[id]=false)}
+space.addEventListener('pointermove',e=>{if(!spaceRun)return;let rect=space.getBoundingClientRect();ship.x=Math.max(24,Math.min(476,(e.clientX-rect.left)*500/rect.width))});
+space.addEventListener('pointerdown',()=>{K.fire=true});space.addEventListener('pointerup',()=>{K.fire=false});
+
+// Pixel Racer: lane changes move once per key press. The road is original geometric canvas art.
+let lane=1,traffic=[],distance=0,speed=1,spawn=0,offset=0,rBest=0;try{rBest=Number(localStorage.getItem('vishwas.race.best')||0)||0}catch(e){}
+function raceLabels(){$('race-score').textContent='DISTANCE: '+Math.floor(distance);$('race-best').textContent='BEST: '+Math.floor(rBest);$('race-level').textContent='SPEED: '+speed}
+function raceSet(){raceRun=false;cancelAnimationFrame(raceFrame);lane=1;traffic=[];distance=0;speed=1;spawn=0;offset=0;raceLabels();$('race-status').textContent='Ready for three lanes of pixel racing.';raceDraw()}
+function saveBest(){if(distance>rBest){rBest=Math.floor(distance);try{localStorage.setItem('vishwas.race.best',String(rBest))}catch(e){}}raceLabels()}
+function raceStop(message){raceRun=false;cancelAnimationFrame(raceFrame);$('race-start').textContent='▶ Start race';$('race-status').textContent=message;raceDraw()}
+function roadX(n){return 130+n*120}
+function raceDraw(){rc.fillStyle='#10251e';rc.fillRect(0,0,500,440);rc.fillStyle='#28364b';rc.fillRect(65,0,370,440);
+rc.fillStyle='#d9cda1';rc.fillRect(65,0,5,440);rc.fillRect(430,0,5,440);
+for(let y=-70+offset;y<440;y+=75){rc.fillStyle='#b2c5ce';rc.fillRect(186,y,5,38);rc.fillRect(307,y,5,38)}
+traffic.forEach(t=>{rc.fillStyle=t.color;rc.fillRect(roadX(t.lane)-27,t.y-26,54,52);rc.fillStyle='#d3f4fc';rc.fillRect(roadX(t.lane)-19,t.y-20,38,11);rc.fillStyle='#fff3b5';rc.fillRect(roadX(t.lane)-20,t.y+15,11,6);rc.fillRect(roadX(t.lane)+9,t.y+15,11,6)});
+rc.fillStyle='#8cf8da';rc.fillRect(roadX(lane)-28,356,56,58);rc.fillStyle='#28607f';rc.fillRect(roadX(lane)-21,367,42,19);rc.fillStyle='#fff3a5';rc.fillRect(roadX(lane)-23,351,12,8);rc.fillRect(roadX(lane)+11,351,12,8);
+if(!raceRun){rc.fillStyle='#f9e5bc';rc.font='bold 18px monospace';rc.textAlign='center';rc.fillText('PIXEL RACER.EXE',250,192)}}
+function tickRace(time){if(!raceRun)return;let dt=Math.min(.033,(time-lastR)/1000||.016);lastR=time;distance+=dt*(10+speed*3);speed=Math.min(12,1+Math.floor(distance/60));offset=(offset+dt*(120+speed*17))%75;spawn-=dt;
+if(spawn<=0){let roadLane=Math.floor(Math.random()*3);traffic.push({lane:roadLane,y:-40,color:['#f7a4bd','#b4a9f8','#e9b578','#f59f79'][Math.floor(Math.random()*4)]});spawn=Math.max(.27,1.15-speed*.065)}
+for(let t of traffic)t.y+=dt*(120+speed*17);
+traffic=traffic.filter(t=>t.y<500);
+if(traffic.some(t=>t.lane===lane&&Math.abs(t.y-384)<43)){saveBest();raceStop('💥 CRASH! Distance '+Math.floor(distance)+'. Try another run.');return}
+raceLabels();raceDraw();raceFrame=requestAnimationFrame(tickRace)}
+function toggleRace(){if(raceRun){raceStop('Paused.');return}if(distance>0&&!traffic.length){raceSet()}raceRun=true;lastR=performance.now();$('race-start').textContent='❚❚ Pause';$('race-status').textContent='Avoid the cars. Every lane move counts.';raceFrame=requestAnimationFrame(tickRace)}
+function moveLane(n){lane=Math.max(0,Math.min(2,lane+n));raceDraw()}
+$('race-start').addEventListener('click',toggleRace);$('race-reset').addEventListener('click',raceSet);$('race-left').addEventListener('click',()=>moveLane(-1));$('race-right').addEventListener('click',()=>moveLane(1));raceSet();
+document.addEventListener('keydown',e=>{if(/INPUT|TEXTAREA|SELECT/.test(e.target.tagName))return;
+if(e.key==='ArrowLeft'||e.key.toLowerCase()==='a'){K.left=true;if(raceRun&&e.key==='ArrowLeft')moveLane(-1);e.preventDefault()}
+if(e.key==='ArrowRight'||e.key.toLowerCase()==='d'){K.right=true;if(raceRun&&e.key==='ArrowRight')moveLane(1);e.preventDefault()}
+if(e.key===' '){K.fire=true;e.preventDefault()}
+if(e.key.toLowerCase()==='j'){moveLane(-1)}if(e.key.toLowerCase()==='l'){moveLane(1)}
+if(e.key.toLowerCase()==='w'){K.left=true}if(e.key.toLowerCase()==='s'){K.right=true}
+});
+document.addEventListener('keyup',e=>{if(e.key==='ArrowLeft'||e.key.toLowerCase()==='a')K.left=false;if(e.key==='ArrowRight'||e.key.toLowerCase()==='d')K.right=false;if(e.key===' ')K.fire=false;if(e.key.toLowerCase()==='w')K.left=false;if(e.key.toLowerCase()==='s')K.right=false});
+document.addEventListener('visibilitychange',()=>{if(document.hidden){if(spaceRun)spaceStop('Paused while tab is hidden.');if(raceRun)raceStop('Paused while tab is hidden.')}});
+})();
+</script></body></html>
