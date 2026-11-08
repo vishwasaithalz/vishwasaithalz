@@ -1,4 +1,4 @@
-name: KARMA Arcade 3 GIFs and playable UI checks
+name: VISHWAS.EXE Arcade 3.0 Quality
 
 on:
   pull_request:
@@ -23,7 +23,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 12
     steps:
-      - name: Check out KARMA profile
+      - name: Check out Vishwas Aithal profile
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           persist-credentials: true
