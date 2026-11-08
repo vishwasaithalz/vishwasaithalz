@@ -1,4 +1,4 @@
-name: KARMA repository orbit
+name: VISHWAS.EXE Repository Orbit
 on:
   workflow_dispatch:
   schedule:
