@@ -41,6 +41,8 @@ for(const [file,expected] of Object.entries(required)){
  if(!html.includes('class="vx-global-nav"'))err(file,'shared top navigation missing');
  if(!html.includes('class="vx-universe"')&&!/class="[^"]*\bvx-universe\b/.test(html))err(file,'shared body theme missing');
  if(!html.includes('assets/brand/retro-shell.css'))err(file,'shared CSS missing');
+ if(!html.includes('assets/brand/favicon.svg'))err(file,'shared favicon missing');
+ if(!html.includes('name="theme-color" content="#0b1b30"'))err(file,'shared browser theme color missing');
  const ids=[...html.matchAll(/\bid="([^"]+)"/g)].map(m=>m[1]);
  for(const id of expected)if(!ids.includes(id))err(file,'missing interactive element: '+id);
  const duplicated=ids.filter((id,i)=>ids.indexOf(id)!==i);
@@ -81,6 +83,15 @@ for(const slug of brands){
  if(!svg.includes('<svg ')||!svg.includes('</svg>'))err(path,'malformed SVG envelope');
  if(!svg.includes('VISHWAS.EXE'))err(path,'unified identity missing');
  if(!svg.includes('prefers-reduced-motion'))err(path,'reduced-motion fallback missing');
+}
+const faviconPath=join(root,'assets/brand/favicon.svg');
+if(!existsSync(faviconPath))err('theme','favicon asset missing');
+const arcadeStyle=join(root,'arcade/styles.css');
+if(!existsSync(arcadeStyle))err('theme','arcade stylesheet missing');
+else{
+ const arcadeCss=readFileSync(arcadeStyle,'utf8');
+ for(const token of ['--bg:#0b1b30','--lime:#aaf0c8','--yellow:#f6d08b'])
+  if(!arcadeCss.includes(token))err('arcade','palette drift: '+token);
 }
 const readme=readFileSync(join(root,'README.md'),'utf8');
 for(const needed of ['assets/brand/vishwas-exe-main.svg','overload/','overload/game-room.html','overload/network.html','overload/capsule.html','overload/tracker.html'])
