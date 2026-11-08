@@ -131,7 +131,7 @@
     ctx.beginPath();ctx.moveTo(22,520);ctx.lineTo(22,88);ctx.quadraticCurveTo(22,21,115,21);ctx.lineTo(448,21);ctx.quadraticCurveTo(536,22,538,91);ctx.lineTo(538,517);ctx.stroke();
     ctx.strokeStyle=colors.pink;ctx.lineWidth=8;
     ctx.beginPath();ctx.moveTo(38,470);ctx.lineTo(124,542);ctx.moveTo(522,470);ctx.lineTo(428,542);ctx.stroke();
-    ctx.textAlign="center";ctx.font="900 22px monospace";ctx.fillStyle="#ffc55a";ctx.fillText("KARMA PINBALL // 198X",280,70);
+    ctx.textAlign="center";ctx.font="900 22px monospace";ctx.fillStyle="#ffc55a";ctx.fillText("VISHWAS AITHAL PINBALL // 198X",280,70);
     ctx.font="12px monospace";ctx.fillStyle="#c9b7e6";ctx.fillText("LAUNCH  •  BOUNCE  •  COLLECT",280,92);
     pins.forEach(b=>{
       const g=ctx.createRadialGradient(b.x-7,b.y-7,3,b.x,b.y,b.r+8);
