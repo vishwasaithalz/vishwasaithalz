@@ -1,4 +1,4 @@
-name: KARMA public repository quality audit
+name: VISHWAS.EXE Public Quality Audit
 on:
   workflow_dispatch:
   schedule:
