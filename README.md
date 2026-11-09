@@ -1,6 +1,6 @@
 <!-- Vishwas Aithal personal GitHub | original retro desktop art | no long dash punctuation -->
 <!-- VISHWAS.EXE UNIFIED THEME START -->
-<p align="center"><a href="https://vishwasaithalz.github.io/vishwasaithalz/"><img src="assets/brand/vishwas-exe-main.svg" width="100%" alt="Vishwas Aithal unified retro Windows project universe with consistent midnight, teal, mint and amber styling" /></a></p>
+<p align="center"><a href="https://vishwasaithalz.github.io/vishwasaithalz/"><img src="assets/brand/vishwas-exe-main.svg" width="100%" alt="An original tactile beige CRT, phosphor green DOS screen, and Vishwas Aithal nameplate with a 90s cybercafe to modern developer story" /></a></p>
 <p align="center"><strong>VISHWAS.EXE / THE CYBERCAFÉ KID</strong><br/><sub>One retro computer universe, real engineering work, original interactive games</sub></p>
 <p align="center">
 <a href="https://vishwasaithalz.github.io/vishwasaithalz/"><strong>💾 BOOT MANAGER</strong></a> &nbsp;·&nbsp;
@@ -16,7 +16,7 @@
 
 <p align="center"><img src="assets/retro-memory-desktop.svg" width="100%" alt="Original retro Windows desktop: Vishwas Aithal, the cybercafe kid, with childhood software, games, music player, cartoons and modern code" /></p>
 </details>
-<p align="center"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&amp;weight=700&amp;size=22&amp;duration=3000&amp;pause=900&amp;color=FF73A8&amp;center=true&amp;vCenter=true&amp;width=720&amp;height=55&amp;lines=Defensive+Security+%7C+Python;Automation+Engineering+%7C+JavaScript;Building+Since+2013+%7C+Vishwas+Aithal" alt="Typing intro: cybersecurity, automation, and building since 2013" /></p>
+<p align="center"><a href="https://vishwasaithalz.github.io/vishwasaithalz/"><img src="assets/brand/vishwas-boot.gif" width="100%" alt="Original animated CRT command-line boot sequence. Vishwas Aithal from the cybercafe era to modern engineering. Open the interactive VISHWAS.EXE computer." /></a></p>
 <p align="center"><strong>Vishwas Aithal</strong> · 90s PC kid · Blogger since 2013 · Defensive security, web and automation now</p>
 
 <p align="center">
