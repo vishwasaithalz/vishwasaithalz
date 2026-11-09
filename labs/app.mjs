@@ -57,7 +57,7 @@ tabs.forEach((tab,i)=>{
  });
 });
 const requested=new URLSearchParams(location.search).get("tab");
-switchTab(tabs.some(t=>t.dataset.tab===requested)?requested:"desk");
+switchTab("desk");
 
 // Support queue.
 let tickets=load(key.tickets,demoTickets).filter(x=>x&&typeof x.id==="string"&&typeof x.title==="string"&&statuses.includes(x.status));
@@ -208,3 +208,6 @@ if("IntersectionObserver" in window){
  },{rootMargin:"180px"});
  observer.observe($("feed-sentinel"));
 }
+
+// Only activate deep-linked feed after its finite data set has been initialized.
+if(requested&&requested!=="desk")switchTab(requested);
