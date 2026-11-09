@@ -6,7 +6,7 @@
 
 ### BOOTDISK 1995 · VISHWAS.EXE · SYSTEM ONLINE
 
-<a href="https://vishwasaithalz.github.io/vishwasaithalz/"><img src="assets/brand/afterhours-cybercafe.svg" width="100%" alt="Vishwas Aithal original illustrated retro cybercafé computer. PRESS START to open the interactive BOOTDISK 1995 experience." /></a>
+<a href="https://vishwasaithalz.github.io/vishwasaithalz/"><img src="assets/brand/afterhours-cybercafe.svg" width="100%" alt="Vishwas Aithal original illustrated retro desktop computer. PRESS START to open the interactive BOOTDISK 1995 experience." /></a>
 
 ### [▶ PRESS START · BOOT THE COMPUTER](https://vishwasaithalz.github.io/vishwasaithalz/)
 
@@ -22,7 +22,7 @@
 <a href="https://vishwasaithal.ai.studio/"><strong>🌐 PORTFOLIO</strong></a>
 </p>
 <!-- VISHWAS.EXE UNIFIED THEME END -->
-<p align="center"><sub>Original hacker-gamer artwork and source code. GitHub READMEs display the art; the actual boot buttons, keyboard controls and games run on GitHub Pages.</sub></p>
+<p align="center"><sub>Original retro-computing artwork and source code. GitHub READMEs display the art; the actual boot buttons, keyboard controls and games run on GitHub Pages.</sub></p>
 
 
 
@@ -35,22 +35,22 @@
 <a href="https://www.youtube.com/@vishwasaithalz"><img src="assets/nav/youtube.svg" width="23%" alt="Visit YouTube" /></a>
 </p>
 
-> **I was the kid who clicked every icon just to find out what it did.** Windows desktops, Winamp playlists, virtual drives, compressed game folders, Saturday morning cartoons, a 2013 tech blog, and a stubborn curiosity about how computers work. Today that curiosity shows up as defensive security tools, websites, automation and experiments you can actually inspect. **The wallpaper changed. The curiosity didn't.**
+> **I started by exploring every corner of a Windows desktop.** Windows desktops, Winamp playlists, virtual drives, compressed game folders, Saturday morning cartoons, a 2013 tech blog, and a stubborn curiosity about how computers work. Today that curiosity shows up as defensive security tools, websites, automation and experiments you can actually inspect. **The wallpaper changed. The curiosity didn't.**
 
 <p align="center"><img src="assets/brand/era-boot-sequence.svg" width="100%" alt="Vishwas Aithal's visual boot history, from 1990s green phosphor CRT and DOS, through 2000s Windows XP and Winamp, to the 2013 YinYangYoHackers blog and modern security, web and automation engineering" /></p>
 
-<p align="center"><sub>1990s CRT &gt; 2000s cybercafé &gt; 2013 Blogger &gt; today's engineering labs. One continuous story.</sub></p>
+<p align="center"><sub>1990s CRT &gt; 2000s Windows desktop &gt; 2013 Blogger &gt; today's engineering labs. One continuous story.</sub></p>
 
 <details>
 <summary><strong>💾 OPEN THE BONUS DISK | Full desktop illustration + animated BIOS tape</strong></summary>
 
 <details>
-<summary><strong>🎞 Open the original full-size cybercafé desktop artwork</strong></summary>
+<summary><strong>🎞 Open the original full-size retro desktop artwork</strong></summary>
 
-<p align="center"><img src="assets/retro-memory-desktop.svg" width="100%" alt="Original retro Windows desktop: Vishwas Aithal, the cybercafe kid, with childhood software, games, music player, cartoons and modern code" /></p>
+<p align="center"><img src="assets/retro-memory-desktop.svg" width="100%" alt="Original retro Windows desktop: Vishwas Aithal, the retro computing enthusiast, with childhood software, games, music player, cartoons and modern code" /></p>
 </details>
 
-<p align="center"><a href="https://vishwasaithalz.github.io/vishwasaithalz/"><img src="assets/brand/vishwas-boot.gif" width="100%" alt="Original animated CRT command-line boot sequence. Vishwas Aithal from the cybercafe era to modern engineering. Open the interactive VISHWAS.EXE computer." /></a></p>
+<p align="center"><a href="https://vishwasaithalz.github.io/vishwasaithalz/"><img src="assets/brand/vishwas-boot.gif" width="100%" alt="Original animated CRT command-line boot sequence. Vishwas Aithal from the early Windows era to modern engineering. Open the interactive VISHWAS.EXE computer." /></a></p>
 
 </details>
 
