@@ -102,7 +102,7 @@ else{
  if(!art.includes('<svg ')||!art.includes('</svg>'))err(activeHero,'missing or malformed SVG envelope');
  if(!art.includes('VISHWAS')||!art.includes('Aithal'))err(activeHero,'personal identity missing');
  if(!art.includes('prefers-reduced-motion'))err(activeHero,'motion fallback missing');
- if(/<script\b|onload\s*=|onerror\s*=|https?:\/\//i.test(art))err(activeHero,'unsafe external or executable SVG content');
+ if(/<script\b|\bonload\s*=|\bonerror\s*=|\b(?:href|src)\s*=\s*["']https?:|url\(\s*["']?https?:/i.test(art))err(activeHero,'unsafe external or executable SVG content');
 }
 for(const needed of ['overload/','overload/game-room.html','overload/network.html','overload/capsule.html','overload/tracker.html'])
  if(!readme.includes(needed))err('README.md','required public link missing: '+needed);
