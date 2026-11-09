@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0b141e">
+<meta name="description" content="ImpactHub, a local-first community campaign and volunteer-hours planning experiment by Vishwas Aithal.">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'">
+<title>ImpactHub | Vishwas Aithal Product Lab</title>
+<link rel="stylesheet" href="../experience.css"><script type="module" src="./app.mjs"></script>
+</head>
+<body>
+<a href="#main" class="skip">Skip to main content</a>
+<nav class="nav"><div class="nav-inner">
+<a href="../" class="brand"><span class="brand-mark">VA.</span><span>VISHWAS AITHAL<small>ORIGINAL PRODUCT LAB / EXPERIMENT 05</small></span></a>
+<div class="nav-links"><a href="../">ALL EXPERIMENTS</a><a href="../commerce/">COMMERCE SANDBOX</a><a href="../../">BOOTDISK HOME</a><a href="https://github.com/vishwasaithalz/vishwasaithalz/tree/main/labs/impact" target="_blank" rel="noopener noreferrer">SOURCE</a></div></div></nav>
+<main id="main" class="container">
+<section class="hero" aria-labelledby="hero-title"><div><div class="kicker">EXPERIMENT 05 / COMMUNITY WORKFLOWS</div>
+<h1 id="hero-title">Small acts.<br><em>Visible impact.</em></h1>
+<p>Coordinate fictional community campaigns, discover volunteer roles, track example hours and export your planning data. No account, no donations, no tracking, no organization affiliation.</p></div>
+<aside class="stamp" aria-label="Lab mode"><span class="light" aria-hidden="true"></span> LOCAL EXPERIMENT / ONLINE PAGE
+<div>V:\IMPACT&gt; RUN PLANNER</div><div class="muted">CAMPAIGNS / SAMPLE DATA</div><div class="muted">STORAGE / THIS BROWSER</div><div class="muted">EXTERNAL REQUESTS / NONE</div><strong>STATUS: READY</strong></aside></section>
+<div class="stats">
+<div class="stat"><span class="stat-label">SAMPLE CAMPAIGNS</span><strong id="count-campaigns">0</strong></div>
+<div class="stat"><span class="stat-label">LOCAL PLEDGES</span><strong id="count-pledges">0</strong></div>
+<div class="stat"><span class="stat-label">HOURS PLANNED</span><strong id="count-hours">0</strong></div>
+<div class="stat"><span class="stat-label">FICTIONAL GOAL MET</span><strong id="count-percent">0%</strong></div></div>
+<div class="layout">
+<section class="panel" aria-labelledby="board-heading">
+<h2 id="board-heading">Community campaign board</h2><p class="sub">Find a fictional initiative by location, topic or skill. These are demonstration scenarios, not live volunteer opportunities.</p>
+<div class="tools"><label>Search campaigns<input id="search" type="search" placeholder="Search topics, roles or locations"></label>
+<label class="compact">Category<select id="category"><option>All</option><option>Education</option><option>Environment</option><option>Digital</option><option>Community</option></select></label>
+<label class="compact">Skill<select id="skill"><option>All</option><option>Writing</option><option>Teaching</option><option>Logistics</option><option>Photography</option><option>Technology</option><option>Data</option></select></label></div>
+<div id="campaign-grid" class="card-grid"></div><p id="board-empty" class="empty" hidden>No campaigns match these filters.</p></section>
+<aside class="panel" aria-labelledby="planner-heading">
+<h2 id="planner-heading">Local volunteer planner</h2><p class="sub">Record a sample pledge to see how resource planning works. Do not enter real personal contact information.</p>
+<form id="pledge-form" class="form">
+<label>Campaign<select id="pledge-campaign" required></select></label>
+<label>Display alias<input id="alias" required minlength="2" maxlength="40" placeholder="Example: Volunteer A"></label>
+<label>Hours available<input id="hours" type="number" min="1" max="40" step="1" value="2" required></label>
+<button type="submit">+ ADD LOCAL PLEDGE</button>
+</form><p id="status" class="status" role="status" aria-live="polite">Ready to plan.</p>
+<div class="mono" style="font-size:12px;color:var(--sun);margin-top:24px">PLEDGE LEDGER</div><div id="pledge-ledger" class="ledger"></div>
+<div class="tools"><button type="button" class="secondary" id="export">EXPORT JSON</button><button type="button" class="secondary" id="reset">RESET DEMO</button></div>
+</aside></div>
+<aside class="notice"><strong>Educational boundary:</strong> No actual NGO, beneficiary, financial donation, volunteer registration or partner affiliation is represented. Local pledges are fictional planning records. Visitors remain responsible for any data entered on their own device.</aside>
+<footer class="footer"><span>© 2026 VISHWAS AITHAL / IMPACTHUB</span><span>HUMAN CENTERED ENGINEERING, CLEARLY LABELED</span><a href="../">BACK TO PRODUCT LAB</a></footer>
+</main>
+</body></html>
