@@ -58,3 +58,10 @@
 .vx-universe .desktop{height:calc(100vh - 91px);min-height:470px}
 }
 @media(prefers-reduced-motion:reduce){.vx-global-nav *{scroll-behavior:auto}}
+
+/* Common visual alignment for text, icon links and arrows across the public apps. */
+.vx-global-nav .vx-links a{min-height:38px;line-height:1.45;vertical-align:middle;justify-content:center;letter-spacing:0}
+.vx-global-nav .vx-brand{min-height:38px;line-height:1.45;vertical-align:middle}
+.vx-universe .launch .arrow{display:inline-flex;align-items:center;min-height:19px;line-height:1.4;letter-spacing:.02em}
+.vx-universe a:focus-visible,.vx-universe button:focus-visible{outline-offset:3px}
+@media(max-width:560px){.vx-global-nav .vx-links a{min-height:39px;padding:9px 10px;font-size:11px}}

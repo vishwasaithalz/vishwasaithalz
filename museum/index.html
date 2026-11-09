@@ -49,7 +49,36 @@ footer{color:var(--muted);font-size:12px;margin-top:32px;border-top:1px solid va
 .visually-hidden{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 @media(max-width:850px){.columns{grid-template-columns:1fr}.header{grid-template-columns:1fr}.grid{grid-template-columns:repeat(auto-fill,minmax(150px,1fr))}.card{min-height:175px}.boot{font-size:10px}}
 @media(prefers-reduced-motion:reduce){.eq i,.card{animation:none;transition:none}}
-</style><link rel="stylesheet" href="../assets/brand/retro-shell.css"><link rel="icon" type="image/svg+xml" href="../assets/brand/favicon.svg"></head>
+</style><link rel="stylesheet" href="../assets/brand/retro-shell.css"><link rel="icon" type="image/svg+xml" href="../assets/brand/favicon.svg"><style id="vx-museum-realism">
+/* No markup, archive content, controls or game logic altered. */
+body.vx-universe{background:radial-gradient(circle at 73% 10%,#47656b18,transparent 38%),repeating-linear-gradient(0deg,transparent 0 38px,#ffffff02 39px 40px),var(--bg);background-attachment:fixed}
+body.vx-universe .wrap{max-width:1350px;padding-top:28px}
+body.vx-universe .header{gap:clamp(16px,3vw,48px);padding:12px 0 27px;border-bottom:1px solid var(--edge);margin-bottom:23px}
+body.vx-universe .header h1{font-family:Impact,"Arial Black",system-ui,sans-serif;font-size:clamp(42px,6.5vw,93px);line-height:.97;letter-spacing:-.035em;text-shadow:2px 3px 0 #0005}
+body.vx-universe .header .kicker{font-size:11px;letter-spacing:.13em}
+body.vx-universe .header .badge{border-radius:2px;box-shadow:inset 1px 1px #ffffff20}
+body.vx-universe .header nav.controls{display:grid;grid-template-columns:repeat(2,minmax(130px,1fr));align-self:center;max-width:350px;gap:9px}
+body.vx-universe .header nav.controls .btn{min-height:48px;justify-content:center;text-align:center}
+body.vx-universe .window{border:1px solid #7e999c!important;background:linear-gradient(145deg,var(--surface),var(--panel));border-radius:4px;box-shadow:inset 1px 1px #ffffff20,0 5px 0 var(--shadow),0 17px 29px #0005}
+body.vx-universe .window>.titlebar{min-height:43px;background:linear-gradient(90deg,#294964,#266376)!important;border-bottom:1px solid #a5c4bd66;padding:11px 14px;letter-spacing:.04em;text-shadow:0 1px #061220}
+body.vx-universe .window-inner{background:linear-gradient(150deg,#ffffff04,transparent 28%)}
+body.vx-universe .controls{row-gap:10px}
+body.vx-universe .controls input,body.vx-universe .controls select{min-height:44px;border:1px solid var(--edge);border-radius:2px;box-shadow:inset 2px 2px 1px #0003;background:var(--bg)}
+body.vx-universe .btn{min-height:43px;border:1px solid var(--edge);border-bottom:3px solid var(--shadow);background:linear-gradient(140deg,var(--panel),var(--surface));box-shadow:inset 1px 1px #ffffff19;padding:9px 12px;justify-content:center;text-align:center}
+body.vx-universe .btn.primary{background:var(--lime);border-color:var(--edge);color:var(--bg)}
+body.vx-universe .card{border:1px solid var(--edge);border-radius:4px;box-shadow:inset 0 1px #ffffff12,0 3px 0 var(--shadow);background:linear-gradient(145deg,var(--panel),var(--surface));transition:transform .16s ease,border-color .16s ease;min-width:0}
+body.vx-universe .card:hover{transform:translateY(-2px);border-color:var(--accent)}
+body.vx-universe .card .emoji{display:inline-grid;place-items:center;background:var(--surface);border:1px solid var(--edge);width:44px;height:42px;border-radius:5px;font-size:25px}
+body.vx-universe .card h3{line-height:1.35;overflow-wrap:anywhere}
+body.vx-universe .card .foot{display:flex;flex-wrap:wrap;gap:5px}
+body.vx-universe .fav{min-width:35px;min-height:35px;border-radius:2px}
+body.vx-universe .box{background:linear-gradient(140deg,var(--panel),var(--surface));border-radius:4px;box-shadow:inset 1px 1px #ffffff12;padding:18px}
+body.vx-universe .player{border-radius:4px;background:#07151b;box-shadow:inset 0 0 26px #0009}
+body.vx-universe .game-cards button{border-radius:3px;box-shadow:inset 1px 1px #ffffff22}
+@media(max-width:850px){body.vx-universe .header nav.controls{max-width:none;width:100%;grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:520px){body.vx-universe .wrap{padding-left:12px;padding-right:12px}body.vx-universe .header nav.controls{grid-template-columns:1fr 1fr}body.vx-universe .header nav.controls .btn{font-size:12px}body.vx-universe .window{box-shadow:0 6px 14px #0005}body.vx-universe .grid{grid-template-columns:repeat(auto-fill,minmax(142px,1fr))}}
+@media(prefers-reduced-motion:reduce){body.vx-universe .card,body.vx-universe .btn{transition:none!important}}
+</style></head>
 <body data-theme="default" class="vx-universe"><nav class="vx-global-nav" aria-label="VISHWAS.EXE global navigation"><a class="vx-brand" href="../"><span aria-hidden="true">▦</span> <strong>VISHWAS.EXE</strong><span> / SYSTEM 98.NOW</span></a><div class="vx-links"><a href="../">💾 BOOT</a><a href="../memory/">🖥️ MEMORY</a><a href="../museum/" aria-current="page">📼 MUSEUM</a><a href="../arcade/">🎮 ARCADE</a><a href="../overload/">💥 OVERLOAD</a><a href="../overload/game-room.html">🕹️ GAMES</a><a href="../overload/tracker.html">🎚️ TRACKER</a><a href="../overload/network.html">📡 NETWORK</a><a href="../overload/capsule.html">💿 FLOPPY</a><a href="https://github.com/vishwasaithalz">⌨️ GITHUB</a></div><span class="vx-indicator">● ONLINE</span></nav>
 <div class="boot"><span>VISHWAS.EXE / MEMORY.MUSEUM / PUBLIC ARCHIVE</span><span id="clock">SYSTEM READY</span></div>
 <main class="wrap">
