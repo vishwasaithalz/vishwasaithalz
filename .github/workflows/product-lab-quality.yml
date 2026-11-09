@@ -35,9 +35,7 @@ jobs:
           python - <<'PY'
           from pathlib import Path
           html=Path("labs/index.html").read_text()
-          for required in ('id="panel-desk"','id="panel-vault"','id="panel-quotes"','id="panel-feed"','id="chat-form"'):
-              # The workbench has no chat service. Check the four real sections only.
-              if required == 'id="chat-form"': continue
+          for required in ('id="panel-desk"','id="panel-vault"','id="panel-quotes"','id="panel-feed"'):
               assert required in html, required
           for local in ('core.mjs','app.mjs','styles.css'):
               assert (Path('labs')/local).exists(), local
