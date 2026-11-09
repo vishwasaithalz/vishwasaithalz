@@ -1,6 +1,6 @@
 <!-- Vishwas Aithal personal GitHub | original retro desktop art | no long dash punctuation -->
 <!-- VISHWAS.EXE UNIFIED THEME START -->
-<p align="center"><a href="https://vishwasaithalz.github.io/vishwasaithalz/"><img src="assets/brand/vishwas-exe-main.svg" width="100%" alt="Vishwas Aithal unified retro Windows project universe with consistent midnight, teal, mint and amber styling" /></a></p>
+<p align="center"><a href="https://vishwasaithalz.github.io/vishwasaithalz/"><img src="assets/brand/vishwas-exe-main.svg" width="100%" alt="An original tactile beige CRT, phosphor green DOS screen, and Vishwas Aithal nameplate with a 90s cybercafe to modern developer story" /></a></p>
 <p align="center"><strong>VISHWAS.EXE / THE CYBERCAFÉ KID</strong><br/><sub>One retro computer universe, real engineering work, original interactive games</sub></p>
 <p align="center">
 <a href="https://vishwasaithalz.github.io/vishwasaithalz/"><strong>💾 BOOT MANAGER</strong></a> &nbsp;·&nbsp;
