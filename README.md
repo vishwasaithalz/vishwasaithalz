@@ -1,23 +1,20 @@
 <!-- Vishwas Aithal personal GitHub | original retro desktop art | no long dash punctuation -->
 <!-- VISHWAS.EXE UNIFIED THEME START -->
-<p align="center"><a href="https://vishwasaithalz.github.io/vishwasaithalz/"><img src="assets/brand/vishwas-exe-main.svg" width="100%" alt="An original tactile beige CRT, phosphor green DOS screen, and Vishwas Aithal nameplate with a 90s cybercafe to modern developer story" /></a></p>
-<p align="center"><strong>VISHWAS.EXE / THE CYBERCAFÉ KID</strong><br/><sub>One retro computer universe, real engineering work, original interactive games</sub></p>
+<p align="center"><a href="https://vishwasaithalz.github.io/vishwasaithalz/"><img src="assets/brand/afterhours-cybercafe.svg" width="100%" alt="Original illustrated midnight cybercafe with a textured CRT, games, floppy disks, handmade tracker and the personal name Vishwas Aithal; click through to the playable interactive computer." /></a></p>
+<p align="center"><strong>VISHWAS AITHAL / CYBERCAFÉ AFTER HOURS</strong><br/><sub>1998 boot disk | 2000s gamer | 2013 Blogger | Security and software now</sub></p>
 <p align="center">
-<a href="https://vishwasaithalz.github.io/vishwasaithalz/"><strong>💾 BOOT MANAGER</strong></a> &nbsp;·&nbsp;
-<a href="https://vishwasaithalz.github.io/vishwasaithalz/overload/"><strong>🖥️ OVERLOAD OS</strong></a> &nbsp;·&nbsp;
-<a href="https://vishwasaithalz.github.io/vishwasaithalz/arcade/"><strong>🎮 ARCADE</strong></a> &nbsp;·&nbsp;
-<a href="https://github.com/vishwasaithalz?tab=repositories"><strong>📁 ALL PROJECTS</strong></a> &nbsp;·&nbsp;
+<a href="https://vishwasaithalz.github.io/vishwasaithalz/"><strong>▶ BOOT THE COMPUTER</strong></a> &nbsp;·&nbsp;
+<a href="https://vishwasaithalz.github.io/vishwasaithalz/arcade/"><strong>🎮 PLAY THE ARCADE</strong></a> &nbsp;·&nbsp;
+<a href="https://vishwasaithalz.github.io/vishwasaithalz/overload/"><strong>🖥️ OPEN THE WORKBENCH</strong></a> &nbsp;·&nbsp;
+<a href="https://github.com/vishwasaithalz?tab=repositories"><strong>⌨️ SOURCE CODE</strong></a> &nbsp;·&nbsp;
 <a href="https://vishwasaithal.ai.studio/"><strong>🌐 PORTFOLIO</strong></a>
 </p>
 <!-- VISHWAS.EXE UNIFIED THEME END -->
+<p align="center"><sub>Original hacker-gamer artwork and source code. GitHub READMEs display the art; the actual boot buttons, keyboard controls and games run on GitHub Pages.</sub></p>
 
-<details>
-<summary><strong>🎞 Open the original full-size cybercafé desktop artwork</strong></summary>
 
-<p align="center"><img src="assets/retro-memory-desktop.svg" width="100%" alt="Original retro Windows desktop: Vishwas Aithal, the cybercafe kid, with childhood software, games, music player, cartoons and modern code" /></p>
-</details>
-<p align="center"><a href="https://vishwasaithalz.github.io/vishwasaithalz/"><img src="assets/brand/vishwas-boot.gif" width="100%" alt="Original animated CRT command-line boot sequence. Vishwas Aithal from the cybercafe era to modern engineering. Open the interactive VISHWAS.EXE computer." /></a></p>
-<p align="center"><strong>Vishwas Aithal</strong> · 90s PC kid · Blogger since 2013 · Defensive security, web and automation now</p>
+
+
 
 <p align="center">
 <a href="https://github.com/vishwasaithalz?tab=repositories"><img src="assets/nav/code.svg" width="23%" alt="Explore GitHub source code" /></a>
@@ -31,6 +28,20 @@
 <p align="center"><img src="assets/brand/era-boot-sequence.svg" width="100%" alt="Vishwas Aithal's visual boot history, from 1990s green phosphor CRT and DOS, through 2000s Windows XP and Winamp, to the 2013 YinYangYoHackers blog and modern security, web and automation engineering" /></p>
 
 <p align="center"><sub>1990s CRT &gt; 2000s cybercafé &gt; 2013 Blogger &gt; today's engineering labs. One continuous story.</sub></p>
+
+<details>
+<summary><strong>💾 OPEN THE BONUS DISK | Full desktop illustration + animated BIOS tape</strong></summary>
+
+<details>
+<summary><strong>🎞 Open the original full-size cybercafé desktop artwork</strong></summary>
+
+<p align="center"><img src="assets/retro-memory-desktop.svg" width="100%" alt="Original retro Windows desktop: Vishwas Aithal, the cybercafe kid, with childhood software, games, music player, cartoons and modern code" /></p>
+</details>
+
+<p align="center"><a href="https://vishwasaithalz.github.io/vishwasaithalz/"><img src="assets/brand/vishwas-boot.gif" width="100%" alt="Original animated CRT command-line boot sequence. Vishwas Aithal from the cybercafe era to modern engineering. Open the interactive VISHWAS.EXE computer." /></a></p>
+
+</details>
+
 
 <p align="center">
 <a href="https://vishwasaithalz.github.io/vishwasaithalz/arcade/#snake"><img src="assets/nav/arcade.svg" width="23%" alt="Play the original Snake browser game" /></a>

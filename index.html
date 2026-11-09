@@ -37,6 +37,36 @@ footer{margin-top:26px;padding:18px 0;color:var(--dim);font-size:12px;line-heigh
 @media(max-width:850px){.hero{grid-template-columns:1fr}.retro-pc{display:none}.launch-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:540px){.launch-grid{grid-template-columns:1fr}.launch{min-height:122px}.hero{padding:19px}.chrome{font-size:9px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.blink{animation:none}.launch{transition:none}}
+
+/* AFTER HOURS / 1998-2026 save slots; isolated from existing arcade */
+.vx-era-console{margin:0 clamp(16px,3vw,30px) 24px;border:2px solid #8caca1;background:#091b25;color:#f4f0db;box-shadow:inset 0 0 0 4px #0b2934,7px 9px #030a11;position:relative}
+.vx-era-console::before{content:"";position:absolute;inset:0;pointer-events:none;background:repeating-linear-gradient(0deg,transparent 0 3px,#0002 4px 5px);opacity:.26}
+.vx-era-header{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:10px 13px;background:linear-gradient(90deg,#204568,#1b3454);border-bottom:2px solid #8aac9e;font:700 12px/1.4 Consolas,monospace;letter-spacing:.09em;color:#e9ebd5}
+.vx-era-led{display:inline-block;width:8px;height:8px;border-radius:50%;background:#afe3aa;box-shadow:0 0 8px #6bba89;margin-right:8px}
+.vx-era-header small{color:#c4d8c9;letter-spacing:.03em;font-size:11px}
+.vx-era-controls{display:flex;flex-wrap:wrap;gap:3px;padding:11px 12px 1px;position:relative}
+.vx-era-controls button{background:#102b3b;color:#c7d7cf;border:1px solid #466a74;border-bottom:3px solid #243b43;padding:9px 13px;font:700 12px Consolas,monospace;letter-spacing:.035em;transition:background .18s ease,color .18s ease}
+.vx-era-controls button:hover{background:#234852;color:#faf5db}
+.vx-era-controls button[aria-pressed="true"]{background:#c9c2a7;color:#1e2b2c;border-color:#f1ebd5;border-bottom:3px solid #d1a36c}
+.vx-era-panels{display:grid;grid-template-columns:minmax(260px,1.05fr) minmax(220px,.95fr);gap:24px;padding:20px clamp(15px,3vw,30px) 22px;position:relative}
+.vx-era-display{min-height:256px;position:relative;border:15px ridge #98978a;border-bottom-width:25px;border-radius:20px;background:radial-gradient(circle at 43% 32%,#183f2f,#05180f 80%);box-shadow:inset 0 0 22px #010c07,8px 11px #0006;overflow:hidden;transform:rotate(-.5deg)}
+.vx-era-display::before{content:"";position:absolute;inset:0;border-radius:3px;pointer-events:none;background:linear-gradient(115deg,#fff2,transparent 24%,transparent 73%,#0003),repeating-linear-gradient(0deg,transparent 0 3px,#0005 4px 5px);opacity:.42}
+.vx-era-display::after{content:"";position:absolute;inset:0;border:2px solid #294337;border-radius:5px;box-shadow:inset 0 0 30px #010d07;pointer-events:none}
+.vx-era-screen{position:relative;z-index:1;padding:15px 17px;min-height:200px;font:clamp(12px,1.6vw,17px)/1.65 Consolas,"Courier New",monospace;color:#a9edaa;white-space:pre-wrap;overflow-wrap:anywhere;text-shadow:0 0 6px #74ff7433}
+.vx-era-display[data-era="2004"]{background:linear-gradient(135deg,#13537d,#0a2672 40%,#167e58);border-color:#c5bdab}
+.vx-era-display[data-era="2004"] .vx-era-screen{color:#f0f5e7;text-shadow:1px 1px #11314a}
+.vx-era-display[data-era="2013"]{background:linear-gradient(#e7dcc1,#c8b793);border-color:#aaa799}
+.vx-era-display[data-era="2013"] .vx-era-screen{color:#392c2a;text-shadow:none}
+.vx-era-display[data-era="2026"]{background:radial-gradient(circle at 75% 10%,#1b4052,#071721 75%);border-color:#536b6b}
+.vx-era-display[data-era="2026"] .vx-era-screen{color:#b7e9c8}
+.vx-era-story{display:flex;flex-direction:column;align-items:flex-start;justify-content:center;padding:5px 0}
+.vx-era-story .vx-era-kicker{font:700 12px Consolas,monospace;letter-spacing:.17em;color:#d6bd86}
+.vx-era-story h2{font:900 clamp(26px,4vw,48px)/.95 Arial,sans-serif;letter-spacing:-.04em;margin:12px 0 12px;color:#f5f1db}
+.vx-era-story p{font:15px/1.65 system-ui,sans-serif;color:#b9cfd1;max-width:490px;margin:0 0 22px}
+.vx-era-story a{padding:11px 16px;background:#d4b779;color:#1e2622;text-decoration:none;font:800 12px Consolas,monospace;border:2px solid #f2dcb4;box-shadow:4px 4px #091a1d}
+.vx-era-story a:hover{background:#ebdbad}.vx-era-footer{display:flex;justify-content:space-between;gap:6px;flex-wrap:wrap;border-top:1px solid #4d6562;padding:8px 12px;color:#99ada9;font:11px Consolas,monospace}
+@media(max-width:735px){.vx-era-panels{grid-template-columns:1fr;gap:15px}.vx-era-display{min-height:200px}.vx-era-screen{min-height:165px}.vx-era-controls button{flex:1}.vx-era-story{padding:0 0 6px}.vx-era-header{font-size:10px}.vx-era-header small{display:none}}
+@media(prefers-reduced-motion:reduce){.vx-era-controls button{transition:none}.vx-era-display{transform:none}.vx-era-led{box-shadow:none}}
 </style><link rel="stylesheet" href="./assets/brand/retro-shell.css"><link rel="icon" type="image/svg+xml" href="./assets/brand/favicon.svg"></head><body data-theme="night" class="vx-universe"><nav class="vx-global-nav" aria-label="VISHWAS.EXE global navigation"><a class="vx-brand" href="./"><span aria-hidden="true">▦</span> <strong>VISHWAS.EXE</strong><span> / SYSTEM 98.NOW</span></a><div class="vx-links"><a href="./" aria-current="page">💾 BOOT</a><a href="./memory/">🖥️ MEMORY</a><a href="./museum/">📼 MUSEUM</a><a href="./arcade/">🎮 ARCADE</a><a href="./overload/">💥 OVERLOAD</a><a href="./overload/game-room.html">🕹️ GAMES</a><a href="./overload/tracker.html">🎚️ TRACKER</a><a href="./overload/network.html">📡 NETWORK</a><a href="./overload/capsule.html">💿 FLOPPY</a><a href="https://github.com/vishwasaithalz">⌨️ GITHUB</a></div><span class="vx-indicator">● ONLINE</span></nav>
 <main class="outer">
 <div class="chrome"><span>▣ VISHWAS AITHAL // BOOT MANAGER 2.0</span><strong id="clock">SYSTEM ONLINE</strong></div>
@@ -49,6 +79,30 @@ footer{margin-top:26px;padding:18px 0;color:var(--dim);font-size:12px;line-heigh
 </div>
 <div class="retro-pc" aria-hidden="true"><div class="monitor"><div class="terminal-head">VISHWAS BIOS v2.0</div><div>Memory: 102+ MEMORIES</div><div>Boot: CURIOSITY.EXE</div><div>Code: PYTHON / JS</div><div>Safety: LOCAL FIRST</div><div>STATUS: READY <span class="blink">▮</span></div></div><div class="pc-bottom">PERSONAL COMPUTER <i class="pc-led"></i></div></div>
 </div>
+<section class="vx-era-console" aria-labelledby="vx-era-label">
+<div class="vx-era-header"><span><span class="vx-era-led" aria-hidden="true"></span><span id="vx-era-label">RESTORE POINTS / C:\VISHWAS\SAVEGAMES</span></span><small>SELECT A YEAR • NO TRACKING • ORIGINAL SIMULATION</small></div>
+<div class="vx-era-controls" role="group" aria-label="Choose a chapter of Vishwas Aithal's computer history">
+<button type="button" data-vx-era="1998" aria-pressed="true">01 / 1998 DOS</button>
+<button type="button" data-vx-era="2004" aria-pressed="false">02 / 2004 CAFÉ</button>
+<button type="button" data-vx-era="2013" aria-pressed="false">03 / 2013 WEB</button>
+<button type="button" data-vx-era="2026" aria-pressed="false">04 / NOW</button>
+</div>
+<div class="vx-era-panels">
+<div class="vx-era-display" data-era="1998" id="vx-era-display" aria-label="Illustrated screen showing the selected computer era">
+<pre class="vx-era-screen" id="vx-era-screen">C:\&gt;dir /w
+GAMES   MUSIC    TOOLS
+SNAKE   CONTRA   TANKS
+
+C:\&gt; run curiosity.exe
+[BOOT DISK LOADED]
+_</pre></div>
+<div class="vx-era-story"><div class="vx-era-kicker" id="vx-era-counter">SAVE SLOT 01 / 04</div>
+<h2 id="vx-era-name">THE FIRST BOOT</h2>
+<p id="vx-era-body">No app stores, no search suggestions. Just a bulky screen and the irresistible urge to open every folder. The old curiosity still powers the new projects.</p>
+<a id="vx-era-destination" href="./memory/">[ ENTER MEMORY OS ]</a></div>
+</div>
+<div class="vx-era-footer"><span>ORIGINAL INTERACTIVE RECONSTRUCTION / NOT A HISTORICAL SCREENSHOT</span><span>ARROW KEYS + ENTER ENABLED</span></div>
+</section>
 <div class="section">
 <div class="hd">📂 CHOOSE YOUR BOOT DEVICE</div><p class="sub">All paths below are part of this public project. The games are original and the nostalgic apps are simulations. Press Tab and Enter, or navigate cards with arrow keys when one is focused.</p>
 <div class="launch-grid" id="launch-grid">
@@ -75,5 +129,24 @@ function clock(){$('clock').textContent=new Date().toLocaleTimeString([],{hour:'
 $('theme').addEventListener('click',()=>document.body.dataset.theme=document.body.dataset.theme==='night'?'day':'night');
 $('tone').addEventListener('click',()=>{try{let ac=new (window.AudioContext||window.webkitAudioContext)();[220,330,440,550].forEach((n,i)=>{let t=ac.currentTime+i*.12,o=ac.createOscillator(),g=ac.createGain();o.type='triangle';o.frequency.value=n;g.gain.setValueAtTime(.0001,t);g.gain.exponentialRampToValueAtTime(.05,t+.025);g.gain.exponentialRampToValueAtTime(.0001,t+.19);o.connect(g);g.connect(ac.destination);o.start(t);o.stop(t+.2)})}catch(e){$('tone').textContent='Sound unavailable'}});
 const cards=[...document.querySelectorAll('.launch')];cards.forEach((a,i)=>{a.addEventListener('focus',()=>{cards.forEach(c=>c.classList.remove('active'));a.classList.add('active')});a.addEventListener('blur',()=>a.classList.remove('active'));a.addEventListener('keydown',e=>{if(e.key==='ArrowRight'||e.key==='ArrowDown'){e.preventDefault();cards[(i+1)%cards.length].focus()}if(e.key==='ArrowLeft'||e.key==='ArrowUp'){e.preventDefault();cards[(i-1+cards.length)%cards.length].focus()}})});
+})();
+</script>
+
+<script>
+(() => {
+'use strict';
+const entries={
+"1998":{title:"THE FIRST BOOT",counter:"SAVE SLOT 01 / 04",copy:"No app stores, no search suggestions. Just a bulky screen and the irresistible urge to open every folder. The old curiosity still powers the new projects.",screen:"C:\\>dir /w\nGAMES   MUSIC    TOOLS\nSNAKE   CONTRA   TANKS\n\nC:\\> run curiosity.exe\n[BOOT DISK LOADED]\n_",url:"./memory/",cta:"[ ENTER MEMORY OS ]"},
+"2004":{title:"ONE HOUR AT THE CAFÉ",counter:"SAVE SLOT 02 / 04",copy:"Winamp skins, counter-timers, shared keyboards, mystery downloads and multiplayer games. A single hour after school could become an entire universe.",screen:"MY COMPUTER  [X] - AFTERHOURS\n--------------------------------\nWINAMP / PLAYLIST: 003 TRACKS\nGAMES / CO-OP READY\nDOWNLOADS / 98%...\n\nTIME LEFT: 00:59:59",url:"./overload/",cta:"[ BOOT OVERLOAD OS ]"},
+"2013":{title:"VIEW SOURCE. START BLOG.",counter:"SAVE SLOT 03 / 04",copy:"YinYangYoHackers began the public web chapter. A blog, a curious mind, and the idea that you could build something people might discover.",screen:"YINYANGYOHACKERS  |  BLOG\n================================\nMY FIRST WEB CHAPTER / 2013\n\nPOST: LEARN. TEST. DOCUMENT.\nLINKS: BLOG | ARCHIVE | SOURCE\n\nStatus: still experimenting",url:"https://yyyh-phi.vercel.app",cta:"[ OPEN THE BLOG ERA ]"},
+"2026":{title:"THE WORKBENCH NOW",counter:"SAVE SLOT 04 / 04",copy:"The wallpaper changed, but the work got more serious: real public security labs, original arcade games, web engineering and tested automation.",screen:"$ git status\nOn branch: still-curious\n\n$ ls projects/\nLogSentry  CyberPlayground\nWeb        Automation\n\nREADY: inspect the source",url:"https://github.com/vishwasaithalz?tab=repositories",cta:"[ INSPECT THE REAL CODE ]"}
+};
+const buttons=[...document.querySelectorAll('[data-vx-era]')];
+const display=document.getElementById('vx-era-display'),screen=document.getElementById('vx-era-screen');
+const name=document.getElementById('vx-era-name'),body=document.getElementById('vx-era-body'),counter=document.getElementById('vx-era-counter'),link=document.getElementById('vx-era-destination');
+if(!display||!screen||!buttons.length)return;
+function choose(which){const e=entries[which];if(!e)return;display.dataset.era=which;screen.textContent=e.screen;name.textContent=e.title;body.textContent=e.copy;counter.textContent=e.counter;link.href=e.url;link.textContent=e.cta;buttons.forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.vxEra===which)));}
+buttons.forEach((b,i)=>{b.addEventListener('click',()=>choose(b.dataset.vxEra));b.addEventListener('keydown',event=>{if(event.key!=='ArrowLeft'&&event.key!=='ArrowRight')return;event.preventDefault();const n=(i+(event.key==='ArrowRight'?1:-1)+buttons.length)%buttons.length;buttons[n].focus();choose(buttons[n].dataset.vxEra);});});
+choose('1998');
 })();
 </script></body></html>
