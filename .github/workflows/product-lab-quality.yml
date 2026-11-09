@@ -25,11 +25,15 @@ jobs:
         with:
           node-version: "22"
       - name: Static data model tests
-        run: node --test labs/test/core.test.mjs
+        run: node --test labs/test/*.test.mjs
       - name: Module syntax
         run: |
           node --check labs/core.mjs
           node --check labs/app.mjs
+          node --check labs/impact/core.mjs
+          node --check labs/impact/app.mjs
+          node --check labs/commerce/core.mjs
+          node --check labs/commerce/app.mjs
       - name: Inspect static HTML and local assets
         run: |
           python - <<'PY'
@@ -40,6 +44,13 @@ jobs:
           for local in ('core.mjs','app.mjs','styles.css'):
               assert (Path('labs')/local).exists(), local
           assert '<script type="module" src="./app.mjs">' in html
+          for folder in ("impact","commerce"):
+              entry=Path("labs")/folder/"index.html"
+              assert entry.exists(), entry
+              subpage=entry.read_text()
+              assert '<script type="module" src="./app.mjs">' in subpage
+              assert '—' not in subpage and '―' not in subpage
+          assert (Path("labs")/"experience.css").exists()
           assert '<script src="https:' not in html
           assert '—' not in html and '―' not in html
           print("Product Lab static assets OK")
