@@ -50,12 +50,7 @@
 </details>
 
 
-<p align="center">
-<a href="https://vishwasaithalz.github.io/vishwasaithalz/arcade/#snake"><img src="assets/nav/arcade.svg" width="23%" alt="Play the original Snake browser game" /></a>
-<a href="https://vishwasaithalz.github.io/vishwasaithalz/arcade/#pinball"><img src="assets/nav/pinball.svg" width="23%" alt="Play Vishwas Aithal 198X physics pinball" /></a>
-<a href="https://vishwasaithalz.github.io/vishwasaithalz/arcade/#chat"><img src="assets/nav/chat.svg" width="23%" alt="Talk to the interactive scripted story" /></a>
-<a href="https://vishwasaithalz.github.io/vishwasaithalz/arcade/#terminal"><img src="assets/nav/terminal.svg" width="23%" alt="Use the interactive browser terminal explorer" /></a>
-</p>
+<p align="center"><a href="https://vishwasaithalz.github.io/vishwasaithalz/arcade/#snake"><strong>🐍 SNAKE</strong></a> &nbsp;·&nbsp; <a href="https://vishwasaithalz.github.io/vishwasaithalz/arcade/#pinball"><strong>🕹 PINBALL</strong></a> &nbsp;·&nbsp; <a href="https://vishwasaithalz.github.io/vishwasaithalz/arcade/#chat"><strong>💬 STORY CHAT</strong></a> &nbsp;·&nbsp; <a href="https://vishwasaithalz.github.io/vishwasaithalz/arcade/#terminal"><strong>⌨ LIVE TERMINAL</strong></a></p>
 
 ## 💾 00 / `C:\VISHWAS\MEMORIES\README.TXT`
 
@@ -216,7 +211,7 @@ The GitHub graph powers this animation. The clickable Snake game has keyboard co
 
 ## 💬 05 / THE CHAT WINDOW
 
-<a href="https://vishwasaithalz.github.io/vishwasaithalz/arcade/#chat"><img src="assets/karma-live-chat.svg" width="100%" alt="Animated scripted conversation about the 2013 blog and newer security projects. Click to ask the archive a question." /></a>
+<p align="center"><a href="https://vishwasaithalz.github.io/vishwasaithalz/arcade/#chat"><img src="assets/karma-live-chat.svg" width="74%" alt="Interactive archive chat preview. Click to ask about the blog, security projects and software experiments." /></a></p>
 
 **💬 Real input, local replies.** The linked chat accepts questions about the 2013 blog, security labs, automation and projects. It is a scripted interactive timeline, not a human operator or live AI assistant.
 
@@ -224,7 +219,7 @@ The GitHub graph powers this animation. The clickable Snake game has keyboard co
 
 ## ⌨️ 06 / DOS PROMPT TO MODERN TERMINAL
 
-<a href="https://vishwasaithalz.github.io/vishwasaithalz/arcade/#terminal"><img src="assets/karma-terminal-launcher.svg" width="100%" alt="Retro terminal preview. Click to open the usable local command explorer." /></a>
+<p align="center"><a href="https://vishwasaithalz.github.io/vishwasaithalz/arcade/#terminal"><img src="assets/karma-terminal-launcher.svg" width="56%" alt="Compact simulated command interface. Open the interactive local terminal on GitHub Pages." /></a></p>
 
 Try `help`, `projects`, `story`, `status`, `open logsentry`, or `snake`. The browser terminal is interactive, but it does **not** execute real shell commands or access anyone's computer.
 
