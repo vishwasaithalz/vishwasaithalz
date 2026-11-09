@@ -319,7 +319,7 @@ if(/INPUT|SELECT|TEXTAREA/.test(e.target.tagName))return;
 const shortcuts={'1':'mines','2':'pong-app','3':'paint-app','4':'builder-app'};if(e.altKey&&shortcuts[e.key]){e.preventDefault();$(shortcuts[e.key]).scrollIntoView({behavior:'smooth'});return}
 if(e.altKey&&e.key.toLowerCase()==='b'){e.preventDefault();startBoot();return}if(e.altKey&&e.key.toLowerCase()==='s'){e.preventDefault();$('saver').click();return}
 if(e.key==='ArrowUp'||e.key==='w')held.up=true;if(e.key==='ArrowDown'||e.key==='s')held.down=true;
-if(e.key.length===1&&!e.altKey&&!e.ctrlKey&&!e.metaKey){secret=(secret+e.key.toLowerCase()).slice(-7);if(secret==='vishwas'){state.secret=true;persist();status('🔓 SECRET UNLOCKED: The kid never logged off. The builder never stopped.')}}});
+if(e.key.length===1&&!e.altKey&&!e.ctrlKey&&!e.metaKey){secret=(secret+e.key.toLowerCase()).slice(-7);if(secret==='vishwas'){state.secret=true;persist();status('🔓 SECRET UNLOCKED: PSYCHKARMA stays online. The builder never stopped.')}}});
 document.addEventListener('keyup',e=>{if(e.key==='ArrowUp'||e.key==='w')held.up=false;if(e.key==='ArrowDown'||e.key==='s')held.down=false});
 // Optional site intro, already booted via user action. No auto-playing sound or forced overlay.
 status('VISHWAS.EXE ready. Press Alt+1, Alt+2, Alt+3 or Alt+4 for featured apps.');
