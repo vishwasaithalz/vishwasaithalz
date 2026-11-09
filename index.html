@@ -99,6 +99,26 @@ footer{margin-top:26px;padding:18px 0;color:var(--dim);font-size:12px;line-heigh
 @media(prefers-reduced-motion:reduce){.vx-era-controls button{transition:none}.vx-era-display{transform:none}.vx-era-led{box-shadow:none}}
 
 .vx-press-start{display:inline-block;padding:13px 21px;background:#ffdb93;color:#142435;font-weight:900;border:3px outset #fff0c1;box-shadow:5px 5px #0008;text-decoration:none;letter-spacing:.12em}.vx-press-start:hover,.vx-press-start:focus-visible{background:#b4f5ba;box-shadow:0 0 0 4px #ffe59b55,5px 5px #0008}.vx-restore-drawer{margin:12px 0 20px}.vx-restore-drawer>summary{cursor:pointer;padding:12px 18px;border:2px solid var(--edge);background:var(--screen);color:var(--gold);font-weight:800}.vx-restore-drawer>.vx-era-console{margin:0 0 16px}
+
+/* Compact real command window. Replaces the oversized ornamental CRT. */
+.hero{grid-template-columns:minmax(0,1fr) minmax(230px,316px)}
+.mini-live-terminal{align-self:center;width:min(100%,316px);min-width:0;border:1px solid #7f929d;background:#07130f;box-shadow:0 4px 0 #0005,0 12px 28px #0004;color:#9dddb1;font:11px/1.5 Consolas,"Courier New",monospace;overflow:hidden}
+.mini-term-bar{display:flex;align-items:center;gap:7px;min-height:33px;padding:7px 9px;background:linear-gradient(100deg,#283f4f,#142d36);color:#e3f4eb;border-bottom:1px solid #68848b}
+.mini-term-bar strong{font-size:10px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;letter-spacing:0}
+.mini-term-led{width:7px;height:7px;border-radius:50%;background:#aef9a6;box-shadow:0 0 6px #aef9a6;flex:none}
+.mini-term-clock{margin-left:auto;color:#f6d08b;white-space:nowrap;font-size:10px}
+.mini-term-screen{padding:13px 12px 7px;min-height:100px;max-height:138px;overflow:auto;overflow-wrap:anywhere;scrollbar-width:thin}
+.mini-term-screen div{padding:2px 0}
+.mini-term-screen b{color:#f6d08b}
+.mini-term-form{display:flex;align-items:center;padding:6px 9px 7px;gap:5px;border-top:1px solid #305846}
+.mini-term-prompt{white-space:nowrap;color:#8cc3a0;font-size:10px}
+.mini-term-form input{min-width:0;flex:1;background:transparent;color:#e7f8e9;border:0;border-bottom:1px solid #5b8b71;border-radius:0;padding:5px 2px;font:11px Consolas,monospace}
+.mini-term-form button{flex:none;padding:5px 6px;background:#234737;color:#e7f8e9;border:1px solid #5c9c7f;font-size:10px}
+.mini-term-foot{padding:2px 10px 6px;margin:0;text-align:right;color:#7eb18d;font-size:9px;letter-spacing:.06em}
+.mini-term-foot span{color:#9dddb1}
+@media(max-width:850px){.mini-live-terminal{width:min(100%,410px);max-width:410px}.hero{grid-template-columns:1fr}}
+@media(max-width:420px){.mini-term-bar strong{font-size:9px}.mini-term-form{flex-wrap:wrap}.mini-term-form input{flex-basis:95px}}
+
 </style><link rel="stylesheet" href="./assets/brand/retro-shell.css"><link rel="icon" type="image/svg+xml" href="./assets/brand/favicon.svg"></head><body data-theme="night" class="vx-universe"><nav class="vx-global-nav" aria-label="VISHWAS.EXE global navigation"><a class="vx-brand" href="./"><span aria-hidden="true">▦</span> <strong>VISHWAS.EXE</strong><span> / SYSTEM 98.NOW</span></a><div class="vx-links"><a href="./" aria-current="page">💾 BOOT</a><a href="./memory/">🖥️ MEMORY</a><a href="./museum/">📼 MUSEUM</a><a href="./arcade/">🎮 ARCADE</a><a href="./overload/">💥 OVERLOAD</a><a href="./overload/game-room.html">🕹️ GAMES</a><a href="./overload/tracker.html">🎚️ TRACKER</a><a href="./overload/network.html">📡 NETWORK</a><a href="./overload/capsule.html">💿 FLOPPY</a><a href="https://github.com/vishwasaithalz">⌨️ GITHUB</a></div><span class="vx-indicator">● ONLINE</span></nav>
 <main class="outer">
 <div class="chrome"><span>▣ VISHWAS AITHAL // BOOT MANAGER 2.0</span><strong id="clock">SYSTEM ONLINE</strong></div>
@@ -110,7 +130,10 @@ footer{margin-top:26px;padding:18px 0;color:var(--dim);font-size:12px;line-heigh
 <p><a class="vx-press-start" href="./memory/" aria-label="Press Start to open the interactive retro desktop">▶ PRESS START</a></p>
 <div class="chips"><span class="chip">💾 BOOTDISK 1995</span><span class="chip">🌐 BLOGGER SINCE 2013</span><span class="chip">⌨️ WEB + SECURITY</span><span class="chip">🕹 ORIGINAL GAMES</span></div>
 </div>
-<div class="retro-pc" aria-hidden="true"><div class="monitor"><div class="terminal-head">VISHWAS BIOS v2.0</div><div>Memory: 102+ MEMORIES</div><div>Boot: CURIOSITY.EXE</div><div>Code: PYTHON / JS</div><div>Safety: LOCAL FIRST</div><div>STATUS: READY <span class="blink">▮</span></div></div><div class="pc-bottom">PERSONAL COMPUTER <i class="pc-led"></i></div></div>
+<section class="mini-live-terminal" aria-label="Interactive compact system terminal">
+<div class="mini-term-bar"><span class="mini-term-led" aria-hidden="true"></span><strong>VISHWAS / COMMAND PROMPT</strong><span class="mini-term-clock" id="mini-term-clock" aria-label="Current local time">LIVE</span></div>
+<div class="mini-term-screen" id="mini-term-screen" role="log" aria-live="polite" aria-relevant="additions"><div>Microsoft-style personal computer archive</div><div>VISHWAS.EXE [LOCAL INTERACTIVE]</div><div>Type <b>help</b> to see commands.</div></div>
+<form class="mini-term-form" id="mini-term-form"><label for="mini-term-input" class="mini-term-prompt">C:\\VISHWAS&gt;</label><input id="mini-term-input" maxlength="48" autocomplete="off" spellcheck="false" aria-label="Enter local terminal command" placeholder="help" required><button type="submit">↵ RUN</button></form><p class="mini-term-foot">LOCAL ONLY <span aria-hidden="true">●</span> NO SHELL ACCESS</p></section>
 </div>
 <details class="vx-restore-drawer"><summary>💾 OPEN RESTORE POINTS / FOUR ERAS</summary>
 <section class="vx-era-console" aria-labelledby="vx-era-label">
@@ -220,4 +243,25 @@ document.addEventListener('visibilitychange',()=>{if(document.hidden)stopTour()}
 reduceMotion.addEventListener('change',()=>{if(reduceMotion.matches)stopTour()});
 renderEra('1998');
 })();
-</script></body></html>
+</script><script>
+(() => {
+ const output=document.getElementById('mini-term-screen'),form=document.getElementById('mini-term-form'),input=document.getElementById('mini-term-input'),clock=document.getElementById('mini-term-clock');
+ if(!output||!form||!input||!clock)return;
+ const tick=()=>{clock.textContent=new Date().toLocaleTimeString('en-IN',{hour:'2-digit',minute:'2-digit',hour12:false});};
+ tick();window.setInterval(tick,30000);
+ const say=(value)=>{const line=document.createElement('div');line.textContent=value;output.append(line);while(output.children.length>10)output.firstElementChild.remove();output.scrollTop=output.scrollHeight;};
+ const pages={boot:'./memory/',overload:'./overload/',museum:'./museum/',arcade:'./arcade/',projects:'https://github.com/vishwasaithalz?tab=repositories'};
+ form.addEventListener('submit',event=>{
+  event.preventDefault();const cmd=input.value.trim().toLowerCase();input.value='';if(!cmd)return;
+  say('C:\\VISHWAS> '+cmd);
+  if(cmd==='clear'){output.replaceChildren();say('SCREEN CLEARED');}
+  else if(cmd==='help')say('help | whoami | time | status | projects | boot | museum | arcade | overload | clear');
+  else if(cmd==='whoami')say('VISHWAS AITHAL | BUILDER | CURIOUS SINCE THE EARLY DESKTOP DAYS');
+  else if(cmd==='time')say(new Date().toLocaleString());
+  else if(cmd==='status')say('LOCAL SIMULATION READY | PRIVACY: ON | NO REMOTE SHELL');
+  else if(Object.prototype.hasOwnProperty.call(pages,cmd)){say('OPENING '+cmd.toUpperCase());window.location.assign(pages[cmd]);}
+  else say('UNKNOWN COMMAND. TYPE help');
+ });
+})();
+</script>
+</body></html>
