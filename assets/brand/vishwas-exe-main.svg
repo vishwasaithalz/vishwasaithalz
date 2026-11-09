@@ -24,7 +24,7 @@
 <rect y="292" width="1200" height="58" fill="url(#wood)"/><path d="M0 291.5H1200" stroke="#88654a" stroke-width="2"/>
 <rect width="1200" height="350" rx="9" fill="#ddd" opacity=".045" filter="url(#rough)"/>
 <path d="M480 30H1180" stroke="#425456" opacity=".55"/>
-<text x="494" y="47" font-family="Consolas,'Courier New',monospace" font-size="16" fill="#e7cfa3" letter-spacing="2">C:\VISHWAS\ABOUT.ME</text>
+<text x="494" y="47" font-family="Consolas,'Courier New',monospace" font-size="16" fill="#e7cfa3" letter-spacing="2">VISHWAS.EXE  /  C:\VISHWAS\ABOUT.ME</text>
 <path d="M491 61H1164" stroke="#69837a" opacity=".52"/>
 <text x="490" y="129" font-family="Arial,Helvetica,sans-serif" font-weight="900" font-size="69" letter-spacing="-3" fill="#eeeadd">VISHWAS</text>
 <text x="490" y="197" font-family="Arial,Helvetica,sans-serif" font-weight="900" font-size="69" letter-spacing="-3" fill="#eeeadd">AITHAL</text>
