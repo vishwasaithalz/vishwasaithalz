@@ -335,6 +335,9 @@ Six independent Vercel workbenches with source code, automated tests and daily H
 
 ## 💌 11 / SEND A MESSAGE
 
+**Verified owner supplied social destinations:** [X: @vishwasaithalz](https://x.com/vishwasaithalz) · [LinkedIn](https://www.linkedin.com/in/vishwas-aithal/) · [Quora](https://www.quora.com/profile/Vishwasaithal) · [YouTube](https://www.youtube.com/@vishwasaithalz)
+
+
 <a href="mailto:vishwas.ptv@gmail.com"><img src="assets/karma-comms.svg" width="100%" alt="Animated Vishwas Aithal communications console. Click to email for collaboration." /></a>
 
 <p align="center">
