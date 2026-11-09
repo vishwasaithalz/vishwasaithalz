@@ -1,7 +1,19 @@
 <!-- Vishwas Aithal personal GitHub | original retro desktop art | no long dash punctuation -->
 <!-- VISHWAS.EXE UNIFIED THEME START -->
-<p align="center"><a href="https://vishwasaithalz.github.io/vishwasaithalz/"><img src="assets/brand/afterhours-cybercafe.svg" width="100%" alt="Original illustrated midnight cybercafe with a textured CRT, games, floppy disks, handmade tracker and the personal name Vishwas Aithal; click through to the playable interactive computer." /></a></p>
-<p align="center"><strong>VISHWAS AITHAL / CYBERCAFÉ AFTER HOURS</strong><br/><sub>BOOTDISK 1995 | 2000s gamer | 2013 Blogger | Security and software now</sub></p>
+<div align="center">
+
+# 💾 VISHWAS AITHAL // PSYCHKARMA
+
+### BOOTDISK 1995 · VISHWAS.EXE · SYSTEM ONLINE
+
+<a href="https://vishwasaithalz.github.io/vishwasaithalz/"><img src="assets/brand/afterhours-cybercafe.svg" width="100%" alt="Vishwas Aithal original illustrated retro cybercafé computer. PRESS START to open the interactive BOOTDISK 1995 experience." /></a>
+
+### [▶ PRESS START · BOOT THE COMPUTER](https://vishwasaithalz.github.io/vishwasaithalz/)
+
+**[🎮 ARCADE](https://vishwasaithalz.github.io/vishwasaithalz/arcade/) · [🖥️ OVERLOAD](https://vishwasaithalz.github.io/vishwasaithalz/overload/) · [📼 INTERNET MUSEUM](https://vishwasaithalz.github.io/vishwasaithalz/museum/) · [💾 MEMORY OS](https://vishwasaithalz.github.io/vishwasaithalz/memory/)**
+
+</div>
+<p align="center"><strong>VISHWAS AITHAL / PSYCHKARMA AFTER HOURS</strong><br/><sub>BOOTDISK 1995 | 2000s gamer | 2013 Blogger | Security and software now</sub></p>
 <p align="center">
 <a href="https://vishwasaithalz.github.io/vishwasaithalz/"><strong>▶ PRESS START / BOOT THE COMPUTER</strong></a> &nbsp;·&nbsp;
 <a href="https://vishwasaithalz.github.io/vishwasaithalz/arcade/"><strong>🎮 PLAY THE ARCADE</strong></a> &nbsp;·&nbsp;
