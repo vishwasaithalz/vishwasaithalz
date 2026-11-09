@@ -41,7 +41,10 @@ const topics = [
   {match: /(security|logsentry|cyber|ethical|hacking)/i, text: "Security is the workshop: LogSentry explores imported Windows event data. Recon Lite studies HTTP response headers. Everything here is intended for defensive, authorized learning. 🛡"},
   {match: /(automation|ai|workflow|agent)/i, text: "The Automation Lab builds provider-neutral workflows and deterministic mock examples. The goal is reproducible behavior, not screenshots of impossible magic. 🤖"},
   {match: /(projects|repo|build|work)/i, text: "Pick a door: LogSentry, Recon Lite, AI Automation Lab, CyberPlayground, YinYangYoHackers, or Vishwas Aithal Ops Monitor. Go to the project roulette tab to discover one. 🚀"},
-  {match: /(karma|name|why)/i, text: "Vishwas Aithal builds this collection of security, automation and web experiments. Each project documents a real step in the journey. ✨"},
+  {match: /(bootdisk|1995|press start|boot)/i, text: "BOOTDISK 1995 is the entry point to this retro computer. PRESS START on the homepage to explore the original desktop, games and engineering workbench. 💾"},
+  {match: /(museum|internet|winamp|software)/i, text: "The Internet Museum preserves retro software memories, searchable exhibits and playful browser activities. Open ../museum/ to explore the collection. 📼"},
+  {match: /(overload|minesweeper|pong|paint)/i, text: "OVERLOAD 2.0 contains the interactive workbench, Minesweeper, Pong, Paint, a PC builder and local terminal. Open ../overload/ to play. 🖥️"},
+  {match: /(karma|psych|name|why)/i, text: "Vishwas Aithal is the creator. PSYCHKARMA / PSYCH / KARMA is part of the creative identity behind these security, automation and web experiments. ✨"},
   {match: /(hello|hi|hey|help)/i, text: "Hey! Try 2013, security, automation, projects or about Vishwas Aithal. This is a local scripted story, not a remote chatbot. 💬"},
   {match: /(music|rap|song)/i, text: "There is a music chapter too, but this little chat focuses on the engineering journey. Explore the linked public projects for code and experiments. 🎧"}
 ];
@@ -74,7 +77,7 @@ function ask(question) {
     $("#chat-input").disabled = false;
     $("#chat-input").focus();
     chatPending = false;
-  }, 480);
+  }, window.matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : 480);
 }
 $("#chat-form").addEventListener("submit", event => {
   event.preventDefault();
