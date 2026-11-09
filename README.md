@@ -1,9 +1,9 @@
 <!-- Vishwas Aithal personal GitHub | original retro desktop art | no long dash punctuation -->
 <!-- VISHWAS.EXE UNIFIED THEME START -->
 <p align="center"><a href="https://vishwasaithalz.github.io/vishwasaithalz/"><img src="assets/brand/afterhours-cybercafe.svg" width="100%" alt="Original illustrated midnight cybercafe with a textured CRT, games, floppy disks, handmade tracker and the personal name Vishwas Aithal; click through to the playable interactive computer." /></a></p>
-<p align="center"><strong>VISHWAS AITHAL / CYBERCAFÉ AFTER HOURS</strong><br/><sub>1998 boot disk | 2000s gamer | 2013 Blogger | Security and software now</sub></p>
+<p align="center"><strong>VISHWAS AITHAL / CYBERCAFÉ AFTER HOURS</strong><br/><sub>BOOTDISK 1995 | 2000s gamer | 2013 Blogger | Security and software now</sub></p>
 <p align="center">
-<a href="https://vishwasaithalz.github.io/vishwasaithalz/"><strong>▶ BOOT THE COMPUTER</strong></a> &nbsp;·&nbsp;
+<a href="https://vishwasaithalz.github.io/vishwasaithalz/"><strong>▶ PRESS START / BOOT THE COMPUTER</strong></a> &nbsp;·&nbsp;
 <a href="https://vishwasaithalz.github.io/vishwasaithalz/arcade/"><strong>🎮 PLAY THE ARCADE</strong></a> &nbsp;·&nbsp;
 <a href="https://vishwasaithalz.github.io/vishwasaithalz/overload/"><strong>🖥️ OPEN THE WORKBENCH</strong></a> &nbsp;·&nbsp;
 <a href="https://github.com/vishwasaithalz?tab=repositories"><strong>⌨️ SOURCE CODE</strong></a> &nbsp;·&nbsp;
