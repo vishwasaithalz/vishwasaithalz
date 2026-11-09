@@ -94,7 +94,17 @@ else{
   if(!arcadeCss.includes(token))err('arcade','palette drift: '+token);
 }
 const readme=readFileSync(join(root,'README.md'),'utf8');
-for(const needed of ['assets/brand/vishwas-exe-main.svg','overload/','overload/game-room.html','overload/network.html','overload/capsule.html','overload/tracker.html'])
+const heroCandidates=['assets/brand/vishwas-exe-main.svg','assets/brand/afterhours-cybercafe.svg'];
+const activeHero=heroCandidates.find(name=>readme.includes(name));
+if(!activeHero)err('README.md','missing visible approved original hero asset');
+else{
+ const asset=join(root,activeHero),art=existsSync(asset)?readFileSync(asset,'utf8'):'';
+ if(!art.includes('<svg ')||!art.includes('</svg>'))err(activeHero,'missing or malformed SVG envelope');
+ if(!art.includes('VISHWAS')||!art.includes('Aithal'))err(activeHero,'personal identity missing');
+ if(!art.includes('prefers-reduced-motion'))err(activeHero,'motion fallback missing');
+ if(/<script\b|onload\s*=|onerror\s*=|https?:\/\//i.test(art))err(activeHero,'unsafe external or executable SVG content');
+}
+for(const needed of ['overload/','overload/game-room.html','overload/network.html','overload/capsule.html','overload/tracker.html'])
  if(!readme.includes(needed))err('README.md','required public link missing: '+needed);
 if(/Build-Journal|nostalgia-karma-dashboard|karma-cloudflare-ops/.test(readme))err('README.md','private repository name disclosed');
 if(/[\u2014\u2015]/.test(readme))err('README.md','visible long dash found');
