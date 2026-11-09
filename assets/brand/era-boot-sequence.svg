@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="282" viewBox="0 0 1200 282" role="img" aria-labelledby="era-title era-desc">
+<title id="era-title">Vishwas Aithal | Four eras of one computer kid</title>
+<desc id="era-desc">A left-to-right timeline moving from a green phosphor CRT and DOS screen in the 1990s, to Windows XP and Winamp in the 2000s, to the YinYangYoHackers blog in 2013, to GitHub engineering today.</desc>
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#07131b"/><stop offset=".52" stop-color="#122738"/><stop offset="1" stop-color="#101e31"/></linearGradient>
+  <linearGradient id="xp" x1="0" y1="0" x2="1"><stop stop-color="#19469b"/><stop offset="1" stop-color="#42a9b5"/></linearGradient>
+  <pattern id="scan" width="4" height="4" patternUnits="userSpaceOnUse"><path d="M0 3.5H1200" stroke="#01060d" stroke-opacity=".16" stroke-width="1"/></pattern>
+</defs>
+<style>
+@keyframes pulse-era{0%,100%{opacity:.48}50%{opacity:1}}
+@keyframes progress-era{0%{transform:translateX(0)}33%{transform:translateX(287px)}66%{transform:translateX(574px)}100%{transform:translateX(861px)}}
+.era-led{animation:pulse-era 2.4s ease-in-out infinite}
+.era-dot{animation:progress-era 12s steps(1,end) infinite}
+@media(prefers-reduced-motion:reduce){.era-led,.era-dot{animation:none}}
+</style>
+<rect width="1200" height="282" rx="9" fill="url(#bg)"/>
+<rect x="5" y="5" width="1190" height="272" rx="6" fill="none" stroke="#6c9e9c" stroke-opacity=".7"/>
+<text x="24" y="29" fill="#e8f7e9" font-family="Consolas,'Courier New',monospace" font-size="16" font-weight="bold">C:\\VISHWAS\\BOOT_HISTORY.EXE</text>
+<text x="1168" y="29" text-anchor="end" fill="#e3c78f" font-family="Consolas,'Courier New',monospace" font-size="13">THE WALLPAPER CHANGED. THE CURIOSITY DIDN'T.</text>
+<path d="M24 39H1176" stroke="#426577" stroke-width="1"/>
+<!-- 1990s / monochrome phosphor -->
+<rect x="22" y="52" width="268" height="167" rx="3" fill="#101c1e" stroke="#647d75"/>
+<text x="36" y="72" fill="#b0c5bd" font-family="Consolas,monospace" font-size="12">01 / 1990s</text>
+<text x="36" y="95" fill="#a5f8ad" font-family="Consolas,monospace" font-size="22" font-weight="bold">CRT / DOS</text>
+<rect x="40" y="106" width="230" height="90" rx="9" fill="#a5a89b"/>
+<rect x="48" y="114" width="214" height="72" rx="5" fill="#081d13" stroke="#304c3e" stroke-width="2"/>
+<text x="59" y="133" fill="#73cf86" font-family="Consolas,monospace" font-size="14">C:\\&gt;dir /w</text>
+<text x="59" y="152" fill="#a6f0ac" font-family="Consolas,monospace" font-size="13">GAMES  DISKS  DOS</text>
+<text x="59" y="173" fill="#a6f0ac" font-family="Consolas,monospace" font-size="13">C:\\&gt;_</text>
+<circle class="era-led" cx="252" cy="202" r="3" fill="#80df9b"/>
+<!-- 2000s / XP and Winamp -->
+<rect x="310" y="52" width="268" height="167" rx="3" fill="#162337" stroke="#5f849b"/>
+<text x="324" y="72" fill="#b5cad8" font-family="Consolas,monospace" font-size="12">02 / 2000s</text>
+<text x="324" y="95" fill="#e9f0f6" font-family="Consolas,monospace" font-size="22" font-weight="bold">XP / CYBERCAFÉ</text>
+<rect x="326" y="108" width="234" height="88" fill="#d3d4c9" stroke="#7d9294"/>
+<rect x="327" y="109" width="232" height="24" fill="url(#xp)"/>
+<text x="337" y="125" fill="#ffffff" font-family="Verdana,sans-serif" font-size="12" font-weight="bold">Winamp 2.x | PLAYLIST</text>
+<rect x="339" y="142" width="208" height="42" fill="#18252b"/>
+<text x="347" y="154" fill="#b7db8e" font-family="Consolas,monospace" font-size="11">01  AFTER_SCHOOL.MP3</text>
+<rect x="349" y="174" width="7" height="7" fill="#8dd963"/><rect x="360" y="164" width="7" height="17" fill="#d6df62"/>
+<rect x="371" y="169" width="7" height="12" fill="#b9d85a"/><rect x="382" y="157" width="7" height="24" fill="#73c95f"/>
+<rect x="393" y="166" width="7" height="15" fill="#dcca61"/><rect x="404" y="162" width="7" height="19" fill="#8dd963"/>
+<text x="418" y="178" fill="#94ce84" font-family="Consolas,monospace" font-size="10">[PLAYING]</text>
+<!-- 2013 / first blog -->
+<rect x="598" y="52" width="268" height="167" rx="3" fill="#23202a" stroke="#8e7969"/>
+<text x="612" y="72" fill="#d4b5a2" font-family="Consolas,monospace" font-size="12">03 / 2013</text>
+<text x="612" y="95" fill="#f1d7ae" font-family="Consolas,monospace" font-size="22" font-weight="bold">THE BLOG ERA</text>
+<rect x="614" y="108" width="234" height="88" fill="#e7e4d6" stroke="#a8a190"/>
+<rect x="615" y="109" width="232" height="22" fill="#af6838"/>
+<text x="625" y="124" fill="#fff4df" font-family="Consolas,monospace" font-size="12" font-weight="bold">YINYANGYOHACKERS</text>
+<rect x="626" y="141" width="90" height="44" fill="#f4eada" stroke="#d3bda6"/>
+<rect x="634" y="149" width="75" height="4" fill="#b78661"/><rect x="634" y="159" width="63" height="4" fill="#c6aa87"/><rect x="634" y="169" width="69" height="4" fill="#c6aa87"/>
+<text x="724" y="150" fill="#4d4644" font-family="Consolas,monospace" font-size="11">FIRST POSTS</text>
+<text x="724" y="166" fill="#826044" font-family="Consolas,monospace" font-size="11">VIEW SOURCE</text>
+<text x="724" y="182" fill="#826044" font-family="Consolas,monospace" font-size="11">LEARN MORE</text>
+<!-- Now / modern source and CI -->
+<rect x="886" y="52" width="292" height="167" rx="3" fill="#101b2b" stroke="#518e90"/>
+<text x="900" y="72" fill="#b5c9cb" font-family="Consolas,monospace" font-size="12">04 / NOW</text>
+<text x="900" y="95" fill="#bbefcc" font-family="Consolas,monospace" font-size="22" font-weight="bold">BUILD / SHIP / LEARN</text>
+<rect x="902" y="108" width="260" height="88" fill="#0b1826" stroke="#355d6b"/>
+<rect x="903" y="109" width="258" height="21" fill="#22445e"/>
+<circle cx="917" cy="120" r="3" fill="#a8dfac"/><circle cx="929" cy="120" r="3" fill="#f5d18b"/>
+<text x="942" y="124" fill="#c8dee0" font-family="Consolas,monospace" font-size="11">terminal / git</text>
+<text x="915" y="147" fill="#a6edbe" font-family="Consolas,monospace" font-size="12">$ git status</text>
+<text x="915" y="165" fill="#dae7dd" font-family="Consolas,monospace" font-size="12">security / web / CI</text>
+<text x="915" y="183" fill="#d9bb7c" font-family="Consolas,monospace" font-size="12">REAL PROJECTS &gt;</text>
+<!-- One uninterrupted timeline -->
+<path d="M148 245H1034" stroke="#47717d" stroke-width="3"/>
+<path d="M148 245H1034" stroke="#9edebd" stroke-opacity=".38" stroke-dasharray="4 11" stroke-width="2"/>
+<circle cx="148" cy="245" r="7" fill="#80df9b"/><circle cx="435" cy="245" r="7" fill="#b1d9df"/>
+<circle cx="722" cy="245" r="7" fill="#e4b783"/><circle cx="1009" cy="245" r="7" fill="#8fe2c1"/>
+<circle class="era-dot" cx="148" cy="245" r="11" fill="none" stroke="#f9e2ab" stroke-width="3"/>
+<text x="24" y="270" fill="#afc9c8" font-family="Consolas,monospace" font-size="12">BOOT 01</text>
+<text x="1176" y="270" text-anchor="end" fill="#afc9c8" font-family="Consolas,monospace" font-size="12">NO REBOOT REQUIRED</text>
+<rect width="1200" height="282" rx="9" fill="url(#scan)" pointer-events="none"/>
+</svg>

@@ -17,10 +17,7 @@
 <p align="center"><img src="assets/retro-memory-desktop.svg" width="100%" alt="Original retro Windows desktop: Vishwas Aithal, the cybercafe kid, with childhood software, games, music player, cartoons and modern code" /></p>
 </details>
 <p align="center"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&amp;weight=700&amp;size=22&amp;duration=3000&amp;pause=900&amp;color=FF73A8&amp;center=true&amp;vCenter=true&amp;width=720&amp;height=55&amp;lines=Defensive+Security+%7C+Python;Automation+Engineering+%7C+JavaScript;Building+Since+2013+%7C+Vishwas+Aithal" alt="Typing intro: cybersecurity, automation, and building since 2013" /></p>
-<p align="center"><strong>VISHWAS.EXE // THE CYBERCAFÉ KID</strong></p>
-<p align="center"><a href="https://vishwasaithalz.github.io/vishwasaithalz/overload/"><strong>💥 OVERLOAD 2.0</strong></a> &nbsp;·&nbsp; <a href="https://vishwasaithalz.github.io/vishwasaithalz/memory/"><strong>🖥️ MEMORY OS</strong></a> &nbsp;·&nbsp; <a href="https://vishwasaithalz.github.io/vishwasaithalz/museum/"><strong>💾 MUSEUM</strong></a> &nbsp;·&nbsp; <a href="https://vishwasaithalz.github.io/vishwasaithalz/arcade/"><strong>🎮 ARCADE 3.0</strong></a></p>
 <p align="center"><strong>Vishwas Aithal</strong> · 90s PC kid · Blogger since 2013 · Defensive security, web and automation now</p>
-<p align="center"><a href="https://vishwasaithal.ai.studio/"><strong>🌐 Personal Portfolio · Cybersecurity / Web Design / SEO</strong></a></p>
 
 <p align="center">
 <a href="https://github.com/vishwasaithalz?tab=repositories"><img src="assets/nav/code.svg" width="23%" alt="Explore GitHub source code" /></a>
@@ -30,6 +27,10 @@
 </p>
 
 > **I was the kid who clicked every icon just to find out what it did.** Windows desktops, Winamp playlists, virtual drives, compressed game folders, Saturday morning cartoons, a 2013 tech blog, and a stubborn curiosity about how computers work. Today that curiosity shows up as defensive security tools, websites, automation and experiments you can actually inspect. **The wallpaper changed. The curiosity didn't.**
+
+<p align="center"><img src="assets/brand/era-boot-sequence.svg" width="100%" alt="Vishwas Aithal's visual boot history, from 1990s green phosphor CRT and DOS, through 2000s Windows XP and Winamp, to the 2013 YinYangYoHackers blog and modern security, web and automation engineering" /></p>
+
+<p align="center"><sub>1990s CRT &gt; 2000s cybercafé &gt; 2013 Blogger &gt; today's engineering labs. One continuous story.</sub></p>
 
 <p align="center">
 <a href="https://vishwasaithalz.github.io/vishwasaithalz/arcade/#snake"><img src="assets/nav/arcade.svg" width="23%" alt="Play the original Snake browser game" /></a>
@@ -68,6 +69,37 @@ Still curious. Still building. Still pressing every button.
 **My personality settings:** a little Dexter's Laboratory, a little old-school PC repair shop, a lot of late-night tinkering. I like tech that feels alive, but I still want the code to be understandable, the demos to be real and the security work to be authorized.
 
 <p align="center"><a href="https://vishwasaithalz.github.io/vishwasaithalz/memory/"><strong>💾 BOOT MEMORY OS</strong></a> &nbsp;·&nbsp; <a href="https://vishwasaithalz.github.io/vishwasaithalz/arcade/#snake"><strong>▶ OPEN ARCADE</strong></a> &nbsp;·&nbsp; <a href="https://yyyh-phi.vercel.app"><strong>🌐 OPEN THE BLOG ERA</strong></a> &nbsp;·&nbsp; <a href="https://github.com/vishwasaithalz?tab=repositories"><strong>📁 OPEN PROJECTS</strong></a></p>
+
+---
+
+## 🗂️ 01 / PROGRAM FILES / MY PROJECTS
+
+**Six real shortcuts, six distinct personalities.** These icons open public source code or working demos, not decorative dead ends.
+
+<p align="center">
+<a href="https://github.com/vishwasaithalz/LogSentry"><img src="assets/tiles/logsentry.svg" width="48%" alt="LogSentry, open defensive Windows event project" /></a>
+<a href="https://recon-lite.vercel.app"><img src="assets/tiles/recon-lite.svg" width="48%" alt="Recon Lite, open public security signals demo" /></a>
+<a href="https://github.com/vishwasaithalz/AI-Automation-Lab"><img src="assets/tiles/automation-lab.svg" width="48%" alt="AI Automation Lab, open reproducible workflow project" /></a>
+<a href="https://cyber-playground-nu.vercel.app"><img src="assets/tiles/cyberplayground.svg" width="48%" alt="CyberPlayground, open safe interactive security learning labs" /></a>
+<a href="https://yyyh-phi.vercel.app"><img src="assets/tiles/yyyh.svg" width="48%" alt="YinYangYoHackers, open the public learning site" /></a>
+<a href="https://karma-ops-monitor.vercel.app"><img src="assets/tiles/karma-ops.svg" width="48%" alt="Vishwas Aithal Ops, open the portfolio workshop" /></a>
+</p>
+
+<details>
+<summary><strong>🧪 Show the technical details and source links</strong></summary>
+
+| Project | Scope | Evidence |
+| :-- | :-- | :-- |
+| [LogSentry](https://github.com/vishwasaithalz/LogSentry) | Imported Windows security event analysis | Python CLI, synthetic fixtures, explicit investigation limits |
+| [Recon Lite](https://github.com/vishwasaithalz/recon-lite) | HTTP security-header and response analysis | [Public Signal Room demo](https://recon-lite.vercel.app) |
+| [AI Automation Lab](https://github.com/vishwasaithalz/AI-Automation-Lab) | Provider-neutral workflow experiments | Deterministic local mock examples |
+| [CyberPlayground](https://github.com/vishwasaithalz/CyberPlayground) | Browser-based security education | [Public learning labs](https://cyber-playground-nu.vercel.app) |
+| [YinYangYoHackers](https://github.com/vishwasaithalz/YYYH) | Cybersecurity learning and technology publishing | [Public website](https://yyyh-phi.vercel.app) |
+| [Vishwas Aithal Ops Monitor](https://github.com/vishwasaithalz/KARMA-Ops-Monitor) | Portfolio and engineering operations | [Vishwas Aithal workshop](https://karma-ops-monitor.vercel.app) |
+
+Public homepages were inspected in a browser on 2026-11-06. A working landing page does not certify every feature. LogSentry and AI Automation Lab have local CLI or mock examples, not a claimed hosted equivalent.
+</details>
+
 
 ---
 
@@ -139,34 +171,6 @@ The after-school PC, now with more buttons than anyone reasonably needs. **This 
 </details>
 
 ---
-
-## 🗂️ 01 / PROGRAM FILES / MY PROJECTS
-
-**Six real shortcuts, six distinct personalities.** These icons open public source code or working demos, not decorative dead ends.
-
-<p align="center">
-<a href="https://github.com/vishwasaithalz/LogSentry"><img src="assets/tiles/logsentry.svg" width="48%" alt="LogSentry, open defensive Windows event project" /></a>
-<a href="https://recon-lite.vercel.app"><img src="assets/tiles/recon-lite.svg" width="48%" alt="Recon Lite, open public security signals demo" /></a>
-<a href="https://github.com/vishwasaithalz/AI-Automation-Lab"><img src="assets/tiles/automation-lab.svg" width="48%" alt="AI Automation Lab, open reproducible workflow project" /></a>
-<a href="https://cyber-playground-nu.vercel.app"><img src="assets/tiles/cyberplayground.svg" width="48%" alt="CyberPlayground, open safe interactive security learning labs" /></a>
-<a href="https://yyyh-phi.vercel.app"><img src="assets/tiles/yyyh.svg" width="48%" alt="YinYangYoHackers, open the public learning site" /></a>
-<a href="https://karma-ops-monitor.vercel.app"><img src="assets/tiles/karma-ops.svg" width="48%" alt="Vishwas Aithal Ops, open the portfolio workshop" /></a>
-</p>
-
-<details>
-<summary><strong>🧪 Show the technical details and source links</strong></summary>
-
-| Project | Scope | Evidence |
-| :-- | :-- | :-- |
-| [LogSentry](https://github.com/vishwasaithalz/LogSentry) | Imported Windows security event analysis | Python CLI, synthetic fixtures, explicit investigation limits |
-| [Recon Lite](https://github.com/vishwasaithalz/recon-lite) | HTTP security-header and response analysis | [Public Signal Room demo](https://recon-lite.vercel.app) |
-| [AI Automation Lab](https://github.com/vishwasaithalz/AI-Automation-Lab) | Provider-neutral workflow experiments | Deterministic local mock examples |
-| [CyberPlayground](https://github.com/vishwasaithalz/CyberPlayground) | Browser-based security education | [Public learning labs](https://cyber-playground-nu.vercel.app) |
-| [YinYangYoHackers](https://github.com/vishwasaithalz/YYYH) | Cybersecurity learning and technology publishing | [Public website](https://yyyh-phi.vercel.app) |
-| [Vishwas Aithal Ops Monitor](https://github.com/vishwasaithalz/KARMA-Ops-Monitor) | Portfolio and engineering operations | [Vishwas Aithal workshop](https://karma-ops-monitor.vercel.app) |
-
-Public homepages were inspected in a browser on 2026-11-06. A working landing page does not certify every feature. LogSentry and AI Automation Lab have local CLI or mock examples, not a claimed hosted equivalent.
-</details>
 
 ## 🌐 02 / NETWORK NEIGHBORHOOD
 
