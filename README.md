@@ -10,7 +10,8 @@
 <a href="https://vishwasaithal.ai.studio/"><strong>🌐 PORTFOLIO</strong></a>
 </p>
 <!-- VISHWAS.EXE UNIFIED THEME END -->
-<p align="center"><sub>Original hacker-gamer artwork and source code. GitHub READMEs display the art; the actual boot buttons, keyboard controls and games run on GitHub Pages.</sub></p>
+<p align="center"><a href="https://vishwasaithalz.github.io/vishwasaithalz/"><img src="assets/brand/vishwas-boot.gif" width="100%" alt="Animated custom CRT boot tape: BIOS to old school hacker gaming, Windows-era cybercafe, Blogger and the modern code workbench. Open the playable GitHub Pages computer." /></a></p>
+<p align="center"><sub><strong>▶ BOOT REPLAY</strong> / the moving intro runs in GitHub README / controls, sound and playable games run on GitHub Pages</sub></p>
 
 
 
@@ -30,16 +31,9 @@
 <p align="center"><sub>1990s CRT &gt; 2000s cybercafé &gt; 2013 Blogger &gt; today's engineering labs. One continuous story.</sub></p>
 
 <details>
-<summary><strong>💾 OPEN THE BONUS DISK | Full desktop illustration + animated BIOS tape</strong></summary>
-
-<details>
-<summary><strong>🎞 Open the original full-size cybercafé desktop artwork</strong></summary>
+<summary><strong>💾 OPEN THE BONUS DISK | Full-size original cybercafé desktop illustration</strong></summary>
 
 <p align="center"><img src="assets/retro-memory-desktop.svg" width="100%" alt="Original retro Windows desktop: Vishwas Aithal, the cybercafe kid, with childhood software, games, music player, cartoons and modern code" /></p>
-</details>
-
-<p align="center"><a href="https://vishwasaithalz.github.io/vishwasaithalz/"><img src="assets/brand/vishwas-boot.gif" width="100%" alt="Original animated CRT command-line boot sequence. Vishwas Aithal from the cybercafe era to modern engineering. Open the interactive VISHWAS.EXE computer." /></a></p>
-
 </details>
 
 
