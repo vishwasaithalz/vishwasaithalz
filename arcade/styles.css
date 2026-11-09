@@ -24,3 +24,39 @@
 .motion-section .panel-heading{margin-bottom:7px}
 .motion-section .gif-gallery img{image-rendering:auto}
 @media(max-width:640px){.motion-section{padding:23px 13px}.motion-section h2{font-size:27px}}
+
+
+/* Product polish: readable chat and responsive functional terminal. */
+#chat .chat-window{max-width:880px;border-radius:9px;border-color:#8c8ca8;box-shadow:inset 1px 1px #ffffff23,0 8px 0 #090d1e,0 22px 42px #0006;background:linear-gradient(140deg,#1b2440,#14192b)}
+#chat .chat-top{background:linear-gradient(90deg,#2b3454,#293a52);border-bottom:1px solid #71889a;padding:14px 17px}
+#chat .chat-log{min-height:238px;max-height:min(47vh,420px);scrollbar-width:thin}
+#chat .message{border-radius:8px;box-shadow:inset 1px 1px #ffffff12}
+#chat .message.bot{border-left:3px solid var(--pink)}
+#chat .message.user{border-right:3px solid var(--cyan)}
+#chat .quick button{min-height:38px;display:inline-flex;align-items:center;justify-content:center;border-radius:5px;line-height:1.2;font-weight:700}
+#chat .chat-form{border-top:1px solid #4d5271;gap:9px}
+#chat .chat-form input{min-height:46px;border-radius:4px}
+#chat .chat-form button{min-height:46px;border-radius:4px;white-space:nowrap}
+#terminal .terminal{width:min(100%,900px);max-width:100%;background:radial-gradient(ellipse at 25% 0%,#142c28,#06100f 78%);border:1px solid #6d9189;border-radius:7px;box-shadow:inset 0 0 29px #0009,0 9px 0 #0b1c27,0 20px 37px #0007}
+#terminal .term-bar{min-height:41px;display:flex;flex-wrap:wrap;align-items:center;gap:8px;padding:9px 13px;background:linear-gradient(90deg,#273f53,#1a3944);border-bottom:1px solid #729c8e;font-size:12px}
+#terminal .term-output{height:clamp(220px,40vh,385px);line-height:1.65;font-size:clamp(12px,1.5vw,15px);padding:clamp(11px,2vw,21px);max-width:100%;scrollbar-width:thin}
+#terminal .term-form{display:flex;flex-wrap:wrap;gap:8px;border-top:1px solid #4b796c;background:#091c17;padding:12px}
+#terminal .term-form input{flex:1 1 140px;min-height:42px;padding:9px;border-bottom:1px solid #548d78;outline-offset:3px;overflow-wrap:anywhere}
+#terminal .term-form input:focus-visible{outline:2px solid var(--yellow);outline-offset:0}
+#terminal .prompt{font-size:clamp(10px,1.3vw,13px)}
+#terminal .quick button{min-height:39px;border-radius:4px;white-space:nowrap;font-family:ui-monospace,Consolas,monospace}
+#terminal .note{max-width:900px}
+@media(max-width:520px){
+ #chat .chat-top{gap:8px;padding:12px}
+ #chat .signal{font-size:9px}
+ #chat .quick{gap:6px}
+ #chat .quick button{flex:1 1 auto;font-size:11px;padding:8px}
+ #chat .chat-form{padding:10px}
+ #chat .chat-form input{min-width:0;font-size:14px}
+ #terminal .term-state{float:none;margin-left:auto;font-size:10px}
+ #terminal .term-output{min-height:230px}
+ #terminal .term-form{align-items:stretch}
+ #terminal .term-form .prompt{display:block;flex-basis:100%}
+ #terminal .term-form input{flex-basis:100%}
+}
+@media(prefers-reduced-motion:reduce){#chat .message{animation:none}}
