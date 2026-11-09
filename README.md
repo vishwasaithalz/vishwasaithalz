@@ -321,7 +321,22 @@ Six independent Vercel workbenches with source code, automated tests and daily H
 | **ZeroAuth** | [Passkey lab](https://karma-zeroauth.vercel.app/) | [Source](https://github.com/vishwasaithalz/AI-Automation-Lab/tree/main/projects/ZeroAuth) |
 | **Spectra UI** | [Accessibility lab](https://karma-spectra-ui.vercel.app/) | [Source](https://github.com/vishwasaithalz/AI-Automation-Lab/tree/main/projects/SpectraUI) |
 
-[Explore all six project folders](https://github.com/vishwasaithalz/AI-Automation-Lab/tree/main/projects) · [Live uptime checks](https://github.com/vishwasaithalz/AI-Automation-Lab/actions/workflows/karma-live-endpoints.yml)
+[Explore all six project folders](https://github.com/vishwasaithalz/AI-Automation-Lab/tree/main/projects) · [Live uptime checks](https://github.com/vishwasaithalz/AI-Automation-Lab/actions/workflows/karma-live-endpoints.yml) · [30 public GitHub research references](https://github.com/vishwasaithalz/AI-Automation-Lab/blob/main/projects/REFERENCE_ATLAS.md)
+
+Six opt-in source-level enhancements now extend the original labs: bounded security event batches, SEO structure checks, read-only Kubernetes policy findings, gzip estimates, passkey counter review and accessible palette comparisons. These are testable software functions, not claims that all features are available in hosted interfaces.
+
+### 🧪 Four original interactive Product Lab apps
+
+**[▶ OPEN PRODUCT LAB 01](https://vishwasaithalz.github.io/vishwasaithalz/labs/)** · [Source and tests](https://github.com/vishwasaithalz/vishwasaithalz/tree/main/labs)
+
+| Working prototype | Interactive features |
+| :-- | :-- |
+| **ServiceDesk.exe** | Create tickets, filter queues, update statuses, summary counts and JSON export |
+| **LinkVault.exe** | Save and tag links, filter, favorite, remove and export |
+| **QuoteAtlas.exe** | Original sample quotes, user notes, favorites, copy and export |
+| **FlowFeed.exe** | Search 96 sample cards, filter topics and load progressively |
+
+All four demos are static, local-first educational applications. They do not provide remote persistence, cloud authentication or real client data processing.
 
 ## 💌 11 / SEND A MESSAGE
 
