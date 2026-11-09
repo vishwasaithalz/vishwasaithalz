@@ -62,6 +62,28 @@ function addMessage(who, message) {
 }
 addMessage("bot", "Connection established. 👋 Welcome to a small interactive scrapbook. Ask about 2013, security, automation, or the projects. The replies are scripted, local and private.");
 let chatPending = false;
+const chapters=[
+  {name:"THE FIRST BOOT",reply:"Windows folders, Winamp playlists, games and a simple question: what happens if I click this? That curiosity became a lifelong technical habit. 💾"},
+  {name:"BLOGGER 2013",reply:"YinYangYoHackers began as a public place to learn and write about technology. The original archive matters as much as the new interface. 🌗"},
+  {name:"SECURITY NOW",reply:"LogSentry processes imported Windows event records. Recon Lite examines saved HTTP headers. Both focus on authorized defensive learning. 🛡️"},
+  {name:"AUTOMATION NOW",reply:"Small reproducible workflows are more useful than impressive claims. The AI Automation Lab includes local mock examples and documented limitations. 🤖"},
+  {name:"THE NEXT BUILD",reply:"The current frontier is accessible interactive software: faster interfaces, local privacy, real tests and working public demos. Open the projects or try the terminal. ⌨️"}
+];
+let chapterIndex=-1;
+function guidedReply(clean) {
+  if(/^(tour|start tour|story tour)$/i.test(clean)){chapterIndex=0;return "CHAPTER 1 / "+chapters[0].name+"\n"+chapters[0].reply+"\nType next to continue.";}
+  if(/^(next|next chapter)$/i.test(clean)){chapterIndex=(chapterIndex+1)%chapters.length;return "CHAPTER "+(chapterIndex+1)+" / "+chapters[chapterIndex].name+"\n"+chapters[chapterIndex].reply;}
+  if(/^(back|previous|previous chapter)$/i.test(clean)){chapterIndex=(chapterIndex-1+chapters.length)%chapters.length;return "CHAPTER "+(chapterIndex+1)+" / "+chapters[chapterIndex].name+"\n"+chapters[chapterIndex].reply;}
+  if(/^(chapters|timeline|index)$/i.test(clean))return "CHAPTER INDEX\n"+chapters.map((item,index)=>(index+1)+". "+item.name).join("\n")+"\nUse tour, next or back.";
+  if(/^(what can you do|commands|topics)$/i.test(clean))return "I can guide you through five chapters and answer preset questions about the blog, projects, security, automation, music and the museum. Everything here is scripted and local.";
+  return null;
+}
+document.querySelector("#chat-reset")?.addEventListener("click",()=>{
+ if(chatPending)return;
+ chapterIndex=-1;document.querySelector("#chat-log").replaceChildren();
+ addMessage("bot","Archive restarted. Type tour to explore five chapters, or pick a topic below. Replies are scripted and local.");
+ document.querySelector("#chat-input").focus();
+});
 function ask(question) {
   const clean = question.trim().slice(0, 160);
   if (!clean || chatPending) return;
@@ -70,7 +92,7 @@ function ask(question) {
   $("#typing").hidden = false;
   $("#chat-input").disabled = true;
   const found = topics.find(item => item.match.test(clean));
-  const reply = found ? found.text : "There are more stories than fit in this little archive. Try 2013, security, projects, automation, or about Vishwas Aithal. Each topic opens a different corner of the workshop. 🧩";
+  const reply = guidedReply(clean) ?? (found ? found.text : "There are more stories than fit in this little archive. Try tour, chapters, 2013, security, projects, automation, or about Vishwas Aithal. 🧩");
   window.setTimeout(() => {
     addMessage("bot", reply);
     $("#typing").hidden = true;
@@ -106,13 +128,23 @@ const projects = [
   {key:"yyyh",icon:"🌗",name:"YinYangYoHackers",desc:"Cybersecurity publishing with roots in 2013",url:"https://yyyh-phi.vercel.app",type:"PUBLISHING"},
   {key:"karma",icon:"🛰️",name:"Vishwas Aithal Ops",desc:"Personal workshop and portfolio operations",url:"https://karma-ops-monitor.vercel.app",type:"OPERATIONS"}
 ];
+const termHistory=[];
+let historyCursor=0;
+const completions=["help","about","whoami","date","pwd","ls","tree","projects","story","status","open ","chat","snake","pinball","roulette","gallery","history","clear"];
 function command(value) {
   const clean = value.trim().toLowerCase();
   if (!clean) return;
+  termHistory.push(value.trim());
+  if(termHistory.length>40)termHistory.shift();
+  historyCursor=termHistory.length;
   termLine("vishwas@github:~$ " + value, "command");
   const parts = clean.split(/\s+/);
   switch(parts[0]) {
-    case "help": termLine("help | about | ls | projects | story | status | whoami | date | open [project] | chat | snake | pinball | roulette | gallery | clear"); break;
+    case "help": termLine("help | about | ls | tree | projects | story | status | whoami | date | pwd | uptime | open [project] | chat | snake | pinball | roulette | gallery | history | clear"); break;
+    case "pwd": termLine("/home/vishwas/public-projects [SIMULATED]");break;
+    case "uptime": termLine("THIS TAB HAS BEEN OPEN FOR "+Math.floor(performance.now()/60000)+" MINUTES. NOT SERVER UPTIME.");break;
+    case "tree": termLine("PROJECTS/\n  SECURITY/ LogSentry, Recon Lite\n  AUTOMATION/ AI Automation Lab\n  EDUCATION/ CyberPlayground, YYYH\n  OPERATIONS/ Ops Monitor\nALL PATHS ARE PUBLIC PROJECT REFERENCES.");break;
+    case "history": termHistory.forEach((item,index)=>termLine(String(index+1).padStart(2,"0")+"  "+item));break;
     case "about": termLine("Vishwas Aithal develops public experiments in defensive security, automation and web engineering."); break;
     case "whoami": termLine("vishwasaithalz | returning technologist | learning by shipping"); break;
     case "ls": termLine("LogSentry/  recon-lite/  AI-Automation-Lab/  CyberPlayground/  YYYH/  KARMA-Ops-Monitor/"); break;
@@ -138,6 +170,22 @@ function command(value) {
 }
 $("#term-form").addEventListener("submit", e=>{e.preventDefault();const i=$("#term-input");const v=i.value;i.value="";command(v);});
 all("[data-command]").forEach(b=>b.addEventListener("click",()=>command(b.dataset.command)));
+$("#term-input").addEventListener("keydown",event=>{
+ const input=event.currentTarget;
+ if(event.key==="ArrowUp"){event.preventDefault();if(termHistory.length){historyCursor=Math.max(0,historyCursor-1);input.value=termHistory[historyCursor];}} 
+ else if(event.key==="ArrowDown"){event.preventDefault();historyCursor=Math.min(termHistory.length,historyCursor+1);input.value=termHistory[historyCursor]||"";}
+ else if(event.key==="Tab" && input.value.trim()){
+  const found=completions.find(candidate=>candidate.startsWith(input.value.trim().toLowerCase()));
+  if(found){event.preventDefault();input.value=found;}
+ }
+});
+$("#term-copy")?.addEventListener("click",async()=>{
+ try {
+  if(!navigator.clipboard?.writeText)throw new Error("Clipboard unavailable");
+  await navigator.clipboard.writeText($("#term-output").innerText);
+  termLine("Copied the local session text to clipboard.","system");
+ } catch {termLine("Clipboard unavailable. Select the terminal output to copy.","error");}
+});
 
 const canvas=$("#game"),ctx=canvas.getContext("2d");
 const cell=16, cols=35, rows=21;
