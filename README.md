@@ -22,7 +22,8 @@
 <a href="https://vishwasaithal.ai.studio/"><strong>🌐 PORTFOLIO</strong></a>
 </p>
 <!-- VISHWAS.EXE UNIFIED THEME END -->
-<p align="center"><sub>Original retro-computing artwork and source code. GitHub READMEs display the art; the actual boot buttons, keyboard controls and games run on GitHub Pages.</sub></p>
+<p align="center"><a href="https://vishwasaithalz.github.io/vishwasaithalz/"><img src="assets/brand/vishwas-boot.gif" width="100%" alt="Original animated CRT boot sequence, from early Windows through Blogger to Vishwas Aithal’s engineering workspace. Open the interactive BOOTDISK computer." /></a></p>
+<p align="center"><sub><strong>▶ BOOT REPLAY</strong> · The animation plays in the profile; interactive era controls, original games and the terminal open on GitHub Pages.</sub></p>
 
 
 
@@ -42,15 +43,9 @@
 <p align="center"><sub>1990s CRT &gt; 2000s Windows desktop &gt; 2013 Blogger &gt; today's engineering labs. One continuous story.</sub></p>
 
 <details>
-<summary><strong>💾 OPEN THE BONUS DISK | Full desktop illustration + animated BIOS tape</strong></summary>
-
-<details>
-<summary><strong>🎞 Open the original full-size retro desktop artwork</strong></summary>
+<summary><strong>💾 OPEN THE BONUS DISK | Full-size original retro desktop artwork</strong></summary>
 
 <p align="center"><img src="assets/retro-memory-desktop.svg" width="100%" alt="Original retro Windows desktop: Vishwas Aithal, the retro computing enthusiast, with childhood software, games, music player, cartoons and modern code" /></p>
-</details>
-
-<p align="center"><a href="https://vishwasaithalz.github.io/vishwasaithalz/"><img src="assets/brand/vishwas-boot.gif" width="100%" alt="Original animated CRT command-line boot sequence. Vishwas Aithal from the early Windows era to modern engineering. Open the interactive VISHWAS.EXE computer." /></a></p>
 
 </details>
 
