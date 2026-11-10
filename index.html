@@ -5,11 +5,11 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="color-scheme" content="light dark">
 <meta name="theme-color" content="#0b1b30">
-<meta name="description" content="Vishwas Aithal's personal internet. A premium portfolio meets a 2000s cybercafe desktop, with real defensive security projects, retro games, creative websites and a working mini terminal.">
+<meta name="description" content="Vishwas Aithal's personal internet. A tactile 4K-ready portfolio meets an interactive retro desktop, with real defensive security projects, retro games, creative websites and a working mini terminal.">
 <meta name="robots" content="index,follow">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Vishwas Aithal | Curious Since the Start Screen">
-<meta property="og:description" content="The best parts of a professional portfolio and a 2000s cybercafe, on one interactive GitHub Pages website.">
+<meta property="og:description" content="Professional work and a tactile late-1990s computing desktop, on one interactive GitHub Pages website.">
 <meta property="og:image" content="https://raw.githubusercontent.com/vishwasaithalz/vishwasaithalz/main/assets/brand/afterhours-cybercafe.svg">
 <title>Vishwas Aithal | Curious Since the Start Screen</title>
 <link rel="icon" type="image/svg+xml" href="./assets/brand/favicon.svg">
@@ -42,32 +42,33 @@
   <div>
    <div class="eyebrow">A PERSONAL INTERNET SPACE / EST. CURIOSITY</div>
    <h1 class="hero-title" id="headline">STILL<br><span class="outlined">PRESSING</span><br><span class="accent">START.</span></h1>
-   <p class="hero-copy">I'm <strong>Vishwas Aithal.</strong> From old Windows desktops, game folders and after-school cybercafés to practical cybersecurity tools, AI automation and the web. I build things worth opening twice.</p>
+   <p class="hero-copy">I’m <strong>Vishwas Aithal.</strong> From DOS prompts, Winamp skins and the first Blogger experiments to defensive cybersecurity, purposeful automation and the modern web. The wallpaper changed. The curiosity didn’t.</p>
    <div class="hero-cta">
-    <a class="pill primary" href="#work">SEE WHAT I BUILD <span aria-hidden="true">↗</span></a>
-    <a class="quiet" href="#sidequests">OR PLAY FIRST <span aria-hidden="true">↗</span></a>
+    <button type="button" class="pill primary" id="boot-start">▶ PRESS START <span aria-hidden="true">↗</span></button>
+    <a class="quiet" href="#work">SEE WHAT I BUILD <span aria-hidden="true">↗</span></a>
+    <a class="quiet" href="#sidequests">PLAY FIRST <span aria-hidden="true">↗</span></a>
    </div>
    <div class="quickfacts" aria-label="Interests"><span>DEFENSIVE SECURITY</span><span>WEB EXPERIENCES</span><span>AI AUTOMATION</span></div>
   </div>
-  <div class="desk-scene" id="desk-scene" aria-label="Interactive illustration of a vintage Windows computer">
-   <div class="desk-lines" aria-hidden="true"></div>
-   <div class="scene-note" aria-hidden="true">NOT A GENERIC<br>PORTFOLIO.<br>IT HAS A START MENU.</div>
-   <div class="pc-cabinet">
-    <div class="pc-screen">
-     <div class="desktop-top"><span>VISHWAS.EXE / BOOTDISK 1995</span><b>● ONLINE</b></div>
-     <div class="desktop-icons">
-      <a class="desk-icon" href="./arcade/" aria-label="Open the playable arcade"><span class="graphic" aria-hidden="true">🕹</span>ARCADE.EXE</a>
-      <a class="desk-icon" href="./memory/" aria-label="Open Memory OS"><span class="graphic" aria-hidden="true">💿</span>MEMORY.OS</a>
-      <a class="desk-icon" href="./museum/" aria-label="Open Internet Museum"><span class="graphic" aria-hidden="true">📼</span>MUSEUM</a>
-      <a class="desk-icon" href="./overload/" aria-label="Open Overload workbench"><span class="graphic" aria-hidden="true">🖥</span>OVERLOAD</a>
-     </div>
-     <div class="pc-taskbar"><button type="button" data-open-palette>▣ START</button><span>● NETWORK CONNECTED</span><time id="pc-clock">--:--</time></div>
-    </div>
-    <div class="pc-footer"><span><i class="pc-led" aria-hidden="true"></i>VISHWAS / PERSONAL COMPUTER</span><span>POWER ON</span></div>
-    <div class="pc-leg" aria-hidden="true"></div><div class="pc-foot" aria-hidden="true"></div>
+  <div class="desk-scene material-stage" id="desk-scene" data-era="1998" data-boot="ready">
+   <img class="hardware-scene" src="./assets/scene-workbench-4k.svg" loading="eager" decoding="async" fetchpriority="high" alt="Original detailed illustration of a well-used beige CRT workstation, mechanical keyboard, software disks, coffee and warm desk lamp.">
+   <div class="scene-readout" aria-label="Interactive BOOTDISK 1995 console">
+    <div class="scene-readout-top"><span id="era-count">RESTORE POINT 01 / 04</span><span class="live-led">● LIVE</span></div>
+    <h2 id="era-headline">1998 / DOS BOOT</h2>
+    <p id="era-summary">The Windows desktop was a universe. Every button had a story.</p>
+    <div class="scene-readout-links"><a href="./arcade/">PLAY ARCADE ↗</a><a href="./memory/">MEMORY OS ↗</a></div>
    </div>
-   <div class="scene-ticket" aria-hidden="true"><b>ONE MORE ROUND?</b>WINDOWS 95 → 11<br>2000s KID / 2026 BUILDER</div>
-   <div class="scene-sticker" aria-hidden="true">100%<br>CURIOUS</div>
+   <div class="scene-controls" role="group" aria-label="Choose computer era">
+    <div class="scene-label">BOOTDISK 1995 / RESTORE POINTS</div>
+    <div class="era-buttons">
+     <button type="button" data-era-select="1998" aria-pressed="true">98 / DOS</button>
+     <button type="button" data-era-select="2004" aria-pressed="false">04 / XP</button>
+     <button type="button" data-era-select="2013" aria-pressed="false">13 / WEB</button>
+     <button type="button" data-era-select="2026" aria-pressed="false">26 / NOW</button>
+    </div>
+    <button type="button" class="tour-button" id="era-tour" aria-pressed="false">▶ 8 SEC TOUR</button>
+   </div>
+   <span class="scene-corner tl" aria-hidden="true"></span><span class="scene-corner br" aria-hidden="true"></span>
   </div>
  </section>
  <div class="strip" aria-label="My technological interests"><div class="strip-track">
