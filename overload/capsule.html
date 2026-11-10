@@ -71,4 +71,4 @@ $('clear').addEventListener('click',()=>{if(!confirm('Erase this virtual disk fr
 $('export').addEventListener('click',()=>{let text='VISHWAS.EXE // VIRTUAL FLOPPY BACKUP\nGenerated locally: '+new Date().toLocaleString()+'\n\n'+disks.map((d,i)=>'=== DISK '+String.fromCharCode(65+i)+': '+d.title.toUpperCase()+' ===\n'+read(d.id).text+'\n').join('\n');try{let blob=new Blob([text],{type:'text/plain;charset=utf-8'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='VISHWAS-FLOPPY-TIME-CAPSULE.txt';document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),2000);$('status').textContent='Text backup export requested.'}catch(e){$('status').textContent='Export unavailable. Copy the note text manually.'}});
 selectDisk('a');
 })();
-</script></body></html>
+</script><script src="../assets/brand/new-tabs.js" defer></script></body></html>
