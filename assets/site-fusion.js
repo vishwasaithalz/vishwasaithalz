@@ -55,7 +55,7 @@ const eraList=[
  {year:'2013',headline:'2013 / BLOGGER',summary:'YinYangYoHackers. Publishing experiments to my first corner of the web.'},
  {year:'2026',headline:'2026 / STILL BUILDING',summary:'Real software, defensive security, web labs and automation.'}
 ];
-const eraButtons=$('[data-era-select]'),eraCounter=$('#era-count'),eraHeadline=$('#era-headline'),eraSummary=$('#era-summary'),tourButton=$('#era-tour'),bootButton=$('#boot-start');
+const eraButtons=Array.from(document.querySelectorAll('[data-era-select]')),eraCounter=$('#era-count'),eraHeadline=$('#era-headline'),eraSummary=$('#era-summary'),tourButton=$('#era-tour'),bootButton=$('#boot-start');
 const reduced=matchMedia('(prefers-reduced-motion: reduce)');
 let currentEra=0,tourId=null,tourCount=0,bootId=null;
 function selectEra(index){
