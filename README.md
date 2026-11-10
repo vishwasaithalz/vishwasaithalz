@@ -325,21 +325,6 @@ Six independent Vercel workbenches with source code, automated tests and daily H
 
 Six opt-in source-level enhancements now extend the original labs: bounded security event batches, SEO structure checks, read-only Kubernetes policy findings, gzip estimates, passkey counter review and accessible palette comparisons. These are testable software functions, not claims that all features are available in hosted interfaces.
 
-### 🧪 Six original interactive Product Lab apps
-
-**[▶ OPEN PRODUCT LAB 01](https://vishwasaithalz.github.io/vishwasaithalz/labs/)** · [Source and tests](https://github.com/vishwasaithalz/vishwasaithalz/tree/main/labs)
-
-| Working prototype | Interactive features |
-| :-- | :-- |
-| **ServiceDesk.exe** | Create tickets, filter queues, update statuses, summary counts and JSON export |
-| **LinkVault.exe** | Save and tag links, filter, favorite, remove and export |
-| **QuoteAtlas.exe** | Original sample quotes, user notes, favorites, copy and export |
-| **FlowFeed.exe** | Search 96 sample cards, filter topics and load progressively |
-| **[ImpactHub](https://vishwasaithalz.github.io/vishwasaithalz/labs/impact/)** | Fictional volunteer campaign board, skill filters and local hour pledges |
-| **[Commerce Sandbox](https://vishwasaithalz.github.io/vishwasaithalz/labs/commerce/)** | Stock-aware local cart, sample orders and exportable demo receipts |
-
-All four demos are static, local-first educational applications. They do not provide remote persistence, cloud authentication or real client data processing.
-
 ## 💌 11 / SEND A MESSAGE
 
 **Verified owner supplied social destinations:** [X: @vishwasaithalz](https://x.com/vishwasaithalz) · [LinkedIn](https://www.linkedin.com/in/vishwas-aithal/) · [Quora](https://www.quora.com/profile/Vishwasaithal) · [YouTube](https://www.youtube.com/@vishwasaithalz)
