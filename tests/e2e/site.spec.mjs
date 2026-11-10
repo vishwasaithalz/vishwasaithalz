@@ -207,5 +207,11 @@ test('Three redesigned README visuals decode as images without missing files',as
   expect(result.ok,'Unable to render '+asset).toBe(true);
   expect(result.width).toBeGreaterThan(1000);
   expect(result.height).toBeGreaterThan(200);
+  const height=Math.round(1200*result.height/result.width);
+  await page.setViewportSize({width:1200,height});
+  await page.setContent('<style>html,body{margin:0;background:#10161b}img{display:block;width:1200px;height:auto}</style><img src="'+asset+'" alt="Retro artwork">');
+  await page.locator('img').evaluate(img=>img.decode());
+  await mkdir('qa-screenshots',{recursive:true});
+  await page.screenshot({path:'qa-screenshots/visual-'+asset.split('/').pop().replace('.svg','.png'),animations:'disabled'});
  }
 });
