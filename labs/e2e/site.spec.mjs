@@ -97,3 +97,38 @@ test('Arcade story chapters and simulated terminal remain interactive',async({pa
  await page.locator('#term-input').press('ArrowUp');
  await expect(page.locator('#term-input')).toHaveValue('help');
 });
+
+
+test('Unified homepage retains studio and afterhours controls',async({page})=>{
+ const errors=[];
+ page.on('pageerror',err=>errors.push(err.message));
+ await page.goto(base+'/');
+ await expect(page.locator('body')).toHaveAttribute('data-mode','studio');
+ await page.locator('#mode-switch').click();
+ await expect(page.locator('body')).toHaveAttribute('data-mode','afterhours');
+ await expect(page.locator('#mode-switch')).toHaveAttribute('aria-pressed','true');
+ await page.locator('#tone').click();
+ await expect(page.locator('body')).toHaveAttribute('data-tone','ice');
+ await page.locator('button[data-filter="security"]').click();
+ await expect(page.locator('.project:visible')).toHaveCount(3);
+ await page.locator('button[data-filter="all"]').click();
+ await expect(page.locator('.project:visible')).toHaveCount(6);
+ await page.locator('#quick-launch').click();
+ await expect(page.locator('#quick-layer')).toHaveClass(/open/);
+ await page.locator('#quick-search').fill('Arcade');
+ await expect(page.locator('#quick-results a')).toHaveCount(1);
+ await page.keyboard.press('Escape');
+ await expect(page.locator('#quick-layer')).not.toHaveClass(/open/);
+ await expect(page.locator('#launch-grid a')).toHaveCount(4);
+ expect(errors).toEqual([]);
+});
+test('Unified homepage stays inside mobile viewport and runs the mini terminal',async({page})=>{
+ await page.setViewportSize({width:390,height:844});
+ await page.goto(base+'/');
+ await expect(page.locator('#headline')).toBeVisible();
+ await page.locator('#mini-term-input').fill('whoami');
+ await page.locator('#mini-term-form button').click();
+ await expect(page.locator('#mini-term-screen')).toContainText('VISHWAS AITHAL');
+ const width=await page.evaluate(()=>document.documentElement.scrollWidth);
+ expect(width).toBeLessThanOrEqual(398);
+});
