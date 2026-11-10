@@ -221,3 +221,19 @@ body[data-mode=afterhours] .material-stage:hover .hardware-scene{filter:saturate
  .floater{max-width:calc(100% - 24px)}
 }
 @media(prefers-reduced-motion:reduce){.material-stage[data-boot="booting"] .scene-readout{animation:none}.strip-track{animation:none}}
+
+
+/* Final tactile alignment: compact terminal, icon baselines, no accidental mobile pan. */
+html,body{max-width:100%;overflow-x:clip}
+.project-bottom{align-items:center}
+.project-arrow{flex:none;display:inline-grid;place-items:center;min-width:27px;min-height:27px;line-height:1;transform:translateY(-1px)}
+.quest small{min-height:34px;display:flex;align-items:center;line-height:1.45}
+.term-wrap{grid-template-columns:minmax(0,1fr) minmax(0,555px);max-width:1170px;margin-inline:auto}
+.terminal{min-height:247px;max-width:555px}
+.terminal-screen{min-height:145px;max-height:177px}
+.terminal-form{min-width:0}
+.terminal-form input{min-width:0}
+.material-stage{transform:rotateY(var(--ry,0deg)) rotateX(var(--rx,0deg));transition:transform .42s var(--ease)}
+@media (hover:hover) and (pointer:fine){.hero{perspective:1900px}}
+@media(max-width:760px){.term-wrap{grid-template-columns:minmax(0,1fr)}.terminal{max-width:100%}.material-stage{transform:none}}
+@media(prefers-reduced-motion:reduce){.material-stage{transition:none;transform:none}}
