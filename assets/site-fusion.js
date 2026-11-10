@@ -46,5 +46,67 @@ output.textContent+='\nC:\\VISHWAS> '+raw+'\n'+response+'\n';output.scrollTop=ou
 form.addEventListener('submit',e=>{e.preventDefault();run(inp.value);inp.value='';inp.focus()});
 inp.addEventListener('keydown',e=>{if(e.key==='ArrowUp'&&history.length){e.preventDefault();cursor=Math.max(0,cursor-1);inp.value=history[cursor]||''}if(e.key==='ArrowDown'&&history.length){e.preventDefault();cursor=Math.min(history.length,cursor+1);inp.value=history[cursor]||''}});
 const desk=$('#desk-scene');if(desk&&!matchMedia('(prefers-reduced-motion: reduce)').matches&&matchMedia('(hover:hover) and (pointer:fine)').matches){desk.addEventListener('pointermove',e=>{const r=desk.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;desk.style.setProperty('--ry',(-x*7).toFixed(2)+'deg');desk.style.setProperty('--rx',(y*5).toFixed(2)+'deg')});desk.addEventListener('pointerleave',()=>{desk.style.setProperty('--ry','0deg');desk.style.setProperty('--rx','0deg')})}
+
+// Original user-controlled 1998 > 2026 display. No automatic startup animation or sound.
+const scene=$('#desk-scene');
+const eraList=[
+ {year:'1998',headline:'1998 / DOS BOOT',summary:'A blinking cursor. A machine begging to be explored.'},
+ {year:'2004',headline:'2004 / XP & WINAMP',summary:'Windows XP, music skins, game folders and late-night discoveries.'},
+ {year:'2013',headline:'2013 / BLOGGER',summary:'YinYangYoHackers. Publishing experiments to my first corner of the web.'},
+ {year:'2026',headline:'2026 / STILL BUILDING',summary:'Real software, defensive security, web labs and automation.'}
+];
+const eraButtons=Array.from(document.querySelectorAll('[data-era-select]')),eraCounter=$('#era-count'),eraHeadline=$('#era-headline'),eraSummary=$('#era-summary'),tourButton=$('#era-tour'),bootButton=$('#boot-start');
+const reduced=matchMedia('(prefers-reduced-motion: reduce)');
+let currentEra=0,tourId=null,tourCount=0,bootId=null;
+function selectEra(index){
+ currentEra=(index+eraList.length)%eraList.length;
+ const era=eraList[currentEra];
+ scene.dataset.era=era.year;
+ eraCounter.textContent='RESTORE POINT '+String(currentEra+1).padStart(2,'0')+' / 04';
+ eraHeadline.textContent=era.headline;
+ eraSummary.textContent=era.summary;
+ eraButtons.forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.eraSelect===era.year)));
+}
+function stopTour(){
+ if(tourId!==null)clearInterval(tourId);
+ tourId=null;tourCount=0;
+ tourButton.setAttribute('aria-pressed','false');
+ tourButton.textContent='▶ 8 SEC TOUR';
+}
+function startTour(){
+ if(tourId!==null){stopTour();return}
+ if(document.hidden)return;
+ tourCount=0;
+ tourButton.setAttribute('aria-pressed','true');
+ tourButton.textContent='Ⅱ STOP TOUR';
+ if(reduced.matches){selectEra((currentEra+1)%4);stopTour();return}
+ tourId=setInterval(()=>{
+  if(document.hidden){stopTour();return}
+  selectEra((currentEra+1)%4);tourCount++;
+  if(tourCount>=4)stopTour();
+ },2000);
+}
+eraButtons.forEach((button,index)=>{
+ button.addEventListener('click',()=>{stopTour();selectEra(index)});
+ button.addEventListener('keydown',event=>{
+  if(event.key==='ArrowLeft'||event.key==='ArrowRight'){
+   event.preventDefault();stopTour();
+   const target=(index+(event.key==='ArrowRight'?1:3))%4;
+   selectEra(target);eraButtons[target].focus();
+  }
+ });
+});
+tourButton.addEventListener('click',startTour);
+document.addEventListener('visibilitychange',()=>{if(document.hidden)stopTour()});
+bootButton.addEventListener('click',()=>{
+ stopTour();clearTimeout(bootId);
+ scene.dataset.boot='booting';
+ eraHeadline.textContent='BOOTDISK 1995 / STARTING';
+ eraSummary.textContent='Loading the next chapter...';
+ if(window.innerWidth<820)scene.scrollIntoView({behavior:reduced.matches?'instant':'smooth',block:'center'});
+ bootId=setTimeout(()=>{scene.dataset.boot='booted';selectEra(0);startTour()},reduced.matches?15:640);
+});
+selectEra(0);
+
 let seq='';document.addEventListener('keydown',e=>{if(e.target instanceof HTMLInputElement||e.ctrlKey||e.metaKey)return;const valid=['ArrowUp','ArrowDown','ArrowLeft','ArrowRight','b','a'];if(!valid.includes(e.key))return;seq=(seq+'|'+e.key).split('|').slice(-10).join('|');if(seq.endsWith('ArrowUp|ArrowUp|ArrowDown|ArrowDown|ArrowLeft|ArrowRight|ArrowLeft|ArrowRight|b|a')){seq='';setMode('afterhours');const toast=$('#easter-egg');if(toast){toast.textContent='CHEAT CODE ACCEPTED. AFTER HOURS UNLOCKED.';toast.hidden=false;setTimeout(()=>toast.hidden=true,4500)}}});
 })();
