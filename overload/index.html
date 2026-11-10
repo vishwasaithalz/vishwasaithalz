@@ -119,7 +119,7 @@ body.vx-universe .termline{border:1px solid #597e7d;border-top:0;background:#091
 @media(max-width:950px){body.vx-universe .lcd{display:none}body.vx-universe .hero{grid-template-columns:1fr}}
 @media(max-width:660px){body.vx-universe .shell{padding-left:11px;padding-right:11px}body.vx-universe .hero h1{font-size:clamp(48px,12vw,78px)}body.vx-universe .dock{gap:7px}body.vx-universe .dock button{flex:1 1 120px;min-width:0}body.vx-universe .window{box-shadow:0 5px 14px #0006}body.vx-universe .bar{font-size:11px}}
 @media(prefers-reduced-motion:reduce){body.vx-universe .window,body.vx-universe button{transition:none!important}}
-</style><link rel="stylesheet" href="../assets/brand/immersive.css"></head>
+</style><link rel="stylesheet" href="../assets/brand/immersive.css"><link rel="stylesheet" href="../assets/brand/immersive-v2.css"></head>
 <body data-theme="default" class="vx-universe vx-overload"><nav class="vx-global-nav" aria-label="VISHWAS.EXE global navigation"><a class="vx-brand" href="../"><span aria-hidden="true">▦</span> <strong>VISHWAS.EXE</strong><span> / SYSTEM 98.NOW</span></a><div class="vx-links"><a href="../">💾 BOOT</a><a href="../memory/">🖥️ MEMORY</a><a href="../museum/">📼 MUSEUM</a><a href="../arcade/">🎮 ARCADE</a><a href="../overload/" aria-current="page">💥 OVERLOAD</a><a href="../overload/game-room.html">🕹️ GAMES</a><a href="../overload/tracker.html">🎚️ TRACKER</a><a href="../overload/network.html">📡 NETWORK</a><a href="../overload/capsule.html">💿 FLOPPY</a><a href="https://github.com/vishwasaithalz">⌨️ GITHUB</a></div><span class="vx-indicator">● ONLINE</span></nav>
 <div class="top"><span>▣ VISHWAS.EXE / PERSONAL PC / NOT AN ACTUAL OPERATING SYSTEM</span><span id="sysclock">SYSTEM READY</span></div>
 <main class="shell" id="main">
@@ -132,8 +132,14 @@ body.vx-universe .termline{border:1px solid #597e7d;border-top:0;background:#091
 </header>
 <section class="vx-workbench" aria-label="Physical retro workstation preview">
  <div class="vx-workbench-toolbar">
-  <span class="vx-immersive-label">VISHWAS AITHAL / PERSONAL COMPUTER / AFTER SCHOOL EDITION</span>
-  <button type="button" id="vx-monitor-power" aria-controls="vx-monitor-glass" aria-pressed="false">◯ DISPLAY STANDBY</button>
+  <span class="vx-immersive-label">VISHWAS AITHAL / AFTER SCHOOL WORKSTATION / 1998 EDITION</span>
+  <div class="vx-v2-actions" role="group" aria-label="Physical display controls">
+   <label for="vx-ambient-range">DESK LIGHT</label><input id="vx-ambient-range" type="range" min="8" max="100" value="75" aria-label="Adjust desk lighting">
+   <span class="vx-immersive-label" id="vx-light-status" role="status">LAMP 75%</span>
+   <button type="button" id="vx-lamp-toggle" aria-pressed="true">◉ TURN LAMP OFF</button>
+   <button type="button" id="vx-focus-toggle" aria-pressed="false">⛶ FOCUS DESKTOP</button>
+   <button type="button" id="vx-monitor-power" aria-controls="vx-monitor-glass" aria-pressed="false">◯ DISPLAY STANDBY</button>
+  </div>
  </div>
  <div class="vx-workbench-scene">
   <div class="vx-monitor-assembly">
@@ -390,4 +396,4 @@ document.addEventListener('keyup',e=>{if(e.key==='ArrowUp'||e.key==='w')held.up=
 // Optional site intro, already booted via user action. No auto-playing sound or forced overlay.
 status('VISHWAS.EXE ready. Press Alt+1, Alt+2, Alt+3 or Alt+4 for featured apps.');
 })();
-</script><script src="../assets/brand/immersive.js" defer></script><script src="../assets/brand/new-tabs.js" defer></script></body></html>
+</script><script src="../assets/brand/immersive.js" defer></script><script src="../assets/brand/immersive-v2.js" defer></script><script src="../assets/brand/new-tabs.js" defer></script></body></html>
