@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="440" viewBox="0 0 1200 440" role="img" aria-labelledby="t d"><title id="t">Vishwas Aithal Overload Computer, physical retro workstation</title><desc id="d">Original detailed illustration of an ivory CRT monitor on a wooden cybercafe desk with playable desktop shortcuts, a computer tower and an old floppy disk. No third party media.</desc>
+<defs>
+<linearGradient id="wall" x2="1" y2="1"><stop stop-color="#213438"/><stop offset=".45" stop-color="#4b4237"/><stop offset="1" stop-color="#101b23"/></linearGradient>
+<radialGradient id="lamp"><stop stop-color="#fff2b5" stop-opacity=".34"/><stop offset="1" stop-color="#fff2b5" stop-opacity="0"/></radialGradient>
+<linearGradient id="desk" x2="0" y2="1"><stop stop-color="#8e5b3d"/><stop offset=".23" stop-color="#69412a"/><stop offset="1" stop-color="#362420"/></linearGradient>
+<linearGradient id="bezel" x2="1" y2=".55"><stop stop-color="#fff1ce"/><stop offset=".35" stop-color="#cbbf9c"/><stop offset=".65" stop-color="#888577"/><stop offset="1" stop-color="#e1d2b0"/></linearGradient>
+<linearGradient id="screen" x2="1" y2="1"><stop stop-color="#4f9996"/><stop offset=".45" stop-color="#1a6378"/><stop offset="1" stop-color="#113047"/></linearGradient>
+<linearGradient id="tower" x2="1" y2=".5"><stop stop-color="#c4baa3"/><stop offset=".45" stop-color="#837e72"/><stop offset=".75" stop-color="#b1a58d"/><stop offset="1" stop-color="#6c695c"/></linearGradient>
+<filter id="shadow" x="-30%" y="-30%" width="160%" height="180%"><feGaussianBlur stdDeviation="13"/></filter>
+<pattern id="grain" width="35" height="35" patternUnits="userSpaceOnUse"><path d="M1 3h32M9 18h17M2 32h20" stroke="#e4bf83" stroke-opacity=".09"/><path d="M0 14h18M24 27h10" stroke="#000" stroke-opacity=".17"/></pattern>
+<pattern id="scan" width="3" height="5" patternUnits="userSpaceOnUse"><path d="M0 4.5h1200" stroke="#081925" stroke-opacity=".22"/></pattern>
+<style>@keyframes led{50%{opacity:.35}}.led{animation:led 2.8s ease-in-out infinite}@media(prefers-reduced-motion:reduce){.led{animation:none}}</style>
+</defs>
+<rect width="1200" height="440" rx="11" fill="url(#wall)"/><rect width="1200" height="440" fill="url(#grain)"/><ellipse cx="457" cy="76" rx="590" ry="280" fill="url(#lamp)"/>
+<path d="M0 367h1200v73H0z" fill="url(#desk)"/><path d="M0 367h1200" stroke="#e3af77" stroke-width="5"/><path d="M0 383h1200" stroke="#1e1716" opacity=".65" stroke-width="3"/>
+<ellipse cx="476" cy="368" rx="354" ry="24" fill="#080d13" opacity=".65" filter="url(#shadow)"/>
+<g transform="translate(135 32)">
+<path d="M32 0H642Q671 0 673 28V293Q673 318 649 318H29Q0 318 0 291V30Q0 0 32 0" fill="url(#bezel)" stroke="#625a4c" stroke-width="5"/>
+<path d="M42 25H629Q650 25 650 45V247Q650 272 625 272H45Q22 272 22 251V47Q22 25 42 25" fill="#273239" stroke="#716a5a" stroke-width="3"/>
+<rect x="37" y="39" width="600" height="216" rx="24" fill="url(#screen)" stroke="#182b32" stroke-width="6"/>
+<rect x="45" y="47" width="584" height="200" rx="17" fill="url(#scan)"/>
+<rect x="49" y="49" width="577" height="24" fill="#245b94"/><text x="61" y="66" fill="#fff" font-size="13" font-family="Consolas,monospace" font-weight="700">▣ VISHWAS.EXE / C:&#92;PROGRAM FILES</text>
+<g fill="#d5efe7" font-family="Consolas,monospace" font-size="12" text-anchor="middle">
+<rect x="69" y="97" width="49" height="46" rx="3" fill="#226487" stroke="#a4d4d9"/><text x="93" y="127" font-size="26">▦</text><text x="93" y="157">MINES</text>
+<rect x="147" y="97" width="49" height="46" rx="3" fill="#226487" stroke="#a4d4d9"/><text x="171" y="127" font-size="26">▣</text><text x="171" y="157">PONG</text>
+<rect x="69" y="175" width="49" height="46" rx="3" fill="#226487" stroke="#a4d4d9"/><text x="93" y="205" font-size="26">✎</text><text x="93" y="235">PAINT</text>
+<rect x="147" y="175" width="49" height="46" rx="3" fill="#226487" stroke="#a4d4d9"/><text x="171" y="205" font-size="26">▤</text><text x="171" y="235">BUILD</text>
+</g>
+<rect x="239" y="83" width="341" height="137" fill="#d6d8cc" stroke="#f9eee0" stroke-width="4"/>
+<rect x="241" y="85" width="337" height="21" fill="#1f5891"/><text x="252" y="99" fill="#fff" font-size="12" font-family="Consolas,monospace">📁 MY COMPUTER / START MENU</text>
+<g fill="#17364a" font-family="Consolas,monospace" font-size="13"><text x="259" y="129">▸ COMMAND.COM</text><text x="259" y="153">▸ DEFRAG.EXE</text><text x="259" y="177">▸ NETWORK.EXE</text><text x="259" y="201">▸ MORE PROGRAMS ...</text></g>
+<rect x="46" y="230" width="581" height="22" fill="#8dc4c2"/><rect x="55" y="233" width="96" height="16" fill="#baddce" stroke="#5e8a8d"/><text x="65" y="245" font-family="Consolas,monospace" font-size="12" font-weight="700" fill="#143b45">▣ START</text><text x="537" y="245" font-size="11" font-family="Consolas,monospace" fill="#123e45">ONLINE</text>
+<path d="M58 42Q249 18 456 49" fill="none" stroke="#fef8d7" stroke-opacity=".20" stroke-width="19"/>
+<text x="29" y="302" font-size="13" font-weight="700" font-family="Consolas,monospace" fill="#46483e">VISHWAS PERSONAL COMPUTER</text><circle class="led" cx="627" cy="294" r="5" fill="#59e78a"/><text x="644" y="299" fill="#444d45" font-size="10" font-family="Consolas,monospace">PWR</text>
+<path d="M285 318h104v23H285z" fill="#b6aa91" stroke="#6c665c"/><ellipse cx="337" cy="347" rx="183" ry="13" fill="#aa9d84" stroke="#5c5549" stroke-width="4"/>
+</g>
+<g transform="translate(862 146)"><rect x="0" y="0" width="166" height="218" rx="11" fill="url(#tower)" stroke="#4c4b43" stroke-width="4"/>
+<rect x="17" y="18" width="132" height="28" rx="4" fill="#aaa698" stroke="#6b695d"/><rect x="26" y="28" width="105" height="4" fill="#55564f"/>
+<rect x="17" y="62" width="132" height="67" rx="5" fill="#77786b" stroke="#55584e"/><path d="M24 75h116M24 85h116M24 95h116" stroke="#b5ad97"/>
+<rect x="17" y="144" width="133" height="53" fill="#c9c1aa" stroke="#777369"/><circle cx="49" cy="171" r="13" fill="#666c61" stroke="#e1dbc3" stroke-width="3"/><circle class="led" cx="99" cy="169" r="5" fill="#64e9a8"/><text x="119" y="172" font-size="10" fill="#54594e" font-family="Consolas,monospace">ON</text>
+</g>
+<g transform="translate(713 340) rotate(-8)"><path d="M0 0h112l9 59H0z" fill="#303d49" stroke="#131e25" stroke-width="4"/><rect x="29" y="3" width="48" height="16" fill="#b9bdb7"/><rect x="11" y="28" width="94" height="24" fill="#ece1c7"/><text x="58" y="44" text-anchor="middle" font-size="11" font-family="Consolas,monospace" fill="#304444">DISK 02</text></g>
+<text x="866" y="67" fill="#f6e4bf" font-size="14" font-weight="700" font-family="Consolas,monospace">EXTRA PACK 02</text>
+<text x="866" y="106" fill="#fff3d9" font-size="33" font-weight="900" font-family="Arial,sans-serif">OVERLOAD</text><text x="866" y="139" fill="#bfe5d5" font-size="15" font-family="Consolas,monospace">OPEN THE COMPUTER</text>
+<rect x="8" y="8" width="1184" height="424" rx="6" fill="none" stroke="#f2dfb9" stroke-opacity=".45" stroke-width="2"/>
+</svg>
