@@ -348,3 +348,27 @@ body.vx-universe.vx-museum .vx-cabinet-drawer[aria-pressed=true] .vx-cabinet-fil
  body.vx-universe.vx-museum .vx-cabinet-drawer{transition:none!important}
  body.vx-universe.vx-overload .vx-v2-keyboard{transform:none!important}
 }
+
+/* Native file and tool icons, without generic emoji artwork. */
+body.vx-universe.vx-overload .vx-screen-icons .vx-d-icon{
+ position:relative;display:grid;place-items:end center;
+ padding:0 0 5px;color:#eaf4e9;
+ font:800 13px/1 Consolas,monospace;letter-spacing:-.02em;
+ background:linear-gradient(165deg,#c7ddd8 0 15%,#53949a 16% 32%,#2d627c 33% 100%);
+ border:1px solid #b8d2d1;border-top-color:#e6f6ef;border-left-color:#e2ebe0;
+ border-radius:2px;
+ box-shadow:inset -3px -3px #082d49ba,2px 3px #09273cb8;
+ text-shadow:1px 1px #16354b;
+}
+body.vx-universe.vx-overload .vx-screen-icons .vx-d-icon:before{
+ content:"";position:absolute;top:5px;left:6px;right:6px;height:4px;
+ border-top:1px solid #e4f0db;background:#608d87;
+}
+body.vx-universe.vx-overload .vx-screen-icons .vx-d-icon:after{
+ content:"EXE";position:absolute;top:13px;right:4px;color:#d1e2d5;
+ font:700 6px Consolas,monospace;letter-spacing:.03em
+}
+@media(max-width:550px){
+ body.vx-universe.vx-overload .vx-screen-icons .vx-d-icon{font-size:10px;padding-bottom:4px}
+ body.vx-universe.vx-overload .vx-screen-icons .vx-d-icon:after{font-size:5px;top:10px}
+}
