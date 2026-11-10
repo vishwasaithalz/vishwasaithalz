@@ -119,8 +119,8 @@ body.vx-universe .termline{border:1px solid #597e7d;border-top:0;background:#091
 @media(max-width:950px){body.vx-universe .lcd{display:none}body.vx-universe .hero{grid-template-columns:1fr}}
 @media(max-width:660px){body.vx-universe .shell{padding-left:11px;padding-right:11px}body.vx-universe .hero h1{font-size:clamp(48px,12vw,78px)}body.vx-universe .dock{gap:7px}body.vx-universe .dock button{flex:1 1 120px;min-width:0}body.vx-universe .window{box-shadow:0 5px 14px #0006}body.vx-universe .bar{font-size:11px}}
 @media(prefers-reduced-motion:reduce){body.vx-universe .window,body.vx-universe button{transition:none!important}}
-</style></head>
-<body data-theme="default" class="vx-universe"><nav class="vx-global-nav" aria-label="VISHWAS.EXE global navigation"><a class="vx-brand" href="../"><span aria-hidden="true">▦</span> <strong>VISHWAS.EXE</strong><span> / SYSTEM 98.NOW</span></a><div class="vx-links"><a href="../">💾 BOOT</a><a href="../memory/">🖥️ MEMORY</a><a href="../museum/">📼 MUSEUM</a><a href="../arcade/">🎮 ARCADE</a><a href="../overload/" aria-current="page">💥 OVERLOAD</a><a href="../overload/game-room.html">🕹️ GAMES</a><a href="../overload/tracker.html">🎚️ TRACKER</a><a href="../overload/network.html">📡 NETWORK</a><a href="../overload/capsule.html">💿 FLOPPY</a><a href="https://github.com/vishwasaithalz">⌨️ GITHUB</a></div><span class="vx-indicator">● ONLINE</span></nav>
+</style><link rel="stylesheet" href="../assets/brand/immersive.css"></head>
+<body data-theme="default" class="vx-universe vx-overload"><nav class="vx-global-nav" aria-label="VISHWAS.EXE global navigation"><a class="vx-brand" href="../"><span aria-hidden="true">▦</span> <strong>VISHWAS.EXE</strong><span> / SYSTEM 98.NOW</span></a><div class="vx-links"><a href="../">💾 BOOT</a><a href="../memory/">🖥️ MEMORY</a><a href="../museum/">📼 MUSEUM</a><a href="../arcade/">🎮 ARCADE</a><a href="../overload/" aria-current="page">💥 OVERLOAD</a><a href="../overload/game-room.html">🕹️ GAMES</a><a href="../overload/tracker.html">🎚️ TRACKER</a><a href="../overload/network.html">📡 NETWORK</a><a href="../overload/capsule.html">💿 FLOPPY</a><a href="https://github.com/vishwasaithalz">⌨️ GITHUB</a></div><span class="vx-indicator">● ONLINE</span></nav>
 <div class="top"><span>▣ VISHWAS.EXE / PERSONAL PC / NOT AN ACTUAL OPERATING SYSTEM</span><span id="sysclock">SYSTEM READY</span></div>
 <main class="shell" id="main">
 <header class="hero">
@@ -130,6 +130,48 @@ body.vx-universe .termline{border:1px solid #597e7d;border-top:0;background:#091
 <div class="controls"><span class="chip">🎮 4 PLAYABLE GAMES ACROSS TWO ROOMS</span><span class="chip">🎨 PIXEL PAINT</span><span class="chip">💻 PC BUILDER</span><span class="chip">🖥 BIOS + LOGIN</span><span class="chip">📡 PUBLIC GITHUB FEED</span><span class="chip">🌐 NETWORK MAP</span><span class="chip">💾 FLOPPY TIME CAPSULE</span><span class="chip">🎚 ORIGINAL AUDIO TRACKER</span></div></div>
 <div class="lcd" aria-hidden="true"><big>VISHWAS.EXE</big>CPU : CURIOSITY 100%<br>RAM : MEMORIES 102+<br>DISK : IDEAS INFINITE<i></i>STATUS : STILL BUILDING</div>
 </header>
+<section class="vx-workbench" aria-label="Physical retro workstation preview">
+ <div class="vx-workbench-toolbar">
+  <span class="vx-immersive-label">VISHWAS AITHAL / PERSONAL COMPUTER / AFTER SCHOOL EDITION</span>
+  <button type="button" id="vx-monitor-power" aria-controls="vx-monitor-glass" aria-pressed="false">◯ DISPLAY STANDBY</button>
+ </div>
+ <div class="vx-workbench-scene">
+  <div class="vx-monitor-assembly">
+   <div class="vx-monitor-frame">
+    <div class="vx-monitor-glass" id="vx-monitor-glass">
+     <div class="vx-screen-top"><span>▣ VISHWAS.EXE / C:\DESKTOP</span><span>□ ×</span></div>
+     <div class="vx-screen-desktop">
+      <div class="vx-screen-icons" aria-label="Workstation program shortcuts">
+       <a href="#mines"><span class="vx-d-icon" aria-hidden="true">💣</span>MINES.EXE</a>
+       <a href="#pong-app"><span class="vx-d-icon" aria-hidden="true">🏓</span>PONG.EXE</a>
+       <a href="#paint-app"><span class="vx-d-icon" aria-hidden="true">🎨</span>PAINT.EXE</a>
+       <a href="#builder-app"><span class="vx-d-icon" aria-hidden="true">🖥</span>PC BUILDER</a>
+      </div>
+      <div class="vx-explorer" aria-label="Retro program explorer">
+       <div class="vx-explorer-title"><span>📁 MY PROGRAMS</span><span>□ ×</span></div>
+       <div class="vx-explorer-path">C:\VISHWAS\PROGRAM FILES</div>
+       <div class="vx-explorer-list">
+        <a href="#terminal-app">⌨ COMMAND.COM <span>↗</span></a>
+        <a href="#defrag-app">💽 DEFRAG.EXE <span>↗</span></a>
+        <a href="#network-app">📡 NETWORK.EXE <span>↗</span></a>
+        <a href="#shortcuts">📂 MORE PROGRAMS <span>↗</span></a>
+       </div>
+      </div>
+     </div>
+     <div class="vx-screen-taskbar"><span class="vx-screen-start">▣ START</span><span>8 PROGRAMS / READY</span><span>▴</span></div>
+    </div>
+    <div class="vx-bezel-foot"><span>◉ VISHWAS PERSONAL COMPUTER</span><span><i class="vx-power-led"></i>POWER</span></div>
+   </div>
+   <div class="vx-monitor-neck" aria-hidden="true"></div><div class="vx-monitor-base" aria-hidden="true"></div>
+  </div>
+  <aside class="vx-desk-notes" aria-label="Workbench memory props">
+   <div class="vx-paper-note"><strong>THE PC THAT STARTED IT ALL</strong><p>Open a desktop shortcut. Every icon leads to a working tool below. No fake installer. No pretend metrics.</p></div>
+   <div class="vx-floppy" aria-hidden="true"><div class="vx-floppy-label">VISHWAS.EXE<br>DISK 02<br>1995 TO NOW</div></div>
+  </aside>
+ </div>
+ <div class="vx-desk-surface" aria-hidden="true"></div>
+ <div class="vx-vintage-caption">REAL BROWSER PROGRAMS BELOW / MONITOR POWER IS VISUAL ONLY / ALL GAME CONTROLS REMAIN AVAILABLE</div>
+</section>
 <nav class="dock" aria-label="Overload controls">
 <button id="boot-again" title="Play original boot animation">💾 BIOS BOOT</button>
 <button id="show-login" title="Show fake nostalgic login screen">🔐 XP LOGIN</button>
@@ -348,4 +390,4 @@ document.addEventListener('keyup',e=>{if(e.key==='ArrowUp'||e.key==='w')held.up=
 // Optional site intro, already booted via user action. No auto-playing sound or forced overlay.
 status('VISHWAS.EXE ready. Press Alt+1, Alt+2, Alt+3 or Alt+4 for featured apps.');
 })();
-</script></body></html>
+</script><script src="../assets/brand/immersive.js" defer></script><script src="../assets/brand/new-tabs.js" defer></script></body></html>
