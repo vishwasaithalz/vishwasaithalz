@@ -4,9 +4,9 @@
 
 # 💾 VISHWAS AITHAL // BOOTDISK 1995
 
-### VISHWAS.EXE / PSYCHKARMA · BOOTDISK 1995 · SYSTEM ONLINE
+### BOOTDISK 1995 · VISHWAS.EXE · SYSTEM ONLINE
 
-<a href="https://vishwasaithalz.github.io/vishwasaithalz/"><img src="assets/scene-workbench-4k.svg" width="100%" alt="Vishwas Aithal original 4K-scalable, richly detailed retro PC workstation artwork. PRESS START opens the real interactive BOOTDISK 1995 on GitHub Pages." /></a>
+<a href="https://vishwasaithalz.github.io/vishwasaithalz/"><img src="assets/brand/afterhours-cybercafe.svg" width="100%" alt="Vishwas Aithal original illustrated retro desktop computer. PRESS START to open the interactive BOOTDISK 1995 experience." /></a>
 
 ### [▶ PRESS START · BOOT THE COMPUTER](https://vishwasaithalz.github.io/vishwasaithalz/)
 
@@ -19,11 +19,11 @@
 <a href="https://vishwasaithalz.github.io/vishwasaithalz/arcade/"><strong>🎮 PLAY THE ARCADE</strong></a> &nbsp;·&nbsp;
 <a href="https://vishwasaithalz.github.io/vishwasaithalz/overload/"><strong>🖥️ OPEN THE WORKBENCH</strong></a> &nbsp;·&nbsp;
 <a href="https://github.com/vishwasaithalz?tab=repositories"><strong>⌨️ SOURCE CODE</strong></a> &nbsp;·&nbsp;
-<a href="https://vishwasaithalz.github.io/vishwasaithalz/"><strong>🌐 ONE LIVE PORTFOLIO</strong></a>
+<a href="https://vishwasaithal.ai.studio/"><strong>🌐 PORTFOLIO</strong></a>
 </p>
 <!-- VISHWAS.EXE UNIFIED THEME END -->
 <p align="center"><a href="https://vishwasaithalz.github.io/vishwasaithalz/"><img src="assets/brand/vishwas-boot.gif" width="100%" alt="Original animated CRT boot sequence, from early Windows through Blogger to Vishwas Aithal’s engineering workspace. Open the interactive BOOTDISK computer." /></a></p>
-<p align="center"><sub><strong>▶ BOOT REPLAY</strong> · The animation plays in the profile. PRESS START opens one GitHub Pages experience with four interactive eras, the real games and the local simulated terminal.</sub></p>
+<p align="center"><sub><strong>▶ BOOT REPLAY</strong> · The animation plays in the profile; interactive era controls, original games and the terminal open on GitHub Pages.</sub></p>
 
 
 
@@ -36,7 +36,7 @@
 <a href="https://www.youtube.com/@vishwasaithalz"><img src="assets/nav/youtube.svg" width="23%" alt="Visit YouTube" /></a>
 </p>
 
-> **I started by exploring every corner of a Windows desktop. Now the BOOTDISK runs as one live GitHub Pages site.** Windows desktops, Winamp playlists, virtual drives, compressed game folders, Saturday morning cartoons, a 2013 tech blog, and a stubborn curiosity about how computers work. Today that curiosity shows up as defensive security tools, websites, automation and experiments you can actually inspect. **The wallpaper changed. The curiosity didn't.**
+> **I started by exploring every corner of a Windows desktop.** Windows desktops, Winamp playlists, virtual drives, compressed game folders, Saturday morning cartoons, a 2013 tech blog, and a stubborn curiosity about how computers work. Today that curiosity shows up as defensive security tools, websites, automation and experiments you can actually inspect. **The wallpaper changed. The curiosity didn't.**
 
 <p align="center"><img src="assets/brand/era-boot-sequence.svg" width="100%" alt="Vishwas Aithal's visual boot history, from 1990s green phosphor CRT and DOS, through 2000s Windows XP and Winamp, to the 2013 YinYangYoHackers blog and modern security, web and automation engineering" /></p>
 
@@ -44,8 +44,6 @@
 
 <details>
 <summary><strong>💾 OPEN THE BONUS DISK | Full-size original retro desktop artwork</strong></summary>
-
-<p align="center"><img src="assets/brand/afterhours-cybercafe.svg" width="100%" alt="Original after-hours desktop art retained in the bonus disk" /></p>
 
 <p align="center"><img src="assets/retro-memory-desktop.svg" width="100%" alt="Original retro Windows desktop: Vishwas Aithal, the retro computing enthusiast, with childhood software, games, music player, cartoons and modern code" /></p>
 
@@ -286,7 +284,8 @@ The Vishwas Aithal Arcade includes an original physics pinball table, Snake, a l
 <a href="https://vishwasaithalz.github.io/vishwasaithalz/arcade/#roulette"><img src="assets/nav/arcade.svg" width="47%" alt="Explore the random real-project arcade" /></a>
 </p>
 
-### 🎞 Six project-specific original animated GIFs
+<details>
+<summary><strong>🎞 Open six project-specific original animated GIFs</strong></summary>
 
 <p align="center">
 <a href="https://github.com/vishwasaithalz/LogSentry"><img src="assets/arcade-gifs/logsentry.gif" width="31%" alt="LogSentry event scanner animation" /></a>
@@ -298,6 +297,8 @@ The Vishwas Aithal Arcade includes an original physics pinball table, Snake, a l
 </p>
 
 Each clip depicts the project's theme. Graphics do not represent live security findings, simulated user data or measured production performance.
+
+</details>
 
 ## 🎞️ 10 / SCREENSAVER VAULT
 
