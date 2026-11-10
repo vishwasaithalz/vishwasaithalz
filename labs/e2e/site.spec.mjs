@@ -206,7 +206,9 @@ test('UHD workstation keeps project links and controls inside viewport',async({p
  await expect(page.locator('#vx-focus-toggle')).toBeVisible();
  await expect(page.locator('.vx-explorer-list a')).toHaveCount(4);
  await expect(page.locator('.vx-v2-keyboard')).toBeVisible();
+ await page.screenshot({path:'qa-screenshots/overload-4k.png',animations:'disabled'});
  await page.goto(base+'/museum/');
  await expect(page.locator('#vx-folder-buttons button')).toHaveCount(8);
  await expect(page.locator('[data-vx-drawer]')).toHaveCount(4);
+ await page.screenshot({path:'qa-screenshots/museum-4k.png',animations:'disabled'});
 });
