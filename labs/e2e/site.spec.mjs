@@ -203,12 +203,16 @@ test('UHD workstation keeps project links and controls inside viewport',async({p
  await page.setViewportSize({width:3840,height:2160});
  await page.goto(base+'/overload/');
  await expect(page.locator('.vx-workbench')).toBeVisible();
+ const workstationBounds=await page.locator('.vx-workbench').boundingBox();
+ expect(workstationBounds.width).toBeGreaterThan(3000);
  await expect(page.locator('#vx-focus-toggle')).toBeVisible();
  await expect(page.locator('.vx-explorer-list a')).toHaveCount(4);
  await expect(page.locator('.vx-v2-keyboard')).toBeVisible();
  await page.screenshot({path:'qa-screenshots/overload-4k.png',animations:'disabled'});
  await page.goto(base+'/museum/');
  await expect(page.locator('#vx-folder-buttons button')).toHaveCount(8);
+ const archiveBounds=await page.locator('.vx-archive-foyer').boundingBox();
+ expect(archiveBounds.width).toBeGreaterThan(3000);
  await expect(page.locator('[data-vx-drawer]')).toHaveCount(4);
  await page.screenshot({path:'qa-screenshots/museum-4k.png',animations:'disabled'});
 });
