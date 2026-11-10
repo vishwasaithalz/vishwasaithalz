@@ -78,13 +78,42 @@ body.vx-universe .game-cards button{border-radius:3px;box-shadow:inset 1px 1px #
 @media(max-width:850px){body.vx-universe .header nav.controls{max-width:none;width:100%;grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:520px){body.vx-universe .wrap{padding-left:12px;padding-right:12px}body.vx-universe .header nav.controls{grid-template-columns:1fr 1fr}body.vx-universe .header nav.controls .btn{font-size:12px}body.vx-universe .window{box-shadow:0 6px 14px #0005}body.vx-universe .grid{grid-template-columns:repeat(auto-fill,minmax(142px,1fr))}}
 @media(prefers-reduced-motion:reduce){body.vx-universe .card,body.vx-universe .btn{transition:none!important}}
-</style></head>
-<body data-theme="default" class="vx-universe"><nav class="vx-global-nav" aria-label="VISHWAS.EXE global navigation"><a class="vx-brand" href="../"><span aria-hidden="true">▦</span> <strong>VISHWAS.EXE</strong><span> / SYSTEM 98.NOW</span></a><div class="vx-links"><a href="../">💾 BOOT</a><a href="../memory/">🖥️ MEMORY</a><a href="../museum/" aria-current="page">📼 MUSEUM</a><a href="../arcade/">🎮 ARCADE</a><a href="../overload/">💥 OVERLOAD</a><a href="../overload/game-room.html">🕹️ GAMES</a><a href="../overload/tracker.html">🎚️ TRACKER</a><a href="../overload/network.html">📡 NETWORK</a><a href="../overload/capsule.html">💿 FLOPPY</a><a href="https://github.com/vishwasaithalz">⌨️ GITHUB</a></div><span class="vx-indicator">● ONLINE</span></nav>
+</style><link rel="stylesheet" href="../assets/brand/immersive.css"></head>
+<body data-theme="default" class="vx-universe vx-museum"><nav class="vx-global-nav" aria-label="VISHWAS.EXE global navigation"><a class="vx-brand" href="../"><span aria-hidden="true">▦</span> <strong>VISHWAS.EXE</strong><span> / SYSTEM 98.NOW</span></a><div class="vx-links"><a href="../">💾 BOOT</a><a href="../memory/">🖥️ MEMORY</a><a href="../museum/" aria-current="page">📼 MUSEUM</a><a href="../arcade/">🎮 ARCADE</a><a href="../overload/">💥 OVERLOAD</a><a href="../overload/game-room.html">🕹️ GAMES</a><a href="../overload/tracker.html">🎚️ TRACKER</a><a href="../overload/network.html">📡 NETWORK</a><a href="../overload/capsule.html">💿 FLOPPY</a><a href="https://github.com/vishwasaithalz">⌨️ GITHUB</a></div><span class="vx-indicator">● ONLINE</span></nav>
 <div class="boot"><span>VISHWAS.EXE / MEMORY.MUSEUM / PUBLIC ARCHIVE</span><span id="clock">SYSTEM READY</span></div>
 <main class="wrap">
 <header class="header"><div><div class="kicker">PSYCHKARMA / BOOTDISK 1995 / EXTRA PACK 01</div><h1>THE INTERNET<br><span>MUSEUM.EXE</span></h1><p class="lead">From cybercafé shortcuts and Winamp skins to a 2013 tech blog and today's Python, security and automation workbench. A searchable nostalgia museum with original interactive toys, no tracking and no copyrighted downloads.</p><p class="small">New expansion: <a href="../overload/"><strong>OVERLOAD 2.0</strong></a> includes Minesweeper, Pong, pixel painting, PC assembly, BIOS, screensaver and more.</p>
 <div><span class="badge">199X TO NOW</span><span class="badge">102 MEMORY FILES</span><span class="badge">LOCAL-ONLY INTERACTIONS</span><span class="badge">VISHWAS AITHAL</span></div></div>
 <nav class="controls" aria-label="Quick links"><a class="btn primary" href="../overload/">💥 OVERLOAD 2.0</a><a class="btn" href="../memory/">🖥️ BOOT MEMORY OS</a><a class="btn" href="../arcade/">🎮 PLAY ARCADE</a><a class="btn" href="https://github.com/vishwasaithalz">⌨️ GITHUB</a></nav></header>
+<section class="vx-archive-foyer" aria-label="Interactive archive reading room">
+ <div class="vx-foyer-top"><strong class="vx-immersive-label">THE INTERNET MUSEUM / FILE ROOM 1995 TO 2026</strong><span class="vx-immersive-label">102 INDEX CARDS / 7 COLLECTIONS</span></div>
+ <div class="vx-foyer-main">
+  <div class="vx-archive-prop" aria-hidden="true">
+   <div class="vx-archive-cabinet">
+    <div class="vx-archive-plate">PROPERTY OF VISHWAS AITHAL / MEMORY ARCHIVE</div>
+    <div class="vx-cabinet-drawer"><div class="vx-cabinet-handle"></div><div class="vx-cabinet-file">CABINET A / 1990s</div></div>
+    <div class="vx-cabinet-drawer"><div class="vx-cabinet-handle"></div><div class="vx-cabinet-file">CABINET B / 2000s</div></div>
+   </div>
+   <div class="vx-archive-disk"><span>FILES<br>102.EXE</span></div>
+  </div>
+  <div class="vx-foyer-copy">
+   <div class="vx-immersive-label">OPEN THE CABINET / READ THE INTERNET YOU GREW UP WITH</div>
+   <h2>EVERY FILE HAS<br>A STORY.</h2>
+   <p>This is a living index of old desktops, media players, games, cartoons, the early internet and the code built since then. Choose a period or open a collection. The original archive, favorites and playable exhibits remain below.</p>
+   <div class="vx-immersive-label">01 / SELECT AN ERA</div>
+   <div class="vx-era-buttons" aria-label="Choose an archive period">
+    <button type="button" data-vx-era="all" aria-pressed="true">ALL YEARS</button>
+    <button type="button" data-vx-era="90s" aria-pressed="false">1990s</button>
+    <button type="button" data-vx-era="00s" aria-pressed="false">2000s</button>
+    <button type="button" data-vx-era="10s" aria-pressed="false">2010s</button>
+    <button type="button" data-vx-era="20s" aria-pressed="false">2020s</button>
+   </div>
+   <div class="vx-immersive-label">02 / OPEN A FILE DRAWER</div>
+   <div class="vx-folder-buttons" id="vx-folder-buttons" aria-label="Choose a museum collection"></div>
+   <p id="vx-foyer-status" role="status" aria-live="polite">Viewing the complete collection.</p>
+  </div>
+ </div>
+</section>
 <section class="window" aria-labelledby="archive-heading"><div class="titlebar"><span id="archive-heading">📁 C:\VISHWAS\ARCHIVE\*.*</span><span>[ SEARCHABLE ]</span></div><div class="window-inner">
 <div class="controls">
 <label class="visually-hidden" for="search">Search archive</label><input id="search" type="search" placeholder="🔎 Search memories: Winamp, XP, Counter-Strike..." autocomplete="off">
@@ -175,4 +204,4 @@ let bars='';for(let i=0;i<30;i++)bars+='<i style="height:'+(18+(i*19)%52)+'%;ani
 $('eq-toggle').addEventListener('click',e=>{let el=$('equalizer'),playing=el.classList.toggle('playing');e.currentTarget.setAttribute('aria-pressed',String(playing));e.currentTarget.textContent=playing?'❚❚ Pause visualizer':'▶ Start visualizer'});
 const clock=()=>{$('clock').textContent=new Date().toLocaleTimeString([], {hour:'2-digit',minute:'2-digit'})};clock();setInterval(clock,30000);
 readStore();render();startMatch();showQuiz();let hash=location.hash.match(/^#memory-(\d+)$/);if(hash&&DATA[Number(hash[1])])openMemory(Number(hash[1]));
-</script></body></html>
+</script><script src="../assets/brand/immersive.js" defer></script><script src="../assets/brand/new-tabs.js" defer></script></body></html>
