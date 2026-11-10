@@ -469,3 +469,20 @@ body.vx-universe.vx-overload .vx-screen-icons .vx-d-icon:after{
  body.vx-universe.vx-museum #archive .card .foot{font-size:clamp(15px,.62vw,22px)}
  body.vx-universe.vx-museum .header nav.controls .btn{font-size:clamp(15px,.64vw,22px);min-height:58px}
 }
+
+/* Phone museum: keep title, cabinet and controls fully inside the viewport. */
+@media(max-width:550px){
+ body.vx-universe.vx-museum .wrap{width:100%;max-width:100%;min-width:0}
+ body.vx-universe.vx-museum .header,
+ body.vx-universe.vx-museum .header>div{min-width:0;max-width:100%}
+ body.vx-universe.vx-museum .header h1{
+  font-size:clamp(26px,7.6vw,30px)!important;
+  line-height:1.06;letter-spacing:-.025em;overflow-wrap:anywhere
+ }
+ body.vx-universe.vx-museum .header h1 br{display:initial!important}
+ body.vx-universe.vx-museum .vx-global-nav{width:100%;min-width:0}
+ body.vx-universe.vx-museum .vx-foyer-main>*{min-width:0}
+ body.vx-universe.vx-museum .vx-archive-foyer,
+ body.vx-universe.vx-museum .window{max-width:100%;min-width:0}
+ body.vx-universe.vx-museum .vx-archive-cabinet{width:100%;max-width:100%}
+}
