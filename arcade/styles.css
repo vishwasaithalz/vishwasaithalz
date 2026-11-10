@@ -60,3 +60,16 @@
  #terminal .term-form input{flex-basis:100%}
 }
 @media(prefers-reduced-motion:reduce){#chat .message{animation:none}}
+
+/* Gallery usability: preserve six unique project animations and consistent arrows. */
+.hero-link{display:inline-flex;align-items:center;gap:.55em;line-height:1.25;min-height:44px}
+.gif-gallery a > span{
+ display:flex;justify-content:space-between;align-items:center;gap:.65rem;
+ min-height:48px;line-height:1.4;
+}
+.gif-gallery .gallery-arrow{
+ display:inline-grid;place-items:center;flex:0 0 24px;
+ inline-size:24px;block-size:24px;line-height:1;font-size:17px;
+ font-style:normal;color:var(--cyan);
+}
+.feature-ribbon a{display:inline-flex;align-items:center;min-height:38px}
