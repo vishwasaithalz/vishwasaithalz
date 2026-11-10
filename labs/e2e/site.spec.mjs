@@ -116,7 +116,7 @@ test('Unified homepage retains studio and afterhours controls',async({page})=>{
  await page.locator('#quick-launch').click();
  await expect(page.locator('#quick-layer')).toHaveClass(/open/);
  await page.locator('#quick-search').fill('Arcade');
- await expect(page.locator('#quick-results a')).toHaveCount(1);
+ await expect(page.locator('#quick-results a')).toHaveCount(2); // Arcade is in both the side-quest description and game shortcut.
  await page.keyboard.press('Escape');
  await expect(page.locator('#quick-layer')).not.toHaveClass(/open/);
  await expect(page.locator('#launch-grid a')).toHaveCount(4);
@@ -131,4 +131,29 @@ test('Unified homepage stays inside mobile viewport and runs the mini terminal',
  await expect(page.locator('#mini-term-screen')).toContainText('VISHWAS AITHAL');
  const width=await page.evaluate(()=>document.documentElement.scrollWidth);
  expect(width).toBeLessThanOrEqual(398);
+});
+
+
+test('4K tactile scene is local, era selector works, tour is opt-in, and boot button is functional',async({page})=>{
+ const exceptions=[];
+ page.on('pageerror',e=>exceptions.push(e.message));
+ await page.goto(base+'/');
+ const artwork=page.locator('.hardware-scene');
+ await expect(artwork).toBeVisible();
+ expect(await artwork.getAttribute('src')).toBe('./assets/scene-workbench-4k.svg');
+ const img=await page.request.get(base+'/assets/scene-workbench-4k.svg');
+ expect(img.status()).toBe(200);
+ expect(await img.text()).toContain('viewBox="0 0 3840 2880"');
+ await page.locator('button[data-era-select="2004"]').click();
+ await expect(page.locator('#desk-scene')).toHaveAttribute('data-era','2004');
+ await expect(page.locator('#era-headline')).toContainText('WINAMP');
+ await page.locator('button[data-era-select="2013"]').focus();
+ await page.keyboard.press('ArrowRight');
+ await expect(page.locator('#desk-scene')).toHaveAttribute('data-era','2026');
+ await page.locator('#boot-start').click();
+ await expect(page.locator('#desk-scene')).toHaveAttribute('data-boot','booted',{timeout:2500});
+ await expect(page.locator('#era-tour')).toHaveAttribute('aria-pressed','true');
+ await page.locator('#era-tour').click();
+ await expect(page.locator('#era-tour')).toHaveAttribute('aria-pressed','false');
+ expect(exceptions).toEqual([]);
 });
