@@ -372,3 +372,100 @@ body.vx-universe.vx-overload .vx-screen-icons .vx-d-icon:after{
  body.vx-universe.vx-overload .vx-screen-icons .vx-d-icon{font-size:10px;padding-bottom:4px}
  body.vx-universe.vx-overload .vx-screen-icons .vx-d-icon:after{font-size:5px;top:10px}
 }
+
+/* Ultra-wide 4K composition: real scaling, not a 1580 pixel canvas floating
+   inside a 3840 pixel window. Remains capped for legibility on 8K displays. */
+@media(min-width:1900px){
+ body.vx-universe.vx-overload .shell,
+ body.vx-universe.vx-museum .wrap{
+  width:min(96vw,3520px);max-width:none;
+  padding-left:clamp(28px,2.4vw,84px);padding-right:clamp(28px,2.4vw,84px);
+ }
+ body.vx-universe.vx-overload .vx-global-nav,
+ body.vx-universe.vx-museum .vx-global-nav{
+  padding-left:clamp(35px,3vw,100px);padding-right:clamp(35px,3vw,100px);
+  min-height:74px;font-size:clamp(13px,.8vw,19px);
+ }
+ body.vx-universe.vx-overload .vx-global-nav .vx-links a,
+ body.vx-universe.vx-museum .vx-global-nav .vx-links a{padding:12px 17px;font-size:clamp(13px,.7vw,18px)}
+ body.vx-universe.vx-overload .hero h1,
+ body.vx-universe.vx-museum .header h1{font-size:clamp(70px,3.5vw,138px)!important}
+ body.vx-universe.vx-overload .hero .hdr-kicker,
+ body.vx-universe.vx-museum .header .kicker{font-size:clamp(16px,.65vw,24px)}
+ body.vx-universe.vx-overload .lead,
+ body.vx-universe.vx-museum .lead{font-size:clamp(18px,.82vw,28px);line-height:1.45}
+ body.vx-universe.vx-overload .hero .chip,
+ body.vx-universe.vx-museum .header .badge{
+  font-size:clamp(13px,.62vw,19px);padding:8px 12px;margin:3px
+ }
+ body.vx-universe.vx-overload .lcd{width:clamp(240px,13vw,425px);padding:17px;font-size:clamp(14px,.7vw,19px)}
+ body.vx-universe.vx-overload .lcd big{font-size:clamp(21px,1.1vw,34px)}
+ body.vx-universe.vx-overload .vx-workbench,
+ body.vx-universe.vx-museum .vx-archive-foyer{padding:clamp(24px,1.6vw,60px)}
+ body.vx-universe.vx-overload .vx-workbench-scene{
+  grid-template-columns:minmax(0,2.2fr) minmax(380px,.54fr);
+  width:100%;max-width:none;gap:clamp(42px,3.8vw,110px)
+ }
+ body.vx-universe.vx-overload .vx-monitor-frame{
+  padding:clamp(26px,1.9vw,65px) clamp(27px,2vw,72px) 24px;
+  border-radius:55px 55px 35px 35px;
+ }
+ body.vx-universe.vx-overload .vx-monitor-glass{min-height:clamp(470px,25vw,930px);border-width:clamp(18px,1vw,34px)}
+ body.vx-universe.vx-overload .vx-screen-desktop{
+  min-height:clamp(410px,23vw,870px);padding:clamp(25px,2vw,70px);
+  gap:clamp(24px,2vw,70px);
+ }
+ body.vx-universe.vx-overload .vx-screen-icons{gap:clamp(14px,1vw,31px)}
+ body.vx-universe.vx-overload .vx-screen-icons a{
+  min-height:clamp(118px,6vw,220px);font-size:clamp(18px,.8vw,30px)
+ }
+ body.vx-universe.vx-overload .vx-screen-icons .vx-d-icon{
+  inline-size:clamp(66px,3.5vw,120px);block-size:clamp(65px,3.5vw,120px);
+  font-size:clamp(20px,1.1vw,40px);padding-bottom:12px
+ }
+ body.vx-universe.vx-overload .vx-screen-icons .vx-d-icon:after{font-size:clamp(9px,.4vw,15px);top:27px;right:8px}
+ body.vx-universe.vx-overload .vx-explorer{font-size:clamp(18px,.95vw,33px)}
+ body.vx-universe.vx-overload .vx-explorer-title,
+ body.vx-universe.vx-overload .vx-explorer-path{padding:clamp(12px,.8vw,27px)}
+ body.vx-universe.vx-overload .vx-explorer-list{gap:clamp(9px,.5vw,19px);padding:clamp(13px,.8vw,29px)}
+ body.vx-universe.vx-overload .vx-explorer-list a{padding:clamp(10px,.6vw,21px);min-height:clamp(56px,3.2vw,120px)}
+ body.vx-universe.vx-overload .vx-screen-top,
+ body.vx-universe.vx-overload .vx-screen-taskbar{padding:clamp(11px,.7vw,25px);font-size:clamp(18px,.7vw,28px)}
+ body.vx-universe.vx-overload .vx-bezel-foot{font-size:clamp(16px,.65vw,22px)}
+ body.vx-universe.vx-overload .vx-v2-keyboard{width:min(83%,1300px);padding:16px 19px 25px}
+ body.vx-universe.vx-overload .vx-v2-keys{gap:7px}
+ body.vx-universe.vx-overload .vx-v2-keys i{height:clamp(18px,1.2vw,45px)}
+ body.vx-universe.vx-overload .vx-v2-keyboard-caption{font-size:16px}
+ body.vx-universe.vx-overload .vx-paper-note{padding:clamp(23px,1.5vw,55px)}
+ body.vx-universe.vx-overload .vx-paper-note strong{font-size:clamp(27px,1.5vw,53px)}
+ body.vx-universe.vx-overload .vx-paper-note p{font-size:clamp(18px,.9vw,30px)}
+ body.vx-universe.vx-overload .vx-floppy{width:min(420px,85%);padding-top:105px}
+ body.vx-universe.vx-overload .vx-floppy-label{font-size:clamp(17px,.9vw,28px)}
+ body.vx-universe.vx-overload .vx-immersive-label,
+ body.vx-universe.vx-museum .vx-immersive-label{font-size:clamp(16px,.67vw,24px)}
+ body.vx-universe.vx-overload .vx-vintage-caption{font-size:clamp(14px,.65vw,22px);padding:19px 0}
+ body.vx-universe.vx-overload .vx-v2-actions label,
+ body.vx-universe.vx-overload .vx-workbench-toolbar button,
+ body.vx-universe.vx-museum .vx-foyer-top button{font-size:clamp(16px,.66vw,22px);min-height:50px}
+ body.vx-universe.vx-overload .vx-v2-actions input[type=range]{width:190px}
+ body.vx-universe.vx-overload .vx-workbench .vx-desk-surface{height:75px;margin:0 -60px}
+ body.vx-universe.vx-museum .vx-foyer-main{grid-template-columns:minmax(0,1.12fr) minmax(0,1fr);gap:clamp(70px,4vw,160px)}
+ body.vx-universe.vx-museum .vx-archive-prop{min-height:980px}
+ body.vx-universe.vx-museum .vx-archive-cabinet{width:min(1250px,100%);min-height:900px;padding:35px 42px}
+ body.vx-universe.vx-museum .vx-archive-plate{font-size:clamp(19px,1vw,35px);padding:14px}
+ body.vx-universe.vx-museum .vx-cabinet-drawer{height:clamp(130px,4.6vw,178px);margin-top:20px}
+ body.vx-universe.vx-museum .vx-cabinet-handle{height:40px;width:240px;top:22px}
+ body.vx-universe.vx-museum .vx-cabinet-file{font-size:clamp(19px,.8vw,32px);padding:12px;bottom:18px}
+ body.vx-universe.vx-museum .vx-archive-disk{width:210px;height:226px;padding:100px 14px 16px}
+ body.vx-universe.vx-museum .vx-archive-disk span{font-size:23px}
+ body.vx-universe.vx-museum .vx-foyer-copy h2{font-size:clamp(70px,3.6vw,136px)}
+ body.vx-universe.vx-museum .vx-foyer-copy p{font-size:clamp(19px,.85vw,29px);line-height:1.5}
+ body.vx-universe.vx-museum .vx-era-buttons button,
+ body.vx-universe.vx-museum .vx-folder-buttons button{font-size:clamp(16px,.72vw,26px);padding:18px 22px;min-height:65px}
+ body.vx-universe.vx-museum #archive{grid-template-columns:repeat(auto-fill,minmax(365px,1fr));gap:25px}
+ body.vx-universe.vx-museum #archive .card{min-height:325px;padding:34px 25px}
+ body.vx-universe.vx-museum #archive .card h3{font-size:clamp(24px,1.1vw,38px)}
+ body.vx-universe.vx-museum #archive .card p{font-size:clamp(18px,.7vw,26px)}
+ body.vx-universe.vx-museum #archive .card .foot{font-size:clamp(15px,.62vw,22px)}
+ body.vx-universe.vx-museum .header nav.controls .btn{font-size:clamp(15px,.64vw,22px);min-height:58px}
+}
