@@ -299,3 +299,52 @@ body.vx-universe.vx-museum #archive .card:hover{transform:translateY(-4px) rotat
  body.vx-universe .vx-workbench,
  body.vx-universe .vx-archive-foyer{transition:none!important;transform:none!important}
 }
+
+/* Additional tactile states and 4K wide screen layout. */
+body.vx-universe.vx-overload.vx-v2-focus{overflow:hidden}
+body.vx-universe.vx-overload.vx-v2-focus .vx-workbench{
+ position:fixed;z-index:2000;inset:clamp(5px,1vw,16px);
+ width:auto;max-width:none;margin:0;height:auto;overflow:auto;
+ padding-left:clamp(12px,4vw,90px);padding-right:clamp(12px,4vw,90px);
+ background:
+ radial-gradient(ellipse at var(--vx-px,45%) 6%,#d09a6368,transparent 53%),
+ linear-gradient(160deg,#493a31,#252b2b 64%,#151a1b);
+ box-shadow:0 0 0 28px #090b0de6,inset 0 0 80px #0006;
+}
+body.vx-universe.vx-overload.vx-v2-focus .vx-workbench-scene{
+ width:min(1460px,100%);margin:auto;
+}
+body.vx-universe.vx-overload.vx-v2-focus .vx-workbench .vx-monitor-assembly{transform:none}
+body.vx-universe.vx-museum .vx-foyer-top button{
+ min-height:32px;padding:5px 9px;font-size:10px;border-color:#968a6b;
+ background:linear-gradient(#48453c,#252e2d);color:#e5d3ac
+}
+body.vx-universe.vx-museum .vx-archive-prop{min-height:530px}
+body.vx-universe.vx-museum .vx-archive-cabinet{min-height:467px}
+body.vx-universe.vx-museum .vx-cabinet-drawer{height:84px}
+body.vx-universe.vx-museum .vx-cabinet-drawer[aria-pressed=true] .vx-cabinet-file{
+ background:#506e60;color:#f5eed4;border-color:#263d32
+}
+@media(min-width:1900px){
+ body.vx-universe.vx-overload .vx-workbench-scene{grid-template-columns:minmax(0,2.2fr) minmax(270px,.5fr)}
+ body.vx-universe.vx-overload .vx-monitor-glass{min-height:420px}
+ body.vx-universe.vx-overload .vx-screen-desktop{min-height:380px}
+ body.vx-universe.vx-overload .vx-screen-icons a{min-height:96px;font-size:13px}
+ body.vx-universe.vx-overload .vx-d-icon{width:56px;height:55px;font-size:30px}
+ body.vx-universe.vx-museum .vx-foyer-main{grid-template-columns:minmax(0,1.1fr) minmax(0,1fr)}
+ body.vx-universe.vx-museum .vx-archive-foyer{padding:34px 42px}
+}
+@media(max-width:550px){
+ body.vx-universe.vx-overload .vx-workbench-toolbar{align-items:flex-start}
+ body.vx-universe.vx-overload .vx-v2-actions{gap:6px}
+ body.vx-universe.vx-overload .vx-v2-actions input[type=range]{width:62px}
+ body.vx-universe.vx-overload .vx-workbench-toolbar button{font-size:9px}
+ body.vx-universe.vx-museum .vx-archive-prop{min-height:437px}
+ body.vx-universe.vx-museum .vx-archive-cabinet{min-height:414px}
+ body.vx-universe.vx-museum .vx-cabinet-drawer{height:70px}
+ body.vx-universe.vx-museum .vx-cabinet-file{font-size:10px}
+}
+@media(prefers-reduced-motion:reduce){
+ body.vx-universe.vx-museum .vx-cabinet-drawer{transition:none!important}
+ body.vx-universe.vx-overload .vx-v2-keyboard{transform:none!important}
+}
