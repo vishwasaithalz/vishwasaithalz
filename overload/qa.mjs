@@ -36,7 +36,10 @@ for(const [file,expected] of Object.entries(required)){
  if(!/<!doctype html>/i.test(html))err(file,'missing HTML doctype');
  if(!/<meta\s+charset=/i.test(html))err(file,'missing character set');
  if(!/name="viewport"/i.test(html))err(file,'missing mobile viewport');
- if(/[\u2014\u2015]/.test(html))err(file,'long dash in public page');
+ if(/[\u2013\u2014\u2015]/.test(html))err(file,'long dash in public page');
+ const textSurface=html.replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi,'').replace(/<style\b[^>]*>[\s\S]*?<\/style>/gi,'').replace(/<!--[\s\S]*?-->/g,'').replace(/<[^>]+>/g,' ');
+ if(/\s-\s/.test(textSurface))err(file,'visible spaced dash in public page');
+ if(!html.includes('assets/brand/new-tabs.js'))err(file,'new tab navigation script missing');
  if(/Build-Journal|nostalgia-karma-dashboard|karma-cloudflare-ops/.test(html))err(file,'private repository name in public page');
  if(!html.includes('class="vx-global-nav"'))err(file,'shared top navigation missing');
  if(!html.includes('class="vx-universe"')&&!/class="[^"]*\bvx-universe\b/.test(html))err(file,'shared body theme missing');
@@ -94,6 +97,20 @@ else{
   if(!arcadeCss.includes(token))err('arcade','palette drift: '+token);
 }
 const readme=readFileSync(join(root,'README.md'),'utf8');
+if(/[\u2013\u2014\u2015]| - /.test(readme))err('README.md','visible dash punctuation');
+if(/\/labs\//.test(readme))err('README.md','retired standalone demo link present');
+for(const key of ['assets/brand/overload-workbench-cover.svg','assets/brand/museum-archive-cover.svg']){
+ if(!readme.includes(key)||!existsSync(join(root,key)))err('README.md','immersive cover missing: '+key);
+}
+for(const asset of ['assets/brand/new-tabs.js','assets/brand/immersive.js']){
+ const abs=join(root,asset);
+ if(!existsSync(abs))err(asset,'missing program');
+ else checkScript(readFileSync(abs,'utf8'),asset,'standalone');
+}
+const immersiveStyle=join(root,'assets/brand/immersive.css');
+if(!existsSync(immersiveStyle))err('immersive.css','missing original UI stylesheet');
+else for(const token of ['.vx-workbench','.vx-archive-foyer','prefers-reduced-motion'])if(!readFileSync(immersiveStyle,'utf8').includes(token))err('immersive.css','missing '+token);
+
 const heroCandidates=['assets/brand/vishwas-exe-main.svg','assets/brand/afterhours-cybercafe.svg'];
 const activeHero=heroCandidates.find(name=>readme.includes(name));
 if(!activeHero)err('README.md','missing visible approved original hero asset');

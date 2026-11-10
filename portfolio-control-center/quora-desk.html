@@ -63,4 +63,4 @@ $('markdown').onclick=function(){var t='# KARMA Quora Queue\n\n'+state.items.map
 $('copyBrief').onclick=function(){var a=state.items,t='KARMA QUORA DESK '+today+'\nCandidates: '+a.length+'\nResearch: '+a.filter(function(x){return x.status==='research'}).length+'\nDraft ready: '+a.filter(function(x){return x.status==='draft ready'}).length+'\nNeeds evidence: '+a.filter(function(x){return x.status==='needs evidence'}).length+'\nEditorial approvals: '+a.filter(function(x){return x.approved}).length+'\nVerified publication records: '+a.filter(function(x){return x.publishedUrl}).length+'\nNo automated publishing.';if(navigator.clipboard)navigator.clipboard.writeText(t).then(function(){alert('Daily brief copied.')}).catch(function(){alert(t)});else alert(t)};
 render();
 })();
-</script></body></html>
+</script><script src="../assets/brand/new-tabs.js" defer></script></body></html>
