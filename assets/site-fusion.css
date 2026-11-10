@@ -89,3 +89,16 @@ body[data-mode=afterhours] .pc-cabinet{box-shadow:inset 7px 8px #f3f1dd,inset -8
 body[data-tone="ice"]{--orange:#359ea5;--pink:#afdde2}
 body[data-mode="afterhours"][data-tone="ice"]{--orange:#8ce3e1;--pink:#b5d9ee}
 #tone[aria-pressed="true"]{background:var(--orange);color:var(--paper);border-color:var(--orange)}
+
+
+/* Compact mobile header keeps the unified controls inside 320px screens. */
+@media(max-width:650px){
+ .mastinner{gap:7px;min-height:62px}
+ .brand{font-size:clamp(16px,4.9vw,21px)}
+ .header-actions{flex:none;gap:5px}
+ .mode-toggle{font-size:9px;gap:5px;padding:7px 8px}
+ .mode-toggle .dot{width:7px;height:7px}
+ .palette-button{width:30px;height:30px}
+ #tone{display:none}
+}
+@media(max-width:365px){.brand{font-size:15px}.mode-toggle{font-size:8px;padding:7px 6px}.mastinner{gap:4px}}
