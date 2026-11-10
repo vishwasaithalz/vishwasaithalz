@@ -116,7 +116,11 @@ test('Unified homepage retains studio and afterhours controls',async({page})=>{
  await page.locator('#quick-launch').click();
  await expect(page.locator('#quick-layer')).toHaveClass(/open/);
  await page.locator('#quick-search').fill('Arcade');
- await expect(page.locator('#quick-results a')).toHaveCount(1);
+ // Search intentionally matches both shortcut names and descriptions.
+ // Assert the actual playable Arcade route, not a brittle total result count.
+ const arcadeShortcut=page.locator('#quick-results a[href="./arcade/"]');
+ await expect(arcadeShortcut).toHaveCount(1);
+ await expect(arcadeShortcut).toBeVisible();
  await page.keyboard.press('Escape');
  await expect(page.locator('#quick-layer')).not.toHaveClass(/open/);
  await expect(page.locator('#launch-grid a')).toHaveCount(4);
