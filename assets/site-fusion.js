@@ -6,6 +6,12 @@ const store={get(k){try{return localStorage.getItem(k)}catch{return null}},set(k
 function setMode(value){const v=value==='afterhours'?'afterhours':'studio';body.dataset.mode=v;modeText.textContent=v==='afterhours'?'AFTER HOURS':'STUDIO MODE';modeButton.setAttribute('aria-pressed',String(v==='afterhours'));modeButton.title=v==='afterhours'?'Switch to studio mode':'Switch to after-hours mode';store.set('vishwas-fusion-mode',v)}
 setMode(store.get('vishwas-fusion-mode')||'studio');
 modeButton.addEventListener('click',()=>setMode(body.dataset.mode==='studio'?'afterhours':'studio'));
+
+const accentButton=$('#tone');
+function setTone(tone){const v=tone==='ice'?'ice':'warm';body.dataset.tone=v;accentButton.setAttribute('aria-pressed',String(v==='ice'));accentButton.title=v==='ice'?'Use sunset accents':'Use ice accents';store.set('vishwas-fusion-tone',v)}
+setTone(store.get('vishwas-fusion-tone')||'warm');
+accentButton.addEventListener('click',()=>setTone(body.dataset.tone==='warm'?'ice':'warm'));
+
 function clock(){const el=$('#pc-clock');if(el)el.textContent=new Date().toLocaleTimeString('en-IN',{hour:'2-digit',minute:'2-digit',hour12:false})}
 clock();setInterval(clock,45000);
 $$('.filter[data-filter]').forEach(b=>b.addEventListener('click',()=>{const f=b.dataset.filter;$$('.filter[data-filter]').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));let n=0;$$('.project[data-kind]').forEach(card=>{const yes=f==='all'||card.dataset.kind.split(' ').includes(f);card.hidden=!yes;if(yes)n++});$('#filter-status').textContent=n+' projects shown'}));
