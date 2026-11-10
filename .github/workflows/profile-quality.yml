@@ -33,6 +33,12 @@ jobs:
           readme = Path('README.md').read_text(encoding='utf-8')
           assert 'VISHWAS.EXE UNIFIED THEME START' in readme
           assert 'Vishwas Aithal' in readme
+          assert not any(c in readme for c in (chr(0x2013), chr(0x2014), chr(0x2015))), 'Long dash punctuation found in profile README'
+          assert not any(c in Path('index.html').read_text(encoding='utf-8') for c in (chr(0x2013), chr(0x2014), chr(0x2015))), 'Long dash punctuation found on homepage'
+          assert '<a id="vx-projects"></a>' in readme
+          assert '<a id="vx-museum"></a>' in readme
+          assert 'Six original interactive Product Lab apps' not in readme
+          assert not Path('labs').exists(), 'Retired standalone applications must not return'
           assert Path('assets/brand/vishwas-exe-main.svg').is_file()
           assert 'https://github.com/vishwasaithalz' in readme
           for path in re.findall(r'(?:src|href)="(assets/[^"]+)"', readme):
