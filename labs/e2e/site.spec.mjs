@@ -144,6 +144,8 @@ test('4K tactile scene is local, era selector works, tour is opt-in, and boot bu
  const img=await page.request.get(base+'/assets/scene-workbench-4k.svg');
  expect(img.status()).toBe(200);
  expect(await img.text()).toContain('viewBox="0 0 3840 2880"');
+ const isDecoded=await artwork.evaluate(img=>img.complete && img.naturalWidth===3840 && img.naturalHeight===2880);
+ expect(isDecoded,'Local scene SVG must successfully decode at authored resolution').toBe(true);
  await page.locator('button[data-era-select="2004"]').click();
  await expect(page.locator('#desk-scene')).toHaveAttribute('data-era','2004');
  await expect(page.locator('#era-headline')).toContainText('WINAMP');
@@ -156,4 +158,16 @@ test('4K tactile scene is local, era selector works, tour is opt-in, and boot bu
  await page.locator('#era-tour').click();
  await expect(page.locator('#era-tour')).toHaveAttribute('aria-pressed','false');
  expect(exceptions).toEqual([]);
+});
+
+
+test('Homepage passes narrow phone, tablet and 4K layout smoke without horizontal pan',async({page})=>{
+ for(const width of [320,360,390,768,1440,3840]){
+  await page.setViewportSize({width,height:920});
+  await page.goto(base+'/',{waitUntil:'domcontentloaded'});
+  await expect(page.locator('#headline')).toBeVisible();
+  const measured=await page.evaluate(()=>({width:document.documentElement.scrollWidth,viewport:innerWidth,asset:document.querySelector('.hardware-scene')?.naturalWidth||0}));
+  expect(measured.width, 'width='+width+' document scrollWidth').toBeLessThanOrEqual(width+1);
+  expect(measured.asset).toBe(3840);
+ }
 });
