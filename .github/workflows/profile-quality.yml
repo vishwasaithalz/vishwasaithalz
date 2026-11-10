@@ -33,6 +33,9 @@ jobs:
           readme = Path('README.md').read_text(encoding='utf-8')
           assert 'VISHWAS.EXE UNIFIED THEME START' in readme
           assert 'Vishwas Aithal' in readme
+          assert chr(0x2014) not in readme, 'Em dash found in profile README'
+          assert chr(0x2014) not in Path('index.html').read_text(encoding='utf-8'), 'Em dash found on homepage'
+          assert '<a id="vx-projects"></a>' in readme
           assert Path('assets/brand/vishwas-exe-main.svg').is_file()
           assert 'https://github.com/vishwasaithalz' in readme
           for path in re.findall(r'(?:src|href)="(assets/[^"]+)"', readme):
