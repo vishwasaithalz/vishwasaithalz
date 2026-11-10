@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="color-scheme" content="light dark">
-<meta name="theme-color" content="#f1eddf">
+<meta name="theme-color" content="#0b1b30">
 <meta name="description" content="Vishwas Aithal's personal internet. A premium portfolio meets a 2000s cybercafe desktop, with real defensive security projects, retro games, creative websites and a working mini terminal.">
 <meta name="robots" content="index,follow">
 <meta property="og:type" content="website">
@@ -13,24 +13,28 @@
 <meta property="og:image" content="https://raw.githubusercontent.com/vishwasaithalz/vishwasaithalz/main/assets/brand/afterhours-cybercafe.svg">
 <title>Vishwas Aithal | Curious Since the Start Screen</title>
 <link rel="icon" type="image/svg+xml" href="./assets/brand/favicon.svg">
+<link rel="stylesheet" href="./assets/brand/retro-shell.css">
 <link rel="stylesheet" href="./assets/site-fusion.css">
 <script src="./assets/site-fusion.js" defer></script>
 </head>
-<body data-mode="studio">
+<body class="vx-universe" data-mode="studio">
 <a class="skip" href="#main">SKIP TO CONTENT</a>
 <header class="mast">
+ <div class="vx-global-nav">
  <div class="shell mastinner">
-  <a class="brand" href="./" aria-label="Vishwas Aithal home">VISHWAS<span>.</span>AITHAL</a>
+  <a class="brand" aria-current="page" href="./" aria-label="Vishwas Aithal home">VISHWAS<span>.</span>AITHAL</a>
   <nav class="navlinks" aria-label="Site navigation">
    <a href="#work">WORK / 01</a>
    <a href="#story">STORY / 02</a>
    <a href="#sidequests">SIDE QUESTS / 03</a>
    <a href="#contact">CONTACT / 04</a>
   </nav>
-  <div class="header-actions">
+  <div class="header-actions" id="theme">
    <button class="mode-toggle" id="mode-switch" aria-pressed="false" type="button" title="Switch to after-hours mode"><span class="dot" aria-hidden="true"></span><span id="mode-label">STUDIO MODE</span> <span aria-hidden="true">↔</span></button>
+   <button class="palette-button" id="tone" title="Cycle accent color" aria-label="Cycle accent color" type="button">◐</button>
    <button class="palette-button" id="quick-launch" title="Quick navigation (Ctrl+K)" aria-label="Open quick navigation" type="button">⌘</button>
   </div>
+ </div>
  </div>
 </header>
 <main id="main">
@@ -124,7 +128,7 @@
  </section>
  <section class="shell section" id="sidequests" aria-labelledby="quest-title">
   <div class="section-heading"><div><div class="pnum">03 / BONUS DISC</div><h2 id="quest-title">OPEN THE<br>SIDE QUESTS.</h2></div><div class="asidenote">YES, THEY ARE REAL.<br>NOT JUST DECORATIVE ICONS.<br>COME BACK BEFORE DINNER.</div></div>
-  <div class="sidequests">
+  <div class="sidequests" id="launch-grid">
    <a class="quest" href="./arcade/"><span>DISC 01 / PLAY</span><span class="qico" aria-hidden="true">🕹</span><b>THE<br>ARCADE</b><small>Snake, original pinball, story chat and terminal ↗</small></a>
    <a class="quest" href="./memory/"><span>DISC 02 / REMEMBER</span><span class="qico" aria-hidden="true">💿</span><b>MEMORY<br>OS</b><small>A desktop full of retro memories ↗</small></a>
    <a class="quest" href="./museum/"><span>DISC 03 / DISCOVER</span><span class="qico" aria-hidden="true">📼</span><b>INTERNET<br>MUSEUM</b><small>Windows and software nostalgia, catalogued ↗</small></a>
