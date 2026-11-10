@@ -8,6 +8,9 @@ on:
       - 'arcade/**'
       - 'museum/**'
       - 'overload/**'
+      - 'assets/site-fusion.css'
+      - 'assets/site-fusion.js'
+      - 'assets/brand/retro-shell.css'
       - '.github/workflows/pages-browser-qa.yml'
   push:
     branches: [main]
@@ -17,6 +20,9 @@ on:
       - 'arcade/**'
       - 'museum/**'
       - 'overload/**'
+      - 'assets/site-fusion.css'
+      - 'assets/site-fusion.js'
+      - 'assets/brand/retro-shell.css'
       - '.github/workflows/pages-browser-qa.yml'
   workflow_dispatch:
 
