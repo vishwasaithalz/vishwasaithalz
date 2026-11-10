@@ -38,4 +38,4 @@ function render(){const q=$('q').value.toLowerCase(),g=$('group').value,s=$('sta
 $('export').onclick=()=>{const blob=new Blob(['# KARMA ULTRA MAX\n\n'+projects.map(p=>'## '+p.name+'\n- Group: '+p.group+'\n- State: '+p.state+'\n- Purpose: '+p.purpose+'\n'+p.features.map(f=>'- [ ] '+f).join('\n')).join('\n\n')],{type:'text/markdown'});const u=URL.createObjectURL(blob),a=document.createElement('a');a.href=u;a.download='KARMA-ULTRA-MAX-roadmap.md';a.click();setTimeout(()=>URL.revokeObjectURL(u),1000)};
 render();
 })();
-</script></body></html>
+</script><script src="../assets/brand/new-tabs.js" defer></script></body></html>
