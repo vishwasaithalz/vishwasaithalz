@@ -116,7 +116,7 @@ test('Unified homepage retains studio and afterhours controls',async({page})=>{
  await page.locator('#quick-launch').click();
  await expect(page.locator('#quick-layer')).toHaveClass(/open/);
  await page.locator('#quick-search').fill('Arcade');
- await expect(page.locator('#quick-results a')).toHaveCount(1);
+ await expect(page.locator('#quick-results a[href="./arcade/"]')).toHaveCount(1);
  await page.keyboard.press('Escape');
  await expect(page.locator('#quick-layer')).not.toHaveClass(/open/);
  await expect(page.locator('#launch-grid a')).toHaveCount(4);
@@ -131,4 +131,31 @@ test('Unified homepage stays inside mobile viewport and runs the mini terminal',
  await expect(page.locator('#mini-term-screen')).toContainText('VISHWAS AITHAL');
  const width=await page.evaluate(()=>document.documentElement.scrollWidth);
  expect(width).toBeLessThanOrEqual(398);
+});
+
+test('Overload physical workstation stays functional',async({page})=>{
+ await page.goto(base+'/overload/');
+ await expect(page.locator('#vx-monitor-power')).toBeVisible();
+ await expect(page.locator('#mine-grid button')).toHaveCount(81);
+ await expect(page.locator('.vx-screen-icons a')).toHaveCount(4);
+ await page.locator('#vx-monitor-power').click();
+ await expect(page.locator('#vx-monitor-glass')).toHaveClass(/vx-screen-off/);
+ await page.locator('#vx-monitor-power').click();
+ await expect(page.locator('#vx-monitor-glass')).not.toHaveClass(/vx-screen-off/);
+ await expect(page.locator('.vx-global-nav a[href="../museum/"]')).toHaveAttribute('target','_blank');
+});
+
+test('Museum physical archive controls filter existing records',async({page})=>{
+ await page.goto(base+'/museum/');
+ await expect(page.locator('#archive .card')).toHaveCount(102);
+ await expect(page.locator('#vx-folder-buttons button')).toHaveCount(8);
+ await page.locator('[data-vx-era="00s"]').click();
+ await expect(page.locator('#era')).toHaveValue('00s');
+ const count=await page.locator('#archive .card').count();
+ expect(count).toBeGreaterThan(0);
+ expect(count).toBeLessThan(102);
+ await page.locator('[data-vx-era="all"]').click();
+ await expect(page.locator('#archive .card')).toHaveCount(102);
+ await page.locator('#vx-folder-buttons button').nth(1).click();
+ await expect(page.locator('#category')).not.toHaveValue('all');
 });
