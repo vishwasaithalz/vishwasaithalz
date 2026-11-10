@@ -159,3 +159,54 @@ test('Museum physical archive controls filter existing records',async({page})=>{
  await page.locator('#vx-folder-buttons button').nth(1).click();
  await expect(page.locator('#category')).not.toHaveValue('all');
 });
+
+test('Physical workstation V2 has functional light and focus controls',async({page})=>{
+ await page.goto(base+'/overload/');
+ const stage=page.locator('.vx-workbench');
+ const monitor=page.locator('#vx-monitor-glass');
+ await expect(page.locator('.vx-v2-keys i')).toHaveCount(64);
+ await page.locator('#vx-ambient-range').fill('40');
+ await expect(page.locator('#vx-light-status')).toHaveText('LAMP 40%');
+ await page.locator('#vx-lamp-toggle').click();
+ await expect(page.locator('#vx-light-status')).toHaveText('LAMP OFF');
+ await page.locator('#vx-lamp-toggle').click();
+ await expect(page.locator('#vx-light-status')).toHaveText('LAMP 40%');
+ await page.locator('#vx-focus-toggle').click();
+ await expect(page.locator('body')).toHaveClass(/vx-v2-focus/);
+ await page.keyboard.press('Escape');
+ await expect(page.locator('body')).not.toHaveClass(/vx-v2-focus/);
+ await expect(stage).toBeVisible();
+ await expect(monitor).toBeVisible();
+ await expect(page.locator('#mine-grid button')).toHaveCount(81);
+});
+
+test('Archive cabinet drawers open live century filters',async({page})=>{
+ await page.goto(base+'/museum/');
+ await expect(page.locator('[data-vx-drawer]')).toHaveCount(4);
+ const full=await page.locator('#archive .card').count();
+ expect(full).toBe(102);
+ await page.locator('[data-vx-drawer="90s"]').click();
+ await expect(page.locator('#era')).toHaveValue('90s');
+ await expect(page.locator('[data-vx-drawer="90s"]')).toHaveAttribute('aria-pressed','true');
+ const nineties=await page.locator('#archive .card').count();
+ expect(nineties).toBeGreaterThan(0);
+ expect(nineties).toBeLessThan(full);
+ await page.locator('#vx-museum-light').click();
+ await expect(page.locator('#vx-museum-light')).toHaveAttribute('aria-pressed','false');
+ await page.locator('#vx-museum-light').click();
+ await expect(page.locator('#vx-museum-light')).toHaveAttribute('aria-pressed','true');
+ await page.locator('[data-vx-era="all"]').click();
+ await expect(page.locator('#archive .card')).toHaveCount(full);
+});
+
+test('UHD workstation keeps project links and controls inside viewport',async({page})=>{
+ await page.setViewportSize({width:3840,height:2160});
+ await page.goto(base+'/overload/');
+ await expect(page.locator('.vx-workbench')).toBeVisible();
+ await expect(page.locator('#vx-focus-toggle')).toBeVisible();
+ await expect(page.locator('.vx-explorer-list a')).toHaveCount(4);
+ await expect(page.locator('.vx-v2-keyboard')).toBeVisible();
+ await page.goto(base+'/museum/');
+ await expect(page.locator('#vx-folder-buttons button')).toHaveCount(8);
+ await expect(page.locator('[data-vx-drawer]')).toHaveCount(4);
+});
