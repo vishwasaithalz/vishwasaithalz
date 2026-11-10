@@ -1,0 +1,301 @@
+/* VISHWAS.EXE / IMMERSIVE V2
+   Real material cues at any DPR, no photographs copied and no remote assets.
+   Additive CSS for existing programs, museum files, and links.
+*/
+body.vx-universe.vx-overload,
+body.vx-universe.vx-museum{
+ --v2-metal:#a7a293;--v2-ivory:#d5c9ad;--v2-ambient:.45;
+ background:radial-gradient(ellipse at 48% -16%,#7564483b,transparent 51%),
+ radial-gradient(ellipse at 92% 35%,#344d4833,transparent 47%),#111618;
+ background-attachment:fixed;
+ color:#e8e5d9;
+}
+body.vx-universe.vx-overload .vx-global-nav,
+body.vx-universe.vx-museum .vx-global-nav{
+ background:linear-gradient(180deg,#293335,#172327 65%,#11191b);
+ border-bottom:1px solid #8c8773;
+ box-shadow:inset 0 1px #d1cbb13b,0 5px 18px #0009;
+}
+body.vx-universe.vx-overload .vx-global-nav .vx-brand,
+body.vx-universe.vx-museum .vx-global-nav .vx-brand{
+ background:linear-gradient(#344c4a,#1a302d);border:1px solid #6a8d82;color:#e3ebd8
+}
+body.vx-universe.vx-overload .vx-global-nav .vx-links a,
+body.vx-universe.vx-museum .vx-global-nav .vx-links a{
+ background:linear-gradient(#344243,#243438);border:1px solid #526766;box-shadow:inset 0 1px #fff2;
+}
+body.vx-universe.vx-overload .top,
+body.vx-universe.vx-museum .boot{
+ padding:5px clamp(12px,2vw,28px);min-height:30px;
+ background:linear-gradient(90deg,#2e3634,#1b292b);border-bottom:1px solid #666e63;
+ color:#c5cbbb;font-size:10px;letter-spacing:.06em
+}
+body.vx-universe.vx-overload .shell{max-width:1580px;padding-top:14px}
+body.vx-universe.vx-museum .wrap{max-width:1580px;padding-top:14px}
+body.vx-universe.vx-overload .hero,
+body.vx-universe.vx-museum .header{
+ gap:clamp(13px,2vw,24px);
+ padding:7px 0 15px;margin:0 0 13px;
+ border-bottom:1px solid #8e8a7052;
+}
+body.vx-universe.vx-overload .hero{grid-template-columns:minmax(0,1fr) 190px}
+body.vx-universe.vx-overload .hero h1{
+ font:900 clamp(30px,3.3vw,52px)/.95 Impact,"Arial Black",sans-serif!important;
+ letter-spacing:.012em!important;margin:5px 0 7px;
+}
+body.vx-universe.vx-overload .hero h1 br{display:none}
+body.vx-universe.vx-overload .hero h1 span{margin-left:.22em}
+body.vx-universe.vx-overload .hero .hdr-kicker,
+body.vx-universe.vx-museum .header .kicker{
+ color:#dfc8a4!important;letter-spacing:.095em;font:700 10px Consolas,monospace
+}
+body.vx-universe.vx-overload .lead,
+body.vx-universe.vx-museum .lead{
+ font-size:12px;line-height:1.6;max-width:84ch;margin:4px 0 7px;
+ color:#bac0b6
+}
+body.vx-universe.vx-overload .hero .controls{gap:5px}
+body.vx-universe.vx-overload .hero .chip{font-size:9px;padding:4px 6px}
+body.vx-universe.vx-overload .lcd{
+ width:180px;padding:10px;border:4px double #778477;
+ font:10px/1.5 Consolas,monospace;line-height:1.45;
+ box-shadow:inset 0 0 28px #000a,3px 5px #0005;
+}
+body.vx-universe.vx-overload .lcd big{font-size:14px;margin-bottom:5px}
+body.vx-universe.vx-overload .lcd i{margin:3px 0}
+body.vx-universe.vx-museum .header{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center}
+body.vx-universe.vx-museum .header h1{
+ font:900 clamp(30px,3.3vw,53px)/.95 Impact,"Arial Black",sans-serif!important;
+ letter-spacing:.015em!important;
+}
+body.vx-universe.vx-museum .header h1 br{display:none}
+body.vx-universe.vx-museum .header h1 span{margin-left:.2em}
+body.vx-universe.vx-museum .header .small{font-size:11px;margin:6px 0}
+body.vx-universe.vx-museum .header .badge{
+ font-size:9px;padding:4px 7px;margin:1px 2px;border-color:#7e8c7b;color:#cdd4c2
+}
+body.vx-universe.vx-museum .header nav.controls{
+ grid-template-columns:repeat(2,minmax(115px,1fr));max-width:300px;gap:5px
+}
+body.vx-universe.vx-museum .header nav.controls .btn{
+ min-height:36px;padding:6px 9px;font:700 10px Consolas,monospace
+}
+/* Background noise is an embedded procedural texture, not a remote image.
+   Micrograin keeps 4K and retina rendering from becoming sterile flat gradients. */
+body.vx-universe .vx-workbench:after,
+body.vx-universe .vx-archive-foyer:after{
+ content:"";inset:0;position:absolute;z-index:7;pointer-events:none;border-radius:inherit;
+ opacity:.17;mix-blend-mode:soft-light;
+ background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.47' numOctaves='3' seed='8' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)' opacity='.75'/%3E%3C/svg%3E");
+}
+body.vx-universe.vx-overload .vx-workbench{
+ margin:6px 0 24px;padding:clamp(13px,2vw,22px) clamp(13px,2.6vw,35px) 0;
+ border-radius:5px;border:1px solid #b18e6e;
+ background:
+ radial-gradient(ellipse at var(--vx-px,50%) var(--vx-py,18%),#dcae7947 0,transparent 57%),
+ radial-gradient(ellipse at 25% 12%,#948a6b33,transparent 48%),
+ repeating-linear-gradient(90deg,transparent 0 36px,#00000012 36px 37px),
+ linear-gradient(155deg,#332e2b,#24252a 50%,#131b1c);
+ box-shadow:inset 1px 1px #ecceb282,inset 0 -40px 66px #050707a0,0 18px 32px #0009
+}
+body.vx-universe.vx-overload .vx-workbench:before{
+ content:"";position:absolute;inset:0;pointer-events:none;z-index:0;
+ background:radial-gradient(ellipse at var(--vx-px,50%) 3%,#fff0be50,transparent 42%);
+ opacity:var(--v2-ambient);transition:opacity .3s
+}
+body.vx-universe.vx-overload .vx-workbench-toolbar{
+ position:relative;z-index:2;border-bottom:1px solid #d1b49445;padding:0 0 9px
+}
+body.vx-universe .vx-workbench-toolbar button{
+ border-radius:2px;background:linear-gradient(#4b635d,#263934);
+ color:#f4e7c6;border:1px solid #8ba493;
+ box-shadow:inset 1px 1px #fff4,0 2px #101d1a;padding:6px 11px;min-height:34px
+}
+.vx-v2-actions{display:flex;flex-wrap:wrap;align-items:center;gap:9px}
+.vx-v2-actions label{font:700 10px Consolas,monospace;color:#e0c6a8;letter-spacing:.06em}
+.vx-v2-actions input[type=range]{width:90px;accent-color:#d4b88a;cursor:pointer}
+body.vx-universe.vx-overload .vx-workbench-scene{
+ grid-template-columns:minmax(0,2.1fr) minmax(200px,.65fr);
+ align-items:end;padding-top:clamp(13px,2.5vw,27px);gap:clamp(14px,2.7vw,46px);
+}
+body.vx-universe.vx-overload .vx-monitor-assembly{
+ filter:drop-shadow(0 24px 15px #0406078c);transition:transform .4s ease;
+ transform:perspective(1900px) rotateY(var(--vx-rotate-y,0deg)) rotateX(var(--vx-rotate-x,0deg))
+}
+body.vx-universe.vx-overload .vx-monitor-frame{
+ border-radius:33px 32px 22px 23px / 30px 31px 19px 20px;
+ border:2px solid #8b8576;
+ padding:clamp(14px,1.9vw,26px) clamp(15px,2vw,27px) 14px;
+ background:
+ radial-gradient(ellipse at 12% 9%,#fff8d9c7,transparent 37%),
+ radial-gradient(ellipse at 87% 88%,#4d423e8a,transparent 24%),
+ linear-gradient(112deg,#e1d8bf,#c3b79e 35%,#908d7e 72%,#c2baa4);
+ box-shadow:inset 4px 4px 4px #fff3dca1,inset -12px -8px 17px #5b594b98,
+ 0 8px 0 #5e5546,0 13px 2px #231f1b,0 35px 43px #000a;
+}
+body.vx-universe.vx-overload .vx-monitor-glass{
+ border:clamp(9px,1.25vw,16px) solid #2b3235;
+ border-radius:9% / 12%;min-height:310px;
+ background:radial-gradient(ellipse at 35% 0%,#4a8592,#124767 62%,#101d2c);
+ box-shadow:inset 0 0 30px #04111e,0 0 0 2px #8e9079,0 0 0 5px #444a46;
+}
+body.vx-universe.vx-overload .vx-monitor-glass:after{
+ background:repeating-linear-gradient(0deg,transparent 0 3px,#020a1314 4px 5px),
+ radial-gradient(ellipse at 25% -11%,#fff5d93d,transparent 49%),
+ linear-gradient(120deg,#fff5db13,transparent 25%);
+}
+body.vx-universe.vx-overload .vx-monitor-glass:before{
+ content:"";pointer-events:none;position:absolute;z-index:4;inset:3px;
+ border:2px solid #b4d9e823;border-radius:inherit;
+ box-shadow:inset 0 0 43px 19px #010c18ad
+}
+body.vx-universe.vx-overload .vx-screen-desktop{min-height:270px}
+body.vx-universe.vx-overload .vx-screen-icons a{
+ border:1px solid transparent;border-radius:3px;transition:transform .15s,background .15s;
+}
+body.vx-universe.vx-overload .vx-screen-icons a:hover{
+ transform:translateY(-2px);background:#badbd72b;border-color:#a9d1d3
+}
+body.vx-universe.vx-overload .vx-explorer{
+ background:#dfded1;border:2px solid #efe8d5;border-right-color:#5b716d;border-bottom-color:#627270;
+ border-radius:2px;box-shadow:4px 7px #102e3ac2;
+}
+body.vx-universe.vx-overload .vx-bezel-foot{
+ font-size:10px;letter-spacing:.08em;color:#504c42;
+ padding-top:13px;filter:drop-shadow(0 1px #eee9cf)
+}
+body.vx-universe.vx-overload .vx-desk-surface{
+ height:53px;margin:0 -35px;
+ background:repeating-linear-gradient(96deg,#5c3b2c 0 3px,#774b32 4px 8px,#573a2f 9px 15px);
+ box-shadow:inset 0 4px 1px #b58253,inset 0 -14px 17px #291a18,0 8px 9px #0006;
+}
+.vx-v2-keyboard{margin:12px auto 0;width:min(82%,570px);
+ padding:8px 11px 13px;
+ background:linear-gradient(170deg,#dfd6bd,#988f7c);
+ border:1px solid #6e695c;border-radius:8px 8px 16px 16px;
+ transform:perspective(800px) rotateX(29deg);
+ box-shadow:inset 2px 2px #f9ecd0a1,inset -5px -5px #716b5a99,0 7px 5px #0205077a;
+}
+.vx-v2-keys{display:grid;grid-template-columns:repeat(16,1fr);gap:3px}
+.vx-v2-keys i{
+ height:clamp(8px,1.6vw,15px);border:1px solid #847d69;border-top-color:#fff6db;
+ border-radius:2px;background:linear-gradient(#eee8d5,#a8a28c);
+ box-shadow:0 2px 1px #504d43;min-width:0
+}
+.vx-v2-keyboard-caption{text-align:center;color:#5c564a;font:700 9px Consolas,monospace;margin-top:7px}
+body.vx-universe.vx-overload .vx-paper-note{transform:rotate(1deg);
+ background:linear-gradient(140deg,#f5ebcb,#d5be89);filter:drop-shadow(8px 12px 9px #0006);
+}
+body.vx-universe.vx-overload .vx-floppy{
+ filter:drop-shadow(4px 8px 5px #0006);
+ transform:rotate(-11deg) perspective(400px) rotateX(6deg);
+}
+/* Museum: dense, museum-grade physical records instead of synthetic card grid */
+body.vx-universe.vx-museum .vx-archive-foyer{
+ margin:6px 0 19px;border:1px solid #a79b7f;border-radius:5px;
+ padding:clamp(14px,1.9vw,24px);
+ background:radial-gradient(ellipse at var(--vx-px,35%) 0%,#f0d0a342,transparent 58%),
+ linear-gradient(120deg,#3d3830,#242d2e 67%,#161d20);
+ box-shadow:inset 1px 1px #e7d6b28c,inset -18px -25px 44px #0d0f0f91,0 19px 37px #0009
+}
+body.vx-universe.vx-museum .vx-archive-foyer:before{
+ content:"";position:absolute;z-index:0;pointer-events:none;inset:0;
+ background:radial-gradient(ellipse at var(--vx-px,35%) 7%,#fff4d951,transparent 48%);
+ opacity:var(--v2-ambient);transition:opacity .3s
+}
+body.vx-universe.vx-museum .vx-archive-foyer>*{position:relative;z-index:1}
+body.vx-universe.vx-museum .vx-foyer-main{grid-template-columns:minmax(0,1.15fr) minmax(0,.98fr);align-items:center;padding:12px 0 4px;gap:clamp(15px,3vw,48px)}
+body.vx-universe.vx-museum .vx-archive-prop{min-height:402px;padding:14px 12px 29px}
+body.vx-universe.vx-museum .vx-archive-cabinet{
+ width:min(550px,100%);min-height:357px;
+ border-radius:7px;border:3px solid #68695d;padding:18px 20px;
+ background:radial-gradient(ellipse at 15% 1%,#faf0d5a8,transparent 48%),
+ linear-gradient(110deg,#ded3b8,#a5a08d 45%,#777d72 75%,#b4b2a0);
+ box-shadow:inset 3px 3px #fff3d0b5,inset -11px -8px 16px #514d4591,0 12px 0 #4b4a42,0 31px 22px #0009;
+ transform:perspective(1000px) rotateY(-5deg)
+}
+body.vx-universe.vx-museum .vx-archive-plate{
+ padding:6px;background:linear-gradient(#e6dbbf,#c5b99f);font:700 11px Consolas,monospace;
+ border:1px solid #827e67;box-shadow:inset 1px 1px #fff6dc;
+}
+body.vx-universe.vx-museum .vx-cabinet-drawer{
+ width:100%;display:block;text-align:center;cursor:pointer;
+ position:relative;height:85px;margin-top:9px;padding:0;
+ color:#48453b;font:700 11px Consolas,monospace;
+ border:2px solid #77786a;background:linear-gradient(165deg,#d7cab0,#a9a38f);
+ box-shadow:inset 3px 3px #efe4cb,inset -5px -5px #716e62,0 4px #4d5148;
+ transition:transform .2s ease,box-shadow .2s ease;
+}
+body.vx-universe.vx-museum .vx-cabinet-drawer:hover,
+body.vx-universe.vx-museum .vx-cabinet-drawer[aria-pressed=true]{
+ transform:translateY(4px) scale(.985);
+ box-shadow:inset 3px 5px 7px #837d70,0 1px #4d5148;
+}
+body.vx-universe.vx-museum .vx-cabinet-drawer:focus-visible{outline:3px solid #e0cfac;outline-offset:3px}
+body.vx-universe.vx-museum .vx-cabinet-handle{top:12px;height:21px}
+body.vx-universe.vx-museum .vx-cabinet-file{bottom:11px;padding:6px;font-size:11px}
+body.vx-universe.vx-museum .vx-archive-disk{right:0;bottom:-12px;filter:drop-shadow(7px 8px 4px #0009)}
+body.vx-universe.vx-museum .vx-foyer-copy h2{
+ font-size:clamp(28px,3.6vw,55px);text-shadow:0 2px 3px #120c0aa8;letter-spacing:-.028em
+}
+body.vx-universe.vx-museum .vx-foyer-copy p{color:#d6c9ad}
+body.vx-universe.vx-museum #archive{
+ grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:19px;padding:14px 0;
+}
+body.vx-universe.vx-museum #archive .card{
+ min-height:213px;border:1px solid #a09880!important;border-top:7px solid #c8b58d!important;
+ background:radial-gradient(ellipse at 10% 0%,#fff9e7,transparent 78%),
+ repeating-linear-gradient(0deg,transparent 0 21px,#a9a0852b 22px 23px),
+ linear-gradient(130deg,#ede5d3,#c9bda2)!important;
+ box-shadow:inset 2px 2px #fff5dc,0 4px #4a4638,7px 11px 16px #0005!important;
+}
+body.vx-universe.vx-museum #archive .card .emoji{
+ font-size:0;position:relative;width:44px;height:42px;background:linear-gradient(#d3c5a8,#eee4d2);
+}
+body.vx-universe.vx-museum #archive .card .emoji:after{
+ content:"FILE";display:grid;place-items:center;position:absolute;inset:5px;
+ color:#6b5543;border:2px double #897458;font:800 10px Consolas,monospace;
+}
+body.vx-universe.vx-museum #archive .card:before{content:"CATALOG / VISHWAS.EXE";font-size:8px}
+body.vx-universe.vx-museum #archive .card .foot{color:#5d5745;border-top:1px dashed #a8a08f}
+body.vx-universe.vx-museum #archive .card:hover{transform:translateY(-4px) rotate(-.45deg)!important}
+/* Adapt material geometry to mobile without hiding tools. */
+@media(max-width:1024px){
+ body.vx-universe.vx-overload .vx-workbench-scene{grid-template-columns:minmax(0,1fr) 180px}
+ body.vx-universe.vx-museum .vx-foyer-main{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+ body.vx-universe.vx-museum .vx-archive-cabinet{min-height:355px}
+}
+@media(max-width:780px){
+ body.vx-universe.vx-overload .hero{grid-template-columns:1fr}
+ body.vx-universe.vx-overload .lcd{display:none}
+ body.vx-universe.vx-overload .vx-workbench-scene,
+ body.vx-universe.vx-museum .vx-foyer-main{grid-template-columns:1fr}
+ body.vx-universe.vx-overload .vx-desk-notes{grid-template-columns:1fr auto;padding-bottom:14px}
+ body.vx-universe.vx-museum .vx-archive-prop{min-height:380px}
+ body.vx-universe.vx-museum .header{grid-template-columns:1fr}
+ body.vx-universe.vx-museum .header nav.controls{width:100%;max-width:none}
+}
+@media(max-width:550px){
+ body.vx-universe.vx-overload .shell,body.vx-universe.vx-museum .wrap{padding-left:12px;padding-right:12px}
+ body.vx-universe.vx-overload .hero h1,body.vx-universe.vx-museum .header h1{font-size:32px!important}
+ body.vx-universe.vx-overload .vx-workbench{padding:12px 10px 0}
+ body.vx-universe.vx-overload .vx-monitor-frame{padding:10px 9px 9px;border-radius:20px}
+ body.vx-universe.vx-overload .vx-monitor-glass{min-height:224px;border-width:8px}
+ body.vx-universe.vx-overload .vx-screen-desktop{min-height:196px;padding:8px 6px}
+ body.vx-universe.vx-overload .vx-desk-surface{margin:0 -10px}
+ .vx-v2-keyboard{padding:5px 7px 8px}
+ .vx-v2-keys{gap:2px}
+ .vx-v2-keys i{height:8px}
+ body.vx-universe.vx-museum .vx-archive-foyer{padding:12px}
+ body.vx-universe.vx-museum .vx-archive-prop{min-height:327px;padding:10px 9px 19px}
+ body.vx-universe.vx-museum .vx-archive-cabinet{min-height:306px;padding:11px 13px}
+ body.vx-universe.vx-museum .vx-cabinet-drawer{height:72px}
+ body.vx-universe.vx-museum #archive{grid-template-columns:repeat(auto-fill,minmax(145px,1fr));gap:9px}
+}
+@media(prefers-reduced-motion:reduce){
+ body.vx-universe .vx-v2-keyboard,
+ body.vx-universe .vx-monitor-assembly,
+ body.vx-universe .vx-cabinet-drawer,
+ body.vx-universe .vx-workbench,
+ body.vx-universe .vx-archive-foyer{transition:none!important;transform:none!important}
+}
