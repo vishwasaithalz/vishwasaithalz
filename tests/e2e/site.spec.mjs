@@ -213,3 +213,23 @@ test('Three redesigned README visuals decode as images without missing files',as
   await page.screenshot({path:'qa-screenshots/visual-'+asset.split('/').pop().replace('.svg','.png'),animations:'disabled'});
  }
 });
+
+test('Release preserves BOOTDISK artwork and all ten README jump destinations',async({page})=>{
+ await page.goto(base+'/');
+ const hero=await page.request.get(base+'/assets/brand/afterhours-cybercafe.svg');
+ expect(hero.ok()).toBe(true);
+ const readme=await readFile(resolve(root,'README.md'),'utf8');
+ for(const id of ['memory','projects','overload','museum','contributions','chat','terminal','arcade','engineering','contact']){
+  expect(readme).toContain('href="#vx-'+id+'"');
+  expect(readme).toContain('id="vx-'+id+'"');
+ }
+});
+test('Original six GIF cards retain source links and aligned arrows',async({page})=>{
+ await page.goto(base+'/arcade/');
+ await expect(page.locator('.gif-gallery a')).toHaveCount(6);
+ await expect(page.locator('.gif-gallery .gallery-arrow')).toHaveCount(6);
+ for(const link of await page.locator('.gif-gallery a').all()){
+  await expect(link).toHaveAttribute('target','_blank');
+  await expect(link).toHaveAttribute('rel',/noopener/);
+ }
+});
