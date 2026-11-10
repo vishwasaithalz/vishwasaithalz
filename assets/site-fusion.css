@@ -102,3 +102,25 @@ body[data-mode="afterhours"][data-tone="ice"]{--orange:#8ce3e1;--pink:#b5d9ee}
  #tone{display:none}
 }
 @media(max-width:365px){.brand{font-size:15px}.mode-toggle{font-size:8px;padding:7px 6px}.mastinner{gap:4px}}
+
+
+/* Review-only UI polish: consistent arrow baseline, tap targets and card content.
+   Preserve the existing retro desktop art, spacing system and reduced-motion rules. */
+.hero-cta .pill > span,
+.hero-cta .quiet > span{
+ display:inline-grid;place-items:center;inline-size:1.25em;block-size:1.25em;
+ line-height:1;vertical-align:middle;flex:0 0 auto;
+}
+.hero-cta .quiet{display:inline-flex;align-items:center;gap:9px;min-height:44px}
+.project-bottom{align-items:center}
+.project-bottom > div{flex:1;min-width:0}
+.project-arrow{
+ display:inline-grid;place-items:center;align-self:center;flex:0 0 36px;
+ inline-size:36px;block-size:36px;line-height:1;
+ border:1px solid currentColor;border-radius:50%;
+ transition:background .2s var(--ease),color .2s var(--ease);
+}
+.project:hover .project-arrow,.project:focus-visible .project-arrow{
+ color:var(--panel);background:var(--orange);border-color:var(--orange);
+}
+@media(prefers-reduced-motion:reduce){.project-arrow{transition:none}}
