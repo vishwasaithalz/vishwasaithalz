@@ -1,268 +1,172 @@
-<!doctype html><html lang="en"><head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#0b1b30"><meta name="description" content="Vishwas Aithal, creator of PSYCHKARMA and BOOTDISK 1995, building retro interactive experiences, defensive security tools and developer projects. Boot an interactive retro computer universe, original arcade games and engineering project showcase.">
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#f1eddf">
+<meta name="description" content="Vishwas Aithal's personal internet. A premium portfolio meets a 2000s cybercafe desktop, with real defensive security projects, retro games, creative websites and a working mini terminal.">
 <meta name="robots" content="index,follow">
-<title>VISHWAS.EXE | PSYCHKARMA BOOTDISK 1995</title>
-<style>
-:root{--bg:#071829;--ink:#e8f7e8;--accent:#b4f5ba;--dim:#b2ccd0;--edge:#72b5ba;--base:#102c41;--screen:#0b2332;--gold:#ffdb93}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;min-width:320px;min-height:100vh;background:radial-gradient(circle at 65% 10%,#174f68 0,transparent 30%),radial-gradient(circle at 12% 75%,#392c63 0,transparent 40%),linear-gradient(145deg,#061623,#172748);font-family:Consolas,"Courier New",monospace;color:var(--ink)}
-body[data-theme=day]{--bg:#dce4de;--ink:#1b3744;--accent:#2a726c;--dim:#365c62;--edge:#3e7381;--base:#cbe7e5;--screen:#d6eced;--gold:#805316;background:linear-gradient(145deg,#d6e4d4,#afbed2)}
-*::selection{background:var(--gold);color:#162a39}
-a,button{font:inherit;cursor:pointer}a:focus-visible,button:focus-visible{outline:3px dashed var(--gold);outline-offset:4px}
-.outer{max-width:1260px;margin:auto;padding:20px clamp(12px,2.6vw,35px) 60px}
-.chrome{display:flex;align-items:center;justify-content:space-between;gap:9px;padding:8px 12px;background:#1c4770;border:2px solid #83b5b7;color:#e0f4ef;font-size:12px}
-.chrome strong{color:#ffdc91}
-.surface{border:2px solid var(--edge);margin-top:17px;background:var(--base);box-shadow:9px 11px #0005}
-.surface-title{background:linear-gradient(90deg,#113a97,#2c8fb1);color:#fff;padding:8px 13px;display:flex;justify-content:space-between;gap:15px;font-size:13px;font-weight:bold}
-.hero{display:grid;grid-template-columns:1fr minmax(200px,290px);align-items:center;gap:23px;padding:clamp(20px,3vw,44px)}
-.kicker{font-size:12px;color:var(--gold);letter-spacing:.2em;font-weight:700}
-h1{font:900 clamp(43px,7vw,94px)/.96 "Arial Black",system-ui,sans-serif;letter-spacing:-.07em;margin:14px 0 16px}h1 span{color:var(--accent)}
-.intro{max-width:760px;color:var(--dim);font:clamp(14px,1.65vw,18px)/1.5 system-ui,sans-serif}
-.chips{display:flex;flex-wrap:wrap;gap:7px;margin-top:21px}.chip{font-size:12px;border:1px solid var(--edge);background:var(--screen);padding:7px 9px;color:var(--gold)}
-.retro-pc{background:linear-gradient(145deg,#b9bfba,#eceae4);border-radius:12px;padding:18px 14px 22px;box-shadow:10px 13px #050c1b80;transform:rotate(2deg);border:4px ridge #dadfd6;color:#1d3442}
-.monitor{background:#071c24;border:13px ridge #818e8d;height:191px;border-radius:9px;padding:14px;position:relative;color:#8ff5bc;font:13px/1.7 Consolas,monospace;box-shadow:inset 0 0 24px #1b5b4a}
-.monitor .terminal-head{color:#ffdf97;font-weight:bold}.blink{animation:blink 1s steps(1) infinite}@keyframes blink{50%{opacity:0}}
-.pc-bottom{text-align:center;font:900 11px Arial,sans-serif;color:#5b6065;margin-top:13px;letter-spacing:.2em}.pc-led{display:inline-block;width:8px;height:8px;border-radius:50%;background:#57bd73;margin-left:15px}
-.section{padding:20px clamp(15px,3vw,30px)}
-.hd{font-size:20px;color:var(--accent);font-weight:800;letter-spacing:-.02em}
-.sub{color:var(--dim);font-size:13px;line-height:1.6;margin-top:4px;margin-bottom:18px}
-.launch-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
-.launch{display:flex;flex-direction:column;gap:7px;min-height:155px;border:2px solid var(--edge);background:var(--screen);padding:15px;text-decoration:none;color:var(--ink);transition:transform .13s ease,border-color .13s ease}
-.launch:hover,.launch.active{border-color:var(--gold);transform:translateY(-3px)}.launch .icon{font-size:30px}.launch strong{font-size:16px;color:var(--accent)}.launch small{font-size:12px;line-height:1.5;color:var(--dim)}.launch .arrow{margin-top:auto;font-size:11px;color:var(--gold);letter-spacing:.09em}
-.bar{display:flex;gap:8px;flex-wrap:wrap;padding:10px 15px;border-top:2px solid var(--edge);align-items:center}
-.bar a,.bar button{background:var(--screen);border:1px solid var(--edge);color:var(--ink);padding:8px 11px;text-decoration:none;min-height:39px}
-.bar a:hover,.bar button:hover{background:var(--base)}
-.bar .grow{flex:1}
-footer{margin-top:26px;padding:18px 0;color:var(--dim);font-size:12px;line-height:1.65;border-top:1px solid var(--edge)}
-@media(max-width:850px){.hero{grid-template-columns:1fr}.retro-pc{display:none}.launch-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media(max-width:540px){.launch-grid{grid-template-columns:1fr}.launch{min-height:122px}.hero{padding:19px}.chrome{font-size:9px}}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.blink{animation:none}.launch{transition:none}}
-
-/* AFTER HOURS / 1998-2026 save slots; isolated from existing arcade */
-.vx-era-console{margin:0 clamp(16px,3vw,30px) 24px;border:2px solid #8caca1;background:#091b25;color:#f4f0db;box-shadow:inset 0 0 0 4px #0b2934,7px 9px #030a11;position:relative}
-.vx-era-console::before{content:"";position:absolute;inset:0;pointer-events:none;background:repeating-linear-gradient(0deg,transparent 0 3px,#0002 4px 5px);opacity:.26}
-.vx-era-header{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:10px 13px;background:linear-gradient(90deg,#204568,#1b3454);border-bottom:2px solid #8aac9e;font:700 12px/1.4 Consolas,monospace;letter-spacing:.09em;color:#e9ebd5}
-.vx-era-led{display:inline-block;width:8px;height:8px;border-radius:50%;background:#afe3aa;box-shadow:0 0 8px #6bba89;margin-right:8px}
-.vx-era-header small{color:#c4d8c9;letter-spacing:.03em;font-size:11px}
-.vx-era-controls{display:flex;flex-wrap:wrap;gap:3px;padding:11px 12px 1px;position:relative}
-.vx-era-controls button{background:#102b3b;color:#c7d7cf;border:1px solid #466a74;border-bottom:3px solid #243b43;padding:9px 13px;font:700 12px Consolas,monospace;letter-spacing:.035em;transition:background .18s ease,color .18s ease}
-.vx-era-controls button:hover{background:#234852;color:#faf5db}
-.vx-era-controls button[aria-pressed="true"]{background:#c9c2a7;color:#1e2b2c;border-color:#f1ebd5;border-bottom:3px solid #d1a36c}
-.vx-era-panels{display:grid;grid-template-columns:minmax(260px,1.05fr) minmax(220px,.95fr);gap:24px;padding:20px clamp(15px,3vw,30px) 22px;position:relative}
-.vx-era-display{min-height:256px;position:relative;border:15px ridge #98978a;border-bottom-width:25px;border-radius:20px;background:radial-gradient(circle at 43% 32%,#183f2f,#05180f 80%);box-shadow:inset 0 0 22px #010c07,8px 11px #0006;overflow:hidden;transform:rotate(-.5deg)}
-.vx-era-display::before{content:"";position:absolute;inset:0;border-radius:3px;pointer-events:none;background:linear-gradient(115deg,#fff2,transparent 24%,transparent 73%,#0003),repeating-linear-gradient(0deg,transparent 0 3px,#0005 4px 5px);opacity:.42}
-.vx-era-display::after{content:"";position:absolute;inset:0;border:2px solid #294337;border-radius:5px;box-shadow:inset 0 0 30px #010d07;pointer-events:none}
-.vx-era-screen{position:relative;z-index:1;padding:15px 17px;min-height:200px;font:clamp(12px,1.6vw,17px)/1.65 Consolas,"Courier New",monospace;color:#a9edaa;white-space:pre-wrap;overflow-wrap:anywhere;text-shadow:0 0 6px #74ff7433}
-.vx-era-display[data-era="2004"]{background:linear-gradient(135deg,#13537d,#0a2672 40%,#167e58);border-color:#c5bdab}
-.vx-era-display[data-era="2004"] .vx-era-screen{color:#f0f5e7;text-shadow:1px 1px #11314a}
-.vx-era-display[data-era="2013"]{background:linear-gradient(#e7dcc1,#c8b793);border-color:#aaa799}
-.vx-era-display[data-era="2013"] .vx-era-screen{color:#392c2a;text-shadow:none}
-.vx-era-display[data-era="2026"]{background:radial-gradient(circle at 75% 10%,#1b4052,#071721 75%);border-color:#536b6b}
-.vx-era-display[data-era="2026"] .vx-era-screen{color:#b7e9c8}
-/* Authentic 1998 -> 2004 -> 2013 -> NOW transition. No font/network dependencies. */
-.vx-era-console{isolation:isolate;overflow:hidden;background:radial-gradient(ellipse at 26% 35%,#152e36 0%,#08171d 72%)}
-.vx-era-console:after{content:"";pointer-events:none;position:absolute;inset:0;z-index:5;box-shadow:inset 0 0 60px #0005}
-.vx-era-header{font-family:"Courier New",monospace;text-shadow:1px 1px #0b1d25}
-.vx-era-controls{background:#0d202a}
-.vx-era-controls button{position:relative;min-height:43px;border-radius:0;box-shadow:inset 1px 1px #738c86,1px 2px #020e13}
-.vx-era-controls button[aria-pressed=true]{box-shadow:inset 2px 2px #8d896f;filter:saturate(.85)}
-.vx-era-controls button[aria-pressed=true]:before{content:"";position:absolute;left:8px;top:7px;width:4px;height:4px;border-radius:50%;background:#74c18e;box-shadow:0 0 7px #74e6a3}
-.vx-era-transport{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:8px 14px 11px;background:#0d202a;border-bottom:1px solid #3d5755}
-.vx-era-transport button{background:#c3baa2;border:2px solid #e0d6bd;border-bottom-color:#776d5c;color:#26312e;padding:6px 13px;font:700 11px "Courier New",monospace;cursor:pointer}
-.vx-era-transport button:focus-visible{outline:2px dashed #d9e2af;outline-offset:3px}
-.vx-era-timecode{font:11px "Courier New",monospace;color:#b6cebd;letter-spacing:.06em}
-.vx-era-timecode b{color:#e0c78b}
-.vx-era-display{transition:background .45s ease,border-color .45s ease,filter .45s ease;box-shadow:inset 0 0 26px #000a,9px 12px #0008,0 1px 0 #f3e4c0}
-.vx-era-display:before{z-index:3}
-.vx-era-display .vx-era-glow{position:absolute;inset:0;pointer-events:none;z-index:2;background:radial-gradient(ellipse at 35% 30%,#c6fff108,transparent 70%),repeating-linear-gradient(0deg,transparent 0 3px,#0002 4px 5px);mix-blend-mode:screen}
-.vx-era-screen{transition:opacity .22s ease,transform .22s ease,font-size .25s ease;position:relative;z-index:2}
-.vx-era-display.vx-era-switching .vx-era-screen{opacity:0;transform:translateY(6px)}
-.vx-era-display[data-era="1998"]{border-color:#a3a08b;filter:sepia(.11);background:radial-gradient(circle at 45% 30%,#1b4b2c,#061809 80%)}
-.vx-era-display[data-era="1998"] .vx-era-screen{font-family:"Courier New",monospace;letter-spacing:.022em;color:#a3f3ab;text-shadow:0 0 8px #7aeaa14f}
-.vx-era-display[data-era="2004"]{border-color:#d2c7ad;background:linear-gradient(160deg,#16629d 0%,#1250a4 45%,#125e3d 95%)}
-.vx-era-display[data-era="2004"] .vx-era-screen{margin:18px;padding:10px 13px 18px;background:#121b21;color:#b9da9c;border:4px ridge #c3beb0;box-shadow:10px 10px #0b315d;font:13px/1.65 "Courier New",monospace;min-height:172px;white-space:pre-wrap}
-.vx-era-display[data-era="2013"]{border-color:#a7a293;background:linear-gradient(140deg,#e9e0ca,#d7c3a6)}
-.vx-era-display[data-era="2013"] .vx-era-screen{margin:16px;padding:22px;background:#fffaf0;border-top:24px solid #9b5329;color:#554531;box-shadow:5px 7px #786b565e;font:14px/1.6 Georgia,serif;min-height:172px}
-.vx-era-display[data-era="2026"]{border-color:#627c7c;background:radial-gradient(circle at 85% 10%,#213c53,#07151f 65%)}
-.vx-era-display[data-era="2026"] .vx-era-screen{margin:14px;padding:17px 14px;border:1px solid #32505b;border-top:23px solid #253c4a;background:#0b1826;color:#b7e4c7;font:13px/1.7 "Courier New",monospace;min-height:176px}
-.vx-era-console[data-tour="playing"] .vx-era-led{animation:vxPulse 1.7s ease-in-out infinite}
-@keyframes vxPulse{0%,100%{opacity:.6;box-shadow:0 0 2px #5cab7a}50%{opacity:1;box-shadow:0 0 12px #9deeb2}}
-@media(max-width:735px){.vx-era-transport{flex-direction:column;align-items:stretch}.vx-era-transport button{width:100%}.vx-era-display[data-era="2004"] .vx-era-screen,.vx-era-display[data-era="2013"] .vx-era-screen,.vx-era-display[data-era="2026"] .vx-era-screen{margin:8px;font-size:11px;min-height:145px}}
-@media(prefers-reduced-motion:reduce){.vx-era-display,.vx-era-screen{transition:none!important}.vx-era-console[data-tour="playing"] .vx-era-led{animation:none}}
-.vx-era-story{display:flex;flex-direction:column;align-items:flex-start;justify-content:center;padding:5px 0}
-.vx-era-story .vx-era-kicker{font:700 12px Consolas,monospace;letter-spacing:.17em;color:#d6bd86}
-.vx-era-story h2{font:900 clamp(26px,4vw,48px)/.95 Arial,sans-serif;letter-spacing:-.04em;margin:12px 0 12px;color:#f5f1db}
-.vx-era-story p{font:15px/1.65 system-ui,sans-serif;color:#b9cfd1;max-width:490px;margin:0 0 22px}
-.vx-era-story a{padding:11px 16px;background:#d4b779;color:#1e2622;text-decoration:none;font:800 12px Consolas,monospace;border:2px solid #f2dcb4;box-shadow:4px 4px #091a1d}
-.vx-era-story a:hover{background:#ebdbad}.vx-era-footer{display:flex;justify-content:space-between;gap:6px;flex-wrap:wrap;border-top:1px solid #4d6562;padding:8px 12px;color:#99ada9;font:11px Consolas,monospace}
-@media(max-width:735px){.vx-era-panels{grid-template-columns:1fr;gap:15px}.vx-era-display{min-height:200px}.vx-era-screen{min-height:165px}.vx-era-controls button{flex:1}.vx-era-story{padding:0 0 6px}.vx-era-header{font-size:10px}.vx-era-header small{display:none}}
-@media(prefers-reduced-motion:reduce){.vx-era-controls button{transition:none}.vx-era-display{transform:none}.vx-era-led{box-shadow:none}}
-
-.vx-press-start{display:inline-block;padding:13px 21px;background:#ffdb93;color:#142435;font-weight:900;border:3px outset #fff0c1;box-shadow:5px 5px #0008;text-decoration:none;letter-spacing:.12em}.vx-press-start:hover,.vx-press-start:focus-visible{background:#b4f5ba;box-shadow:0 0 0 4px #ffe59b55,5px 5px #0008}.vx-restore-drawer{margin:12px 0 20px}.vx-restore-drawer>summary{cursor:pointer;padding:12px 18px;border:2px solid var(--edge);background:var(--screen);color:var(--gold);font-weight:800}.vx-restore-drawer>.vx-era-console{margin:0 0 16px}
-
-/* Compact real command window. Replaces the oversized ornamental CRT. */
-.hero{grid-template-columns:minmax(0,1fr) minmax(230px,316px)}
-.mini-live-terminal{align-self:center;width:min(100%,316px);min-width:0;border:1px solid #7f929d;background:#07130f;box-shadow:0 4px 0 #0005,0 12px 28px #0004;color:#9dddb1;font:11px/1.5 Consolas,"Courier New",monospace;overflow:hidden}
-.mini-term-bar{display:flex;align-items:center;gap:7px;min-height:33px;padding:7px 9px;background:linear-gradient(100deg,#283f4f,#142d36);color:#e3f4eb;border-bottom:1px solid #68848b}
-.mini-term-bar strong{font-size:10px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;letter-spacing:0}
-.mini-term-led{width:7px;height:7px;border-radius:50%;background:#aef9a6;box-shadow:0 0 6px #aef9a6;flex:none}
-.mini-term-clock{margin-left:auto;color:#f6d08b;white-space:nowrap;font-size:10px}
-.mini-term-screen{padding:13px 12px 7px;min-height:100px;max-height:138px;overflow:auto;overflow-wrap:anywhere;scrollbar-width:thin}
-.mini-term-screen div{padding:2px 0}
-.mini-term-screen b{color:#f6d08b}
-.mini-term-form{display:flex;align-items:center;padding:6px 9px 7px;gap:5px;border-top:1px solid #305846}
-.mini-term-prompt{white-space:nowrap;color:#8cc3a0;font-size:10px}
-.mini-term-form input{min-width:0;flex:1;background:transparent;color:#e7f8e9;border:0;border-bottom:1px solid #5b8b71;border-radius:0;padding:5px 2px;font:11px Consolas,monospace}
-.mini-term-form button{flex:none;padding:5px 6px;background:#234737;color:#e7f8e9;border:1px solid #5c9c7f;font-size:10px}
-.mini-term-foot{padding:2px 10px 6px;margin:0;text-align:right;color:#7eb18d;font-size:9px;letter-spacing:.06em}
-.mini-term-foot span{color:#9dddb1}
-@media(max-width:850px){.mini-live-terminal{width:min(100%,410px);max-width:410px}.hero{grid-template-columns:1fr}}
-@media(max-width:420px){.mini-term-bar strong{font-size:9px}.mini-term-form{flex-wrap:wrap}.mini-term-form input{flex-basis:95px}}
-
-</style><link rel="stylesheet" href="./assets/brand/retro-shell.css"><link rel="icon" type="image/svg+xml" href="./assets/brand/favicon.svg"></head><body data-theme="night" class="vx-universe"><nav class="vx-global-nav" aria-label="VISHWAS.EXE global navigation"><a class="vx-brand" href="./"><span aria-hidden="true">▦</span> <strong>VISHWAS.EXE</strong><span> / SYSTEM 98.NOW</span></a><div class="vx-links"><a href="./" aria-current="page">💾 BOOT</a><a href="./memory/">🖥️ MEMORY</a><a href="./museum/">📼 MUSEUM</a><a href="./arcade/">🎮 ARCADE</a><a href="./overload/">💥 OVERLOAD</a><a href="./overload/game-room.html">🕹️ GAMES</a><a href="./overload/tracker.html">🎚️ TRACKER</a><a href="./overload/network.html">📡 NETWORK</a><a href="./overload/capsule.html">💿 FLOPPY</a><a href="https://github.com/vishwasaithalz">⌨️ GITHUB</a></div><span class="vx-indicator">● ONLINE</span></nav>
-<main class="outer">
-<div class="chrome"><span>▣ VISHWAS AITHAL // BOOT MANAGER 2.0</span><strong id="clock">SYSTEM ONLINE</strong></div>
-<div class="surface">
-<div class="surface-title"><span>🖥 C:\VISHWAS\MY COMPUTER</span><span>□ ×</span></div>
-<div class="hero">
-<div><div class="kicker">BOOTDISK 1995 / PSYCHKARMA SYSTEM ONLINE</div><h1>VISHWAS<span>.EXE</span><br>BOOTDISK 1995_</h1>
-<p class="intro">Winamp playlists. Virtual drives. Mystery downloads. Snake, Mario, Contra, Tanks, Virtua Cop 2, I.G.I. and Counter-Strike. Dexter, Johnny Bravo, Pokémon, Beyblade and after-school television. A 2013 blog. A lifelong obsession with how things work. Now: original games, safe security labs, web projects and automation.</p>
-<p><a class="vx-press-start" href="./memory/" aria-label="Press Start to open the interactive retro desktop">▶ PRESS START</a></p>
-<div class="chips"><span class="chip">💾 BOOTDISK 1995</span><span class="chip">🌐 BLOGGER SINCE 2013</span><span class="chip">⌨️ WEB + SECURITY</span><span class="chip">🕹 ORIGINAL GAMES</span></div>
-</div>
-<section class="mini-live-terminal" aria-label="Interactive compact system terminal">
-<div class="mini-term-bar"><span class="mini-term-led" aria-hidden="true"></span><strong>VISHWAS / COMMAND PROMPT</strong><span class="mini-term-clock" id="mini-term-clock" aria-label="Current local time">LIVE</span></div>
-<div class="mini-term-screen" id="mini-term-screen" role="log" aria-live="polite" aria-relevant="additions"><div>Microsoft-style personal computer archive</div><div>VISHWAS.EXE [LOCAL INTERACTIVE]</div><div>Type <b>help</b> to see commands.</div></div>
-<form class="mini-term-form" id="mini-term-form"><label for="mini-term-input" class="mini-term-prompt">C:\\VISHWAS&gt;</label><input id="mini-term-input" maxlength="48" autocomplete="off" spellcheck="false" aria-label="Enter local terminal command" placeholder="help" required><button type="submit">↵ RUN</button></form><p class="mini-term-foot">LOCAL ONLY <span aria-hidden="true">●</span> NO SHELL ACCESS</p></section>
-</div>
-<details class="vx-restore-drawer"><summary>💾 OPEN RESTORE POINTS / FOUR ERAS</summary>
-<section class="vx-era-console" aria-labelledby="vx-era-label">
-<div class="vx-era-header"><span><span class="vx-era-led" aria-hidden="true"></span><span id="vx-era-label">RESTORE POINTS / C:\VISHWAS\SAVEGAMES</span></span><small>SELECT A YEAR • NO TRACKING • ORIGINAL SIMULATION</small></div>
-<div class="vx-era-controls" role="group" aria-label="Choose a chapter of Vishwas Aithal's computer history">
-<button type="button" data-vx-era="1998" aria-pressed="true">01 / 1998 DOS</button>
-<button type="button" data-vx-era="2004" aria-pressed="false">02 / 2004 CAFÉ</button>
-<button type="button" data-vx-era="2013" aria-pressed="false">03 / 2013 WEB</button>
-<button type="button" data-vx-era="2026" aria-pressed="false">04 / NOW</button>
-</div>
-<div class="vx-era-transport"><span class="vx-era-timecode">DEMO TAPE <b id="vx-era-timecode">01:1998 / 04:2026</b> &nbsp;·&nbsp; <span id="vx-era-transport-status">MANUAL PLAYBACK</span></span><button type="button" id="vx-era-autoplay" aria-pressed="false">▶ PLAY ERA TOUR</button></div>
-<div class="vx-era-panels">
-<div class="vx-era-display" data-era="1998" id="vx-era-display" aria-label="Illustrated screen showing the selected computer era">
-<span class="vx-era-glow" aria-hidden="true"></span>
-<pre class="vx-era-screen" id="vx-era-screen">C:\&gt;dir /w
-GAMES   MUSIC    TOOLS
-SNAKE   CONTRA   TANKS
-
-C:\&gt; run curiosity.exe
-[BOOT DISK LOADED]
-_</pre></div>
-<div class="vx-era-story"><div class="vx-era-kicker" id="vx-era-counter">SAVE SLOT 01 / 04</div>
-<h2 id="vx-era-name">THE FIRST BOOT</h2>
-<p id="vx-era-body">No app stores, no search suggestions. Just a bulky screen and the irresistible urge to open every folder. The old curiosity still powers the new projects.</p>
-<a id="vx-era-destination" href="./memory/">[ ENTER MEMORY OS ]</a></div>
-</div>
-<div class="vx-era-footer"><span>ORIGINAL INTERACTIVE RECONSTRUCTION / NOT A HISTORICAL SCREENSHOT</span><span>ARROW KEYS + ENTER ENABLED</span></div>
-</section>
-</details>
-<div class="section">
-<div class="hd">📂 CHOOSE YOUR BOOT DEVICE</div><p class="sub">All paths below are part of this public project. The games are original and the nostalgic apps are simulations. Press Tab and Enter, or navigate cards with arrow keys when one is focused.</p>
-<div class="launch-grid" id="launch-grid">
-<a class="launch" href="./overload/"><span class="icon">💥</span><strong>OVERLOAD 2.0</strong><small>Minesweeper, Pong, paint, PC builder, BIOS, terminal, fake BSOD, animated screensaver and more.</small><span class="arrow">[1] BOOT DESKTOP ▶</span></a>
-<a class="launch" href="./overload/game-room.html"><span class="icon">🚀</span><strong>BONUS GAME ROOM</strong><small>Original Starfighter and Pixel Racer with keyboard and touch controls.</small><span class="arrow">[2] LAUNCH ARCADE ▶</span></a>
-<a class="launch" href="./overload/network.html"><span class="icon">🌐</span><strong>NETWORK NEIGHBORHOOD</strong><small>Clickable illustrated diagram of public projects, not a real network scan.</small><span class="arrow">[3] EXPLORE REPOS ▶</span></a>
-<a class="launch" href="./overload/capsule.html"><span class="icon">💾</span><strong>FLOPPY TIME CAPSULE</strong><small>Four private-to-your-browser memory disks with optional text export.</small><span class="arrow">[4] OPEN FLOPPY ▶</span></a>
-<a class="launch" href="./overload/tracker.html"><span class="icon">🎚️</span><strong>TRACKER STUDIO</strong><small>Original 16-step synthesized rhythm machine, local patterns and JSON export.</small><span class="arrow">[5] MAKE ORIGINAL BEATS ▶</span></a>
-<a class="launch" href="./memory/"><span class="icon">🖥️</span><strong>MEMORY OS</strong><small>Original windowed 90s-inspired desktop, Snake, Winamp-ish visualizer and local terminal.</small><span class="arrow">[6] RESTORE DESKTOP ▶</span></a>
-<a class="launch" href="./museum/"><span class="icon">📼</span><strong>THE INTERNET MUSEUM</strong><small>102 searchable software, game, cartoon and early web memories with mini-games.</small><span class="arrow">[7] OPEN ARCHIVE ▶</span></a>
-<a class="launch" href="./arcade/"><span class="icon">🎮</span><strong>ARCADE 3.0</strong><small>The preserved original Snake, pinball, project roulette, chat and terminal experience.</small><span class="arrow">[8] ORIGINAL ARCADE ▶</span></a>
-<a class="launch" href="./labs/"><span class="icon">🧪</span><strong>PRODUCT LAB 01</strong><small>Six original working browser apps: ticket desk, bookmark vault, quote atlas, progressive feed, community planning and commerce sandbox.</small><span class="arrow">[A] OPEN PRODUCT LAB ▶</span></a>
-<a class="launch" href="https://github.com/vishwasaithalz"><span class="icon">⌨️</span><strong>REAL SOURCE CODE</strong><small>Inspect public security labs, websites, automation experiments and documented limitations.</small><span class="arrow">[9] OPEN GITHUB ▶</span></a>
-<a class="launch" href="https://vishwasaithal.ai.studio/"><span class="icon">🧑‍💻</span><strong>PERSONAL PORTFOLIO</strong><small>Follow the actual builder beyond the nostalgia and see the public identity.</small><span class="arrow">[0] OPEN PORTFOLIO ▶</span></a>
-</div></div>
-<div class="bar"><button id="theme" type="button">🎨 TOGGLE THEME</button><button id="tone" type="button">🔊 ORIGINAL BOOT TONES</button><span class="grow"></span><a href="https://www.linkedin.com/in/vishwas-aithal">LINKEDIN</a><a href="https://github.com/vishwasaithalz?tab=repositories">GITHUB PROJECTS</a></div>
-</div>
-<footer>© Vishwas Aithal. Original illustrations and code. Classic software and entertainment names are descriptive nostalgia references, not affiliated downloads or copyrighted audio. No analytics, account creation, advertisements or automatic playback. GitHub Pages hosting required for subpages to appear live.</footer>
+<meta property="og:type" content="website">
+<meta property="og:title" content="Vishwas Aithal | Curious Since the Start Screen">
+<meta property="og:description" content="The best parts of a professional portfolio and a 2000s cybercafe, on one interactive GitHub Pages website.">
+<meta property="og:image" content="https://raw.githubusercontent.com/vishwasaithalz/vishwasaithalz/main/assets/brand/afterhours-cybercafe.svg">
+<title>Vishwas Aithal | Curious Since the Start Screen</title>
+<link rel="icon" type="image/svg+xml" href="./assets/brand/favicon.svg">
+<link rel="stylesheet" href="./assets/site-fusion.css">
+<script src="./assets/site-fusion.js" defer></script>
+</head>
+<body data-mode="studio">
+<a class="skip" href="#main">SKIP TO CONTENT</a>
+<header class="mast">
+ <div class="shell mastinner">
+  <a class="brand" href="./" aria-label="Vishwas Aithal home">VISHWAS<span>.</span>AITHAL</a>
+  <nav class="navlinks" aria-label="Site navigation">
+   <a href="#work">WORK / 01</a>
+   <a href="#story">STORY / 02</a>
+   <a href="#sidequests">SIDE QUESTS / 03</a>
+   <a href="#contact">CONTACT / 04</a>
+  </nav>
+  <div class="header-actions">
+   <button class="mode-toggle" id="mode-switch" aria-pressed="false" type="button" title="Switch to after-hours mode"><span class="dot" aria-hidden="true"></span><span id="mode-label">STUDIO MODE</span> <span aria-hidden="true">↔</span></button>
+   <button class="palette-button" id="quick-launch" title="Quick navigation (Ctrl+K)" aria-label="Open quick navigation" type="button">⌘</button>
+  </div>
+ </div>
+</header>
+<main id="main">
+ <section class="shell hero" id="top" aria-labelledby="headline">
+  <div>
+   <div class="eyebrow">A PERSONAL INTERNET SPACE / EST. CURIOSITY</div>
+   <h1 class="hero-title" id="headline">STILL<br><span class="outlined">PRESSING</span><br><span class="accent">START.</span></h1>
+   <p class="hero-copy">I'm <strong>Vishwas Aithal.</strong> From old Windows desktops, game folders and after-school cybercafés to practical cybersecurity tools, AI automation and the web. I build things worth opening twice.</p>
+   <div class="hero-cta">
+    <a class="pill primary" href="#work">SEE WHAT I BUILD <span aria-hidden="true">↗</span></a>
+    <a class="quiet" href="#sidequests">OR PLAY FIRST <span aria-hidden="true">↗</span></a>
+   </div>
+   <div class="quickfacts" aria-label="Interests"><span>DEFENSIVE SECURITY</span><span>WEB EXPERIENCES</span><span>AI AUTOMATION</span></div>
+  </div>
+  <div class="desk-scene" id="desk-scene" aria-label="Interactive illustration of a vintage Windows computer">
+   <div class="desk-lines" aria-hidden="true"></div>
+   <div class="scene-note" aria-hidden="true">NOT A GENERIC<br>PORTFOLIO.<br>IT HAS A START MENU.</div>
+   <div class="pc-cabinet">
+    <div class="pc-screen">
+     <div class="desktop-top"><span>VISHWAS.EXE / BOOTDISK 1995</span><b>● ONLINE</b></div>
+     <div class="desktop-icons">
+      <a class="desk-icon" href="./arcade/" aria-label="Open the playable arcade"><span class="graphic" aria-hidden="true">🕹</span>ARCADE.EXE</a>
+      <a class="desk-icon" href="./memory/" aria-label="Open Memory OS"><span class="graphic" aria-hidden="true">💿</span>MEMORY.OS</a>
+      <a class="desk-icon" href="./museum/" aria-label="Open Internet Museum"><span class="graphic" aria-hidden="true">📼</span>MUSEUM</a>
+      <a class="desk-icon" href="./overload/" aria-label="Open Overload workbench"><span class="graphic" aria-hidden="true">🖥</span>OVERLOAD</a>
+     </div>
+     <div class="pc-taskbar"><button type="button" data-open-palette>▣ START</button><span>● NETWORK CONNECTED</span><time id="pc-clock">--:--</time></div>
+    </div>
+    <div class="pc-footer"><span><i class="pc-led" aria-hidden="true"></i>VISHWAS / PERSONAL COMPUTER</span><span>POWER ON</span></div>
+    <div class="pc-leg" aria-hidden="true"></div><div class="pc-foot" aria-hidden="true"></div>
+   </div>
+   <div class="scene-ticket" aria-hidden="true"><b>ONE MORE ROUND?</b>WINDOWS 95 → 11<br>2000s KID / 2026 BUILDER</div>
+   <div class="scene-sticker" aria-hidden="true">100%<br>CURIOUS</div>
+  </div>
+ </section>
+ <div class="strip" aria-label="My technological interests"><div class="strip-track">
+  <span>WINAMP SKINS <i>✳</i> COUNTER-STRIKE <i>✳</i> WINDOWS STARTUP <i>✳</i> YINYANGYOHACKERS <i>✳</i> WEB DESIGN <i>✳</i> DEFENSIVE SECURITY <i>✳</i> ACTUAL EXPERIMENTS <i>✳</i></span>
+  <span aria-hidden="true">WINAMP SKINS <i>✳</i> COUNTER-STRIKE <i>✳</i> WINDOWS STARTUP <i>✳</i> YINYANGYOHACKERS <i>✳</i> WEB DESIGN <i>✳</i> DEFENSIVE SECURITY <i>✳</i> ACTUAL EXPERIMENTS <i>✳</i></span>
+ </div></div>
+ <section class="shell section" id="work" aria-labelledby="work-title">
+  <div class="section-heading"><div><div class="pnum">01 / THE PROGRAM FILES</div><h2 id="work-title">SELECTED<br>WORK.</h2></div><div class="asidenote">REAL WORK. REAL LINKS.<br>NO FAKE METRICS.<br>YOU CAN ACTUALLY OPEN THESE.</div></div>
+  <div class="filters" role="group" aria-label="Filter portfolio projects">
+   <button class="filter" type="button" data-filter="all" aria-pressed="true">ALL / 06</button>
+   <button class="filter" type="button" data-filter="security" aria-pressed="false">SECURITY</button>
+   <button class="filter" type="button" data-filter="automation" aria-pressed="false">AUTOMATION</button>
+   <button class="filter" type="button" data-filter="web" aria-pressed="false">WEB & ARCHIVE</button>
+  </div>
+  <span id="filter-status" class="visually-hidden" aria-live="polite">6 projects shown</span>
+  <div class="projects">
+   <a class="project" data-kind="security" href="https://github.com/vishwasaithalz/CyberPlayground" target="_blank" rel="noopener noreferrer">
+    <div class="project-art"><span class="index">01 / DEFENSIVE SECURITY</span><img loading="lazy" src="./assets/projects/cyberplayground-v2.svg" alt="Custom illustrated CyberPlayground project artwork"></div>
+    <div class="project-bottom"><div><h3 class="project-title">CyberPlayground</h3><p class="project-desc">Hands-on security experiments and accessible practical tools.</p></div><span class="project-arrow" aria-hidden="true">↗</span></div>
+   </a>
+   <a class="project" data-kind="security" href="https://github.com/vishwasaithalz/LogSentry" target="_blank" rel="noopener noreferrer">
+    <div class="project-art"><span class="index">02 / WINDOWS DEFENSE</span><img loading="lazy" src="./assets/projects/logsentry-v2.svg" alt="Custom LogSentry Windows event log artwork"></div>
+    <div class="project-bottom"><div><h3 class="project-title">LogSentry</h3><p class="project-desc">Windows event insights and a defense-first investigation mindset.</p></div><span class="project-arrow" aria-hidden="true">↗</span></div>
+   </a>
+   <a class="project" data-kind="automation" href="https://github.com/vishwasaithalz/AI-Automation-Lab" target="_blank" rel="noopener noreferrer">
+    <div class="project-art"><span class="index">03 / AUTOMATION</span><img loading="lazy" src="./assets/projects/automation-lab-v2.svg" alt="Custom AI Automation Lab project artwork"></div>
+    <div class="project-bottom"><div><h3 class="project-title">AI Automation Lab</h3><p class="project-desc">Systems that automate repetitive work and give time back.</p></div><span class="project-arrow" aria-hidden="true">↗</span></div>
+   </a>
+   <a class="project" data-kind="web" href="https://yyyh-phi.vercel.app/" target="_blank" rel="noopener noreferrer">
+    <div class="project-art"><span class="index">04 / 2013 INTERNET</span><img loading="lazy" src="./assets/projects/yyyh-v2.svg" alt="Custom YinYangYoHackers retro website artwork"></div>
+    <div class="project-bottom"><div><h3 class="project-title">YinYangYoHackers</h3><p class="project-desc">My early blogging era and a time capsule of the old web.</p></div><span class="project-arrow" aria-hidden="true">↗</span></div>
+   </a>
+   <a class="project" data-kind="security web" href="https://github.com/vishwasaithalz/recon-lite" target="_blank" rel="noopener noreferrer">
+    <div class="project-art"><span class="index">05 / RECON & LEARNING</span><img loading="lazy" src="./assets/projects/recon-lite-v2.svg" alt="Custom Recon Lite public-data research illustration"></div>
+    <div class="project-bottom"><div><h3 class="project-title">Recon Lite</h3><p class="project-desc">Lightweight, responsible public-information recon explorations.</p></div><span class="project-arrow" aria-hidden="true">↗</span></div>
+   </a>
+   <a class="project" data-kind="web automation" href="https://github.com/vishwasaithalz?tab=repositories" target="_blank" rel="noopener noreferrer">
+    <div class="project-art"><span class="index">06 / EVERYTHING ELSE</span><img loading="lazy" src="./assets/brand/vishwas-exe-main.svg" alt="Vishwas Aithal retro computer project identity artwork"></div>
+    <div class="project-bottom"><div><h3 class="project-title">The Rest of the Lab</h3><p class="project-desc">More repos, experiments, engineering notes and side projects.</p></div><span class="project-arrow" aria-hidden="true">↗</span></div>
+   </a>
+  </div>
+ </section>
+ <section class="shell section" id="story" aria-labelledby="story-title">
+  <div class="section-heading"><div><div class="pnum">02 / SYSTEM RESTORE POINTS</div><h2 id="story-title">HOW THE<br>STORY LOADED.</h2></div><div class="asidenote">NOT A STRAIGHT LINE.<br>NOT A PERSONAL BRAND TEMPLATE.<br>JUST YEARS OF CURIOSITY.</div></div>
+  <div class="double">
+   <div>
+    <p class="big-quote">THE WALLPAPER<br>CHANGED.<br><strong>THE KID DIDN'T.</strong></p>
+    <p class="smallcopy">The magic started long before GitHub: old desktops, floppy-disk icons, game CDs, WinRAR archives and a browser with too many tabs. That curiosity followed me into modern web engineering, defensive cybersecurity and automation.</p>
+    <div class="memory-art"><img loading="lazy" src="./assets/brand/era-boot-sequence.svg" alt="Original timeline illustration connecting early Windows desktops, the 2013 blogging era and modern programming"></div>
+   </div>
+   <div class="chapters">
+    <div class="chapter"><div class="chapter-year">1990s+</div><div><h3>Windows. Everything was clickable.</h3><p>Learned what things do by exploring the desktop. Mostly through curiosity, occasionally through spectacular trial and error.</p></div></div>
+    <div class="chapter"><div class="chapter-year">2000s</div><div><h3>After-school cybercafé energy.</h3><p>Winamp, VLC, Daemon Tools, PowerISO, Internet Download Manager, Mario, Counter-Strike, Project I.G.I. and endless tinkering.</p></div></div>
+    <div class="chapter"><div class="chapter-year">2013</div><div><h3>The Blogger chapter.</h3><p>YinYangYoHackers became my corner of the internet, before everything needed a polished pitch deck.</p></div></div>
+    <div class="chapter"><div class="chapter-year">NOW</div><div><h3>Build. Test. Understand. Repeat.</h3><p>Thoughtful web interfaces, defensive security experiments, useful automation and more unusual creative ideas.</p></div></div>
+   </div>
+  </div>
+ </section>
+ <section class="shell section" id="sidequests" aria-labelledby="quest-title">
+  <div class="section-heading"><div><div class="pnum">03 / BONUS DISC</div><h2 id="quest-title">OPEN THE<br>SIDE QUESTS.</h2></div><div class="asidenote">YES, THEY ARE REAL.<br>NOT JUST DECORATIVE ICONS.<br>COME BACK BEFORE DINNER.</div></div>
+  <div class="sidequests">
+   <a class="quest" href="./arcade/"><span>DISC 01 / PLAY</span><span class="qico" aria-hidden="true">🕹</span><b>THE<br>ARCADE</b><small>Snake, original pinball, story chat and terminal ↗</small></a>
+   <a class="quest" href="./memory/"><span>DISC 02 / REMEMBER</span><span class="qico" aria-hidden="true">💿</span><b>MEMORY<br>OS</b><small>A desktop full of retro memories ↗</small></a>
+   <a class="quest" href="./museum/"><span>DISC 03 / DISCOVER</span><span class="qico" aria-hidden="true">📼</span><b>INTERNET<br>MUSEUM</b><small>Windows and software nostalgia, catalogued ↗</small></a>
+   <a class="quest" href="./overload/"><span>DISC 04 / EXPERIMENT</span><span class="qico" aria-hidden="true">🖥</span><b>OVERLOAD<br>LAB</b><small>Old-school computer toys and experiments ↗</small></a>
+  </div>
+ </section>
+ <section class="shell term-section" id="terminal" aria-labelledby="terminal-title">
+  <div class="term-wrap">
+   <div><div class="pnum" style="color:#d6ec88">04 / SAFE LITTLE TERMINAL</div><h2 id="terminal-title">C:\VISHWAS&gt;</h2><p>This isn't a fake command screenshot. Type something. The little command prompt responds. Try whoami, projects, memories, date or help.</p><button class="pill" type="button" data-open-palette style="color:#ecf4df;border-color:#9baea7;margin-top:12px">OPEN QUICK LAUNCHER ↗</button></div>
+   <div class="terminal" role="region" aria-label="Interactive simulated command prompt">
+    <div class="titlebar"><span>▣ C:\VISHWAS\CMD.EXE</span><span class="lights">● ● ●</span></div>
+    <div id="mini-term-screen" class="terminal-screen" aria-live="polite">VISHWAS.EXE LOCAL TERMINAL / v2.6
+STATUS: ONLINE / SAFE SIMULATOR
+TYPE help TO SEE COMMANDS.</div>
+    <form id="mini-term-form" class="terminal-form"><label for="mini-term-input">C:\VISHWAS&gt;</label><input id="mini-term-input" autocomplete="off" spellcheck="false" placeholder="type whoami" aria-label="Enter a simulated command"><button type="submit">RUN ↵</button></form>
+   </div>
+  </div>
+ </section>
+ <section class="shell connect" id="contact" aria-labelledby="contact-title">
+  <div class="pnum">05 / SEND A SIGNAL</div>
+  <h2 id="contact-title">LET'S MAKE<br><span>IT REAL.</span></h2>
+  <div class="connect-bottom">
+   <p>Have a project, collaboration idea, question, or a great story from the old internet? Find me where I'm building and sharing.</p>
+   <nav class="socials" aria-label="Social profiles">
+    <a href="https://www.linkedin.com/in/vishwas-aithal" target="_blank" rel="noopener noreferrer">LINKEDIN ↗</a>
+    <a href="https://github.com/vishwasaithalz" target="_blank" rel="noopener noreferrer">GITHUB ↗</a>
+    <a href="https://www.youtube.com/@vishwasaithalz" target="_blank" rel="noopener noreferrer">YOUTUBE ↗</a>
+    <a href="./labs/">MORE EXPERIMENTS ↗</a>
+   </nav>
+  </div>
+ </section>
 </main>
-<script>
-(function(){
-'use strict';
-let $=id=>document.getElementById(id);
-function clock(){$('clock').textContent=new Date().toLocaleTimeString([],{hour:'2-digit',minute:'2-digit'})}clock();setInterval(clock,45000);
-$('theme').addEventListener('click',()=>document.body.dataset.theme=document.body.dataset.theme==='night'?'day':'night');
-$('tone').addEventListener('click',()=>{try{let ac=new (window.AudioContext||window.webkitAudioContext)();[220,330,440,550].forEach((n,i)=>{let t=ac.currentTime+i*.12,o=ac.createOscillator(),g=ac.createGain();o.type='triangle';o.frequency.value=n;g.gain.setValueAtTime(.0001,t);g.gain.exponentialRampToValueAtTime(.05,t+.025);g.gain.exponentialRampToValueAtTime(.0001,t+.19);o.connect(g);g.connect(ac.destination);o.start(t);o.stop(t+.2)})}catch(e){$('tone').textContent='Sound unavailable'}});
-const cards=[...document.querySelectorAll('.launch')];cards.forEach((a,i)=>{a.addEventListener('focus',()=>{cards.forEach(c=>c.classList.remove('active'));a.classList.add('active')});a.addEventListener('blur',()=>a.classList.remove('active'));a.addEventListener('keydown',e=>{if(e.key==='ArrowRight'||e.key==='ArrowDown'){e.preventDefault();cards[(i+1)%cards.length].focus()}if(e.key==='ArrowLeft'||e.key==='ArrowUp'){e.preventDefault();cards[(i-1+cards.length)%cards.length].focus()}})});
-})();
-</script>
-
-<script>
-(() => {
-'use strict';
-const entries={
-"1998":{title:"THE FIRST BOOT",counter:"SAVE SLOT 01 / 04",copy:"No app stores, no search suggestions. Just a bulky screen and the irresistible urge to open every folder. The old curiosity still powers the new projects.",screen:"C:\\>dir /w\nGAMES   MUSIC    TOOLS\nSNAKE   CONTRA   TANKS\n\nC:\\> run curiosity.exe\n[BOOT DISK LOADED]\n_",url:"./memory/",cta:"[ ENTER MEMORY OS ]"},
-"2004":{title:"ONE HOUR AT THE CAFÉ",counter:"SAVE SLOT 02 / 04",copy:"Winamp skins, counter-timers, shared keyboards, mystery downloads and multiplayer games. A single hour after school could become an entire universe.",screen:"MY COMPUTER  [X] · AFTERHOURS\n--------------------------------\nWINAMP / PLAYLIST: 003 TRACKS\nGAMES / CO-OP READY\nDOWNLOADS / 98%...\n\nTIME LEFT: 00:59:59",url:"./overload/",cta:"[ BOOT OVERLOAD OS ]"},
-"2013":{title:"VIEW SOURCE. START BLOG.",counter:"SAVE SLOT 03 / 04",copy:"YinYangYoHackers began the public web chapter. A blog, a curious mind, and the idea that you could build something people might discover.",screen:"YINYANGYOHACKERS  |  BLOG\n================================\nMY FIRST WEB CHAPTER / 2013\n\nPOST: LEARN. TEST. DOCUMENT.\nLINKS: BLOG | ARCHIVE | SOURCE\n\nStatus: still experimenting",url:"https://yyyh-phi.vercel.app",cta:"[ OPEN THE BLOG ERA ]"},
-"2026":{title:"THE WORKBENCH NOW",counter:"SAVE SLOT 04 / 04",copy:"The wallpaper changed, but the work got more serious: real public security labs, original arcade games, web engineering and tested automation.",screen:"$ git status\nOn branch: still-curious\n\n$ ls projects/\nLogSentry  CyberPlayground\nWeb        Automation\n\nREADY: inspect the source",url:"https://github.com/vishwasaithalz?tab=repositories",cta:"[ INSPECT THE REAL CODE ]"}
-};
-const buttons=[...document.querySelectorAll('[data-vx-era]')];
-const display=document.getElementById('vx-era-display'),screen=document.getElementById('vx-era-screen');
-const name=document.getElementById('vx-era-name'),body=document.getElementById('vx-era-body'),counter=document.getElementById('vx-era-counter'),link=document.getElementById('vx-era-destination');
-if(!display||!screen||!buttons.length)return;
-function choose(which){const e=entries[which];if(!e)return;display.dataset.era=which;screen.textContent=e.screen;name.textContent=e.title;body.textContent=e.copy;counter.textContent=e.counter;link.href=e.url;link.textContent=e.cta;buttons.forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.vxEra===which)));}
-const tour=document.getElementById('vx-era-autoplay'),tourStatus=document.getElementById('vx-era-transport-status'),tourTimecode=document.getElementById('vx-era-timecode');
-const sequence=['1998','2004','2013','2026'];
-const reduceMotion=window.matchMedia('(prefers-reduced-motion: reduce)');
-const consoleBox=document.querySelector('.vx-era-console');
-let currentIndex=0,tourTimer=null,transitionTimer=null;
-function renderEra(which){
-  const idx=sequence.indexOf(which);
-  if(idx<0)return;
-  currentIndex=idx;
-  display.classList.add('vx-era-switching');
-  clearTimeout(transitionTimer);
-  transitionTimer=setTimeout(()=>{choose(which);tourTimecode.textContent=String(idx+1).padStart(2,'0')+':'+which+' / 04:2026';display.classList.remove('vx-era-switching')},reduceMotion.matches?0:180);
-}
-function stopTour(){
-  if(tourTimer!==null){clearInterval(tourTimer);tourTimer=null}
-  tour.setAttribute('aria-pressed','false');
-  tour.textContent='▶ PLAY ERA TOUR';
-  tourStatus.textContent='MANUAL PLAYBACK';
-  consoleBox.dataset.tour='paused';
-}
-function startTour(){
-  if(reduceMotion.matches||document.hidden){tourStatus.textContent='MOTION REDUCED / TAB INACTIVE';return}
-  if(tourTimer!==null)return;
-  tour.setAttribute('aria-pressed','true');tour.textContent='Ⅱ PAUSE ERA TOUR';
-  tourStatus.textContent='AUTOMATIC / 8 SECOND CHAPTERS';
-  consoleBox.dataset.tour='playing';
-  tourTimer=setInterval(()=>renderEra(sequence[(currentIndex+1)%sequence.length]),8000);
-}
-buttons.forEach((b,i)=>{
-  b.addEventListener('click',()=>{stopTour();renderEra(b.dataset.vxEra)});
-  b.addEventListener('keydown',event=>{if(event.key!=='ArrowLeft'&&event.key!=='ArrowRight')return;event.preventDefault();stopTour();const n=(i+(event.key==='ArrowRight'?1:-1)+buttons.length)%buttons.length;buttons[n].focus();renderEra(buttons[n].dataset.vxEra)});
-});
-tour.addEventListener('click',()=>tourTimer===null?startTour():stopTour());
-document.addEventListener('visibilitychange',()=>{if(document.hidden)stopTour()});
-reduceMotion.addEventListener('change',()=>{if(reduceMotion.matches)stopTour()});
-renderEra('1998');
-})();
-</script><script>
-(() => {
- const output=document.getElementById('mini-term-screen'),form=document.getElementById('mini-term-form'),input=document.getElementById('mini-term-input'),clock=document.getElementById('mini-term-clock');
- if(!output||!form||!input||!clock)return;
- const tick=()=>{clock.textContent=new Date().toLocaleTimeString('en-IN',{hour:'2-digit',minute:'2-digit',hour12:false});};
- tick();window.setInterval(tick,30000);
- const say=(value)=>{const line=document.createElement('div');line.textContent=value;output.append(line);while(output.children.length>10)output.firstElementChild.remove();output.scrollTop=output.scrollHeight;};
- const pages={boot:'./memory/',overload:'./overload/',museum:'./museum/',arcade:'./arcade/',projects:'https://github.com/vishwasaithalz?tab=repositories'};
- form.addEventListener('submit',event=>{
-  event.preventDefault();const cmd=input.value.trim().toLowerCase();input.value='';if(!cmd)return;
-  say('C:\\VISHWAS> '+cmd);
-  if(cmd==='clear'){output.replaceChildren();say('SCREEN CLEARED');}
-  else if(cmd==='help')say('help | whoami | time | status | projects | boot | museum | arcade | overload | clear');
-  else if(cmd==='whoami')say('VISHWAS AITHAL | BUILDER | CURIOUS SINCE THE EARLY DESKTOP DAYS');
-  else if(cmd==='time')say(new Date().toLocaleString());
-  else if(cmd==='status')say('LOCAL SIMULATION READY | PRIVACY: ON | NO REMOTE SHELL');
-  else if(Object.prototype.hasOwnProperty.call(pages,cmd)){say('OPENING '+cmd.toUpperCase());window.location.assign(pages[cmd]);}
-  else say('UNKNOWN COMMAND. TYPE help');
- });
-})();
-</script>
+<footer class="shell footer"><span>© 2026 VISHWAS AITHAL. BUILT WITH CURIOSITY, NOT A WEBSITE TEMPLATE.</span><span>ONE SITE / TWO MOODS / TOO MANY OPEN TABS.</span></footer>
+<div class="floater" aria-label="Quick actions"><button type="button" data-open-palette>⌘ QUICK LAUNCH</button><button type="button" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">↑ TOP</button></div>
+<div class="quick-layer" id="quick-layer" role="dialog" aria-modal="true" aria-label="Quick navigation" aria-hidden="true">
+ <div class="quick-box">
+  <div class="quick-head"><span>⌘</span><span>QUICK LAUNCH / VISHWAS.EXE</span><b>CTRL + K</b></div>
+  <label for="quick-search" class="visually-hidden">Search site navigation</label>
+  <input type="search" id="quick-search" placeholder="Where do you want to go?" autocomplete="off">
+  <div id="quick-results" class="quick-results"></div>
+  <button class="quick-close" id="quick-close" type="button">ESC / CLOSE</button>
+ </div>
+</div>
+<div id="easter-egg" hidden role="status" style="position:fixed;bottom:80px;left:20px;z-index:210;background:#e4ed91;color:#1d2a2d;padding:12px 18px;border:2px solid #233439;font:700 11px Consolas,monospace;box-shadow:5px 5px #192e33">CHEAT CODE ACCEPTED.</div>
 </body></html>
