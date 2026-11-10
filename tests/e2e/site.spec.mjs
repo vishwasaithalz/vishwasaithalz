@@ -41,6 +41,10 @@ for(const [name,path] of screens){
   await expect(page.locator('h1').first()).toBeVisible();
   await page.screenshot({path:'qa-screenshots/'+name+'-mobile.png',fullPage:true});
   expect(errors,'Local page exceptions on '+name).toEqual([]);
+  if(name==='Museum'){
+   const width=await page.evaluate(()=>document.documentElement.scrollWidth);
+   expect(width,'Museum must fit a 390px mobile viewport').toBeLessThanOrEqual(398);
+  }
  });
 }
 
