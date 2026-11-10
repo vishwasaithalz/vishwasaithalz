@@ -190,3 +190,22 @@ test('Retired standalone demo route and home shortcuts are absent',async({page})
  const oldRoute=await page.goto(base+'/labs/');
  expect(oldRoute.status()).toBe(404);
 });
+
+test('Three redesigned README visuals decode as images without missing files',async({page})=>{
+ await page.goto(base+'/');
+ for(const asset of [
+  '/assets/brand/era-boot-sequence.svg',
+  '/assets/brand/overload-workbench-cover.svg',
+  '/assets/brand/museum-archive-cover.svg'
+ ]){
+  const result=await page.evaluate(async src=>new Promise(resolve=>{
+   const img=new Image();
+   img.onload=()=>resolve({ok:true,width:img.naturalWidth,height:img.naturalHeight});
+   img.onerror=()=>resolve({ok:false,width:0,height:0});
+   img.src=src;
+  }),asset);
+  expect(result.ok,'Unable to render '+asset).toBe(true);
+  expect(result.width).toBeGreaterThan(1000);
+  expect(result.height).toBeGreaterThan(200);
+ }
+});
