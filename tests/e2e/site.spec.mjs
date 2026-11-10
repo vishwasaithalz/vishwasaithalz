@@ -26,8 +26,7 @@ test.beforeAll(async()=>{
 test.afterAll(async()=>{if(server)await new Promise(done=>server.close(done))});
 
 const screens=[
- ['Bootdisk','/'],['ProductLab','/labs/'],['ImpactHub','/labs/impact/'],
- ['Commerce','/labs/commerce/'],['Overload','/overload/'],['Museum','/museum/'],['Arcade','/arcade/']
+ ['Bootdisk','/'],['Overload','/overload/'],['Museum','/museum/'],['Arcade','/arcade/']
 ];
 for(const [name,path] of screens){
  test(name+' desktop and mobile screenshot smoke',async({page})=>{
@@ -41,43 +40,11 @@ for(const [name,path] of screens){
   await page.setViewportSize({width:390,height:844});
   await expect(page.locator('h1').first()).toBeVisible();
   await page.screenshot({path:'qa-screenshots/'+name+'-mobile.png',fullPage:true});
-  if(['ImpactHub','Commerce','ProductLab'].includes(name)){
-   expect(errors,'Local page exceptions on '+name).toEqual([]);
-   const width=await page.evaluate(()=>document.documentElement.scrollWidth);
-   expect(width).toBeLessThanOrEqual(398);
-  }
+  expect(errors,'Local page exceptions on '+name).toEqual([]);
+  const width=await page.evaluate(()=>document.documentElement.scrollWidth);
+  expect(width).toBeLessThanOrEqual(398);
  });
 }
-
-test('ImpactHub stores local sample planning records and supports filters',async({page})=>{
- await page.goto(base+'/labs/impact/');
- await expect(page.locator('#campaign-grid .card')).toHaveCount(6);
- await page.locator('#category').selectOption('Education');
- await expect(page.locator('#campaign-grid .card')).toHaveCount(1);
- await page.locator('#category').selectOption('All');
- await page.locator('#alias').fill('Volunteer A');
- await page.locator('#hours').fill('3');
- await page.locator('#pledge-form button[type=submit]').click();
- await expect(page.locator('#status')).toContainText('Added 3');
- await expect(page.locator('#count-hours')).toHaveText('3');
- await expect(page.locator('#pledge-ledger')).toContainText('Volunteer A');
- await page.reload();
- await expect(page.locator('#count-hours')).toHaveText('3');
-});
-
-test('Commerce Sandbox updates stock and issues a demo receipt only',async({page})=>{
- await page.goto(base+'/labs/commerce/');
- await expect(page.locator('#product-grid .card')).toHaveCount(6);
- await page.locator('#product-grid .card').first().getByRole('button',{name:'ADD TO CART'}).click();
- await expect(page.locator('#count-cart')).toHaveText('1');
- page.on('dialog',dialog=>dialog.accept());
- await page.locator('#checkout').click();
- await expect(page.locator('#status')).toContainText('This is not a purchase');
- await expect(page.locator('#count-orders')).toHaveText('1');
- await expect(page.locator('#count-cart')).toHaveText('0');
- await page.reload();
- await expect(page.locator('#count-orders')).toHaveText('1');
-});
 
 test('Bootdisk small terminal responds to local commands',async({page})=>{
  await page.goto(base+'/');
@@ -215,4 +182,11 @@ test('UHD workstation keeps project links and controls inside viewport',async({p
  expect(archiveBounds.width).toBeGreaterThan(3000);
  await expect(page.locator('[data-vx-drawer]')).toHaveCount(4);
  await page.screenshot({path:'qa-screenshots/museum-4k.png',animations:'disabled'});
+});
+
+test('Retired standalone demo route and home shortcuts are absent',async({page})=>{
+ await page.goto(base+'/');
+ await expect(page.locator('a[href*="/labs/"]')).toHaveCount(0);
+ const oldRoute=await page.goto(base+'/labs/');
+ expect(oldRoute.status()).toBe(404);
 });

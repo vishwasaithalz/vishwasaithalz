@@ -98,7 +98,7 @@ else{
 }
 const readme=readFileSync(join(root,'README.md'),'utf8');
 if(/[\u2013\u2014\u2015]| - /.test(readme))err('README.md','visible dash punctuation');
-if(readme.includes('Six original interactive Product Lab apps'))err('README.md','removed Product Lab section was restored');
+if(/\/labs\//.test(readme))err('README.md','retired standalone demo link present');
 for(const key of ['assets/brand/overload-workbench-cover.svg','assets/brand/museum-archive-cover.svg']){
  if(!readme.includes(key)||!existsSync(join(root,key)))err('README.md','immersive cover missing: '+key);
 }
