@@ -118,7 +118,7 @@ Public homepages were inspected in a browser on 2026-11-06. A working landing pa
 
 ## 💥 EXTRA PACK 02 / THE OVERLOAD COMPUTER
 
-<a href="https://vishwasaithalz.github.io/vishwasaithalz/overload/"><img src="assets/retro-overload-marquee.svg" width="100%" alt="Overload 2.0 original illustrated retro computer with Minesweeper, Pong, pixel paint, PC building, command prompt, defrag visualization, GitHub feed and BIOS features" /></a>
+<a href="https://vishwasaithalz.github.io/vishwasaithalz/overload/"><img src="assets/brand/overload-workbench-cover.svg" width="100%" alt="Overload 2.0 original illustrated retro computer with Minesweeper, Pong, pixel paint, PC building, command prompt, defrag visualization, GitHub feed and BIOS features" /></a>
 
 The after-school PC, now with more buttons than anyone reasonably needs. **This expansion contains playable original Minesweeper and Pong, a working pixel painting canvas with PNG export, a playful PC parts selector, a safe terminal, a visual-only defrag toy, a retro BIOS boot screen, an XP-style fake welcome screen, an original screensaver and user-triggered synthesized boot tones.**
 
@@ -158,7 +158,7 @@ The after-school PC, now with more buttons than anyone reasonably needs. **This 
 
 ## 🏛️ BONUS DISC / THE INTERNET MUSEUM
 
-<a href="https://vishwasaithalz.github.io/vishwasaithalz/museum/"><img src="assets/retro-museum-marquee.svg" width="100%" alt="Original illustrated museum launcher with seven nostalgic memory folders" /></a>
+<a href="https://vishwasaithalz.github.io/vishwasaithalz/museum/"><img src="assets/brand/museum-archive-cover.svg" width="100%" alt="Original illustrated museum launcher with seven nostalgic memory folders" /></a>
 
 **102 memory files, seven collections, two playable mini-games and four desktop themes.** Open the archive, search for classic software and cartoons, collect favorites locally or find the secret keyboard Easter egg. It is a tribute to the PC culture that shaped my curiosity, not an installer archive.
 
