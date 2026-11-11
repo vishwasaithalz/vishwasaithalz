@@ -1,7 +1,7 @@
 {
   "version": 1,
   "source": "Authenticated GitHub Actions snapshot",
-  "checkedAt": "2026-11-10T11:29:54.678Z",
+  "checkedAt": "2026-11-11T11:20:00.162Z",
   "timeMeaning": "Snapshot content changed at this time; unchanged checks do not create commits.",
   "results": [
     {
@@ -28,20 +28,68 @@
     {
       "name": "AI-Automation-Lab",
       "status": "success",
-      "sha": "c254f24d992711307ebd415f0ee676c525cd941c",
-      "message": "Revert Nov 10 repository animation and homepage link changes",
-      "commitDate": "2026-11-10T06:34:28Z",
+      "sha": "78ee53f37c8a0f5771e659fe81e73676ff130dc4",
+      "message": "feat: expose six verified interactive engineering upgrades\n\nMerge six locally interactive engineering upgrades after Chromium and Python tests plus all seven Vercel checks passed. No change to project roots, existing endpoints, or feature boundaries.",
+      "commitDate": "2026-11-11T04:00:09Z",
       "files": [
         {
-          "name": "README.md",
+          "name": "projects/ApexVitals/web/index.html",
           "status": "modified",
-          "additions": 0,
-          "deletions": 14
+          "additions": 15,
+          "deletions": 1
+        },
+        {
+          "name": "projects/CloudHardener/web/index.html",
+          "status": "modified",
+          "additions": 20,
+          "deletions": 4
+        },
+        {
+          "name": "projects/README.md",
+          "status": "modified",
+          "additions": 11,
+          "deletions": 7
+        },
+        {
+          "name": "projects/SERPMatrix/web/index.html",
+          "status": "modified",
+          "additions": 12,
+          "deletions": 2
+        },
+        {
+          "name": "projects/SentinelPulse/web/index.html",
+          "status": "modified",
+          "additions": 37,
+          "deletions": 1
+        },
+        {
+          "name": "projects/SpectraUI/web/app.mjs",
+          "status": "modified",
+          "additions": 23,
+          "deletions": 1
+        },
+        {
+          "name": "projects/SpectraUI/web/index.html",
+          "status": "modified",
+          "additions": 9,
+          "deletions": 1
+        },
+        {
+          "name": "projects/ZeroAuth/web/app.mjs",
+          "status": "modified",
+          "additions": 2,
+          "deletions": 3
+        },
+        {
+          "name": "tests/e2e/lab-preview-upgrades.spec.mjs",
+          "status": "added",
+          "additions": 93,
+          "deletions": 0
         }
       ],
-      "url": "https://github.com/vishwasaithalz/AI-Automation-Lab/commit/c254f24d992711307ebd415f0ee676c525cd941c",
+      "url": "https://github.com/vishwasaithalz/AI-Automation-Lab/commit/78ee53f37c8a0f5771e659fe81e73676ff130dc4",
       "ci": "success",
-      "ciUrl": "https://github.com/vishwasaithalz/AI-Automation-Lab/actions/runs/42769441815",
+      "ciUrl": "https://github.com/vishwasaithalz/AI-Automation-Lab/actions/runs/42956352805",
       "release": null,
       "releaseStatus": "checked",
       "providerWarnings": []
@@ -49,20 +97,32 @@
     {
       "name": "CyberPlayground",
       "status": "success",
-      "sha": "5d449a233643956b83e45b7042775fb5f4e356c7",
-      "message": "Revert Nov 10 repository animation and homepage link changes",
-      "commitDate": "2026-11-10T06:34:24Z",
+      "sha": "8fdbb48c03047820bf27426ae5d72cf7ed90df29",
+      "message": "fix: validate IP addresses in network lookup\n\nMerge tested local IPv4 and IPv6 syntax validation with passing GitHub CI and READY Vercel preview.",
+      "commitDate": "2026-11-11T03:59:09Z",
       "files": [
         {
-          "name": "README.md",
+          "name": "assets/ip-validation.mjs",
+          "status": "added",
+          "additions": 46,
+          "deletions": 0
+        },
+        {
+          "name": "tests/ip-validation.test.js",
+          "status": "added",
+          "additions": 33,
+          "deletions": 0
+        },
+        {
+          "name": "tools/network.html",
           "status": "modified",
-          "additions": 0,
-          "deletions": 14
+          "additions": 3,
+          "deletions": 2
         }
       ],
-      "url": "https://github.com/vishwasaithalz/CyberPlayground/commit/5d449a233643956b83e45b7042775fb5f4e356c7",
+      "url": "https://github.com/vishwasaithalz/CyberPlayground/commit/8fdbb48c03047820bf27426ae5d72cf7ed90df29",
       "ci": "success",
-      "ciUrl": "https://github.com/vishwasaithalz/CyberPlayground/actions/runs/42769432148",
+      "ciUrl": "https://github.com/vishwasaithalz/CyberPlayground/actions/runs/42956248378",
       "release": null,
       "releaseStatus": "checked",
       "providerWarnings": []
@@ -70,20 +130,26 @@
     {
       "name": "YYYH",
       "status": "success",
-      "sha": "570424e4487f97bc984d7abb1ab560788a96d1a4",
-      "message": "Revert Nov 10 repository animation and homepage link changes",
-      "commitDate": "2026-11-10T06:34:27Z",
+      "sha": "b43630d18928924aedb181dc5b1f070e49593270",
+      "message": "fix(privacy): enforce live consent for outgoing telemetry events\n\nFilter Vercel Analytics and Speed Insights at the event boundary so revoked consent blocks future events, even when SDK scripts persist. Green CI and READY preview verified.",
+      "commitDate": "2026-11-11T04:15:48Z",
       "files": [
         {
-          "name": "README.md",
+          "name": "src/components/HackerCookieConsent.tsx",
           "status": "modified",
-          "additions": 0,
-          "deletions": 14
+          "additions": 1,
+          "deletions": 1
+        },
+        {
+          "name": "src/main.tsx",
+          "status": "modified",
+          "additions": 18,
+          "deletions": 4
         }
       ],
-      "url": "https://github.com/vishwasaithalz/YYYH/commit/570424e4487f97bc984d7abb1ab560788a96d1a4",
+      "url": "https://github.com/vishwasaithalz/YYYH/commit/b43630d18928924aedb181dc5b1f070e49593270",
       "ci": "success",
-      "ciUrl": "https://github.com/vishwasaithalz/YYYH/actions/runs/42769438584",
+      "ciUrl": "https://github.com/vishwasaithalz/YYYH/actions/runs/42958079744",
       "release": null,
       "releaseStatus": "checked",
       "providerWarnings": []
