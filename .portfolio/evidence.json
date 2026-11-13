@@ -1,7 +1,7 @@
 {
   "version": 1,
   "source": "Authenticated GitHub Actions snapshot",
-  "checkedAt": "2026-11-12T11:38:31.164Z",
+  "checkedAt": "2026-11-13T11:22:42.562Z",
   "timeMeaning": "Snapshot content changed at this time; unchanged checks do not create commits.",
   "results": [
     {
@@ -28,68 +28,98 @@
     {
       "name": "AI-Automation-Lab",
       "status": "success",
-      "sha": "78ee53f37c8a0f5771e659fe81e73676ff130dc4",
-      "message": "feat: expose six verified interactive engineering upgrades\n\nMerge six locally interactive engineering upgrades after Chromium and Python tests plus all seven Vercel checks passed. No change to project roots, existing endpoints, or feature boundaries.",
-      "commitDate": "2026-11-11T04:00:09Z",
+      "sha": "5e91f593bb26919df4c5c1abf4885e1aa9bd7546",
+      "message": "feat: immersive functional instruments for six engineering labs\n\n* feat: add interactive instruments and original visual systems to six labs\n\n* test: exercise new six-lab instruments in Chromium and serve JS with correct MIME\n\n* design: add original project-specific operational illustrations to six lab previews",
+      "commitDate": "2026-11-13T05:39:01Z",
       "files": [
+        {
+          "name": "projects/ApexVitals/web/experience.js",
+          "status": "added",
+          "additions": 70,
+          "deletions": 0
+        },
         {
           "name": "projects/ApexVitals/web/index.html",
           "status": "modified",
-          "additions": 15,
+          "additions": 2,
           "deletions": 1
+        },
+        {
+          "name": "projects/CloudHardener/web/experience.js",
+          "status": "added",
+          "additions": 71,
+          "deletions": 0
         },
         {
           "name": "projects/CloudHardener/web/index.html",
           "status": "modified",
-          "additions": 20,
-          "deletions": 4
+          "additions": 2,
+          "deletions": 1
         },
         {
-          "name": "projects/README.md",
-          "status": "modified",
-          "additions": 11,
-          "deletions": 7
+          "name": "projects/SERPMatrix/web/experience.js",
+          "status": "added",
+          "additions": 71,
+          "deletions": 0
         },
         {
           "name": "projects/SERPMatrix/web/index.html",
           "status": "modified",
-          "additions": 12,
-          "deletions": 2
+          "additions": 2,
+          "deletions": 1
+        },
+        {
+          "name": "projects/SentinelPulse/web/experience.js",
+          "status": "added",
+          "additions": 73,
+          "deletions": 0
         },
         {
           "name": "projects/SentinelPulse/web/index.html",
           "status": "modified",
-          "additions": 37,
+          "additions": 2,
           "deletions": 1
         },
         {
-          "name": "projects/SpectraUI/web/app.mjs",
-          "status": "modified",
-          "additions": 23,
-          "deletions": 1
+          "name": "projects/SpectraUI/web/experience.js",
+          "status": "added",
+          "additions": 70,
+          "deletions": 0
         },
         {
           "name": "projects/SpectraUI/web/index.html",
           "status": "modified",
-          "additions": 9,
+          "additions": 2,
           "deletions": 1
         },
         {
-          "name": "projects/ZeroAuth/web/app.mjs",
+          "name": "projects/ZeroAuth/web/experience.js",
+          "status": "added",
+          "additions": 72,
+          "deletions": 0
+        },
+        {
+          "name": "projects/ZeroAuth/web/index.html",
           "status": "modified",
           "additions": 2,
-          "deletions": 3
+          "deletions": 1
         },
         {
           "name": "tests/e2e/lab-preview-upgrades.spec.mjs",
+          "status": "modified",
+          "additions": 64,
+          "deletions": 1
+        },
+        {
+          "name": "tests/immersive-labs.test.mjs",
           "status": "added",
-          "additions": 93,
+          "additions": 14,
           "deletions": 0
         }
       ],
-      "url": "https://github.com/vishwasaithalz/AI-Automation-Lab/commit/78ee53f37c8a0f5771e659fe81e73676ff130dc4",
+      "url": "https://github.com/vishwasaithalz/AI-Automation-Lab/commit/5e91f593bb26919df4c5c1abf4885e1aa9bd7546",
       "ci": "success",
-      "ciUrl": "https://github.com/vishwasaithalz/AI-Automation-Lab/actions/runs/43023018244",
+      "ciUrl": "https://github.com/vishwasaithalz/AI-Automation-Lab/actions/runs/43373404089",
       "release": null,
       "releaseStatus": "checked",
       "providerWarnings": []
@@ -130,26 +160,164 @@
     {
       "name": "YYYH",
       "status": "success",
-      "sha": "b43630d18928924aedb181dc5b1f070e49593270",
-      "message": "fix(privacy): enforce live consent for outgoing telemetry events\n\nFilter Vercel Analytics and Speed Insights at the event boundary so revoked consent blocks future events, even when SDK scripts persist. Green CI and READY preview verified.",
-      "commitDate": "2026-11-11T04:15:48Z",
+      "sha": "3fec97c498fae5d7c9ee2520950cc917c8cc41e5",
+      "message": "chore: clean up project metadata and dependencies\n\nUpdate project title formatting, remove analytics dependencies, and refine SEO meta tags for brand consistency.",
+      "commitDate": "2026-11-13T09:23:19Z",
       "files": [
         {
-          "name": "src/components/HackerCookieConsent.tsx",
+          "name": "CONTENT_MANIFEST.md",
+          "status": "modified",
+          "additions": 3,
+          "deletions": 3
+        },
+        {
+          "name": "IMPLEMENTATION_LOG.md",
           "status": "modified",
           "additions": 1,
           "deletions": 1
         },
         {
-          "name": "src/main.tsx",
+          "name": "SEO_IMPLEMENTATION_PLAN.md",
           "status": "modified",
-          "additions": 18,
+          "additions": 2,
+          "deletions": 2
+        },
+        {
+          "name": "assets/.aistudio/.gitignore",
+          "status": "removed",
+          "additions": 0,
+          "deletions": 1
+        },
+        {
+          "name": "bun.lock",
+          "status": "modified",
+          "additions": 1,
+          "deletions": 7
+        },
+        {
+          "name": "favicon.ico",
+          "status": "added",
+          "additions": 0,
+          "deletions": 0
+        },
+        {
+          "name": "index.html",
+          "status": "modified",
+          "additions": 14,
+          "deletions": 14
+        },
+        {
+          "name": "package.json",
+          "status": "modified",
+          "additions": 2,
+          "deletions": 1
+        },
+        {
+          "name": "public/.well-known/security.txt",
+          "status": "modified",
+          "additions": 5,
+          "deletions": 5
+        },
+        {
+          "name": "public/404.html",
+          "status": "modified",
+          "additions": 2,
+          "deletions": 2
+        },
+        {
+          "name": "public/assets/aistudio/Screenshot_2026-10-20_144409_ee278cd6.png",
+          "status": "added",
+          "additions": 0,
+          "deletions": 0
+        },
+        {
+          "name": "public/blogger-posts.xml",
+          "status": "modified",
+          "additions": 199,
+          "deletions": 199
+        },
+        {
+          "name": "public/blogger-theme.xml",
+          "status": "modified",
+          "additions": 4,
           "deletions": 4
+        },
+        {
+          "name": "public/favicon.ico",
+          "status": "modified",
+          "additions": 0,
+          "deletions": 0
+        },
+        {
+          "name": "public/feed.xml",
+          "status": "modified",
+          "additions": 44,
+          "deletions": 44
+        },
+        {
+          "name": "public/llms-full.txt",
+          "status": "modified",
+          "additions": 1,
+          "deletions": 1
+        },
+        {
+          "name": "public/llms.txt",
+          "status": "modified",
+          "additions": 1,
+          "deletions": 1
+        },
+        {
+          "name": "public/rss.xml",
+          "status": "modified",
+          "additions": 4,
+          "deletions": 4
+        },
+        {
+          "name": "public/security.txt",
+          "status": "modified",
+          "additions": 5,
+          "deletions": 5
+        },
+        {
+          "name": "public/sitemap.xml",
+          "status": "modified",
+          "additions": 6,
+          "deletions": 0
+        },
+        {
+          "name": "scripts/test-suite.ts",
+          "status": "added",
+          "additions": 269,
+          "deletions": 0
+        },
+        {
+          "name": "server.ts",
+          "status": "modified",
+          "additions": 460,
+          "deletions": 1
+        },
+        {
+          "name": "src/App.tsx",
+          "status": "modified",
+          "additions": 68,
+          "deletions": 22
+        },
+        {
+          "name": "src/components/AboutView.tsx",
+          "status": "modified",
+          "additions": 2,
+          "deletions": 2
+        },
+        {
+          "name": "src/components/ArticleCard.tsx",
+          "status": "modified",
+          "additions": 43,
+          "deletions": 95
         }
       ],
-      "url": "https://github.com/vishwasaithalz/YYYH/commit/b43630d18928924aedb181dc5b1f070e49593270",
-      "ci": "success",
-      "ciUrl": "https://github.com/vishwasaithalz/YYYH/actions/runs/42958079744",
+      "url": "https://github.com/vishwasaithalz/YYYH/commit/3fec97c498fae5d7c9ee2520950cc917c8cc41e5",
+      "ci": "failure",
+      "ciUrl": "https://github.com/vishwasaithalz/YYYH/actions/runs/43400896158",
       "release": null,
       "releaseStatus": "checked",
       "providerWarnings": []
