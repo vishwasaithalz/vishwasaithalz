@@ -1,7 +1,7 @@
 {
   "version": 1,
   "source": "Authenticated GitHub Actions snapshot",
-  "checkedAt": "2026-11-15T11:21:11.648Z",
+  "checkedAt": "2026-11-16T11:53:01.791Z",
   "timeMeaning": "Snapshot content changed at this time; unchanged checks do not create commits.",
   "results": [
     {
@@ -119,7 +119,7 @@
       ],
       "url": "https://github.com/vishwasaithalz/AI-Automation-Lab/commit/5e91f593bb26919df4c5c1abf4885e1aa9bd7546",
       "ci": "success",
-      "ciUrl": "https://github.com/vishwasaithalz/AI-Automation-Lab/actions/runs/43593786829",
+      "ciUrl": "https://github.com/vishwasaithalz/AI-Automation-Lab/actions/runs/43715541868",
       "release": null,
       "releaseStatus": "checked",
       "providerWarnings": []
@@ -127,32 +127,20 @@
     {
       "name": "CyberPlayground",
       "status": "success",
-      "sha": "8fdbb48c03047820bf27426ae5d72cf7ed90df29",
-      "message": "fix: validate IP addresses in network lookup\n\nMerge tested local IPv4 and IPv6 syntax validation with passing GitHub CI and READY Vercel preview.",
-      "commitDate": "2026-11-11T03:59:09Z",
+      "sha": "d4ec7c9f354e41a7fa4210ad10ba165e0fc15560",
+      "message": "docs: fix visible newline escapes in CyberPlayground README",
+      "commitDate": "2026-11-15T12:17:42Z",
       "files": [
         {
-          "name": "assets/ip-validation.mjs",
-          "status": "added",
-          "additions": 46,
-          "deletions": 0
-        },
-        {
-          "name": "tests/ip-validation.test.js",
-          "status": "added",
-          "additions": 33,
-          "deletions": 0
-        },
-        {
-          "name": "tools/network.html",
+          "name": "README.md",
           "status": "modified",
-          "additions": 3,
+          "additions": 5,
           "deletions": 2
         }
       ],
-      "url": "https://github.com/vishwasaithalz/CyberPlayground/commit/8fdbb48c03047820bf27426ae5d72cf7ed90df29",
+      "url": "https://github.com/vishwasaithalz/CyberPlayground/commit/d4ec7c9f354e41a7fa4210ad10ba165e0fc15560",
       "ci": "success",
-      "ciUrl": "https://github.com/vishwasaithalz/CyberPlayground/actions/runs/42956248378",
+      "ciUrl": "https://github.com/vishwasaithalz/CyberPlayground/actions/runs/43713107338",
       "release": null,
       "releaseStatus": "checked",
       "providerWarnings": []
@@ -160,32 +148,32 @@
     {
       "name": "YYYH",
       "status": "success",
-      "sha": "6b8f21fed73da2d3f933c5a1ff2216a5b9fea03c",
-      "message": "chore(blogger): daily read-only health audit\n\n* chore(blogger): add scripts/blogger_health.py for read-only automated audit\n\n* chore(blogger): add .github/workflows/blogger-health.yml for read-only automated audit\n\n* chore(blogger): add docs/BLOGGER_AUTOMATION_ROLLOUT.md for read-only automated audit",
-      "commitDate": "2026-11-15T11:17:49Z",
+      "sha": "2c2259f6b797f0bb679243ec3e63a2d409d0804b",
+      "message": "feat(blogger): protected draft-only editorial workflow\n\n* feat(blogger): add manual draft-only publisher guarded by OAuth\n\n* feat(blogger): add manually approved draft workflow\n\n* docs(blogger): document OAuth secrets and safe editorial approval",
+      "commitDate": "2026-11-15T11:23:52Z",
       "files": [
         {
-          "name": ".github/workflows/blogger-health.yml",
+          "name": ".github/workflows/blogger-drafts-manual.yml",
+          "status": "added",
+          "additions": 37,
+          "deletions": 0
+        },
+        {
+          "name": "docs/BLOGGER_DRAFTS_SETUP.md",
           "status": "added",
           "additions": 30,
           "deletions": 0
         },
         {
-          "name": "docs/BLOGGER_AUTOMATION_ROLLOUT.md",
+          "name": "scripts/blogger_draft.py",
           "status": "added",
-          "additions": 25,
-          "deletions": 0
-        },
-        {
-          "name": "scripts/blogger_health.py",
-          "status": "added",
-          "additions": 134,
+          "additions": 78,
           "deletions": 0
         }
       ],
-      "url": "https://github.com/vishwasaithalz/YYYH/commit/6b8f21fed73da2d3f933c5a1ff2216a5b9fea03c",
+      "url": "https://github.com/vishwasaithalz/YYYH/commit/2c2259f6b797f0bb679243ec3e63a2d409d0804b",
       "ci": "success",
-      "ciUrl": "https://github.com/vishwasaithalz/YYYH/actions/runs/43708234123",
+      "ciUrl": "https://github.com/vishwasaithalz/YYYH/actions/runs/43859357689",
       "release": null,
       "releaseStatus": "checked",
       "providerWarnings": []
