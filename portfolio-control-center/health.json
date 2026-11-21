@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "checkedAt": "2026-11-20T12:00:08.663532+00:00",
+  "checkedAt": "2026-11-21T11:35:32.877160+00:00",
   "method": "HTTP GET + expected page text from GitHub Actions; not a browser or full functional test",
   "checks": [
     {
