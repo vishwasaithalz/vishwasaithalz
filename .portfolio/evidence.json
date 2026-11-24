@@ -1,7 +1,7 @@
 {
   "version": 1,
   "source": "Authenticated GitHub Actions snapshot",
-  "checkedAt": "2026-11-23T13:27:23.130Z",
+  "checkedAt": "2026-11-24T14:06:02.631Z",
   "timeMeaning": "Snapshot content changed at this time; unchanged checks do not create commits.",
   "results": [
     {
@@ -28,98 +28,62 @@
     {
       "name": "AI-Automation-Lab",
       "status": "success",
-      "sha": "5e91f593bb26919df4c5c1abf4885e1aa9bd7546",
-      "message": "feat: immersive functional instruments for six engineering labs\n\n* feat: add interactive instruments and original visual systems to six labs\n\n* test: exercise new six-lab instruments in Chromium and serve JS with correct MIME\n\n* design: add original project-specific operational illustrations to six lab previews",
-      "commitDate": "2026-11-13T05:39:01Z",
+      "sha": "c21ea8a8486a5c352607e95649e14f08957c0e7a",
+      "message": "chore: merge reviewed dry-run KARMA automation v2 audit gates\n\nKARMA automation v2: reviewed tool registry, no-side-effect gates and CI",
+      "commitDate": "2026-11-24T04:32:13Z",
       "files": [
         {
-          "name": "projects/ApexVitals/web/experience.js",
+          "name": ".github/workflows/karma-automation-v2.yml",
           "status": "added",
-          "additions": 70,
+          "additions": 47,
           "deletions": 0
         },
         {
-          "name": "projects/ApexVitals/web/index.html",
-          "status": "modified",
-          "additions": 2,
-          "deletions": 1
-        },
-        {
-          "name": "projects/CloudHardener/web/experience.js",
+          "name": "automation/node-red/netmirror-readonly-check.json",
           "status": "added",
-          "additions": 71,
+          "additions": 163,
           "deletions": 0
         },
         {
-          "name": "projects/CloudHardener/web/index.html",
-          "status": "modified",
-          "additions": 2,
-          "deletions": 1
-        },
-        {
-          "name": "projects/SERPMatrix/web/experience.js",
+          "name": "config/karma-automation-v2.json",
           "status": "added",
-          "additions": 71,
+          "additions": 421,
           "deletions": 0
         },
         {
-          "name": "projects/SERPMatrix/web/index.html",
-          "status": "modified",
-          "additions": 2,
-          "deletions": 1
-        },
-        {
-          "name": "projects/SentinelPulse/web/experience.js",
+          "name": "docs/KARMA_AUTOMATION_V2.md",
           "status": "added",
-          "additions": 73,
+          "additions": 106,
           "deletions": 0
         },
         {
-          "name": "projects/SentinelPulse/web/index.html",
-          "status": "modified",
-          "additions": 2,
-          "deletions": 1
-        },
-        {
-          "name": "projects/SpectraUI/web/experience.js",
+          "name": "scripts/KARMA-Automation-V2-Setup.ps1",
           "status": "added",
-          "additions": 70,
+          "additions": 114,
           "deletions": 0
         },
         {
-          "name": "projects/SpectraUI/web/index.html",
-          "status": "modified",
-          "additions": 2,
-          "deletions": 1
-        },
-        {
-          "name": "projects/ZeroAuth/web/experience.js",
+          "name": "src/karma-automation-audit.mjs",
           "status": "added",
-          "additions": 72,
+          "additions": 78,
           "deletions": 0
         },
         {
-          "name": "projects/ZeroAuth/web/index.html",
-          "status": "modified",
-          "additions": 2,
-          "deletions": 1
-        },
-        {
-          "name": "tests/e2e/lab-preview-upgrades.spec.mjs",
-          "status": "modified",
-          "additions": 64,
-          "deletions": 1
-        },
-        {
-          "name": "tests/immersive-labs.test.mjs",
+          "name": "tests/karma-automation-audit.test.mjs",
           "status": "added",
-          "additions": 14,
+          "additions": 41,
+          "deletions": 0
+        },
+        {
+          "name": "tests/karma-node-red-flow.test.mjs",
+          "status": "added",
+          "additions": 21,
           "deletions": 0
         }
       ],
-      "url": "https://github.com/vishwasaithalz/AI-Automation-Lab/commit/5e91f593bb26919df4c5c1abf4885e1aa9bd7546",
+      "url": "https://github.com/vishwasaithalz/AI-Automation-Lab/commit/c21ea8a8486a5c352607e95649e14f08957c0e7a",
       "ci": "success",
-      "ciUrl": "https://github.com/vishwasaithalz/AI-Automation-Lab/actions/runs/45027299519",
+      "ciUrl": "https://github.com/vishwasaithalz/AI-Automation-Lab/actions/runs/45327076913",
       "release": null,
       "releaseStatus": "checked",
       "providerWarnings": []
@@ -173,7 +137,7 @@
       ],
       "url": "https://github.com/vishwasaithalz/YYYH/commit/2c2259f6b797f0bb679243ec3e63a2d409d0804b",
       "ci": "success",
-      "ciUrl": "https://github.com/vishwasaithalz/YYYH/actions/runs/45180206167",
+      "ciUrl": "https://github.com/vishwasaithalz/YYYH/actions/runs/45408166538",
       "release": null,
       "releaseStatus": "checked",
       "providerWarnings": []
