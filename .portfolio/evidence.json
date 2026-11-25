@@ -1,7 +1,7 @@
 {
   "version": 1,
   "source": "Authenticated GitHub Actions snapshot",
-  "checkedAt": "2026-11-24T14:06:02.631Z",
+  "checkedAt": "2026-11-25T13:19:10.622Z",
   "timeMeaning": "Snapshot content changed at this time; unchanged checks do not create commits.",
   "results": [
     {
@@ -83,7 +83,7 @@
       ],
       "url": "https://github.com/vishwasaithalz/AI-Automation-Lab/commit/c21ea8a8486a5c352607e95649e14f08957c0e7a",
       "ci": "success",
-      "ciUrl": "https://github.com/vishwasaithalz/AI-Automation-Lab/actions/runs/45327076913",
+      "ciUrl": "https://github.com/vishwasaithalz/AI-Automation-Lab/actions/runs/45431173546",
       "release": null,
       "releaseStatus": "checked",
       "providerWarnings": []
@@ -136,8 +136,8 @@
         }
       ],
       "url": "https://github.com/vishwasaithalz/YYYH/commit/2c2259f6b797f0bb679243ec3e63a2d409d0804b",
-      "ci": "success",
-      "ciUrl": "https://github.com/vishwasaithalz/YYYH/actions/runs/45408166538",
+      "ci": "failure",
+      "ciUrl": "https://github.com/vishwasaithalz/YYYH/actions/runs/45620429652",
       "release": null,
       "releaseStatus": "checked",
       "providerWarnings": []
